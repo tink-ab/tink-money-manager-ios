@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AppearanceProvider Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/AppearanceProvider" class="dashAnchor"></a>
+    <a title="AppearanceProvider Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TinkPFMUI 0.9.8 Docs</a> (45% documented)</p>
+        <p class="header-right"><a href="https://github.com/tink-ab/tink-pfm-sdk-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TinkPFMUI Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AppearanceProvider Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AccountDetailsViewController.html">AccountDetailsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ActionableInsightsViewController.html">ActionableInsightsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ActionableInsightsViewController/EmptyState.html">– EmptyState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategorizeTransactionViewController.html">CategorizeTransactionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategoryStatisticsNavigationControllerDelegate.html">CategoryStatisticsNavigationControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategoryStatisticsViewController.html">CategoryStatisticsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategoryStatisticsViewController/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorProvider.html">ColorProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FinanceOverviewViewController.html">FinanceOverviewViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FinanceOverviewViewController/Feature.html">– Feature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FontProvider.html">FontProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IconProvider.html">IconProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Tink.html">Tink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Tink/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransactionsViewController.html">TransactionsViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Appearance.html">Appearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EventTracker.html">EventTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Font.html">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Font/Weight.html">– Weight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Font/Size.html">– Size</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ScreenEvent.html">ScreenEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SessionCredential.html">SessionCredential</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGAffineTransform.html">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGFloat.html">CGFloat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGPoint.html">CGPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Comparable.html">Comparable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DateInterval.html">DateInterval</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FloatingPoint.html">FloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Locale.html">Locale</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSLayoutConstraint.html">NSLayoutConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NumberFormatter.html">NumberFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Range.html">Range</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SecCertificate.html">SecCertificate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SecTrust.html">SecTrust</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UINavigationBar.html">UINavigationBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/WeeklySummaryExpensesByCategoryItemView">WeeklySummaryExpensesByCategoryItemView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/WeeklySummaryExpensesByDayItemView">WeeklySummaryExpensesByDayItemView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AccountDetailsViewControllerDelegate.html">AccountDetailsViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ActionableInsightsViewControllerDelegate.html">ActionableInsightsViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AppearanceProviding.html">AppearanceProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CategorizeTransactionViewControllerDelegate.html">CategorizeTransactionViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ColorProviding.html">ColorProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EventTracking.html">EventTracking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FontProviding.html">FontProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IconProviding.html">IconProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TransactionsViewControllerDelegate.html">TransactionsViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Account.html">Account</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ActionableInsight.html">ActionableInsight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ActionableInsight/Insight.html">– Insight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ActionableInsight.html#/Action">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AppearanceProvider.html">AppearanceProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Budget.html">Budget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category.html">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category/Code.html">– Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category/Kind.html">– Kind</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Identifier.html">Identifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TinkError.html">TinkError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TinkError/Status.html">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Transaction.html">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionsQuery.html">TransactionsQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionsQuery/Sort.html">– Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionsQuery/Order.html">– Order</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI35ActionableInsightListViewControllera">ActionableInsightListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI43ActionableInsightListViewControllerDelegatea">ActionableInsightListViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI12CategoryNodea">CategoryNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI12CategoryTypea">CategoryType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AppearanceProvider</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AppearanceProvider</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/AppearanceProviding.html">AppearanceProviding</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>A appearance provider that can provide colors, fonts and icons for Tink views.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV6colorsAA14ColorProviding_pvp"></a>
+                    <a name="//apple_ref/swift/Property/colors" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV6colorsAA14ColorProviding_pvp">colors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">colors</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ColorProviding.html">ColorProviding</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV5iconsAA13IconProviding_pvp"></a>
+                    <a name="//apple_ref/swift/Property/icons" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV5iconsAA13IconProviding_pvp">icons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">icons</span><span class="p">:</span> <span class="kt"><a href="../Protocols/IconProviding.html">IconProviding</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV5fontsAA13FontProviding_pvp"></a>
+                    <a name="//apple_ref/swift/Property/fonts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV5fontsAA13FontProviding_pvp">fonts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fonts</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FontProviding.html">FontProviding</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV14colorProvidingAA05ColorF0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/colorProviding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV14colorProvidingAA05ColorF0_pvp">colorProviding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">colorProviding</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ColorProviding.html">ColorProviding</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L25-L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV13iconProvidingAA04IconF0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/iconProviding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV13iconProvidingAA04IconF0_pvp">iconProviding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">iconProviding</span><span class="p">:</span> <span class="kt"><a href="../Protocols/IconProviding.html">IconProviding</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L31-L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV13fontProvidingAA04FontF0_pvp"></a>
+                    <a name="//apple_ref/swift/Property/fontProviding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV13fontProvidingAA04FontF0_pvp">fontProviding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fontProviding</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FontProviding.html">FontProviding</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L37-L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV6colors5fonts5iconsAcA05ColorD0CSg_AA04FontD0CSgAA04IconD0CSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(colors:fonts:icons:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV6colors5fonts5iconsAcA05ColorD0CSg_AA04FontD0CSgAA04IconD0CSgtcfc">init(colors:fonts:icons:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">colors</span><span class="p">:</span> <span class="kt"><a href="../Classes/ColorProvider.html">ColorProvider</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">fonts</span><span class="p">:</span> <span class="kt"><a href="../Classes/FontProvider.html">FontProvider</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">icons</span><span class="p">:</span> <span class="kt"><a href="../Classes/IconProvider.html">IconProvider</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L42-L50">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground07groupedG00f7GroupedG05label0F5Label9separator6accent8expenses6income9transfers13uncategorized7warning0N9IconColor0osT00psT00qsT00nsgT00osgT00psgT00qsgT09lightFont07regularV008semiBoldV004boldV07account6budget5alert8benefits17doubleTransaction7exclude0nS09financial4food8wellness4home5house0oS013entertainment7pension5other6refund6salary7savings6search8shopping3tag8transfer9transport0qS008categorysG18CornerRadiusFactorACSo7UIColorC_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_SgA29_A29_A29_A29_A29_A29_A29_AA0V0OA31_A31_A31_So7UIImageCA33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_12CoreGraphics7CGFloatVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(background:secondaryBackground:groupedBackground:secondaryGroupedBackground:label:secondaryLabel:separator:accent:expenses:income:transfers:uncategorized:warning:expensesIconColor:incomeIconColor:transfersIconColor:uncategorizedIconColor:expensesIconBackgroundColor:incomeIconBackgroundColor:transfersIconBackgroundColor:uncategorizedIconBackgroundColor:lightFont:regularFont:semiBoldFont:boldFont:account:budget:alert:benefits:doubleTransaction:exclude:expensesIcon:financial:food:wellness:home:house:incomeIcon:entertainment:pension:other:refund:salary:savings:search:shopping:tag:transfer:transport:uncategorizedIcon:categoryIconBackgroundCornerRadiusFactor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground07groupedG00f7GroupedG05label0F5Label9separator6accent8expenses6income9transfers13uncategorized7warning0N9IconColor0osT00psT00qsT00nsgT00osgT00psgT00qsgT09lightFont07regularV008semiBoldV004boldV07account6budget5alert8benefits17doubleTransaction7exclude0nS09financial4food8wellness4home5house0oS013entertainment7pension5other6refund6salary7savings6search8shopping3tag8transfer9transport0qS008categorysG18CornerRadiusFactorACSo7UIColorC_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_A28_SgA29_A29_A29_A29_A29_A29_A29_AA0V0OA31_A31_A31_So7UIImageCA33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_A33_12CoreGraphics7CGFloatVSgtcfc">init(background:secondaryBackground:groupedBackground:secondaryGroupedBackground:label:secondaryLabel:separator:accent:expenses:income:transfers:uncategorized:warning:expensesIconColor:incomeIconColor:transfersIconColor:uncategorizedIconColor:expensesIconBackgroundColor:incomeIconBackgroundColor:transfersIconBackgroundColor:uncategorizedIconBackgroundColor:lightFont:regularFont:semiBoldFont:boldFont:account:budget:alert:benefits:doubleTransaction:exclude:expensesIcon:financial:food:wellness:home:house:incomeIcon:entertainment:pension:other:refund:salary:savings:search:shopping:tag:transfer:transport:uncategorizedIcon:categoryIconBackgroundCornerRadiusFactor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a appearance provider with the specified styling.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Font parameters defaults to <code>systemDefault</code> if not provided.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use AppearanceProvider(colorProvider:fontProvider:iconProvider:﹚ instead."</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">background</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">groupedBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryGroupedBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">label</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryLabel</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">separator</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">accent</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expenses</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">income</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">transfers</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">uncategorized</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">warning</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expensesIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">incomeIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">transfersIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">uncategorizedIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">expensesIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">incomeIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">transfersIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">uncategorizedIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">lightFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">regularFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">semiBoldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">boldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">account</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">budget</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">alert</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">benefits</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">doubleTransaction</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">exclude</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">expensesIcon</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">financial</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">food</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">wellness</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">home</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">house</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">incomeIcon</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">entertainment</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">pension</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">other</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">refund</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">salary</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">savings</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">search</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">shopping</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">tag</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">transfer</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">transport</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">uncategorizedIcon</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">,</span>
+    <span class="nv">categoryIconBackgroundCornerRadiusFactor</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>background</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for the main background of the interface.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryBackground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for content layered on top of the main background.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>groupedBackground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for the main background of grouped interface components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryGroupedBackground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for content layered on top of the main background of grouped interface components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>label</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Primary text color.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryLabel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Secondary text color.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>separator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for separators.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Colors for buttons, indicators and other similar elements.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expenses</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing expenses for all categories.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>income</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorized</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>warning</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing a warning.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expensesIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses icon, defaults to <code>expenses</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>incomeIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes, defaults to <code>income</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfersIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers, defaults to <code>transfers</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorizedIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions, defaults to <code>uncategorized</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expensesIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses, defaults to <code>expensesIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>incomeIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes, defaults to <code>incomeIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfersIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers, defaults to <code>transfersIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorizedIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions, defaults to <code>uncategorizedIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lightFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The light font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>regularFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The regular font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>semiBoldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The semibold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>boldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>benefits</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing benefits.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>exclude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing excluded transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expenses</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing expenses for all categories.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>food</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing food and drinks transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>wellness</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing health and beauty transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>home</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing household transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>house</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing home and garden transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entertainment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing free time and leisure transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing other transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>refund</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing refunds and reimbursements.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>salary</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing salary.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>savings</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing savings.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shopping</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing shopping transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing transfers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transport</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing transportation transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorizedIcon</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Icon representing uncategorized transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>categoryIconBackgroundCornerRadiusFactor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Representing the corner radius factor of all icons, defaults to a circular shape.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L101-L212">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV6accent8expenses6income9transfers13uncategorized7warning0F9IconColor0gkL00hkL00ikL00fk10BackgroundL00gkmL00hkmL00ikmL09lightFont07regularO008semiBoldO004boldO008categorykM18CornerRadiusFactorACSo7UIColorC_A6XSgA7yA0O0OA_A_A_12CoreGraphics7CGFloatVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(accent:expenses:income:transfers:uncategorized:warning:expensesIconColor:incomeIconColor:transfersIconColor:uncategorizedIconColor:expensesIconBackgroundColor:incomeIconBackgroundColor:transfersIconBackgroundColor:uncategorizedIconBackgroundColor:lightFont:regularFont:semiBoldFont:boldFont:categoryIconBackgroundCornerRadiusFactor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV6accent8expenses6income9transfers13uncategorized7warning0F9IconColor0gkL00hkL00ikL00fk10BackgroundL00gkmL00hkmL00ikmL09lightFont07regularO008semiBoldO004boldO008categorykM18CornerRadiusFactorACSo7UIColorC_A6XSgA7yA0O0OA_A_A_12CoreGraphics7CGFloatVSgtcfc">init(accent:expenses:income:transfers:uncategorized:warning:expensesIconColor:incomeIconColor:transfersIconColor:uncategorizedIconColor:expensesIconBackgroundColor:incomeIconBackgroundColor:transfersIconBackgroundColor:uncategorizedIconBackgroundColor:lightFont:regularFont:semiBoldFont:boldFont:categoryIconBackgroundCornerRadiusFactor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a appearance provider with the specified styling and system default colors for backgrounds, labels, and separator.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Font parameters defaults to <code>systemDefault</code> if not provided.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use AppearanceProvider(colorProvider:fontProvider:iconProvider:﹚ instead."</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">accent</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expenses</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">income</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">transfers</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">uncategorized</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">warning</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expensesIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">incomeIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">transfersIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">uncategorizedIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">expensesIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">incomeIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">transfersIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">uncategorizedIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">lightFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">regularFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">semiBoldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">boldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">categoryIconBackgroundCornerRadiusFactor</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Colors for buttons, indicators and other similar elements.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expenses</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>income</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorized</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expensesIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses icon, defaults to <code>expenses</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>incomeIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes, defaults to <code>income</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfersIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers, defaults to <code>transfers</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorizedIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions, defaults to <code>uncategorized</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expensesIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses, defaults to <code>expensesIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>incomeIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes, defaults to <code>incomeIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfersIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers, defaults to <code>transfersIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorizedIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions, defaults to <code>uncategorizedIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lightFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The light font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>regularFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The regular font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>semiBoldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The semibold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>boldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>categoryIconBackgroundCornerRadiusFactor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Representing the corner radius factor of all icons, defaults to a circular shape.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L237-L344">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground07groupedG00f7GroupedG05label0F5Label9separator6accent8expenses6income9transfers13uncategorized0N9IconColor0orS00prS00qrS00nrgS00orgS00prgS00qrgS09lightFont07regularU008semiBoldU004boldU008categoryrG18CornerRadiusFactorACSo7UIColorC_A2_A2_A2_A2_A2_A2_A2_A2_A2_A2_A2_A2_SgA3_A3_A3_A3_A3_A3_A3_AA0U0OA5_A5_A5_12CoreGraphics7CGFloatVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(background:secondaryBackground:groupedBackground:secondaryGroupedBackground:label:secondaryLabel:separator:accent:expenses:income:transfers:uncategorized:expensesIconColor:incomeIconColor:transfersIconColor:uncategorizedIconColor:expensesIconBackgroundColor:incomeIconBackgroundColor:transfersIconBackgroundColor:uncategorizedIconBackgroundColor:lightFont:regularFont:semiBoldFont:boldFont:categoryIconBackgroundCornerRadiusFactor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground07groupedG00f7GroupedG05label0F5Label9separator6accent8expenses6income9transfers13uncategorized0N9IconColor0orS00prS00qrS00nrgS00orgS00prgS00qrgS09lightFont07regularU008semiBoldU004boldU008categoryrG18CornerRadiusFactorACSo7UIColorC_A2_A2_A2_A2_A2_A2_A2_A2_A2_A2_A2_A2_SgA3_A3_A3_A3_A3_A3_A3_AA0U0OA5_A5_A5_12CoreGraphics7CGFloatVSgtcfc">init(background:secondaryBackground:groupedBackground:secondaryGroupedBackground:label:secondaryLabel:separator:accent:expenses:income:transfers:uncategorized:expensesIconColor:incomeIconColor:transfersIconColor:uncategorizedIconColor:expensesIconBackgroundColor:incomeIconBackgroundColor:transfersIconBackgroundColor:uncategorizedIconBackgroundColor:lightFont:regularFont:semiBoldFont:boldFont:categoryIconBackgroundCornerRadiusFactor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a appearance provider with the specified styling.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Font parameters defaults to <code>systemDefault</code> if not provided.
+
+</div><div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Icon parameters defaults to <code>MaterialIconsProvider</code> if not provided.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use AppearanceProvider(colorProvider:fontProvider:iconProvider:﹚ instead."</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">background</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">groupedBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryGroupedBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">label</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryLabel</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">separator</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">accent</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expenses</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">income</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">transfers</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">uncategorized</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expensesIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">incomeIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">transfersIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">uncategorizedIconColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">expensesIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">incomeIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">transfersIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">uncategorizedIconBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+
+    <span class="nv">lightFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">regularFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">semiBoldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">boldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">categoryIconBackgroundCornerRadiusFactor</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>background</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for the main background of the interface.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryBackground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for content layered on top of the main background.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>groupedBackground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for the main background of grouped interface components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryGroupedBackground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for content layered on top of the main background of grouped interface components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>label</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Primary text color.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryLabel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Secondary text color.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>separator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for separators.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Colors for buttons, indicators and other similar elements.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expenses</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>income</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorized</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>warning</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing a warning.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expensesIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses icon, defaults to <code>expenses</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>incomeIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes, defaults to <code>income</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfersIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers, defaults to <code>transfers</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorizedIconColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions, defaults to <code>uncategorized</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expensesIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses, defaults to <code>expensesIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>incomeIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes, defaults to <code>incomeIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfersIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers, defaults to <code>transfersIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorizedIconBackgroundColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions, defaults to <code>uncategorizedIconColor</code> mixed with <code>background</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lightFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The light font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>regularFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The regular font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>semiBoldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The semibold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>boldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>categoryIconBackgroundCornerRadiusFactor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Representing the corner radius factor of all icons, defaults to a circular shape.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L378-L463">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground5label0F5Label9separator6accent7expense6income8transfer13uncategorized9lightFont07regularQ008semiBoldQ004boldQ0ACSo7UIColorC_A9sA0Q0OA3Utcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(background:secondaryBackground:label:secondaryLabel:separator:accent:expense:income:transfer:uncategorized:lightFont:regularFont:semiBoldFont:boldFont:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground5label0F5Label9separator6accent7expense6income8transfer13uncategorized9lightFont07regularQ008semiBoldQ004boldQ0ACSo7UIColorC_A9sA0Q0OA3Utcfc">init(background:secondaryBackground:label:secondaryLabel:separator:accent:expense:income:transfer:uncategorized:lightFont:regularFont:semiBoldFont:boldFont:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">background</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">label</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryLabel</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">separator</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">accent</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expense</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">income</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">transfer</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">uncategorized</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">lightFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">regularFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">semiBoldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">boldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L466-L483">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground07groupedG00f7GroupedG05label0F5Label9separator6accent8expenses6income9transfers13uncategorized9lightFont07regularS008semiBoldS004boldS0ACSo7UIColorC_A11uA0S0OA3Wtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(background:secondaryBackground:groupedBackground:secondaryGroupedBackground:label:secondaryLabel:separator:accent:expenses:income:transfers:uncategorized:lightFont:regularFont:semiBoldFont:boldFont:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI18AppearanceProviderV10background19secondaryBackground07groupedG00f7GroupedG05label0F5Label9separator6accent8expenses6income9transfers13uncategorized9lightFont07regularS008semiBoldS004boldS0ACSo7UIColorC_A11uA0S0OA3Wtcfc">init(background:secondaryBackground:groupedBackground:secondaryGroupedBackground:label:secondaryLabel:separator:accent:expenses:income:transfers:uncategorized:lightFont:regularFont:semiBoldFont:boldFont:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a appearance provider with the specified styling.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Font parameters defaults to <code>systemDefault</code> if not provided.</p>
+
+</div><div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Icon parameters defaults to <code>MaterialIconsProvider</code> if not provided.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Use AppearanceProvider(colorProvider:fontProvider:iconProvider:﹚ instead."</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">background</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">groupedBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryGroupedBackground</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">label</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">secondaryLabel</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">separator</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">accent</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">expenses</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">income</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">transfers</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">uncategorized</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span>
+    <span class="nv">lightFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">regularFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">semiBoldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span><span class="p">,</span>
+    <span class="nv">boldFont</span><span class="p">:</span> <span class="kt"><a href="../Enums/Font.html">Font</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">systemDefault</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>background</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for the main background of the interface.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryBackground</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for content layered on top of the main background.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>label</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Primary text color.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secondaryLabel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Secondary text color.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>separator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color for separators.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Colors for buttons, indicators and other similar elements.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expenses</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent expenses.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>income</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent incomes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transfers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color to represent transfers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uncategorized</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Color representing uncategorized transactions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lightFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The light font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>regularFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The regular font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>semiBoldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The semibold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>boldFont</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bold font to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/AppearanceProviding.swift#L506-L581">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://tink.com" target="_blank" rel="external">Tink</a>. All rights reserved. (Last updated: 2020-08-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
