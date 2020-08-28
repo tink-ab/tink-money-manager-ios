@@ -43,6 +43,14 @@ Tink.shared.setCredential(.accessToken(accessToken))
 Tink.shared.refresh()
 ```
 
+## Caching
+
+The SDK will cache fetched data in memory. If the user logs out, you need to reset the cache to make sure there won't be any cached data presented to the wrong user. 
+
+```swift
+Tink.shared.resetCache()
+```
+
 ## Creating a custom Tink instance
 
 You can create your own Tink instance if you prefer. This might be used if you would like full control over the lifetime of the Tink object or if you need to access more advanced features like certificate pinning. 
@@ -67,73 +75,26 @@ let tink = Tink(configuration: configuration)
 let financeOverviewViewController = FinanceOverviewViewController(tink: tink, features: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
 ```
 
-## Customization 
 
-To configure colors, font or icons you update the `Appearance.provider`.
-This needs to be done before initializing the `FinanceOverviewViewController` or any of the other View Controllers provided by this SDK.
+## Appearance
 
-### Colors
+You can configure colors, icons and fonts by providing Tink PFM SDK with a `ColorProviding`, `IconProviding` and `FontProviding` type respectively. Tink PFM SDK also provides an `AppearanceProvider` type that conforms to all of these protocols and can be used to customize the Tink PFM SDK views. You can selectively choose what icons you'd like to customize.
 
-|`Color`|Description|
-|--------|-------------|
-|`background`|Color for the main background of the interface.|
-|`secondaryBackground`|Color for content layered on top of the main background.|
-|`groupedBackground`|Color for the main background of grouped interface components.|
-|`secondaryGroupedBackground`|Color for content layered on top of the main background of grouped interface components.|
-|`label`|Primary text color.|
-|`secondaryLabel`|Secondary text color.|
-|`separator`|Color for separators.|
-|`accent`|Colors for buttons, indicators and other similar elements.|
-|`expenses`|Color to represent expenses.|
-|`income`|Color to represent income.|
-|`transfers`|Color to represent transfers.|
-|`uncategorized`|Color representing uncategorized transactions.|
-|`warning`|Color representing a warning.|
+To customize the appearance of the SDK, use the `Appearance` singleton. 
 
 ```swift
-let colorProvider = ColorProvider()
-colorProvider.accent = <#UIColor#>
-colorProvider.expenses = <#UIColor#>
-colorProvider.income = <#UIColor#>
-colorProvider.transfers = <#UIColor#>
-colorProvider.uncategorized = <#UIColor#>
-Appearance.provider.colors = colorProvider
-```
+// Create an appearance provider 
+let appearanceProvider = AppearanceProvider(
+    accent: accentColor,
+    expenses: expensesColor,
+    income: incomeColor,
+    transfers: transfersColor,
+    uncategorized: uncategorizedColor,
+)
 
-### Icons
-You can decide if you want to change all icons or just some icons. It is also possible to customize the icons background corner radiuses with  `categoryIconBackgroundCornerRadiusFactor`. This can be set with a factor from `0.0` to `1.0` where `0.0` results in a square shape and `1.0` , which is the default value, makes a circle.
+// Update the appearance
+Appearance.provider = appearanceProvider
 
-### Themes
-You can configure colors, font and icons by providing Tink PFM SDK with a `ColorProviding` , `IconProviding` and `FontProviding` type respectively. Tink PFM SDK also provides a `AppearanceProvider` type that can be used to easily customize the Tink PFM SDK views. 
-
-```swift
-let colorProvider = ColorProvider()
-let fontProvider = FontProvider()
-let iconProvider = IconProvider()
-colorProvider.accent = <#UIColor#>
-colorProvider.expenses = <#UIColor#>
-colorProvider.income = <#UIColor#>
-colorProvider.transfers = <#UIColor#>
-colorProvider.uncategorized = <#UIColor#>
-fontProvider.lightFont = <#UIFont#>
-fontProvider.regularFont = <#UIFont#>
-fontProvider.semiBoldFont = <#UIFont#>
-fontProvider.boldFont = <#UIFont#>
-iconProvider.wellness = <#UIImage#>
-iconProvider.house = <#UIImage#>
-iconProvider.entertainment = <#UIImage#>
-iconProvider.shopping = <#UIImage#>
-iconProvider.categoryIconBackgroundCornerRadiusFactor = <#CGFloat#>
-
-Appearance.provider = AppearenceProvider(colors: colorProvider, fonts: fontProvder, icons: iconProvider)
-```
-
-## Caching
-
-The SDK will cache fetched data in memory. If the user logs out, you need to reset the cache to make sure there won't be any cached data presented to the wrong user. 
-
-```swift
-Tink.shared.resetCache()
 ```
 
 ## Localization
