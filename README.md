@@ -12,28 +12,59 @@ Drag the `TinkPFMUI.xcframework` into the  _Frameworks, Libraries, and Embedded 
 
 You should now be able to `import TinkPFMUI` within your project.
 
-## Fetching data
+## Initialization
 
 Tink PFM SDK needs a valid access token for a specific user to function correctly. Since Tink PFM SDK does not handle any type of authentication, this needs to be done by your backend. 
 See [this link](https://docs.tink.com/api/#oauth) for more info on how this is done. Once you have an access token you pass it on to your `Tink` instance.
 
-```swift 
-Tink.shared.setCredential(.accessToken(<#String#>))
+```swift
+Tink.shared.setCredential(.accessToken(accessToken))
 ```
 
-## Displaying the Finance Overview
+Once you have a valid access token you can create a `FinanceOverviewViewController`.
 
-Create a `FinanceOverviewViewController` and provide which sections should be displayed. Then add it to e.g. a `UITabBarController`.
 ```swift
-let financeOverviewViewController = FinanceOverviewViewController(layoutSections: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
-tabBarController.viewControllers?.append(financeOverviewViewController)
+let financeOverviewViewController = FinanceOverviewViewController(features: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
+let navigationController = UINavigationController(rootViewController: financeOverviewViewController)
+```
+
+4. Present the view controller, for example in a `UITabbarController`:
+
+```swift
+tabBarController.viewControllers?.append(navigationController)
 ```
 
 ## Refreshing access tokens
-User access tokens expire after a set amount of time. You can keep your user logged in by exchanging your refresh token for a new access token (see Tink docs) and passing it to the Tink PFM SDK. This will overwrite the token that the fragment was initialzed with. If needed you can also refresh the statistics, accounts, and latest transactions:
-```swift 
-Tink.shared.setCredential(.accessToken(<#String#>))
+ 
+User access tokens expire after a set amount of time. You can keep your user logged in by [exchanging your refresh token](https://docs.tink.com/api/#oauth) for a new access token and passing it to the Tink PFM SDK. This will replace the previous token that was used. If needed you can also refresh the statistics, accounts and latest transactions.
+
+```swift
+Tink.shared.setCredential(.accessToken(accessToken))
 Tink.shared.refresh()
+```
+
+## Creating a custom Tink instance
+
+You can create your own Tink instance if you prefer. This might be used if you would like full control over the lifetime of the Tink object or if you need to access more advanced features like certificate pinning. 
+
+1. Create a configuration:
+
+```swift
+let configuration = Tink.Configuration(endpoint: .custom(url: customEndpoint), certificate: certificate)
+```
+
+*The SSL certificate is used for certificate pinning. This is optional and you can choose to set it depending on your requirements.*
+
+2. Create a `Tink` instance using your configuration:
+
+```swift
+let tink = Tink(configuration: configuration)
+```
+
+3. The `Tink` instance can be added to view controllers during initialization:
+
+```swift
+let financeOverviewViewController = FinanceOverviewViewController(tink: tink, features: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
 ```
 
 ## Customization 
