@@ -11,9 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         tabBarController.tabBar.isTranslucent = false
 
-        let configuration = try! Tink.Configuration(clientID: "YOUR_CLIENT_ID", redirectURI: URL(string: "REDIRECT_URL")!, environment: .production)
+        let configuration = Tink.Configuration(environment: .production)
         let tink = Tink(configuration: configuration)
-        tink.userSession = .accessToken("YOUR_ACCESS_TOKEN")
+        tink.setCredential(.accessToken("YOUR_ACCESS_TOKEN"))
 
         let colorProvider = ColorProvider()
         colorProvider.accent = .systemBlue

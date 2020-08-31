@@ -11,7 +11,6 @@
 		20C24BAD241A398200EB5927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C24BAC241A398200EB5927 /* Assets.xcassets */; };
 		20DBE5182424F86C005AA1B9 /* TinkPFMUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBE5172424F86C005AA1B9 /* TinkPFMUI.xcframework */; };
 		20DBE5192424F86C005AA1B9 /* TinkPFMUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBE5172424F86C005AA1B9 /* TinkPFMUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9D64F0B824EAD233007E40AB /* TinkCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9D64F0B724EAD233007E40AB /* TinkCore */; };
 		9DC592592395548000C9A5F1 /* DebugAnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */; };
 		9DDD67A82368850500507DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD67A72368850500507DF3 /* AppDelegate.swift */; };
 		9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */; };
@@ -49,7 +48,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DBE5182424F86C005AA1B9 /* TinkPFMUI.xcframework in Frameworks */,
-				9D64F0B824EAD233007E40AB /* TinkCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,9 +109,6 @@
 			dependencies = (
 			);
 			name = PFMExampleApp;
-			packageProductDependencies = (
-				9D64F0B724EAD233007E40AB /* TinkCore */,
-			);
 			productName = PFMExampleApp;
 			productReference = 9DDD67A42368850500507DF3 /* PFMExampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -142,9 +137,6 @@
 				sv,
 			);
 			mainGroup = 9DDD679B2368850500507DF3;
-			packageReferences = (
-				9D64F0B624EAD233007E40AB /* XCRemoteSwiftPackageReference "tink-core-ios" */,
-			);
 			productRefGroup = 9DDD67A52368850500507DF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,25 +370,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9D64F0B624EAD233007E40AB /* XCRemoteSwiftPackageReference "tink-core-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tink-ab/tink-core-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9D64F0B724EAD233007E40AB /* TinkCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9D64F0B624EAD233007E40AB /* XCRemoteSwiftPackageReference "tink-core-ios" */;
-			productName = TinkCore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DDD679C2368850500507DF3 /* Project object */;
 }
