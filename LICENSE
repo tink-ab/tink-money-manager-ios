@@ -1,0 +1,69 @@
+TERMS AND CONDITIONS FOR TINK PFM SDK - v.1.0
+
+1. Introduction
+
+1.1. The PFM SDK is provided to customers of Tink that have subscribed to Tink’s PFM service under a Technology License and Services Agreement.
+1.2. By installing and/or using PFM SDK, you agree to be bound by the terms and conditions of this Agreement and warrant that you are authorized to enter into agreements on behalf of the Licensee. 
+
+2. Definitions 
+
+2.1. "Affiliate" means, with respect to an entity, that another entity is controlling, controlled by, or under common control with that entity where “control” shall mean direct or indirect ownership of fifty percent or more of the share capital or voting interest in such company or other entity.
+2.2. “Licensee” means the natural person or a legal entity that is granted the license to the PFM SDK or otherwise uses the license to the PFM SDK in accordance with this Agreement.
+2.3. “Party” means Licensee and Tink respectively and “Parties” means Licensee and Tink jointly.
+2.4. “Agreement” means these terms and conditions.
+2.5. “Technology License and Services Agreement” means the agreement between the Parties for the provision of PFM and/or payment services.
+
+3. License
+
+3.1. Tink grants Licensee a personal, non-exclusive, non-transferable right to install and use the copy of the PFM SDK in the form provided, solely for use in connection with Tink products and services under the Technology License and Services Agreement. 
+3.2. Licensee has no right to copy or otherwise reproduce, modify, decompile, disassemble, reverse engineer, or by any other means attempt to recreate the source code of the PFM SDK except as expressly authorized herein or to the extent permitted under compulsory law, provided, however, where the Licensee has such rights under compulsory law, Licensee will provide Tink with reasonably detailed information regarding any intended copying, reproducing, modification, decompilation, disassembling, reverse engineering or re-creating of the source code. 
+
+4. Third party tools
+
+4.1. Any third-party tools or software included in the SDK may also be subject to separate license agreement with such third party.
+
+5. Intellectual Property Rights
+
+5.1. The title to and ownership of, and all intellectual property rights, including but not limited to copyright, and all other rights to, the PFM SDK, including any derivatives thereof, shall remain with Tink or its third-party licensors. Thus, this Agreement does not imply that any other rights are granted to the Licensee other than the non-exclusive license as set out in Section 3.  
+5.2. Nothing in this Agreement gives Licensee a right to use any of Tink’ trade names, trademarks, service marks, logos, domain names, or other distinctive brand features except to the extent such brand features are included in the PFM SDK.
+
+6. Warranty
+
+6.1. Except as expressly specified herein, the PFM SDK and any additional services are provided “as is” and “as available” without warranty of any kind, express or implied. Tink does not warrant that the PFM SDK will be compatible with any licensee application or environment or otherwise meet Licensee´s requirements, or that operation will be uninterrupted or error-free.
+
+7. Limitation of Liability
+
+7.1. Licensee assumes the entire risk of using the PFM SDK. Tink is under no circumstances liable for direct damages, indirect damages, special damages, consequential damages such as, but not limited to, loss of profits or loss of data, which may result from the use of the PFM SDK. 
+
+8. Indemnification
+
+8.1. To the maximum extent permitted by law, the Licensee agrees to defend, indemnify and hold harmless Tink, Tink’s Affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including attorneys’ fees) relating to (i) the Licensee’s use of the PFM SDK, (ii) any application the Licensee develops with the use of the PFM SDK, including a claim that such application infringes or threatens to infringe any intellectual property right of any person, and (iii) any non-compliance by the Licensee with this Agreement.
+
+9. Support
+
+9.1. Tink has no obligation to provide support for the PFM SDK or any applications developed by Licensee using the PFM SDK.
+
+10. New Versions
+
+10.1. The terms and conditions of this Agreement applies automatically to new releases or changes of the PFM SDK, unless Tink provides other terms along with the update or change. 
+
+11. Termination
+
+11.1. Without prejudice to any other rights or remedies, each Party may terminate the Agreement at its sole discretion at any time. 
+11.2. The Agreement will also terminate if Licensee fails to comply with the terms of the Agreement or are otherwise in violation of the Swedish Copyright Act (1960:729) or other applicable laws or regulations relating to the license or the PFM SDK under this Agreement.
+11.3. All rights granted to the Licensee, including but not limited to the right to use the PFM SDK, will immediately cease upon termination of the Agreement.
+
+12. Waiver
+
+12.1. The failure of either Party to enforce its rights in accordance with this Agreement shall in no way be construed to be a present or future waiver of such provisions, nor in any way affect the ability of either Party to enforce every such provision thereafter. The express waiver by either Party of any provision, condition or requirement of this Agreement shall not constitute a waiver of any future obligation to comply with such provision, condition or requirement.
+
+13. Miscellaneous 
+
+13.1. Assignment. Neither Party may sell, assign or transfer any of its obligations and/or rights under this Agreement without the prior written consent of the other Party.
+13.2. Entire Agreement. This Agreement supersedes all prior agreements and understandings (whether written or oral) between the Parties with respect to the subject matter hereof.
+13.3. Severability. In the event that any provision in the Agreement is found invalid or unenforceable pursuant to judicial decree or decision, such provision shall be deemed to apply only to the maximum extent permitted by law, and the remainder of the Agreement shall remain valid and enforceable according to its terms.
+13.4. Survival. The provisions of the Agreement that by their nature extend beyond the expiration date or other termination of the Agreement shall survive and remain in effect until all obligations are satisfied.
+
+14. Law and Dispute Resolution
+
+14.1. This Agreement shall be governed by and construed in accordance with the laws of Sweden. Any dispute, controversy or claim arising out of, or in connection with, this Undertaking, or the breach, termination or invalidity of the Undertaking, shall be settled by arbitration in accordance with the Rules of the Arbitration Institute of the Stockholm Chamber of Commerce. The place of arbitration shall be Stockholm, Sweden. The language to be used in the arbitral proceedings shall be English.
