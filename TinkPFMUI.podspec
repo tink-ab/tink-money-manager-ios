@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name     = 'TinkPFMUI'
   s.version  = '0.9.8'
-  s.license  = 'Tink AB'
+  s.license = { :type => 'Tink', :file => 'LICENSE' }
   s.authors  = { 'Tink AB' => 'mobile@tink.se' }
   s.homepage = 'https://tink.com'
   s.summary = 'Tink PFM UI SDK.'
