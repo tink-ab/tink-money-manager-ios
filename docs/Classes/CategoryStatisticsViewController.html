@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CategoryStatisticsViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CategoryStatisticsViewController" class="dashAnchor"></a>
+    <a title="CategoryStatisticsViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TinkPFMUI 0.9.8 Docs</a> (45% documented)</p>
+        <p class="header-right"><a href="https://github.com/tink-ab/tink-pfm-sdk-ios"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TinkPFMUI Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CategoryStatisticsViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AccountDetailsViewController.html">AccountDetailsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ActionableInsightsViewController.html">ActionableInsightsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ActionableInsightsViewController/EmptyState.html">– EmptyState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategorizeTransactionViewController.html">CategorizeTransactionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategoryStatisticsNavigationControllerDelegate.html">CategoryStatisticsNavigationControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategoryStatisticsViewController.html">CategoryStatisticsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CategoryStatisticsViewController/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ColorProvider.html">ColorProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FinanceOverviewViewController.html">FinanceOverviewViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FinanceOverviewViewController/Feature.html">– Feature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FontProvider.html">FontProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IconProvider.html">IconProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Tink.html">Tink</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Tink/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TransactionsViewController.html">TransactionsViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Appearance.html">Appearance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EventTracker.html">EventTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Font.html">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Font/Weight.html">– Weight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Font/Size.html">– Size</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ScreenEvent.html">ScreenEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SessionCredential.html">SessionCredential</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGAffineTransform.html">CGAffineTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGFloat.html">CGFloat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGPoint.html">CGPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Comparable.html">Comparable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DateInterval.html">DateInterval</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FloatingPoint.html">FloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Locale.html">Locale</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSLayoutConstraint.html">NSLayoutConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NumberFormatter.html">NumberFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Range.html">Range</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SecCertificate.html">SecCertificate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SecTrust.html">SecTrust</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UINavigationBar.html">UINavigationBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIViewController.html">UIViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/WeeklySummaryExpensesByCategoryItemView">WeeklySummaryExpensesByCategoryItemView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/WeeklySummaryExpensesByDayItemView">WeeklySummaryExpensesByDayItemView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AccountDetailsViewControllerDelegate.html">AccountDetailsViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ActionableInsightsViewControllerDelegate.html">ActionableInsightsViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AppearanceProviding.html">AppearanceProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CategorizeTransactionViewControllerDelegate.html">CategorizeTransactionViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ColorProviding.html">ColorProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EventTracking.html">EventTracking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FontProviding.html">FontProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IconProviding.html">IconProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TransactionsViewControllerDelegate.html">TransactionsViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Account.html">Account</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ActionableInsight.html">ActionableInsight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ActionableInsight/Insight.html">– Insight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ActionableInsight.html#/Action">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AppearanceProvider.html">AppearanceProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Budget.html">Budget</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category.html">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category/Code.html">– Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Category/Kind.html">– Kind</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Identifier.html">Identifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TinkError.html">TinkError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TinkError/Status.html">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Transaction.html">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionsQuery.html">TransactionsQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionsQuery/Sort.html">– Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransactionsQuery/Order.html">– Order</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI35ActionableInsightListViewControllera">ActionableInsightListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI43ActionableInsightListViewControllerDelegatea">ActionableInsightListViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI12CategoryNodea">CategoryNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9TinkPFMUI12CategoryTypea">CategoryType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CategoryStatisticsViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">CategoryStatisticsViewController</span> <span class="p">:</span> <span class="kt">UINavigationController</span></code></pre>
+
+                </div>
+              </div>
+            <p>A view controller for displaying statistics for categories.</p>
+
+<p>A <code>CategoryStatisticsViewController</code> displays an interface for browsing combined sum of categories by month.</p>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>Creating a statistics view requires you to provide which type of categories to display statistics for.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">categoryStatisticsViewController</span> <span class="o">=</span> <span class="kt">CategoryStatisticsViewController</span><span class="p">(</span><span class="nv">tink</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Tink</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">categoryType</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Category</span><span class="o">.</span><span class="kt">Kind</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="nf">present</span><span class="p">(</span><span class="n">categoryStatisticsViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+<p>The <code>CategoryStatisticsViewController</code> manages it&rsquo;s own <code>UINavigationController</code> for navigating between subcategories and transaction lists.
+It&rsquo;s designed to be presented modally or in a tab but cannot be pushed into a <code>UINavigationController</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI32CategoryStatisticsViewControllerC5StyleO"></a>
+                    <a name="//apple_ref/swift/Enum/Style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI32CategoryStatisticsViewControllerC5StyleO">Style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Classes/CategoryStatisticsViewController/Style.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Style</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift#L20-L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI32CategoryStatisticsViewControllerC12categoryTypeAA0C0V4KindOvp"></a>
+                    <a name="//apple_ref/swift/Property/categoryType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI32CategoryStatisticsViewControllerC12categoryTypeAA0C0V4KindOvp">categoryType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of categories that the view controller is displaying statistics for.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">categoryType</span><span class="p">:</span> <span class="kt"><a href="../Structs/Category.html">Category</a></span><span class="o">.</span><span class="kt">Kind</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI32CategoryStatisticsViewControllerC5styleAC5StyleOvp"></a>
+                    <a name="//apple_ref/swift/Property/style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI32CategoryStatisticsViewControllerC5styleAC5StyleOvp">style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of visualization to use when displaying statistics.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/CategoryStatisticsViewController/Style.html">Style</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI32CategoryStatisticsViewControllerC026shouldShowCurrencySymbolInD5TotalSbvp"></a>
+                    <a name="//apple_ref/swift/Property/shouldShowCurrencySymbolInStatisticsTotal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI32CategoryStatisticsViewControllerC026shouldShowCurrencySymbolInD5TotalSbvp">shouldShowCurrencySymbolInStatisticsTotal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Determines whether a currency symbol should be shown for the total amount in the statistics pie charts.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldShowCurrencySymbolInStatisticsTotal</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift#L37">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Creating%20a%20View%20Controller"></a>
+                <a name="//apple_ref/swift/Section/Creating a View Controller" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Creating%20a%20View%20Controller"></a>
+                  <h3 class="section-name"><p>Creating a View Controller</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9TinkPFMUI32CategoryStatisticsViewControllerC4tink12categoryType5styleAcA0A0C_AA0C0V4KindOAC5StyleOtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(tink:categoryType:style:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9TinkPFMUI32CategoryStatisticsViewControllerC4tink12categoryType5styleAcA0A0C_AA0C0V4KindOAC5StyleOtcfc">init(tink:categoryType:style:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a new view controller.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tink</span><span class="p">:</span> <span class="kt"><a href="../Classes/Tink.html">Tink</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">shared</span><span class="p">,</span> <span class="nv">categoryType</span><span class="p">:</span> <span class="kt"><a href="../Structs/Category.html">Category</a></span><span class="o">.</span><span class="kt">Kind</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/CategoryStatisticsViewController/Style.html">Style</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">pieChart</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tink</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A configured <code><a href="../Classes/Tink.html">Tink</a></code> object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>categoryType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type of categories to display statistics for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The type of visualization to use when displaying statistics. Defaults to a pie chart style.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift#L46-L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@TinkPFMUI@objc(cs)CategoryStatisticsViewController(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@TinkPFMUI@objc(cs)CategoryStatisticsViewController(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">coder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift#L58-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/View%20Lifecycle"></a>
+                <a name="//apple_ref/swift/Section/View Lifecycle" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/View%20Lifecycle"></a>
+                  <h3 class="section-name"><p>View Lifecycle</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@TinkPFMUI@objc(cs)CategoryStatisticsViewController(im)viewDidLoad"></a>
+                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@TinkPFMUI@objc(cs)CategoryStatisticsViewController(im)viewDidLoad">viewDidLoad()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/tink-ab/tink-pfm-sdk-ios/tree/v0.9.8/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift#L66-L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://tink.com" target="_blank" rel="external">Tink</a>. All rights reserved. (Last updated: 2020-08-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,3526 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Appearance/ColorProvider.swift",
+      "line": 61,
+      "symbol": "ColorProvider.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Appearance/FontProvider.swift",
+      "line": 14,
+      "symbol": "FontProvider.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Appearance/IconProvider.swift",
+      "line": 60,
+      "symbol": "IconProvider.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Appearance.swift",
+      "line": 3,
+      "symbol": "Appearance",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 8,
+      "symbol": "AppearanceProviding.colors",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 9,
+      "symbol": "AppearanceProviding.icons",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 10,
+      "symbol": "AppearanceProviding.fonts",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 12,
+      "symbol": "AppearanceProviding.colorProviding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 14,
+      "symbol": "AppearanceProviding.iconProviding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 16,
+      "symbol": "AppearanceProviding.fontProviding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 21,
+      "symbol": "AppearanceProvider.colors",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 22,
+      "symbol": "AppearanceProvider.icons",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 23,
+      "symbol": "AppearanceProvider.fonts",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 25,
+      "symbol": "AppearanceProvider.colorProviding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 31,
+      "symbol": "AppearanceProvider.iconProviding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 37,
+      "symbol": "AppearanceProvider.fontProviding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 42,
+      "symbol": "AppearanceProvider.init(colors:fonts:icons:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/AppearanceProviding.swift",
+      "line": 466,
+      "symbol": "AppearanceProvider.init(background:secondaryBackground:label:secondaryLabel:separator:accent:expense:income:transfer:uncategorized:lightFont:regularFont:semiBoldFont:boldFont:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 341,
+      "symbol": "BarChartViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 379,
+      "symbol": "BarChartViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 424,
+      "symbol": "BarChartViewController.scroll(to:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 596,
+      "symbol": "BarChartViewController.collectionView(_:didSelectItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 604,
+      "symbol": "BarChartViewController.collectionView(_:didHighlightItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 609,
+      "symbol": "BarChartViewController.collectionView(_:didUnhighlightItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 618,
+      "symbol": "BarChartViewController.scrollViewDidEndDragging(_:willDecelerate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 624,
+      "symbol": "BarChartViewController.scrollViewDidEndDecelerating(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/BarChartViewController.swift",
+      "line": 628,
+      "symbol": "BarChartViewController.scrollViewDidEndScrollingAnimation(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/Range+CGFloat.swift",
+      "line": 4,
+      "symbol": "Range.cgFloatRange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Bar Chart View Controller/Range+CGFloat.swift",
+      "line": 10,
+      "symbol": "ClosedRange.cgFloatRange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartIconsView.swift",
+      "line": 127,
+      "symbol": "PieChartIconsView.touchesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartIconsView.swift",
+      "line": 134,
+      "symbol": "PieChartIconsView.touchesMoved(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartIconsView.swift",
+      "line": 141,
+      "symbol": "PieChartIconsView.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartIconsView.swift",
+      "line": 148,
+      "symbol": "PieChartIconsView.touchesCancelled(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartIconsView.swift",
+      "line": 155,
+      "symbol": "PieChartIconsView.hitTest(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartIconsView.swift",
+      "line": 204,
+      "symbol": "PieChartIconsView.reloadData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartSegmentLayer.swift",
+      "line": 46,
+      "symbol": "PieChartSegmentLayer.layoutSublayers()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartSegmentLayer.swift",
+      "line": 65,
+      "symbol": "PieChartSegmentLayer.updateStartAngle(_:distance:animationDuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartTitleView+AppearanceConfiguration.swift",
+      "line": 4,
+      "symbol": "PieChartTitleView.ViewModel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartTitleView+AppearanceConfiguration.swift",
+      "line": 5,
+      "symbol": "PieChartTitleView.ViewModel.data(title:value:dateSpan:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartTitleView+AppearanceConfiguration.swift",
+      "line": 6,
+      "symbol": "PieChartTitleView.ViewModel.notAvailable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartView.swift",
+      "line": 276,
+      "symbol": "PieChartView.touchesBegan(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartView.swift",
+      "line": 283,
+      "symbol": "PieChartView.touchesMoved(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartView.swift",
+      "line": 290,
+      "symbol": "PieChartView.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartView.swift",
+      "line": 297,
+      "symbol": "PieChartView.touchesCancelled(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Charts/Pie Chart/PieChartView.swift",
+      "line": 431,
+      "symbol": "PieChartView.unhighlightAndDeselectSegmentIfNeeded(notifyDelegate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Client/Behaviors/ClientBehavior.swift",
+      "line": 12,
+      "symbol": "ClientBehavior.headers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Client/Behaviors/ClientBehavior.swift",
+      "line": 14,
+      "symbol": "ClientBehavior.beforeRequest(request:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Client/Behaviors/ClientBehavior.swift",
+      "line": 15,
+      "symbol": "ClientBehavior.afterSuccess(response:urlResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Client/Behaviors/ClientBehavior.swift",
+      "line": 16,
+      "symbol": "ClientBehavior.afterError(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 8,
+      "symbol": "Color.background",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 9,
+      "symbol": "Color.secondaryBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 10,
+      "symbol": "Color.groupedBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 11,
+      "symbol": "Color.secondaryGroupedBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 12,
+      "symbol": "Color.label",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 13,
+      "symbol": "Color.secondaryLabel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 14,
+      "symbol": "Color.separator",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 15,
+      "symbol": "Color.accent",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 16,
+      "symbol": "Color.secondaryButtonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 18,
+      "symbol": "Color.expenses",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 19,
+      "symbol": "Color.income",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 20,
+      "symbol": "Color.transfers",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 21,
+      "symbol": "Color.uncategorized",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 22,
+      "symbol": "Color.warning",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 27,
+      "symbol": "Color.highlight",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 29,
+      "symbol": "Color.accentBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 30,
+      "symbol": "Color.chevronButton",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 31,
+      "symbol": "Color.chevronButtonDisabled",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 33,
+      "symbol": "Color.expensesIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 34,
+      "symbol": "Color.incomeIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 35,
+      "symbol": "Color.uncategorizedIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 36,
+      "symbol": "Color.transfersIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 38,
+      "symbol": "Color.expensesIconBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 39,
+      "symbol": "Color.incomeIconBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 40,
+      "symbol": "Color.uncategorizedIconBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 41,
+      "symbol": "Color.transfersIconBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 43,
+      "symbol": "Color.expensesChartBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 44,
+      "symbol": "Color.incomeChartBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 46,
+      "symbol": "Color.tertiaryButtonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Colors/Color.swift",
+      "line": 47,
+      "symbol": "Color.tertiaryButtonBackground",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Controllers/BudgetController.swift",
+      "line": 60,
+      "symbol": "BudgetController.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Controllers/BudgetController.swift",
+      "line": 65,
+      "symbol": "BudgetController.categoryCodesForBudget(id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Controllers/TransactionsControllerHelper.swift",
+      "line": 15,
+      "symbol": "TransactionsControllerDelegate.controllerDidStartFetching(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Controllers/TransactionsControllerHelper.swift",
+      "line": 16,
+      "symbol": "TransactionsControllerDelegate.controllerDidFinishFetching(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Controllers/TransactionsControllerHelper.swift",
+      "line": 17,
+      "symbol": "TransactionsControllerDelegate.controller(_:didFailWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Controllers/TransactionsControllerHelper.swift",
+      "line": 116,
+      "symbol": "TransactionsControllerHelper.fetch()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Controllers/TransactionsControllerHelper.swift",
+      "line": 121,
+      "symbol": "TransactionsControllerHelper.fetchMore()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/BudgetFilter+Icon.swift",
+      "line": 2,
+      "symbol": "Budget.Filter.icon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/CGAffineTransform+Extensions.swift",
+      "line": 4,
+      "symbol": "CGAffineTransform.init(scaleAndTranslationForView:in:toAlignWith:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/CGPoint+Extensions.swift",
+      "line": 4,
+      "symbol": "CGPoint.distance(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Calendar+DateInterval.swift",
+      "line": 4,
+      "symbol": "Calendar.dates(in:byAdding:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/CategoryIconMap+CategoryNode.swift",
+      "line": 4,
+      "symbol": "CategoryIconMap.image(for:size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/CategoryIconMap+CategoryNode.swift",
+      "line": 8,
+      "symbol": "CategoryIconMap.image(for:size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/CategoryTree+Helpers.swift",
+      "line": 4,
+      "symbol": "CategoryTree.find(categoryCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/DateInterval+Period.swift",
+      "line": 4,
+      "symbol": "DateInterval.init(dateIntervals:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 4,
+      "symbol": "Locale.init(currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 10,
+      "symbol": "Locale.init(identifier:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 17,
+      "symbol": "Locale.init(identifier:countryCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 24,
+      "symbol": "Locale.init(currencyCode:countryCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 33,
+      "symbol": "Locale.init(languageCode:countryCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 42,
+      "symbol": "Locale.init(languageCode:currencyCode:countryCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 52,
+      "symbol": "Locale.init(identifier:currencyCode:countryCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 60,
+      "symbol": "Locale.init(currencyCode:languageCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Locale+CurrencyCode.swift",
+      "line": 69,
+      "symbol": "Locale.init(fromComponents:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 4,
+      "symbol": "Comparable.clamped(to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 8,
+      "symbol": "Comparable.clamped(min:max:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 108,
+      "symbol": "FloatingPoint.roundedToClosest(_:rule:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 114,
+      "symbol": "CGFloat.roundedToScreenScale(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 119,
+      "symbol": "CGFloat.lerped(a:b:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 123,
+      "symbol": "CGFloat.lerped(a:b:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 127,
+      "symbol": "CGFloat.lerped(a:b:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 131,
+      "symbol": "CGFloat.lerped(a:b:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/MathUtils.swift",
+      "line": 146,
+      "symbol": "UIColor.components()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Month+PeriodKey.swift",
+      "line": 4,
+      "symbol": "Month.init(value:calendar:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/Month+PeriodKey.swift",
+      "line": 13,
+      "symbol": "Month.periodKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/NSLayoutConstraint+Extension.swift",
+      "line": 4,
+      "symbol": "NSLayoutConstraint.withPriority(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/NumberFormatter+Extensions.swift",
+      "line": 4,
+      "symbol": "NumberFormatter.string(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/NumberFormatter+Extensions.swift",
+      "line": 8,
+      "symbol": "NumberFormatter.string(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/ReusableCell.swift",
+      "line": 8,
+      "symbol": "ReusableCell.reuseIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/ReusableCell.swift",
+      "line": 14,
+      "symbol": "UITableView.registerReusableCell(ofType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/ReusableCell.swift",
+      "line": 18,
+      "symbol": "UITableView.dequeueReusableCell(ofType:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/ReusableCell.swift",
+      "line": 25,
+      "symbol": "UITableView.dequeueReusableCell(ofType:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/ReusableCell.swift",
+      "line": 34,
+      "symbol": "UICollectionView.registerReusableCell(ofType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/ReusableCell.swift",
+      "line": 38,
+      "symbol": "UICollectionView.dequeueReusableCell(ofType:for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/SecCertificate+Swift.swift",
+      "line": 4,
+      "symbol": "SecCertificate.copyData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/SecTrust+Swift.swift",
+      "line": 4,
+      "symbol": "SecTrust.evaluate()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/SecTrust+Swift.swift",
+      "line": 52,
+      "symbol": "SecTrust.certificateCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/SecTrust+Swift.swift",
+      "line": 54,
+      "symbol": "SecTrust.certificate(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/UIColor+Extensions.swift",
+      "line": 4,
+      "symbol": "UIColor.init(hex:alpha:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/UIColor+Extensions.swift",
+      "line": 64,
+      "symbol": "UIColor.mixedWith(color:factor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/UIColor+Extensions.swift",
+      "line": 83,
+      "symbol": "UIColor.adjust(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/UILabel+Extensions.swift",
+      "line": 4,
+      "symbol": "UILabel.boundingBox(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/UINavigationBar+Extensions.swift",
+      "line": 4,
+      "symbol": "UINavigationBar.copyAppearance(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/UIView+Extensions.swift",
+      "line": 4,
+      "symbol": "UIView.globalOrigin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/UIView+Extensions.swift",
+      "line": 8,
+      "symbol": "UIView.sizeToFit(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/URLSession+Extensions.swift",
+      "line": 4,
+      "symbol": "URLSession.resourceTask(with:behavior:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Extensions/URLSession+Extensions.swift",
+      "line": 31,
+      "symbol": "URLSession.dataTask(with:behavior:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Accounts/AccountDetailsViewController.swift",
+      "line": 57,
+      "symbol": "AccountDetailsViewController.init(tink:accountId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Accounts/AccountDetailsViewController.swift",
+      "line": 73,
+      "symbol": "AccountDetailsViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Accounts/AccountDetailsViewController.swift",
+      "line": 81,
+      "symbol": "AccountDetailsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Accounts/AccountDetailsViewController.swift",
+      "line": 116,
+      "symbol": "AccountDetailsViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Accounts/AccountDetailsViewController.swift",
+      "line": 209,
+      "symbol": "AccountDetailsViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 4,
+      "symbol": "ActionableInsightListViewController",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 7,
+      "symbol": "ActionableInsightListViewControllerDelegate",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 209,
+      "symbol": "ActionableInsightsViewController.EmptyState",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 210,
+      "symbol": "ActionableInsightsViewController.EmptyState.default",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 211,
+      "symbol": "ActionableInsightsViewController.EmptyState.custom(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 214,
+      "symbol": "ActionableInsightsViewController.emptyState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 305,
+      "symbol": "ActionableInsightsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 389,
+      "symbol": "ActionableInsightsViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 467,
+      "symbol": "ActionableInsightsViewController.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 471,
+      "symbol": "ActionableInsightsViewController.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 485,
+      "symbol": "ActionableInsightsViewController.handleActionForButton(at:inCellAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ActionableInsightsViewController.swift",
+      "line": 571,
+      "symbol": "ActionableInsightsViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ArchivedInsightsViewController.swift",
+      "line": 60,
+      "symbol": "ArchivedInsightsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ArchivedInsightsViewController.swift",
+      "line": 119,
+      "symbol": "ArchivedInsightsViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ArchivedInsightsViewController.swift",
+      "line": 126,
+      "symbol": "ArchivedInsightsViewController.refresh(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ArchivedInsightsViewController.swift",
+      "line": 154,
+      "symbol": "ArchivedInsightsViewController.updateEmptyStateVisibility()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ArchivedInsightsViewController.swift",
+      "line": 162,
+      "symbol": "ArchivedInsightsViewController.collectionView(_:numberOfItemsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/ArchivedInsightsViewController.swift",
+      "line": 166,
+      "symbol": "ArchivedInsightsViewController.collectionView(_:cellForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/CardCellVendor.swift",
+      "line": 29,
+      "symbol": "CardCellVendor.registerCells()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/CardCellVendor.swift",
+      "line": 38,
+      "symbol": "CardCellVendor.dequeueCell(for:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/CardCellVendor.swift",
+      "line": 94,
+      "symbol": "CardCellVendor.cardCollectionViewCell(_:didTapButtonAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/InsightConfiguring.swift",
+      "line": 15,
+      "symbol": "InsightConfiguring.configure(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumBudgetSummaryCardCollectionViewCell+ActionableInsight.swift",
+      "line": 6,
+      "symbol": "MediumBudgetSummaryCardCollectionViewCell.configure(with:color:budgetProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumBudgetSummaryCardCollectionViewCell+ActionableInsight.swift",
+      "line": 16,
+      "symbol": "MediumBudgetSummaryCardView.configure(with:budgetProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumBudgetSummaryCardCollectionViewCell+ActionableInsight.swift",
+      "line": 22,
+      "symbol": "BudgetSummaryView.configure(with:budgetProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumBudgetSummaryCardCollectionViewCell.swift",
+      "line": 48,
+      "symbol": "MediumBudgetSummaryCardCollectionViewCell.actionButtonRow(_:didTapButtonAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumImageCardCollectionViewCell+ActionableInsight.swift",
+      "line": 6,
+      "symbol": "MediumImageCardCollectionViewCell.configure(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumImageCardCollectionViewCell.swift",
+      "line": 48,
+      "symbol": "MediumImageCardCollectionViewCell.actionButtonRow(_:didTapButtonAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumTransactionCardCollectionViewCell+ActionableInsight.swift",
+      "line": 6,
+      "symbol": "MediumTransactionCardCollectionViewCell.configure(with:categoryProvider:transactionProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumTransactionCardCollectionViewCell+ActionableInsight.swift",
+      "line": 22,
+      "symbol": "MediumTransactionCardHeaderView.configure(with:categoryProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumTransactionCardCollectionViewCell.swift",
+      "line": 48,
+      "symbol": "MediumTransactionCardCollectionViewCell.actionButtonRow(_:didTapButtonAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByCategoryCardCollectionViewCell+ActionableInsight.swift",
+      "line": 6,
+      "symbol": "MediumWeeklySummaryExpensesByDayCardCollectionViewCell.configure(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByCategoryCardCollectionViewCell+ActionableInsight.swift",
+      "line": 13,
+      "symbol": "WeeklySummaryExpensesByDayView.configure(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByCategoryCardCollectionViewCell+ActionableInsight.swift",
+      "line": 35,
+      "symbol": "WeeklySummaryExpensesByDayItemView.Model.init(dataPoint:maxAmount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByCategoryCardCollectionViewCell.swift",
+      "line": 48,
+      "symbol": "MediumWeeklySummaryExpensesByCategoryCardCollectionViewCell.actionButtonRow(_:didTapButtonAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByDayCardCollectionViewCell+ActionableInsight.swift",
+      "line": 6,
+      "symbol": "MediumWeeklySummaryExpensesByCategoryCardCollectionViewCell.configure(with:categoryProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByDayCardCollectionViewCell+ActionableInsight.swift",
+      "line": 13,
+      "symbol": "WeeklySummaryExpensesByCategoryView.configure(with:categoryProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByDayCardCollectionViewCell+ActionableInsight.swift",
+      "line": 25,
+      "symbol": "WeeklySummaryExpensesByCategoryItemView.Model.init(dataPoint:order:categoryProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/MediumWeeklySummaryExpensesByDayCardCollectionViewCell.swift",
+      "line": 48,
+      "symbol": "MediumWeeklySummaryExpensesByDayCardCollectionViewCell.actionButtonRow(_:didTapButtonAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/SmallCardCollectionViewCell+ActionableInsight.swift",
+      "line": 6,
+      "symbol": "SmallCardCollectionViewCell.configure(with:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/SmallCardCollectionViewCell+ActionableInsight.swift",
+      "line": 11,
+      "symbol": "SmallCardCollectionViewCell.configure(with:color:budgetProvider:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Cards/SmallCardCollectionViewCell.swift",
+      "line": 49,
+      "symbol": "SmallCardCollectionViewCell.actionButtonRow(_:didTapButtonAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/ActionableInsight+ArchivedDescription.swift",
+      "line": 4,
+      "symbol": "ActionableInsight.archivedDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/BudgetSummary+RESTInsightData.swift",
+      "line": 2,
+      "symbol": "BudgetSummary.init(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/BudgetSummary+RESTInsightData.swift",
+      "line": 6,
+      "symbol": "BudgetSummary.init(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/Color+RESTInsightData.swift",
+      "line": 4,
+      "symbol": "Color.makeInsightColor(restInsightData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/Illustration+RESTInsightData.swift",
+      "line": 2,
+      "symbol": "ActionableInsight.Insight.Illustration.init(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/PeriodSummaryExpensesByCategory+RESTInsightData.swift",
+      "line": 4,
+      "symbol": "PeriodSummaryExpensesByCategory.init(restWeeklyExpensesByCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/PeriodSummaryExpensesByCategory+RESTInsightData.swift",
+      "line": 8,
+      "symbol": "PeriodSummaryExpensesByCategory.init(restMonthlyExpensesByCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/PeriodSummaryExpensesByCategory+RESTInsightData.swift",
+      "line": 14,
+      "symbol": "PeriodSummaryExpensesByCategory.DataPoint.init(categorySpending:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/PeriodSummaryExpensesByCategory+RESTInsightData.swift",
+      "line": 20,
+      "symbol": "PeriodSummaryExpensesByCategory.DataPoint.init(categorySpending:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/WeeklySummaryExpensesByDay+RESTInsightData.swift",
+      "line": 4,
+      "symbol": "WeeklySummaryExpensesByDay.init(restWeeklyExpensesByDay:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Mappings/WeeklySummaryExpensesByDay+RESTInsightData.swift",
+      "line": 17,
+      "symbol": "WeeklySummaryExpensesByDay.DataPoint.init(expenseStatistics:date:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Models/PeriodSummaryExpensesByCategory.swift",
+      "line": 13,
+      "symbol": "PeriodSummaryExpensesByCategory.DataPoint",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Models/WeeklySummaryExpensesByDay.swift",
+      "line": 16,
+      "symbol": "WeeklySummaryExpensesByDay.DataPoint",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Views/ActionButtonRow+ActionableInsight.swift",
+      "line": 4,
+      "symbol": "ActionButtonRow.makeButtons(for:primaryButtonStyle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Actionable Insights/Views/ActionButtonRow.swift",
+      "line": 9,
+      "symbol": "ActionButtonRowDelegate.actionButtonRow(_:stateChangedAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 115,
+      "symbol": "CategorizeTransactionViewController.init(tink:transactionId:categoryTypes:categoryId:showSimilarTransactions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 173,
+      "symbol": "CategorizeTransactionViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 189,
+      "symbol": "CategorizeTransactionViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 195,
+      "symbol": "CategorizeTransactionViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 295,
+      "symbol": "CategorizeTransactionViewController.categoryPickerViewController(_:shouldSelectCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 303,
+      "symbol": "CategorizeTransactionViewController.categoryPickerViewController(_:didSelectCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 311,
+      "symbol": "CategorizeTransactionViewController.categoryPickerViewController(_:shouldToggleExpandCellForCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 324,
+      "symbol": "CategorizeTransactionViewController.categoryPickerViewControllerDidCancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategorizeTransactionViewController.swift",
+      "line": 335,
+      "symbol": "CategorizeTransactionViewController.similarTransactionsPickerViewController(_:didSelect:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 12,
+      "symbol": "CategoryPickerViewControllerDelegate.categoryPickerViewController(_:shouldSelectCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 16,
+      "symbol": "CategoryPickerViewControllerDelegate.categoryPickerViewController(_:titleForCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 20,
+      "symbol": "CategoryPickerViewControllerDelegate.categoryPickerViewController(_:shouldToggleExpandCellForCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 67,
+      "symbol": "CategoryPickerViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 108,
+      "symbol": "CategoryPickerViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 316,
+      "symbol": "CategoryPickerViewController.numberOfSections(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 320,
+      "symbol": "CategoryPickerViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 331,
+      "symbol": "CategoryPickerViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/CategoryPickerViewController.swift",
+      "line": 368,
+      "symbol": "CategoryPickerViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 207,
+      "symbol": "SimilarTransactionsPickerViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 253,
+      "symbol": "SimilarTransactionsPickerViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 262,
+      "symbol": "SimilarTransactionsPickerViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 447,
+      "symbol": "SimilarTransactionsPickerViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 451,
+      "symbol": "SimilarTransactionsPickerViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 463,
+      "symbol": "SimilarTransactionsPickerViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 468,
+      "symbol": "SimilarTransactionsPickerViewController.tableView(_:didDeselectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Categorization/View Controllers/SimilarTransactionsPickerViewController.swift",
+      "line": 477,
+      "symbol": "SimilarTransactionsPickerViewController.gestureRecognizerShouldBegin(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsMainTransition.swift",
+      "line": 8,
+      "symbol": "FinanceOverviewViewController.pieChartViewForMainTransition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsMainTransition.swift",
+      "line": 12,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.pieChartViewForMainTransition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsNavigationControllerDelegate.swift",
+      "line": 3,
+      "symbol": "CategoryStatisticsNavigationControllerDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsNavigationControllerDelegate.swift",
+      "line": 4,
+      "symbol": "CategoryStatisticsNavigationControllerDelegate.navigationController(_:willShow:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsNavigationControllerDelegate.swift",
+      "line": 8,
+      "symbol": "CategoryStatisticsNavigationControllerDelegate.navigationController(_:didShow:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsNavigationControllerDelegate.swift",
+      "line": 12,
+      "symbol": "CategoryStatisticsNavigationControllerDelegate.navigationControllerSupportedInterfaceOrientations(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsNavigationControllerDelegate.swift",
+      "line": 16,
+      "symbol": "CategoryStatisticsNavigationControllerDelegate.navigationControllerPreferredInterfaceOrientationForPresentation(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsNavigationControllerDelegate.swift",
+      "line": 20,
+      "symbol": "CategoryStatisticsNavigationControllerDelegate.navigationController(_:interactionControllerFor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsNavigationControllerDelegate.swift",
+      "line": 24,
+      "symbol": "CategoryStatisticsNavigationControllerDelegate.navigationController(_:animationControllerFor:from:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsPieChartTopListTransition.swift",
+      "line": 8,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.pieChartViewForPieChartTopListTransition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsPieChartTopListTransition.swift",
+      "line": 17,
+      "symbol": "CategoryStatisticsPieChartViewController.pieChartViewForPieChartTopListTransition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsTopListTransition.swift",
+      "line": 9,
+      "symbol": "CategoryStatisticsTopSubcategoriesMonthPickerViewController.pieChartView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsTopListTransition.swift",
+      "line": 11,
+      "symbol": "CategoryStatisticsTopSubcategoriesMonthPickerViewController.topListView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsTopListTransition.swift",
+      "line": 15,
+      "symbol": "CategoryStatisticsTopTransactionsMonthPickerViewController.pieChartView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsTopListTransition.swift",
+      "line": 16,
+      "symbol": "CategoryStatisticsTopTransactionsMonthPickerViewController.topListView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsTopListTransition.swift",
+      "line": 20,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.topListView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/CategoryStatisticsTopListTransition.swift",
+      "line": 24,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.topListView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Bar Chart/CategoryStatisticsBarChartViewController.swift",
+      "line": 96,
+      "symbol": "CategoryStatisticsBarChartViewController.monthPickerBarViewController(_:viewControllerForMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Bar Chart/CategoryStatisticsBarChartViewController.swift",
+      "line": 104,
+      "symbol": "CategoryStatisticsBarChartViewController.monthPickerBarViewController(_:canSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Bar Chart/CategoryStatisticsBarChartViewController.swift",
+      "line": 108,
+      "symbol": "CategoryStatisticsBarChartViewController.monthPickerBarViewController(_:didSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Bar Chart/CategoryStatisticsBarChartViewController.swift",
+      "line": 155,
+      "symbol": "CategoryStatisticsBarChartViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Bar Chart/CategoryStatisticsBarChartViewModel.swift",
+      "line": 112,
+      "symbol": "CategoryStatisticsBarChartViewModel.makeBarChartViewModel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Bar Chart/CategoryStatisticsBarChartViewModel.swift",
+      "line": 168,
+      "symbol": "CategoryStatisticsBarChartViewModel.makeTransactionsQuery()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Bar Chart/CategoryStatisticsBarChartViewModel.swift",
+      "line": 178,
+      "symbol": "CategoryStatisticsBarChartViewModel.makeTransactionsQuery(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 99,
+      "symbol": "CategoryStatisticsOverTimeViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 118,
+      "symbol": "CategoryStatisticsOverTimeViewController.toolbarItems",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 210,
+      "symbol": "CategoryStatisticsOverTimeViewController.currentDateInterval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 262,
+      "symbol": "CategoryStatisticsOverTimeViewController.categoryPickerViewController(_:didSelectCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 267,
+      "symbol": "CategoryStatisticsOverTimeViewController.categoryPickerViewControllerDidCancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 271,
+      "symbol": "CategoryStatisticsOverTimeViewController.categoryPickerViewController(_:titleForCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 276,
+      "symbol": "CategoryStatisticsOverTimeViewController.categoryPickerViewController(_:shouldToggleExpandCellForCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 353,
+      "symbol": "CategoryStatisticsOverTimeViewController.updateToolbarItems()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 373,
+      "symbol": "CategoryStatisticsOverTimeViewController.updateLongPressBarChartTitle(amount:month:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 404,
+      "symbol": "CategoryStatisticsOverTimeViewController.barChartViewController(_:barPatternForMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 408,
+      "symbol": "CategoryStatisticsOverTimeViewController.barChartViewController(_:didHighlightMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 416,
+      "symbol": "CategoryStatisticsOverTimeViewController.barChartViewController(_:didUnhighlightMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 420,
+      "symbol": "CategoryStatisticsOverTimeViewController.barChartViewController(_:didSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsOverTimeViewController.swift",
+      "line": 425,
+      "symbol": "CategoryStatisticsOverTimeViewController.barChartViewController(_:didEndScrolling:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsPieChartViewController.swift",
+      "line": 73,
+      "symbol": "CategoryStatisticsPieChartViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsPieChartViewController.swift",
+      "line": 140,
+      "symbol": "CategoryStatisticsPieChartViewController.isInNarrowContext",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsPieChartViewController.swift",
+      "line": 142,
+      "symbol": "CategoryStatisticsPieChartViewController.currentPeriodDateInterval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsPieChartViewController.swift",
+      "line": 216,
+      "symbol": "CategoryStatisticsPieChartViewController.monthPickerBarViewController(_:canSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsPieChartViewController.swift",
+      "line": 220,
+      "symbol": "CategoryStatisticsPieChartViewController.monthPickerBarViewController(_:didSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 73,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 108,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 132,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.gestureRecognizerShouldBegin(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 140,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.monthPickerViewController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 170,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.monthPickerBarViewController(_:viewControllerForMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 187,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.monthPickerBarViewController(_:canSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 194,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.monthPickerBarViewController(_:didSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 202,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.categoryStatisticsPieChartViewController(_:didChangeMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSegmentedControlViewController.swift",
+      "line": 270,
+      "symbol": "CategoryStatisticsSegmentedControlViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSubcategoryListViewController.swift",
+      "line": 43,
+      "symbol": "CategoryStatisticsSubcategoryListViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSubcategoryListViewController.swift",
+      "line": 57,
+      "symbol": "CategoryStatisticsSubcategoryListViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSubcategoryListViewController.swift",
+      "line": 61,
+      "symbol": "CategoryStatisticsSubcategoryListViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSubcategoryListViewController.swift",
+      "line": 76,
+      "symbol": "CategoryStatisticsSubcategoryListViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSubcategoryListViewController.swift",
+      "line": 81,
+      "symbol": "CategoryStatisticsSubcategoryListViewController.tableView(_:didHighlightRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsSubcategoryListViewController.swift",
+      "line": 86,
+      "symbol": "CategoryStatisticsSubcategoryListViewController.tableView(_:didUnhighlightRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesMonthPickerViewController.swift",
+      "line": 37,
+      "symbol": "CategoryStatisticsTopSubcategoriesMonthPickerViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesMonthPickerViewController.swift",
+      "line": 52,
+      "symbol": "CategoryStatisticsTopSubcategoriesMonthPickerViewController.monthPickerBarViewController(_:viewControllerForMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesMonthPickerViewController.swift",
+      "line": 68,
+      "symbol": "CategoryStatisticsTopSubcategoriesMonthPickerViewController.categoryStatisticsTopSubcategoriesViewController(_:didSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesMonthPickerViewController.swift",
+      "line": 77,
+      "symbol": "CategoryStatisticsTopSubcategoriesMonthPickerViewController.currentPeriodDateInterval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesMonthPickerViewController.swift",
+      "line": 140,
+      "symbol": "CategoryStatisticsTopSubcategoriesMonthPickerViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesViewController.swift",
+      "line": 87,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesViewController.swift",
+      "line": 179,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.isInNarrowContext",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesViewController.swift",
+      "line": 209,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.monthPickerBarViewController(_:canSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesViewController.swift",
+      "line": 213,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.monthPickerBarViewController(_:didSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesViewController.swift",
+      "line": 246,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.subcategoryTableViewController(_:didSelectSubcategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesViewController.swift",
+      "line": 253,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.subcategoryTableViewController(_:didHighlightSubcategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopSubcategoriesViewController.swift",
+      "line": 259,
+      "symbol": "CategoryStatisticsTopSubcategoriesViewController.subcategoryTableViewController(_:didUnhighlightSubcategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsMonthPickerViewController.swift",
+      "line": 37,
+      "symbol": "CategoryStatisticsTopTransactionsMonthPickerViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsMonthPickerViewController.swift",
+      "line": 52,
+      "symbol": "CategoryStatisticsTopTransactionsMonthPickerViewController.monthPickerBarViewController(_:viewControllerForMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsMonthPickerViewController.swift",
+      "line": 67,
+      "symbol": "CategoryStatisticsTopTransactionsMonthPickerViewController.currentPeriodDateInterval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsMonthPickerViewController.swift",
+      "line": 130,
+      "symbol": "CategoryStatisticsTopTransactionsMonthPickerViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsViewController.swift",
+      "line": 87,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsViewController.swift",
+      "line": 188,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsViewController.swift",
+      "line": 196,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.isInNarrowContext",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsViewController.swift",
+      "line": 363,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.subcategoryTransactionsTableViewController(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsViewController.swift",
+      "line": 368,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.subcategoryTransactionsTableViewController(_:didHighlightRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsViewController.swift",
+      "line": 372,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.subcategoryTransactionsTableViewController(_:didUnhighlightRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTopTransactionsViewController.swift",
+      "line": 403,
+      "symbol": "CategoryStatisticsTopTransactionsViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTransactionListViewController.swift",
+      "line": 43,
+      "symbol": "CategoryStatisticsTransactionListViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTransactionListViewController.swift",
+      "line": 57,
+      "symbol": "CategoryStatisticsTransactionListViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTransactionListViewController.swift",
+      "line": 61,
+      "symbol": "CategoryStatisticsTransactionListViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTransactionListViewController.swift",
+      "line": 76,
+      "symbol": "CategoryStatisticsTransactionListViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTransactionListViewController.swift",
+      "line": 80,
+      "symbol": "CategoryStatisticsTransactionListViewController.tableView(_:didHighlightRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsTransactionListViewController.swift",
+      "line": 84,
+      "symbol": "CategoryStatisticsTransactionListViewController.tableView(_:didUnhighlightRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift",
+      "line": 20,
+      "symbol": "CategoryStatisticsViewController.Style",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift",
+      "line": 21,
+      "symbol": "CategoryStatisticsViewController.Style.barChart",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift",
+      "line": 21,
+      "symbol": "CategoryStatisticsViewController.Style.pieChart",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift",
+      "line": 58,
+      "symbol": "CategoryStatisticsViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Controllers/Pie Chart/CategoryStatisticsViewController.swift",
+      "line": 66,
+      "symbol": "CategoryStatisticsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Models/BigNumbersDefaultViewModel.swift",
+      "line": 9,
+      "symbol": "BigNumbersDefaultViewModel.init(totalValue:averageValue:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Models/CategoryAmountSegment.swift",
+      "line": 15,
+      "symbol": "CategoryAmountSegment.makeSegments(from:with:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Models/SubcategoryTransactionGroup.swift",
+      "line": 10,
+      "symbol": "SubcategoryTransactionGroup.init(group:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Models/SubcategoryTransactionGroup.swift",
+      "line": 16,
+      "symbol": "SubcategoryTransactionGroup.init(title:groups:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Models/TransactionsGroup.swift",
+      "line": 15,
+      "symbol": "TransactionsGroup.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/View Models/TransactionsGroup.swift",
+      "line": 25,
+      "symbol": "TransactionsGroup.makeTransactionGroups(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/Views/CategoryFilterPeriodOptionPickerView.swift",
+      "line": 69,
+      "symbol": "CategoryFilterPeriodOptionPickerView.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/Views/CategoryFilterPeriodOptionPickerView.swift",
+      "line": 73,
+      "symbol": "CategoryFilterPeriodOptionPickerView.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Category Statistics/Views/CategoryFilterPeriodOptionPickerView.swift",
+      "line": 84,
+      "symbol": "CategoryFilterPeriodOptionPickerView.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/FinanceOverviewController+LayoutSection.swift",
+      "line": 5,
+      "symbol": "FinanceOverviewViewController.LayoutSection",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/FinanceOverviewViewController.swift",
+      "line": 55,
+      "symbol": "FinanceOverviewViewController.init(tink:layoutSections:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/FinanceOverviewViewController.swift",
+      "line": 135,
+      "symbol": "FinanceOverviewViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/FinanceOverviewViewController.swift",
+      "line": 185,
+      "symbol": "FinanceOverviewViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/FinanceOverviewViewController.swift",
+      "line": 192,
+      "symbol": "FinanceOverviewViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/FinanceOverviewViewController.swift",
+      "line": 197,
+      "symbol": "FinanceOverviewViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/FinanceOverviewViewController.swift",
+      "line": 227,
+      "symbol": "FinanceOverviewViewController.scrollViewDidScroll(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/FinanceOverviewViewController.swift",
+      "line": 243,
+      "symbol": "FinanceOverviewViewController.controller(_:didSelectAccount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewAccountsViewController.swift",
+      "line": 49,
+      "symbol": "OverviewAccountsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewAccountsViewController.swift",
+      "line": 118,
+      "symbol": "OverviewAccountsViewController.configureCell(_:account:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewAccountsViewController.swift",
+      "line": 131,
+      "symbol": "OverviewAccountsViewController.scrollViewDidScroll(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewAccountsViewController.swift",
+      "line": 147,
+      "symbol": "OverviewAccountsViewController.collectionView(_:didSelectItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewAccountsViewController.swift",
+      "line": 161,
+      "symbol": "OverviewAccountsViewController.collectionView(_:layout:sizeForItemAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewAccountsViewController.swift",
+      "line": 173,
+      "symbol": "OverviewAccountsViewController.collectionView(_:layout:minimumInteritemSpacingForSectionAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewActionableInsightsViewController.swift",
+      "line": 42,
+      "symbol": "OverviewActionableInsightsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewActionableInsightsViewController.swift",
+      "line": 105,
+      "symbol": "OverviewActionableInsightsViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewCategoryPieChartViewController.swift",
+      "line": 65,
+      "symbol": "OverviewCategoryPieChartViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewCategoryPieChartViewController.swift",
+      "line": 94,
+      "symbol": "OverviewCategoryPieChartViewController.gestureRecognizerShouldBegin(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewCategoryPieChartViewController.swift",
+      "line": 122,
+      "symbol": "OverviewCategoryPieChartViewController.currentDateInterval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewCategoryPieChartViewController.swift",
+      "line": 151,
+      "symbol": "OverviewCategoryPieChartViewController.overviewPieChartDataSourceDidUpdate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewLatestTransactionsViewController.swift",
+      "line": 35,
+      "symbol": "OverviewLatestTransactionsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewLatestTransactionsViewController.swift",
+      "line": 54,
+      "symbol": "OverviewLatestTransactionsViewController.preferredContentSizeDidChange(forChildContentContainer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewLatestTransactionsViewController.swift",
+      "line": 63,
+      "symbol": "OverviewLatestTransactionsViewController.showAllTransactions(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewLatestTransactionsViewController.swift",
+      "line": 116,
+      "symbol": "OverviewLatestTransactionsViewController.presentationControllerWillDismiss(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 91,
+      "symbol": "OverviewPieChartPageViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 106,
+      "symbol": "OverviewPieChartPageViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 136,
+      "symbol": "OverviewPieChartPageViewController.gestureRecognizerShouldBegin(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 151,
+      "symbol": "OverviewPieChartPageViewController.scrollToPage(at:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 168,
+      "symbol": "OverviewPieChartPageViewController.reloadData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 198,
+      "symbol": "OverviewPieChartPageViewController.currentPageFraction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 234,
+      "symbol": "OverviewPieChartPageViewController.scrollViewDidScroll(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 259,
+      "symbol": "OverviewPieChartPageViewController.scrollViewDidEndDragging(_:willDecelerate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartPageViewController.swift",
+      "line": 265,
+      "symbol": "OverviewPieChartPageViewController.scrollViewDidEndDecelerating(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartsViewController.swift",
+      "line": 46,
+      "symbol": "OverviewPieChartsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartsViewController.swift",
+      "line": 60,
+      "symbol": "OverviewPieChartsViewController.setupSingleChartView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartsViewController.swift",
+      "line": 78,
+      "symbol": "OverviewPieChartsViewController.setupMultiChartView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartsViewController.swift",
+      "line": 113,
+      "symbol": "OverviewPieChartsViewController.numberOfPieCharts(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartsViewController.swift",
+      "line": 117,
+      "symbol": "OverviewPieChartsViewController.overviewPieChartsPageViewController(_:pieChartViewControllerForPageAtIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Overview/View Controllers/OverviewPieChartsViewController.swift",
+      "line": 130,
+      "symbol": "OverviewPieChartsViewController.overviewPieChartsPageViewController(_:didSelectPageAtIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 220,
+      "symbol": "TransactionsViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 267,
+      "symbol": "TransactionsViewController.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 281,
+      "symbol": "TransactionsViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 286,
+      "symbol": "TransactionsViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 318,
+      "symbol": "TransactionsViewController.isFetchingTransactions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 408,
+      "symbol": "TransactionsViewController.controller(_:didFetchTransactions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 412,
+      "symbol": "TransactionsViewController.controller(_:didInsertTransactions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 416,
+      "symbol": "TransactionsViewController.controller(_:didUpdateTransactions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 420,
+      "symbol": "TransactionsViewController.controller(_:didRemoveTransactions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 424,
+      "symbol": "TransactionsViewController.controllerDidStartFetching(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 438,
+      "symbol": "TransactionsViewController.controllerDidFinishFetching(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 446,
+      "symbol": "TransactionsViewController.controller(_:didFailWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 466,
+      "symbol": "TransactionsViewController.controller(_:didTriggerForScrollView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 509,
+      "symbol": "TransactionsViewController.tableView(_:viewForHeaderInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/TransactionsViewController.swift",
+      "line": 521,
+      "symbol": "TransactionsViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Features/Transactions/UIViewController+TransactionsViewController.swift",
+      "line": 4,
+      "symbol": "UIViewController.clearSelectionOnTopTransactionsViewController(animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Fonts/Font.swift",
+      "line": 39,
+      "symbol": "Font.Size",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Fonts/Font.swift",
+      "line": 104,
+      "symbol": "Font.light(_:adjustsFontForContentSizeCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Fonts/Font.swift",
+      "line": 112,
+      "symbol": "Font.regular(_:adjustsFontForContentSizeCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Fonts/Font.swift",
+      "line": 120,
+      "symbol": "Font.semibold(_:adjustsFontForContentSizeCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Fonts/Font.swift",
+      "line": 128,
+      "symbol": "Font.bold(_:adjustsFontForContentSizeCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Fonts/Font.swift",
+      "line": 136,
+      "symbol": "Font.lineSpacing(weight:size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Identifier.swift",
+      "line": 1,
+      "symbol": "Identifier",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Identifier.swift",
+      "line": 2,
+      "symbol": "Identifier.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Identifier.swift",
+      "line": 4,
+      "symbol": "Identifier.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Localization.swift",
+      "line": 6,
+      "symbol": "Bundle.tinkPFMSDK",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Observable.swift",
+      "line": 14,
+      "symbol": "Observerable.addObserver(_:handler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Observable.swift",
+      "line": 24,
+      "symbol": "Observerable.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Observable.swift",
+      "line": 30,
+      "symbol": "Observerable.publish(event:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Month Picker/MonthPickerBarViewController.swift",
+      "line": 55,
+      "symbol": "MonthPickerBarViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Month Picker/MonthPickerBarViewController.swift",
+      "line": 116,
+      "symbol": "MonthPickerBarViewController.monthPickerBar(_:shouldSelectMonth:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Segmented Control/SegmentedControlViewController.swift",
+      "line": 88,
+      "symbol": "SegmentedControlViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Segmented Control/SegmentedControlViewController.swift",
+      "line": 138,
+      "symbol": "SegmentedControlViewController.shouldAutomaticallyForwardAppearanceMethods",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Segmented Control/SegmentedControlViewController.swift",
+      "line": 140,
+      "symbol": "SegmentedControlViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Segmented Control/SegmentedControlViewController.swift",
+      "line": 145,
+      "symbol": "SegmentedControlViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Segmented Control/SegmentedControlViewController.swift",
+      "line": 150,
+      "symbol": "SegmentedControlViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Segmented Control/SegmentedControlViewController.swift",
+      "line": 155,
+      "symbol": "SegmentedControlViewController.viewDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/View Controllers/Segmented Control/SegmentedControlViewController.swift",
+      "line": 160,
+      "symbol": "SegmentedControlViewController.preferredStatusBarStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Views/ActivityIndicatorView.swift",
+      "line": 156,
+      "symbol": "ActivityIndicatorView.setAnimating(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Views/ActivityIndicatorView.swift",
+      "line": 275,
+      "symbol": "ActivityIndicatorView.didMoveToSuperview()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Views/ActivityIndicatorView.swift",
+      "line": 297,
+      "symbol": "ActivityIndicatorView.animationDidStart(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Generic/Views/ActivityIndicatorView.swift",
+      "line": 299,
+      "symbol": "ActivityIndicatorView.animationDidStop(_:finished:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Icons/Icon.swift",
+      "line": 37,
+      "symbol": "Icon.makeImage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Account.swift",
+      "line": 1,
+      "symbol": "Account",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Account.swift",
+      "line": 3,
+      "symbol": "Account",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Account.swift",
+      "line": 4,
+      "symbol": "Account.ID",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Account.swift",
+      "line": 18,
+      "symbol": "Account.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 11,
+      "symbol": "ActionableInsight.Insight",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 28,
+      "symbol": "ActionableInsight.Insight.DataType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 29,
+      "symbol": "ActionableInsight.Insight.DataType.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 30,
+      "symbol": "ActionableInsight.Insight.DataType.accountBalanceLow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 31,
+      "symbol": "ActionableInsight.Insight.DataType.budgetOverspent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 32,
+      "symbol": "ActionableInsight.Insight.DataType.budgetCloseNegative",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 33,
+      "symbol": "ActionableInsight.Insight.DataType.budgetClosePositive",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 34,
+      "symbol": "ActionableInsight.Insight.DataType.budgetSuccess",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 35,
+      "symbol": "ActionableInsight.Insight.DataType.budgetSummaryAchieved",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 36,
+      "symbol": "ActionableInsight.Insight.DataType.budgetSummaryOverspent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 37,
+      "symbol": "ActionableInsight.Insight.DataType.largeExpense",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 38,
+      "symbol": "ActionableInsight.Insight.DataType.singleUncategorizedTransaction",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 39,
+      "symbol": "ActionableInsight.Insight.DataType.doubleCharge",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 40,
+      "symbol": "ActionableInsight.Insight.DataType.weeklyUncategorizedTransactions",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 41,
+      "symbol": "ActionableInsight.Insight.DataType.weeklySummaryExpensesByCategory",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 42,
+      "symbol": "ActionableInsight.Insight.DataType.weeklySummaryExpensesByDay",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 43,
+      "symbol": "ActionableInsight.Insight.DataType.monthlySummaryExpensesByCategory",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ActionableInsight.swift",
+      "line": 70,
+      "symbol": "ActionableInsight.Insight.DataType",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Budget.swift",
+      "line": 3,
+      "symbol": "Budget",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Budget.swift",
+      "line": 3,
+      "symbol": "Budget",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Budget.swift",
+      "line": 4,
+      "symbol": "Budget.ID",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Category.swift",
+      "line": 1,
+      "symbol": "Category",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Category.swift",
+      "line": 2,
+      "symbol": "CategoryNode",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Category.swift",
+      "line": 4,
+      "symbol": "Category",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Category.swift",
+      "line": 6,
+      "symbol": "Category",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Category.swift",
+      "line": 8,
+      "symbol": "Category.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 2,
+      "symbol": "Category.Code",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 25,
+      "symbol": "Category.Code",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 26,
+      "symbol": "Category.Code.isExpense",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 27,
+      "symbol": "Category.Code.isIncome",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 28,
+      "symbol": "Category.Code.isTransfer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 30,
+      "symbol": "Category.Code.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 32,
+      "symbol": "Category.Code.isUncategorized",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 33,
+      "symbol": "Category.Code.isReimbursement",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 34,
+      "symbol": "Category.Code.isSavings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 35,
+      "symbol": "Category.Code.isExcluded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 36,
+      "symbol": "Category.Code.isOther",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 37,
+      "symbol": "Category.Code.isMiscOther",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 38,
+      "symbol": "Category.Code.isExpensesOther",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 40,
+      "symbol": "Category.Code.isRootCategory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 41,
+      "symbol": "Category.Code.isSubcategory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryCode.swift",
+      "line": 43,
+      "symbol": "Category.Code.isChild(of:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 29,
+      "symbol": "CategoryTree.Node.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 31,
+      "symbol": "CategoryTree.Node.isIncome",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 33,
+      "symbol": "CategoryTree.Node.isUncategorized",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 35,
+      "symbol": "CategoryTree.Node.isReimbursement",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 37,
+      "symbol": "CategoryTree.Node.isSavings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 39,
+      "symbol": "CategoryTree.Node.isExcluded",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 41,
+      "symbol": "CategoryTree.Node.isOther",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 43,
+      "symbol": "CategoryTree.Node.isMiscOther",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 45,
+      "symbol": "CategoryTree.Node.isExpensesOther",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 47,
+      "symbol": "CategoryTree.Node.isRootCategory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 48,
+      "symbol": "CategoryTree.Node.isSubcategory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryNode.swift",
+      "line": 50,
+      "symbol": "CategoryTree.Node.formattedName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryType.swift",
+      "line": 4,
+      "symbol": "CategoryType",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryType.swift",
+      "line": 19,
+      "symbol": "Category.Kind.init(code:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CategoryType.swift",
+      "line": 31,
+      "symbol": "Category.Kind.categoryCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 9,
+      "symbol": "CurrencyDenominatedAmount.doubleValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 13,
+      "symbol": "CurrencyDenominatedAmount.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 17,
+      "symbol": "CurrencyDenominatedAmount.init(_:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 21,
+      "symbol": "CurrencyDenominatedAmount.init(_:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 25,
+      "symbol": "CurrencyDenominatedAmount.init(_:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 30,
+      "symbol": "CurrencyDenominatedAmount.init(_:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 35,
+      "symbol": "CurrencyDenominatedAmount.init(_:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 40,
+      "symbol": "CurrencyDenominatedAmount.init(unscaledValue:scale:currencyCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 45,
+      "symbol": "CurrencyDenominatedAmount.+(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 50,
+      "symbol": "CurrencyDenominatedAmount.-(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/CurrencyDenominatedAmount.swift",
+      "line": 55,
+      "symbol": "CurrencyDenominatedAmount./(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ExactNumber.swift",
+      "line": 9,
+      "symbol": "ExactNumber.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ExactNumber.swift",
+      "line": 33,
+      "symbol": "ExactNumber.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/ExactNumber.swift",
+      "line": 38,
+      "symbol": "ExactNumber.doubleValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/Account+RESTAccount.swift",
+      "line": 2,
+      "symbol": "Account.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/Account+RESTAccount.swift",
+      "line": 14,
+      "symbol": "Account.Kind.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/ActionableInsight+RESTInsight.swift",
+      "line": 4,
+      "symbol": "ActionableInsight.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/ActionableInsight+RESTInsight.swift",
+      "line": 20,
+      "symbol": "ActionableInsight.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/ActionableInsight+RESTInsight.swift",
+      "line": 35,
+      "symbol": "ActionableInsight.Action.Target.init(restInsightActionData:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/ActionableInsight+RESTInsight.swift",
+      "line": 71,
+      "symbol": "ActionableInsight.Insight.DataType.init(restInsightDataType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/Budget+RESTBudget.swift",
+      "line": 4,
+      "symbol": "Budget.init(restBudget:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/CategoryNode+RESTCategory.swift",
+      "line": 2,
+      "symbol": "CategoryTree.Node.init(restCategory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/CategoryTree+RESTCategory.swift",
+      "line": 4,
+      "symbol": "CategoryTree.init(restCategories:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/PeriodMode+RESTPeriodMode.swift",
+      "line": 2,
+      "symbol": "PeriodMode.init(restPeriodMode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/PeriodMode+RESTPeriodMode.swift",
+      "line": 11,
+      "symbol": "PeriodMode.restPeriodMode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/StatisticTree+RESTStatistic.swift",
+      "line": 4,
+      "symbol": "StatisticTree.init(restStatistics:currencyCode:periods:now:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/StatisticType+RESTStatisticQueryType.swift",
+      "line": 2,
+      "symbol": "StatisticType.restType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/Transaction+RESTTransaction.swift",
+      "line": 4,
+      "symbol": "Transaction.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/TransactionsQuery+RESTSearchQuery.swift",
+      "line": 2,
+      "symbol": "RESTSortType.init(transactionQuerySort:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/TransactionsQuery+RESTSearchQuery.swift",
+      "line": 19,
+      "symbol": "RESTOrderType.init(transactionQueryOrder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/User+RESTUser.swift",
+      "line": 2,
+      "symbol": "User.init(restUser:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/Mappings/UserProfile+RESTUserProfile.swift",
+      "line": 4,
+      "symbol": "UserProfile.init(restUserProfile:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/Models/TransactionsQuery.swift",
+      "line": 85,
+      "symbol": "Collection.filter(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/REST/CertificatePinningDelegate.swift",
+      "line": 13,
+      "symbol": "CertificatePinningDelegate.urlSession(_:didReceive:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios/Sources/TinkPFMUI/TinkError.swift",
+      "line": 38,
+      "symbol": "TinkError.init(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/zhangmenghao/Developer/tink-pfm-sdk-ios"
+}
