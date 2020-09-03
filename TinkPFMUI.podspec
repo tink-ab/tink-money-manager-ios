@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.authors  = { 'Tink AB' => 'mobile@tink.se' }
   s.homepage = 'https://tink.com'
   s.summary = 'Tink PFM UI SDK.'
-  s.source = { :git => "https://github.com/tink-ab/tink-pfm-ios.git", :tag => spec.version }
+  s.source = { :git => "https://github.com/tink-ab/tink-pfm-ios.git", :tag => s.version }
 
   s.ios.deployment_target = '11.0'
 
