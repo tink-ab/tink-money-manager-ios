@@ -3,32 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		205C2F92241F60FE00BD3CF1 /* TinkPFMUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = 205C2F94241F60FE00BD3CF1 /* TinkPFMUI.strings */; };
 		20C24BAD241A398200EB5927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C24BAC241A398200EB5927 /* Assets.xcassets */; };
-		20DBE5182424F86C005AA1B9 /* TinkPFMUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBE5172424F86C005AA1B9 /* TinkPFMUI.xcframework */; };
-		20DBE5192424F86C005AA1B9 /* TinkPFMUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBE5172424F86C005AA1B9 /* TinkPFMUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9DC592592395548000C9A5F1 /* DebugAnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */; };
 		9DDD67A82368850500507DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD67A72368850500507DF3 /* AppDelegate.swift */; };
 		9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		20DBE51A2424F86C005AA1B9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				20DBE5192424F86C005AA1B9 /* TinkPFMUI.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		20183728242258FF00F07BC8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/TinkPFMUI.strings; sourceTree = "<group>"; };
@@ -47,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20DBE5182424F86C005AA1B9 /* TinkPFMUI.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +85,6 @@
 				9DDD67A02368850500507DF3 /* Sources */,
 				9DDD67A12368850500507DF3 /* Frameworks */,
 				9DDD67A22368850500507DF3 /* Resources */,
-				20DBE51A2424F86C005AA1B9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
