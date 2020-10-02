@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinkPFMUI - Budget</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+            <strong>
+                TinkPFMUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#budget.id">ID</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#budget.init(id:name:amount:filter:periodicity:)">init(id:​name:​amount:​filter:​periodicity:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#budget.id">id</a></li><li class="variable"><a href="#budget.name">name</a></li><li class="variable"><a href="#budget.amount">amount</a></li><li class="variable"><a href="#budget.filter">filter</a></li><li class="variable"><a href="#budget.periodicity">periodicity</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Budget</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Budget</span></code></pre></body></html>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Periodicity">Budget.Periodicity</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/Budget_RecurringPeriodicity">Budget.RecurringPeriodicity</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/Budget_OneOffPeriodicity">Budget.OneOffPeriodicity</a></code></dt>
+<dd></dd>
+<dt class="enumeration"><code><a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Filter">Budget.Filter</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Transaction">Budget.Transaction</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Period">Budget.Period</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="nested type aliases">
+        <h2>Nested Type Aliases</h2>
+
+        <div role="article" class="typealias" id="budget.id">
+    <h3>
+        <code>ID</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">ID</span> = <span class="type">Identifier</span>&lt;<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>&gt;</code></pre></body></html>
+</div>
+    </section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="budget.init(id:name:amount:filter:periodicity:)">
+    <h3>
+        <code>init(id:​name:​amount:​filter:​periodicity:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">name</span>: <span class="type">String</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?, <span class="variable">filter</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Filter</span>], <span class="variable">periodicity</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Periodicity</span>?)</code></pre></body></html>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="budget.id">
+    <h3>
+        <code>id</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">id</span>: <span class="type">ID</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="budget.name">
+    <h3>
+        <code>name</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">name</span>: <span class="type">String</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="budget.amount">
+    <h3>
+        <code>amount</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="budget.filter">
+    <h3>
+        <code>filter</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">filter</span>: [<span class="type">Filter</span>]</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="budget.periodicity">
+    <h3>
+        <code>periodicity</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">periodicity</span>: <span class="type">Periodicity</span>?</code></pre></body></html>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-09-30T13:48:23+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

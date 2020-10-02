@@ -2,28 +2,36 @@
 // swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkPFMUI
 import CoreGraphics
-import Dispatch
 import Foundation
 import QuartzCore
 import Security
 import Swift
+@_exported import TinkCore
 import UIKit
+extension FinanceOverviewViewController {
+  public enum Feature {
+    public enum StatisticsData {
+      case expenses
+      case income
+      public static func == (a: TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData, b: TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData) -> Swift.Bool
+      public var hashValue: Swift.Int {
+        get
+      }
+      public func hash(into hasher: inout Swift.Hasher)
+    }
+    case statistics([TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData])
+    case latestTransactions
+    case accounts
+    case actionableInsights(delegate: TinkPFMUI.ActionableInsightsViewControllerDelegate)
+    case budgets
+  }
+}
+public struct ActionableInsightViewModel {
+  public struct Insight {
+  }
+}
 public protocol FontProviding {
   func font(for weight: TinkPFMUI.Font.Weight) -> TinkPFMUI.Font
-}
-@available(*, deprecated, renamed: "Category.Kind")
-public typealias CategoryType = TinkPFMUI.Category.Kind
-extension Category {
-  public enum Kind : Swift.String, Swift.Hashable, Swift.Codable {
-    case expenses
-    case income
-    case transfers
-    public typealias RawValue = Swift.String
-    public init?(rawValue: Swift.String)
-    public var rawValue: Swift.String {
-      get
-    }
-  }
 }
 public class ColorProvider : TinkPFMUI.ColorProviding {
   public var background: UIKit.UIColor
@@ -35,7 +43,12 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
   public var separator: UIKit.UIColor
   public var accent: UIKit.UIColor
   public var accentBackground: UIKit.UIColor?
+  public var button: UIKit.UIColor?
+  public var secondaryButton: UIKit.UIColor?
+  @available(*, deprecated, renamed: "secondaryButton")
   public var secondaryButtonTitle: UIKit.UIColor?
+  public var tertiaryButton: UIKit.UIColor?
+  @available(*, deprecated, renamed: "tertiaryButton")
   public var tertiaryButtonTitle: UIKit.UIColor?
   public var tertiaryButtonBackground: UIKit.UIColor?
   public var chevronButton: UIKit.UIColor?
@@ -45,6 +58,8 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
   public var transfers: UIKit.UIColor
   public var uncategorized: UIKit.UIColor
   public var warning: UIKit.UIColor
+  public var critical: UIKit.UIColor
+  public var leftToSpend: UIKit.UIColor
   public var expensesIconColor: UIKit.UIColor?
   public var incomeIconColor: UIKit.UIColor?
   public var transfersIconColor: UIKit.UIColor?
@@ -57,6 +72,15 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
   public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil)
   @objc deinit
 }
+@objc @_hasMissingDesignatedInitializers final public class CreateBudgetViewController : UIKit.UINavigationController {
+  convenience public init(tink: TinkCore.Tink = .shared, completion: @escaping (Swift.Result<TinkCore.Budget, Swift.Error>) -> Swift.Void)
+  @objc override final public func viewDidLoad()
+  @objc deinit
+  @available(iOS 5.0, *)
+  @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
 @objc final public class CategoryStatisticsViewController : UIKit.UINavigationController {
   public enum Style {
     case pieChart, barChart
@@ -66,10 +90,10 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
     }
     public func hash(into hasher: inout Swift.Hasher)
   }
-  final public let categoryType: TinkPFMUI.Category.Kind
+  final public let categoryType: TinkCore.Category.Kind
   final public let style: TinkPFMUI.CategoryStatisticsViewController.Style
   final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool
-  public init(tink: TinkPFMUI.Tink = .shared, categoryType: TinkPFMUI.Category.Kind, style: TinkPFMUI.CategoryStatisticsViewController.Style = .pieChart)
+  public init(tink: TinkCore.Tink = .shared, categoryType: TinkCore.Category.Kind, style: TinkPFMUI.CategoryStatisticsViewController.Style = .pieChart)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
   @available(iOS 5.0, *)
@@ -79,6 +103,9 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
 }
 extension CategoryStatisticsViewController {
   @objc override final public func viewDidLoad()
+}
+extension CategoryStatisticsViewController : UIKit.UIGestureRecognizerDelegate {
+  @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
 }
 public enum Appearance {
   public static var provider: TinkPFMUI.AppearanceProviding
@@ -98,54 +125,6 @@ public enum Appearance {
     set
   }
 }
-public struct TransactionsQuery : Swift.Equatable {
-  public let accountIDs: [TinkPFMUI.Account.ID]?
-  public var categoryIDs: [TinkPFMUI.Category.ID]?
-  public let dateInterval: Foundation.DateInterval?
-  public var query: Swift.String?
-  public let includeUpcoming: Swift.Bool
-  public let sort: TinkPFMUI.TransactionsQuery.Sort
-  public let order: TinkPFMUI.TransactionsQuery.Order
-  public var limit: Swift.Int32?
-  public enum Sort : Swift.String {
-    case date
-    case account
-    case description
-    case amount
-    case category
-    public typealias RawValue = Swift.String
-    public init?(rawValue: Swift.String)
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum Order : Swift.String {
-    case ascending
-    case descending
-    public typealias RawValue = Swift.String
-    public init?(rawValue: Swift.String)
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public init(accountIDs: [TinkPFMUI.Account.ID]? = nil, categoryIDs: [TinkPFMUI.Category.ID]? = nil, dateInterval: Foundation.DateInterval? = nil, query: Swift.String? = nil, includeUpcoming: Swift.Bool = false, sort: TinkPFMUI.TransactionsQuery.Sort = .date, order: TinkPFMUI.TransactionsQuery.Order = .descending, limit: Swift.Int32? = nil)
-  @available(*, unavailable, renamed: "init(accountIDs:categoryIDs:dateInterval:query:includeUpcoming:sort:order:limit:)")
-  public init(accountIds: [TinkPFMUI.Account.ID]? = nil, categoryIds: [TinkPFMUI.Category.ID]? = nil, dateInterval: Foundation.DateInterval? = nil, query: Swift.String? = nil, includeUpcoming: Swift.Bool = false, sort: TinkPFMUI.TransactionsQuery.Sort = .date, order: TinkPFMUI.TransactionsQuery.Order = .descending, limit: Swift.Int32? = nil)
-  public static func == (a: TinkPFMUI.TransactionsQuery, b: TinkPFMUI.TransactionsQuery) -> Swift.Bool
-}
-@available(*, unavailable, renamed: "Tink")
-public typealias TinkContext = TinkPFMUI.Tink
-final public class Tink {
-  public static let shared: TinkPFMUI.Tink
-  public typealias ErrorHandler = (TinkPFMUI.TinkError) -> Swift.Void
-  public init(configuration: TinkPFMUI.Tink.Configuration = Configuration(environment: .production), errorHandler: TinkPFMUI.Tink.ErrorHandler? = nil)
-  @available(*, unavailable, renamed: "init(configuration:)")
-  public init(clientConfiguration: TinkPFMUI.Tink.Configuration)
-  final public func setCredential(_ credential: TinkPFMUI.SessionCredential?)
-  final public func refresh()
-  final public func resetCache()
-  @objc deinit
-}
 public struct TinkError : Swift.Error {
   public enum Status {
     case cancelled
@@ -157,6 +136,9 @@ public struct TinkError : Swift.Error {
     case unknown
     case badRequest
     case forbidden
+    case conflict
+    case preconditionFailed
+    case unavailableForLegalReasons
     public static func == (a: TinkPFMUI.TinkError.Status, b: TinkPFMUI.TinkError.Status) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
@@ -169,6 +151,7 @@ public struct TinkError : Swift.Error {
 }
 public class IconProvider : TinkPFMUI.IconProviding {
   public var account: UIKit.UIImage
+  public var add: UIKit.UIImage
   public var alert: UIKit.UIImage
   public var benefits: UIKit.UIImage
   public var budget: UIKit.UIImage
@@ -201,21 +184,28 @@ public class IconProvider : TinkPFMUI.IconProviding {
 }
 public enum Color {
 }
-@available(*, unavailable, renamed: "Tink.Configuration")
-public typealias ClientConfiguration = TinkPFMUI.Tink.Configuration
-extension Tink {
-  public struct Configuration {
-    public init(environment: TinkPFMUI.Environment, certificate: Swift.String? = nil)
-  }
+public protocol BudgetDetailsViewControllerDelegate : AnyObject {
+  func viewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
+  func viewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
+  func viewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers final public class BudgetDetailsViewController : UIKit.UIViewController {
+  weak final public var delegate: TinkPFMUI.BudgetDetailsViewControllerDelegate?
+  convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension BudgetDetailsViewController {
+  @objc override final public func viewDidLoad()
 }
 public protocol AccountDetailsViewControllerDelegate : AnyObject {
-  func accountDetailsViewController(_ viewController: TinkPFMUI.AccountDetailsViewController, didSelectTransaction transaction: TinkPFMUI.Transaction)
+  func accountDetailsViewController(_ viewController: TinkPFMUI.AccountDetailsViewController, didSelectTransaction transaction: TinkCore.Transaction)
 }
 @objc @_hasMissingDesignatedInitializers final public class AccountDetailsViewController : UIKit.UIViewController {
   weak final public var delegate: TinkPFMUI.AccountDetailsViewControllerDelegate?
-  convenience public init(tink: TinkPFMUI.Tink = .shared, accountID: TinkPFMUI.Account.ID)
+  convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
   @available(*, deprecated, renamed: "init(tink:accountID:)")
-  convenience public init(tink: TinkPFMUI.Tink = .shared, accountId: TinkPFMUI.Account.ID)
+  convenience public init(tink: TinkCore.Tink = .shared, accountId: TinkCore.Account.ID)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -225,13 +215,13 @@ extension AccountDetailsViewController {
   @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension AccountDetailsViewController : TinkPFMUI.CategorizeTransactionViewControllerDelegate {
-  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, willCategorizeAs category: TinkPFMUI.Category)
-  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didCategorize transactionIDs: [TinkPFMUI.Transaction.ID], category: TinkPFMUI.Category)
+  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
+  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didCategorize transactionIDs: [TinkCore.Transaction.ID], category: TinkCore.Category)
   final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didFailWithError error: Swift.Error)
   final public func categorizeTransactionViewControllerDidCancel(_ controller: TinkPFMUI.CategorizeTransactionViewController)
 }
 extension AccountDetailsViewController : TinkPFMUI.TransactionsViewControllerDelegate {
-  final public func transactionsViewController(_ viewController: TinkPFMUI.TransactionsViewController, didSelectTransaction transaction: TinkPFMUI.Transaction)
+  final public func transactionsViewController(_ viewController: TinkPFMUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
 }
 extension AccountDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
@@ -249,41 +239,13 @@ public class FontProvider : TinkPFMUI.FontProviding {
 public protocol EventTracking : AnyObject {
   func track(_ screen: TinkPFMUI.ScreenEvent)
 }
-public struct ActionableInsight {
-  public struct Insight {
-    public enum DataType {
-      case unknown
-      case accountBalanceLow
-      case budgetOverspent
-      case budgetCloseNegative
-      case budgetClosePositive
-      case budgetSuccess
-      case budgetSummaryAchieved
-      case budgetSummaryOverspent
-      case largeExpense
-      case singleUncategorizedTransaction
-      case doubleCharge
-      case weeklyUncategorizedTransactions
-      case weeklySummaryExpensesByCategory
-      case weeklySummaryExpensesByDay
-      case monthlySummaryExpensesByCategory
-      public static func == (a: TinkPFMUI.ActionableInsight.Insight.DataType, b: TinkPFMUI.ActionableInsight.Insight.DataType) -> Swift.Bool
-      public var hashValue: Swift.Int {
-        get
-      }
-      public func hash(into hasher: inout Swift.Hasher)
-    }
-  }
-}
-@available(*, deprecated, renamed: "Category")
-public typealias CategoryNode = TinkPFMUI.Category
-public struct Category : Swift.Equatable {
-  public typealias ID = TinkPFMUI.Identifier<TinkPFMUI.Category>
-  public let id: TinkPFMUI.Category.ID
-  public static func == (a: TinkPFMUI.Category, b: TinkPFMUI.Category) -> Swift.Bool
+extension Tink {
+  public func refresh()
+  public func resetCache()
 }
 public protocol IconProviding {
   var account: UIKit.UIImage { get set }
+  var add: UIKit.UIImage { get set }
   var budget: UIKit.UIImage { get set }
   var alert: UIKit.UIImage { get set }
   var benefits: UIKit.UIImage { get set }
@@ -310,23 +272,6 @@ public protocol IconProviding {
   var uncategorizedIcon: UIKit.UIImage { get set }
   var categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
   var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
-}
-extension FinanceOverviewViewController {
-  public enum Feature {
-    public enum StatisticsData {
-      case expenses
-      case income
-      public static func == (a: TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData, b: TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData) -> Swift.Bool
-      public var hashValue: Swift.Int {
-        get
-      }
-      public func hash(into hasher: inout Swift.Hasher)
-    }
-    case statistics([TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData])
-    case latestTransactions
-    case accounts
-    case actionableInsights(delegate: TinkPFMUI.ActionableInsightsViewControllerDelegate)
-  }
 }
 public enum ScreenEvent {
   case overview
@@ -363,14 +308,14 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
   public init(stringLiteral value: Swift.String)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
-  public typealias StringLiteralType = Swift.String
-  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
-  public typealias UnicodeScalarLiteralType = Swift.String
-  public static func == (a: TinkPFMUI.Identifier<Type>, b: TinkPFMUI.Identifier<Type>) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
+  public typealias StringLiteralType = Swift.String
+  public static func == (a: TinkPFMUI.Identifier<Type>, b: TinkPFMUI.Identifier<Type>) -> Swift.Bool
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
 }
 public enum Font {
   case custom(Swift.String)
@@ -436,27 +381,25 @@ public struct AppearanceProvider : TinkPFMUI.AppearanceProviding {
 public enum EventTracker {
   public static var tracker: TinkPFMUI.EventTracking?
 }
-public struct Budget {
-  public typealias ID = TinkPFMUI.Identifier<TinkPFMUI.Budget>
-}
 @available(*, deprecated, renamed: "ActionableInsightsViewController")
 public typealias ActionableInsightListViewController = TinkPFMUI.ActionableInsightsViewController
 @available(*, deprecated, renamed: "ActionableInsightsViewControllerDelegate")
 public typealias ActionableInsightListViewControllerDelegate = TinkPFMUI.ActionableInsightsViewControllerDelegate
 public protocol ActionableInsightsViewControllerDelegate : AnyObject {
-  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showBudget id: TinkPFMUI.Budget.ID, budgetPeriodStart: Foundation.Date)
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
   func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, initiateTransferFromAccount source: Foundation.URL?, to destination: Foundation.URL?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionWithID id: TinkPFMUI.Transaction.ID)
-  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkPFMUI.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkPFMUI.Transaction.ID])
-  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkPFMUI.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithDataType dataType: TinkPFMUI.ActionableInsight.Insight.DataType) -> UIKit.UIImage?
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
 }
 extension ActionableInsightsViewControllerDelegate {
-  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkPFMUI.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkPFMUI.Transaction.ID])
-  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkPFMUI.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithDataType dataType: TinkPFMUI.ActionableInsight.Insight.DataType) -> UIKit.UIImage?
+  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
+  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind dataType: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
+  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
 }
 @objc @_hasMissingDesignatedInitializers final public class ActionableInsightsViewController : UIKit.UIViewController {
   public enum EmptyState {
@@ -467,7 +410,7 @@ extension ActionableInsightsViewControllerDelegate {
     get
     set
   }
-  convenience public init(tink: TinkPFMUI.Tink = .shared, delegate: TinkPFMUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
+  convenience public init(tink: TinkCore.Tink = .shared, delegate: TinkPFMUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc deinit
 }
@@ -480,15 +423,15 @@ extension ActionableInsightsViewController : UIKit.UICollectionViewDataSource {
   @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
 }
 extension ActionableInsightsViewController : TinkPFMUI.CategorizeTransactionViewControllerDelegate {
-  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, willCategorizeAs category: TinkPFMUI.Category)
-  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didCategorize transactions: [TinkPFMUI.Transaction.ID], category: TinkPFMUI.Category)
+  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
+  final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didCategorize transactions: [TinkCore.Transaction.ID], category: TinkCore.Category)
   final public func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didFailWithError error: Swift.Error)
 }
 extension ActionableInsightsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 public protocol TransactionsViewControllerDelegate : AnyObject {
-  func transactionsViewController(_ viewController: TinkPFMUI.TransactionsViewController, didSelectTransaction transaction: TinkPFMUI.Transaction)
+  func transactionsViewController(_ viewController: TinkPFMUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
   func transactionsViewController(_ viewController: TinkPFMUI.TransactionsViewController, didFailWithError error: Swift.Error)
 }
 extension TransactionsViewControllerDelegate {
@@ -496,7 +439,7 @@ extension TransactionsViewControllerDelegate {
 }
 @objc @_hasMissingDesignatedInitializers final public class TransactionsViewController : UIKit.UIViewController {
   weak final public var delegate: TinkPFMUI.TransactionsViewControllerDelegate?
-  convenience public init(tink: TinkPFMUI.Tink = .shared, query: TinkPFMUI.TransactionsQuery = TransactionsQuery())
+  convenience public init(tink: TinkCore.Tink = .shared, query: TinkCore.TransactionsQuery = TransactionsQuery())
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc deinit
 }
@@ -523,8 +466,9 @@ public protocol ColorProviding {
   var separator: UIKit.UIColor { get set }
   var accent: UIKit.UIColor { get set }
   var accentBackground: UIKit.UIColor? { get set }
-  var secondaryButtonTitle: UIKit.UIColor? { get set }
-  var tertiaryButtonTitle: UIKit.UIColor? { get set }
+  var button: UIKit.UIColor? { get set }
+  var secondaryButton: UIKit.UIColor? { get set }
+  var tertiaryButton: UIKit.UIColor? { get set }
   var tertiaryButtonBackground: UIKit.UIColor? { get set }
   var chevronButton: UIKit.UIColor? { get set }
   var chevronButtonDisabled: UIKit.UIColor? { get set }
@@ -533,6 +477,8 @@ public protocol ColorProviding {
   var transfers: UIKit.UIColor { get set }
   var uncategorized: UIKit.UIColor { get set }
   var warning: UIKit.UIColor { get set }
+  var critical: UIKit.UIColor { get set }
+  var leftToSpend: UIKit.UIColor { get set }
   var expensesIconColor: UIKit.UIColor? { get set }
   var incomeIconColor: UIKit.UIColor? { get set }
   var transfersIconColor: UIKit.UIColor? { get set }
@@ -542,10 +488,6 @@ public protocol ColorProviding {
   var transfersIconBackgroundColor: UIKit.UIColor? { get set }
   var uncategorizedIconBackgroundColor: UIKit.UIColor? { get set }
 }
-public enum Environment {
-  case production
-  case custom(url: Foundation.URL)
-}
 @objc @_hasMissingDesignatedInitializers final public class FinanceOverviewViewController : UIKit.UIViewController {
   final public var hidesTopBarWhenPushed: Swift.Bool
   final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
@@ -553,8 +495,8 @@ public enum Environment {
     set
   }
   @available(*, deprecated, message: "Use init(tink:features:) instead and embed this view controller inside a UINavigationController.")
-  convenience public init(tink: TinkPFMUI.Tink = .shared, layoutSections: [TinkPFMUI.FinanceOverviewViewController.Feature])
-  convenience public init(tink: TinkPFMUI.Tink = .shared, features: [TinkPFMUI.FinanceOverviewViewController.Feature])
+  convenience public init(tink: TinkCore.Tink = .shared, layoutSections: [TinkPFMUI.FinanceOverviewViewController.Feature])
+  convenience public init(tink: TinkCore.Tink = .shared, features: [TinkPFMUI.FinanceOverviewViewController.Feature])
   @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
 }
@@ -567,33 +509,12 @@ extension FinanceOverviewViewController {
 extension FinanceOverviewViewController : UIKit.UIScrollViewDelegate {
   @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
-public struct Transaction {
-  public typealias ID = TinkPFMUI.Identifier<TinkPFMUI.Transaction>
-  public let id: TinkPFMUI.Transaction.ID
-}
-extension Transaction : Swift.Hashable {
-  public var hashValue: Swift.Int {
-    get
-  }
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: TinkPFMUI.Transaction, b: TinkPFMUI.Transaction) -> Swift.Bool
-}
-public enum SessionCredential {
-  case sessionID(Swift.String)
-  case accessToken(Swift.String)
-}
-public struct Account : Swift.Hashable {
-  public typealias ID = TinkPFMUI.Identifier<TinkPFMUI.Account>
-  public let id: TinkPFMUI.Account.ID
-  public static func == (a: TinkPFMUI.Account, b: TinkPFMUI.Account) -> Swift.Bool
-  public var hashValue: Swift.Int {
-    get
-  }
-  public func hash(into hasher: inout Swift.Hasher)
+extension FinanceOverviewViewController : UIKit.UIGestureRecognizerDelegate {
+  @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
 }
 public protocol CategorizeTransactionViewControllerDelegate : AnyObject {
-  func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, willCategorizeAs category: TinkPFMUI.Category)
-  func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didCategorize transactionIDs: [TinkPFMUI.Transaction.ID], category: TinkPFMUI.Category)
+  func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
+  func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didCategorize transactionIDs: [TinkCore.Transaction.ID], category: TinkCore.Category)
   func categorizeTransactionViewController(_ controller: TinkPFMUI.CategorizeTransactionViewController, didFailWithError error: Swift.Error)
   func categorizeTransactionViewControllerDidCancel(_ controller: TinkPFMUI.CategorizeTransactionViewController)
 }
@@ -602,9 +523,9 @@ extension CategorizeTransactionViewControllerDelegate where Self : UIKit.UIViewC
 }
 @objc @_hasMissingDesignatedInitializers final public class CategorizeTransactionViewController : UIKit.UINavigationController {
   weak final public var categorizeTransactionDelegate: TinkPFMUI.CategorizeTransactionViewControllerDelegate?
-  convenience public init(tink: TinkPFMUI.Tink = .shared, transactionID: TinkPFMUI.Transaction.ID, categoryTypes: [TinkPFMUI.Category.Kind], categoryID: TinkPFMUI.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
+  convenience public init(tink: TinkCore.Tink = .shared, transactionID: TinkCore.Transaction.ID, categoryTypes: [TinkCore.Category.Kind], categoryID: TinkCore.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
   @available(*, deprecated, renamed: "init(tink:transactionID:categoryTypes:categoryID:showSimilarTransactions:)")
-  convenience public init(tink: TinkPFMUI.Tink = .shared, transactionId: TinkPFMUI.Transaction.ID, categoryTypes: [TinkPFMUI.Category.Kind], categoryId: TinkPFMUI.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
+  convenience public init(tink: TinkCore.Tink = .shared, transactionId: TinkCore.Transaction.ID, categoryTypes: [TinkCore.Category.Kind], categoryId: TinkCore.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
   @available(iOS 5.0, *)
   @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
   @objc override dynamic public init(rootViewController: UIKit.UIViewController)
@@ -616,21 +537,12 @@ extension CategorizeTransactionViewController {
   @objc override final public func viewWillAppear(_ animated: Swift.Bool)
   @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
-extension TinkPFMUI.Category.Kind : Swift.RawRepresentable {}
-extension TinkPFMUI.CategoryStatisticsViewController.Style : Swift.Equatable {}
-extension TinkPFMUI.CategoryStatisticsViewController.Style : Swift.Hashable {}
-extension TinkPFMUI.TransactionsQuery.Sort : Swift.Equatable {}
-extension TinkPFMUI.TransactionsQuery.Sort : Swift.Hashable {}
-extension TinkPFMUI.TransactionsQuery.Sort : Swift.RawRepresentable {}
-extension TinkPFMUI.TransactionsQuery.Order : Swift.Equatable {}
-extension TinkPFMUI.TransactionsQuery.Order : Swift.Hashable {}
-extension TinkPFMUI.TransactionsQuery.Order : Swift.RawRepresentable {}
-extension TinkPFMUI.TinkError.Status : Swift.Equatable {}
-extension TinkPFMUI.TinkError.Status : Swift.Hashable {}
-extension TinkPFMUI.ActionableInsight.Insight.DataType : Swift.Equatable {}
-extension TinkPFMUI.ActionableInsight.Insight.DataType : Swift.Hashable {}
 extension TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Equatable {}
 extension TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Hashable {}
+extension TinkPFMUI.CategoryStatisticsViewController.Style : Swift.Equatable {}
+extension TinkPFMUI.CategoryStatisticsViewController.Style : Swift.Hashable {}
+extension TinkPFMUI.TinkError.Status : Swift.Equatable {}
+extension TinkPFMUI.TinkError.Status : Swift.Hashable {}
 extension TinkPFMUI.ScreenEvent : Swift.Equatable {}
 extension TinkPFMUI.ScreenEvent : Swift.Hashable {}
 extension TinkPFMUI.Font.Weight : Swift.Equatable {}

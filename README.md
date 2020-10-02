@@ -2,9 +2,8 @@
 
 ## Prerequisites
 
-1. App with a deployment target of iOS 11 or later.
-2. Follow the [getting started guide](https://docs.tink.com/resources/getting-started/set-up-your-account) to set up your Tink account. 
-3. [Get an access token](https://docs.tink.com/resources/getting-started/get-access-token) with the [scopes](https://docs.tink.com/api/#introduction-authentication-authentication-scopes) required for the features you intend to use.
+1. Follow the [getting started guide](https://docs.tink.com/resources/getting-started/set-up-your-account) to set up your Tink account. 
+2. [Get an access token](https://docs.tink.com/resources/getting-started/get-access-token) with the [scopes](https://docs.tink.com/api/#introduction-authentication-authentication-scopes) required for the features you intend to use.
 
 ## Installation
 
@@ -21,39 +20,93 @@ Refer to their [guide](https://guides.cocoapods.org/using/using-cocoapods.html) 
 3. Open your `.xcworkspace` file to see the project in Xcode.
 
 ### Manual Installation
-Drag the `TinkPFMUI.xcframework` into the  _Frameworks, Libraries, and Embedded Content_ section on your application targets’ _General_ tab. 
+Drag the `TinkPFMUI.xcframework` and `TinkCore.xcframework` into the  _Frameworks, Libraries, and Embedded Content_ section on your application targets’ _General_ tab. 
 
 You should now be able to `import TinkPFMUI` within your project.
 
-## Initialization
+## Fetching data
 
 Tink PFM SDK needs a valid access token for a specific user to function correctly. Since Tink PFM SDK does not handle any type of authentication, this needs to be done by your backend. 
 See [this link](https://docs.tink.com/api/#oauth) for more info on how this is done. Once you have an access token you pass it on to your `Tink` instance.
 
-```swift
-Tink.shared.setCredential(.accessToken(accessToken))
+```swift 
+Tink.shared.setCredential(.accessToken(<#String#>))
 ```
 
-Once you have a valid access token you can create a `FinanceOverviewViewController`.
+## Displaying the Finance Overview
 
+Create a `FinanceOverviewViewController` and provide which sections should be displayed. Then add it to e.g. a `UITabBarController`.
 ```swift
-let financeOverviewViewController = FinanceOverviewViewController(features: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
-let navigationController = UINavigationController(rootViewController: financeOverviewViewController)
-```
-
-4. Present the view controller, for example in a `UITabbarController`:
-
-```swift
-tabBarController.viewControllers?.append(navigationController)
+let financeOverviewViewController = FinanceOverviewViewController(layoutSections: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
+tabBarController.viewControllers?.append(financeOverviewViewController)
 ```
 
 ## Refreshing access tokens
- 
-User access tokens expire after a set amount of time. You can keep your user logged in by [exchanging your refresh token](https://docs.tink.com/api/#oauth) for a new access token and passing it to the Tink PFM SDK. This will replace the previous token that was used. If needed you can also refresh the statistics, accounts and latest transactions.
+User access tokens expire after a set amount of time. You can keep your user logged in by exchanging your refresh token for a new access token (see Tink docs) and passing it to the Tink PFM SDK. This will overwrite the token that the fragment was initialzed with. If needed you can also refresh the statistics, accounts, and latest transactions:
+```swift 
+Tink.shared.setCredential(.accessToken(<#String#>))
+Tink.shared.refresh()
+```
+
+## Customization 
+
+To configure colors, font or icons you update the `Appearance.provider`.
+This needs to be done before initializing the `FinanceOverviewViewController` or any of the other View Controllers provided by this SDK.
+
+### Colors
+
+|`Color`|Description|
+|--------|-------------|
+|`background`|Color for the main background of the interface.|
+|`secondaryBackground`|Color for content layered on top of the main background.|
+|`groupedBackground`|Color for the main background of grouped interface components.|
+|`secondaryGroupedBackground`|Color for content layered on top of the main background of grouped interface components.|
+|`label`|Primary text color.|
+|`secondaryLabel`|Secondary text color.|
+|`separator`|Color for separators.|
+|`accent`|Colors for buttons, indicators and other similar elements.|
+|`expenses`|Color to represent expenses.|
+|`income`|Color to represent income.|
+|`transfers`|Color to represent transfers.|
+|`uncategorized`|Color representing uncategorized transactions.|
+|`warning`|Color representing a warning.|
 
 ```swift
-Tink.shared.setCredential(.accessToken(accessToken))
-Tink.shared.refresh()
+let colorProvider = ColorProvider()
+colorProvider.accent = <#UIColor#>
+colorProvider.expenses = <#UIColor#>
+colorProvider.income = <#UIColor#>
+colorProvider.transfers = <#UIColor#>
+colorProvider.uncategorized = <#UIColor#>
+Appearance.provider.colors = colorProvider
+```
+
+### Icons
+You can decide if you want to change all icons or just some icons. It is also possible to customize the icons background corner radiuses with  `categoryIconBackgroundCornerRadiusFactor`. This can be set with a factor from `0.0` to `1.0` where `0.0` results in a square shape and `1.0` , which is the default value, makes a circle.
+
+### Themes
+You can configure colors, font and icons by providing Tink PFM SDK with a `ColorProviding` , `IconProviding` and `FontProviding` type respectively. Tink PFM SDK also provides a `AppearanceProvider` type that can be used to easily customize the Tink PFM SDK views. 
+
+```swift
+let colorProvider = ColorProvider()
+let fontProvider = FontProvider()
+let iconProvider = IconProvider()
+colorProvider.accent = <#UIColor#>
+colorProvider.expenses = <#UIColor#>
+colorProvider.income = <#UIColor#>
+colorProvider.transfers = <#UIColor#>
+colorProvider.uncategorized = <#UIColor#>
+fontProvider.lightFont = <#UIFont#>
+fontProvider.regularFont = <#UIFont#>
+fontProvider.semiBoldFont = <#UIFont#>
+fontProvider.boldFont = <#UIFont#>
+iconProvider.wellness = <#UIImage#>
+iconProvider.house = <#UIImage#>
+iconProvider.entertainment = <#UIImage#>
+iconProvider.shopping = <#UIImage#>
+iconProvider.categoryIconBackgroundCornerRadiusFactor = <#CGFloat#>
+
+Appearance.provider = AppearenceProvider(colors: colorProvider, fonts: fontProvder, icons: iconProvider)
 ```
 
 ## Caching
@@ -62,52 +115,6 @@ The SDK will cache fetched data in memory. If the user logs out, you need to res
 
 ```swift
 Tink.shared.resetCache()
-```
-
-## Creating a custom Tink instance
-
-You can create your own Tink instance if you prefer. This might be used if you would like full control over the lifetime of the Tink object or if you need to access more advanced features like certificate pinning. 
-
-1. Create a configuration:
-
-```swift
-let configuration = Tink.Configuration(endpoint: .custom(url: customEndpoint), certificate: certificate)
-```
-
-*The SSL certificate is used for certificate pinning. This is optional and you can choose to set it depending on your requirements.*
-
-2. Create a `Tink` instance using your configuration:
-
-```swift
-let tink = Tink(configuration: configuration)
-```
-
-3. The `Tink` instance can be added to view controllers during initialization:
-
-```swift
-let financeOverviewViewController = FinanceOverviewViewController(tink: tink, features: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
-```
-
-
-## Appearance
-
-You can configure colors, icons and fonts by providing Tink PFM SDK with a `ColorProviding`, `IconProviding` and `FontProviding` type respectively. Tink PFM SDK also provides an `AppearanceProvider` type that conforms to all of these protocols and can be used to customize the Tink PFM SDK views. You can selectively choose what icons you'd like to customize.
-
-To customize the appearance of the SDK, use the `Appearance` singleton. 
-
-```swift
-// Create an appearance provider 
-let appearanceProvider = AppearanceProvider(
-    accent: accentColor,
-    expenses: expensesColor,
-    income: incomeColor,
-    transfers: transfersColor,
-    uncategorized: uncategorizedColor,
-)
-
-// Update the appearance
-Appearance.provider = appearanceProvider
-
 ```
 
 ## Localization

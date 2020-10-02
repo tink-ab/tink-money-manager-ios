@@ -1,474 +1,1290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>TinkPFMUI  Reference</title>
-    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
-    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
-    <script src="js/jquery.min.js" defer></script>
-    <script src="js/jazzy.js" defer></script>
-    
-  </head>
-  <body>
-    <a title="TinkPFMUI  Reference"></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinkPFMUI - TinkPFMUI</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+</head>
+<body>
     <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">TinkPFMUI 0.9.8 Docs</a> (45% documented)</p>
-        <p class="header-right"><a href="https://github.com/tink-ab/tink-pfm-sdk-ios"><img src="img/gh.png"/>View on GitHub</a></p>
-      </div>
+        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+            <strong>
+                TinkPFMUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
     </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">TinkPFMUI Reference</a>
-        <img id="carat" src="img/carat.png" />
-        TinkPFMUI  Reference
-      </p>
-    </div>
-    <div class="content-wrapper">
-      <nav class="sidebar">
-        <ul class="nav-groups">
-          <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Classes/AccountDetailsViewController.html">AccountDetailsViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ActionableInsightsViewController.html">ActionableInsightsViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ActionableInsightsViewController/EmptyState.html">– EmptyState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CategorizeTransactionViewController.html">CategorizeTransactionViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CategoryStatisticsNavigationControllerDelegate.html">CategoryStatisticsNavigationControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CategoryStatisticsViewController.html">CategoryStatisticsViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/CategoryStatisticsViewController/Style.html">– Style</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ColorProvider.html">ColorProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/FinanceOverviewViewController.html">FinanceOverviewViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/FinanceOverviewViewController/Feature.html">– Feature</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/FontProvider.html">FontProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/IconProvider.html">IconProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/Tink.html">Tink</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/Tink/Configuration.html">– Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/TransactionsViewController.html">TransactionsViewController</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Enums/Appearance.html">Appearance</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Color.html">Color</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Environment.html">Environment</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/EventTracker.html">EventTracker</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Font.html">Font</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Font/Weight.html">– Weight</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Font/Size.html">– Size</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ScreenEvent.html">ScreenEvent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/SessionCredential.html">SessionCredential</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Extensions/Array.html">Array</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Bundle.html">Bundle</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/CGAffineTransform.html">CGAffineTransform</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/CGFloat.html">CGFloat</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/CGPoint.html">CGPoint</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Calendar.html">Calendar</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/ClosedRange.html">ClosedRange</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Collection.html">Collection</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Comparable.html">Comparable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/DateInterval.html">DateInterval</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/FloatingPoint.html">FloatingPoint</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Locale.html">Locale</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/NSLayoutConstraint.html">NSLayoutConstraint</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/NumberFormatter.html">NumberFormatter</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Range.html">Range</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/SecCertificate.html">SecCertificate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/SecTrust.html">SecTrust</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UICollectionView.html">UICollectionView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIColor.html">UIColor</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UILabel.html">UILabel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UINavigationBar.html">UINavigationBar</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIScrollView.html">UIScrollView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UITableView.html">UITableView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIView.html">UIView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIViewController.html">UIViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/URLSession.html">URLSession</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions.html#/WeeklySummaryExpensesByCategoryItemView">WeeklySummaryExpensesByCategoryItemView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions.html#/WeeklySummaryExpensesByDayItemView">WeeklySummaryExpensesByDayItemView</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols/AccountDetailsViewControllerDelegate.html">AccountDetailsViewControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ActionableInsightsViewControllerDelegate.html">ActionableInsightsViewControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/AppearanceProviding.html">AppearanceProviding</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/CategorizeTransactionViewControllerDelegate.html">CategorizeTransactionViewControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ColorProviding.html">ColorProviding</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/EventTracking.html">EventTracking</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/FontProviding.html">FontProviding</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/IconProviding.html">IconProviding</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/TransactionsViewControllerDelegate.html">TransactionsViewControllerDelegate</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Structs/Account.html">Account</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ActionableInsight.html">ActionableInsight</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ActionableInsight/Insight.html">– Insight</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ActionableInsight.html#/Action">– Action</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/AppearanceProvider.html">AppearanceProvider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/Budget.html">Budget</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/Category.html">Category</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/Category/Code.html">– Code</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/Category/Kind.html">– Kind</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/Identifier.html">Identifier</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TinkError.html">TinkError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TinkError/Status.html">– Status</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/Transaction.html">Transaction</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TransactionsQuery.html">TransactionsQuery</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TransactionsQuery/Sort.html">– Sort</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/TransactionsQuery/Order.html">– Order</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Typealiases.html">Type Aliases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:9TinkPFMUI35ActionableInsightListViewControllera">ActionableInsightListViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:9TinkPFMUI43ActionableInsightListViewControllerDelegatea">ActionableInsightListViewControllerDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:9TinkPFMUI12CategoryNodea">CategoryNode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:9TinkPFMUI12CategoryTypea">CategoryType</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <article class="main-content">
-        <section>
-          <section class="section">
-            
-            <h1 id='tink-pfm-sdk-for-ios' class='heading'>Tink PFM SDK for iOS</h1>
-<h2 id='prerequisites' class='heading'>Prerequisites</h2>
 
-<ol>
-<li>Follow the <a href="https://docs.tink.com/resources/getting-started/set-up-your-account">getting started guide</a> to set up your Tink account.</li>
-<li><a href="https://docs.tink.com/resources/getting-started/get-access-token">Get an access token</a> with the <a href="https://docs.tink.com/api/#introduction-authentication-authentication-scopes">scopes</a> required for the features you intend to use.</li>
-</ol>
-<h2 id='installation' class='heading'>Installation</h2>
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
 
-<p>Drag the <code>TinkPFMUI.xcframework</code> into the  <em>Frameworks, Libraries, and Embedded Content</em> section on your application targets’ <em>General</em> tab. </p>
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li><li><a href="#protocols">Protocols</a></li><li><a href="#typealiases">Typealiases</a></li></ol>
+        </div>
+    </nav>
 
-<p>You should now be able to <code>import TinkPFMUI</code> within your project.</p>
-<h2 id='fetching-data' class='heading'>Fetching data</h2>
+    <main>
+        <article>
+                <section id="classes">
+        <h2>Classes</h2>
+        <dl>
+            <dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ColorProvider" title="class - ColorProvider">
+        Color​Provider
+    </a>
+</dt>
+<dd>
+    <p>A type that can provide custom colors for Tink views.</p>
 
-<p>Tink PFM SDK needs a valid access token for a specific user to function correctly. Since Tink PFM SDK does not handle any type of authentication, this needs to be done by your backend. 
-See <a href="https://docs.tink.com/api/#oauth">this link</a> for more info on how this is done. Once you have an access token you pass it on to your <code>TinkContext</code>.</p>
-<pre class="highlight swift"><code><span class="kt">Tink</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setCredential</span><span class="p">(</span><span class="o">.</span><span class="nf">accessToken</span><span class="p">(</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">String</span><span class="err">#</span><span class="o">&gt;</span><span class="p">))</span>
-</code></pre>
-<h2 id='displaying-the-finance-overview' class='heading'>Displaying the Finance Overview</h2>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FontProvider" title="class - FontProvider">
+        Font​Provider
+    </a>
+</dt>
+<dd>
+    <p>A type that can provide custom fonts for Tink views.</p>
 
-<p>Create a <code><a href="Classes/FinanceOverviewViewController.html">FinanceOverviewViewController</a></code> and provide which sections should be displayed. Then add it to e.g. a <code>UITabBarController</code>.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">financeOverviewViewController</span> <span class="o">=</span> <span class="kt">FinanceOverviewViewController</span><span class="p">(</span><span class="nv">layoutSections</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="nf">statistics</span><span class="p">([</span><span class="o">.</span><span class="n">expenses</span><span class="p">,</span> <span class="o">.</span><span class="n">income</span><span class="p">]),</span> <span class="o">.</span><span class="n">accounts</span><span class="p">,</span> <span class="o">.</span><span class="n">latestTransactions</span><span class="p">])</span>
-<span class="n">tabBarController</span><span class="o">.</span><span class="n">viewControllers</span><span class="p">?</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">financeOverviewViewController</span><span class="p">)</span>
-</code></pre>
-<h2 id='refreshing-access-tokens' class='heading'>Refreshing access tokens</h2>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/IconProvider" title="class - IconProvider">
+        Icon​Provider
+    </a>
+</dt>
+<dd>
+    <p>A type that can provide custom icons for Tink views.</p>
 
-<p>User access tokens expire after a set amount of time. You can keep your user logged in by exchanging your refresh token for a new access token (see Tink docs) and passing it to the Tink PFM SDK. This will overwrite the token that the fragment was initialzed with. If needed you can also refresh the statistics, accounts, and latest transactions:</p>
-<pre class="highlight swift"><code><span class="kt">Tink</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setCredential</span><span class="p">(</span><span class="o">.</span><span class="nf">accessToken</span><span class="p">(</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">String</span><span class="err">#</span><span class="o">&gt;</span><span class="p">))</span>
-<span class="kt">Tink</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">refresh</span><span class="p">()</span>
-</code></pre>
-<h2 id='customization' class='heading'>Customization</h2>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AccountDetailsViewController" title="class - AccountDetailsViewController">
+        Account​Details​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that displays balance and transactions for a specific account.
+Required scopes: <code>accounts:read</code>, <code>categories:read</code>, <code>transactions:read</code> and <code>transactions:categorize</code>.</p>
 
-<p>To configure colors, font or icons you update the <code><a href="Enums/Appearance.html#/s:9TinkPFMUI10AppearanceO8providerAA0C9Providing_pvpZ">Appearance.provider</a></code>.
-This needs to be done before initializing the <code><a href="Classes/FinanceOverviewViewController.html">FinanceOverviewViewController</a></code> or any of the other View Controllers provided by this SDK.</p>
-<h3 id='colors' class='heading'>Colors</h3>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController" title="class - ActionableInsightsViewController">
+        Actionable​Insights​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that displays a list actionable insights.</p>
 
-<table><thead>
-<tr>
-<th><code><a href="Enums/Color.html">Color</a></code></th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>background</code></td>
-<td>Color for the main background of the interface.</td>
-</tr>
-<tr>
-<td><code>secondaryBackground</code></td>
-<td>Color for content layered on top of the main background.</td>
-</tr>
-<tr>
-<td><code>groupedBackground</code></td>
-<td>Color for the main background of grouped interface components.</td>
-</tr>
-<tr>
-<td><code>secondaryGroupedBackground</code></td>
-<td>Color for content layered on top of the main background of grouped interface components.</td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td>Primary text color.</td>
-</tr>
-<tr>
-<td><code>secondaryLabel</code></td>
-<td>Secondary text color.</td>
-</tr>
-<tr>
-<td><code>separator</code></td>
-<td>Color for separators.</td>
-</tr>
-<tr>
-<td><code>accent</code></td>
-<td>Colors for buttons, indicators and other similar elements.</td>
-</tr>
-<tr>
-<td><code>expenses</code></td>
-<td>Color to represent expenses.</td>
-</tr>
-<tr>
-<td><code>income</code></td>
-<td>Color to represent income.</td>
-</tr>
-<tr>
-<td><code>transfers</code></td>
-<td>Color to represent transfers.</td>
-</tr>
-<tr>
-<td><code>uncategorized</code></td>
-<td>Color representing uncategorized transactions.</td>
-</tr>
-<tr>
-<td><code>warning</code></td>
-<td>Color representing a warning.</td>
-</tr>
-</tbody></table>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">colorProvider</span> <span class="o">=</span> <span class="kt">ColorProvider</span><span class="p">()</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">accent</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">expenses</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">income</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">transfers</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">uncategorized</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="kt">Appearance</span><span class="o">.</span><span class="n">provider</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="n">colorProvider</span>
-</code></pre>
-<h3 id='icons' class='heading'>Icons</h3>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetailsViewController" title="class - BudgetDetailsViewController">
+        Budget​Details​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that displays details of a budget.</p>
 
-<p>You can decide if you want to change all icons or just some icons. It is also possible to customize the icons background corner radiuses with  <code>categoryIconBackgroundCornerRadiusFactor</code>. This can be set with a factor from <code>0.0</code> to <code>1.0</code> where <code>0.0</code> results in a square shape and <code>1.0</code> , which is the default value, makes a circle.</p>
-<h3 id='themes' class='heading'>Themes</h3>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CreateBudgetViewController" title="class - CreateBudgetViewController">
+        Create​Budget​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that can be used to create a budget.</p>
 
-<p>You can configure colors, font and icons by providing Tink PFM SDK with a <code><a href="Protocols/ColorProviding.html">ColorProviding</a></code> , <code><a href="Protocols/IconProviding.html">IconProviding</a></code> and <code><a href="Protocols/FontProviding.html">FontProviding</a></code> type respectively. Tink PFM SDK also provides a <code><a href="Structs/AppearanceProvider.html">AppearanceProvider</a></code> type that can be used to easily customize the Tink PFM SDK views. </p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">colorProvider</span> <span class="o">=</span> <span class="kt">ColorProvider</span><span class="p">()</span>
-<span class="k">let</span> <span class="nv">fontProvider</span> <span class="o">=</span> <span class="kt">FontProvider</span><span class="p">()</span>
-<span class="k">let</span> <span class="nv">iconProvider</span> <span class="o">=</span> <span class="kt">IconProvider</span><span class="p">()</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">accent</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">expenses</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">income</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">transfers</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">colorProvider</span><span class="o">.</span><span class="n">uncategorized</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIColor</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">fontProvider</span><span class="o">.</span><span class="n">lightFont</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIFont</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">fontProvider</span><span class="o">.</span><span class="n">regularFont</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIFont</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">fontProvider</span><span class="o">.</span><span class="n">semiBoldFont</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIFont</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">fontProvider</span><span class="o">.</span><span class="n">boldFont</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIFont</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">iconProvider</span><span class="o">.</span><span class="n">wellness</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIImage</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">iconProvider</span><span class="o">.</span><span class="n">house</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIImage</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">iconProvider</span><span class="o">.</span><span class="n">entertainment</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIImage</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">iconProvider</span><span class="o">.</span><span class="n">shopping</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">UIImage</span><span class="err">#</span><span class="o">&gt;</span>
-<span class="n">iconProvider</span><span class="o">.</span><span class="n">categoryIconBackgroundCornerRadiusFactor</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">CGFloat</span><span class="err">#</span><span class="o">&gt;</span>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CategorizeTransactionViewController" title="class - CategorizeTransactionViewController">
+        Categorize​Transaction​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller for categorizing a transaction.
+Required scopes: <code>categories:read</code>, <code>transactions:read</code>, and <code>transactions:categorize</code></p>
 
-<span class="kt">Appearance</span><span class="o">.</span><span class="n">provider</span> <span class="o">=</span> <span class="kt">AppearenceProvider</span><span class="p">(</span><span class="nv">colors</span><span class="p">:</span> <span class="n">colorProvider</span><span class="p">,</span> <span class="nv">fonts</span><span class="p">:</span> <span class="n">fontProvder</span><span class="p">,</span> <span class="nv">icons</span><span class="p">:</span> <span class="n">iconProvider</span><span class="p">)</span>
-</code></pre>
-<h2 id='caching' class='heading'>Caching</h2>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CategoryStatisticsNavigationControllerDelegate" title="class - CategoryStatisticsNavigationControllerDelegate">
+        Category​Statistics​Navigation​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CategoryStatisticsViewController" title="class - CategoryStatisticsViewController">
+        Category​Statistics​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller for displaying statistics for categories.
+Required scopes: <code>statistics:read</code>, <code>transactions:read</code>, <code>transactions:categorize</code>, <code>categories:read</code> and <code>calender:read</code> .</p>
 
-<p>The SDK will cache fetched data in memory. If the user logs out, you need to reset the cache to make sure there won&rsquo;t be any cached data presented to the wrong user. </p>
-<pre class="highlight swift"><code><span class="kt">Tink</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">resetCache</span><span class="p">()</span>
-</code></pre>
-<h2 id='localization' class='heading'>Localization</h2>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController" title="class - FinanceOverviewViewController">
+        Finance​Overview​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller for displaying an overview of a user's finances.</p>
 
-<p>Numerical and time-based information such as transaction amounts and dates are formatted with the locale settings set by the current user in the system Settings app.</p>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsViewController" title="class - TransactionsViewController">
+        Transactions​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that displays a list of transactions.
+Required scopes: <code>transactions:write</code>, <code>transactions:read</code> and <code>categories:read</code>.</p>
 
-<p>Since some user-facing text is sent from the Tink API we recommend you to set the <code>locale</code> of the Tink user model to match the user&rsquo;s preference for a consistent user experience.</p>
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ServiceContainer" title="class - ServiceContainer">
+        Service​Container
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Tink" title="class - Tink">
+        Tink
+    </a>
+</dt>
+<dd>
+    <p>The <code>Tink</code> class encapsulates a connection to the Tink API.</p>
 
-<p>User-facing text in Tink PFM SDK are in English by default. 
-To add translations for other locales, refer to Localizable Strings document provided with the SDK.</p>
-<h2 id='additional-requirements' class='heading'>Additional requirements</h2>
-<h3 id='locking-screen-orientation' class='heading'>Locking screen orientation</h3>
+</dd>
+        </dl>
+    </section>
+    <section id="structures">
+        <h2>Structures</h2>
+        <dl>
+            <dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AppearanceProvider" title="structure - AppearanceProvider">
+        Appearance​Provider
+    </a>
+</dt>
+<dd>
+    <p>A appearance provider that can provide colors, fonts and icons for Tink views.</p>
 
-<p>View controllers from Tink PFM SDK should always be displayed in a portrait orientation since they currently do not support landscape orientations. 
-If presented in a landscape orientation, it will cause unexpected results and a suboptimal user experience.
-Disable other orientations than portrait by either overriding <code>supportedInterfaceOrientations</code> in the view controller that presents the view controller you&rsquo;re using from Tink PFM SDK.</p>
-<pre class="highlight swift"><code><span class="k">override</span> <span class="k">var</span> <span class="nv">supportedInterfaceOrientations</span><span class="p">:</span> <span class="kt">UIInterfaceOrientationMask</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">.</span><span class="n">portrait</span>
-<span class="p">}</span>
-</code></pre>
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Identifier" title="structure - Identifier">
+        Identifier
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Identifier" title="structure - Identifier">
+        Identifier
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AccessToken" title="structure - AccessToken">
+        Access​Token
+    </a>
+</dt>
+<dd>
+    <p>An OAuth access token to access the Tink service.</p>
 
-<p>Or by disabling all <em>Device Orientations</em> except <code>Portrait</code> in the <em>Deployment Info</em> section on your application targets’ <em>General</em> tab.  </p>
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Account" title="structure - Account">
+        Account
+    </a>
+</dt>
+<dd>
+    <p>An account could either be a debit account, a credit card, a loan or mortgage.</p>
 
-          </section>
-        </section>
-        <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://tink.com" target="_blank" rel="external">Tink</a>. All rights reserved. (Last updated: 2020-08-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
-      </article>
-    </div>
-  </body>
-</div>
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AuthorizationCode" title="structure - AuthorizationCode">
+        Authorization​Code
+    </a>
+</dt>
+<dd>
+    <p>An authorization code from the Tink backend.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ClientDescription" title="structure - ClientDescription">
+        Client​Description
+    </a>
+</dt>
+<dd>
+    <p>Description of a client using Tink.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyCode" title="structure - CurrencyCode">
+        Currency​Code
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount" title="structure - CurrencyDenominatedAmount">
+        Currency​Denominated​Amount
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Market" title="structure - Market">
+        Market
+    </a>
+</dt>
+<dd>
+    <p>Represents a market by a two-letter country code.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope" title="structure - Scope">
+        Scope
+    </a>
+</dt>
+<dd>
+    <p>Access to Tink is divided into scopes which grant access to different API endpoints.
+Each API customer has a set of scopes which control the maximum permitted data access.
+To see the total set of scopes that you can use, go to app settings in the Tink Console.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ScopeDescription" title="structure - ScopeDescription">
+        Scope​Description
+    </a>
+</dt>
+<dd>
+    <p>A title and description explaining a specific scope.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/SessionUser" title="structure - SessionUser">
+        Session​User
+    </a>
+</dt>
+<dd>
+    <p>A user in the Tink API.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight" title="structure - ActionableInsight">
+        Actionable​Insight
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_InsightAction" title="structure - ActionableInsight.InsightAction">
+        Actionable​Insight.​Insight​Action
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_AccountBalanceLowData" title="structure - ActionableInsight.AccountBalanceLowData">
+        Actionable​Insight.​Account​Balance​Low​Data
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_BudgetSummary" title="structure - ActionableInsight.BudgetSummary">
+        Actionable​Insight.​Budget​Summary
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_BudgetPeriod" title="structure - ActionableInsight.BudgetPeriod">
+        Actionable​Insight.​Budget​Period
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_BudgetPeriodSummary" title="structure - ActionableInsight.BudgetPeriodSummary">
+        Actionable​Insight.​Budget​Period​Summary
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_LargeExpense" title="structure - ActionableInsight.LargeExpense">
+        Actionable​Insight.​Large​Expense
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_WeeklyTranscations" title="structure - ActionableInsight.WeeklyTranscations">
+        Actionable​Insight.​Weekly​Transcations
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_CategorySpending" title="structure - ActionableInsight.CategorySpending">
+        Actionable​Insight.​Category​Spending
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_TransactionSummary" title="structure - ActionableInsight.TransactionSummary">
+        Actionable​Insight.​Transaction​Summary
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_TransactionSummary_TransactionsOverview" title="structure - ActionableInsight.TransactionSummary.TransactionsOverview">
+        Actionable​Insight.​Transaction​Summary.​Transactions​Overview
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_TransactionSummary_LargestExpense" title="structure - ActionableInsight.TransactionSummary.LargestExpense">
+        Actionable​Insight.​Transaction​Summary.​Largest​Expense
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_WeeklyExpensesByCategory" title="structure - ActionableInsight.WeeklyExpensesByCategory">
+        Actionable​Insight.​Weekly​Expenses​ByCategory
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_WeeklyExpensesByDay" title="structure - ActionableInsight.WeeklyExpensesByDay">
+        Actionable​Insight.​Weekly​Expenses​ByDay
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_WeeklyExpensesByDay_ExpenseStatisticsByDay" title="structure - ActionableInsight.WeeklyExpensesByDay.ExpenseStatisticsByDay">
+        Actionable​Insight.​Weekly​Expenses​ByDay.​Expense​Statistics​ByDay
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_WeeklyExpensesByDay_ExpenseStatistics" title="structure - ActionableInsight.WeeklyExpensesByDay.ExpenseStatistics">
+        Actionable​Insight.​Weekly​Expenses​ByDay.​Expense​Statistics
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_WeeklyTransactionsSummary" title="structure - ActionableInsight.WeeklyTransactionsSummary">
+        Actionable​Insight.​Weekly​Transactions​Summary
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_MonthlyExpensesByCategory" title="structure - ActionableInsight.MonthlyExpensesByCategory">
+        Actionable​Insight.​Monthly​Expenses​ByCategory
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_NewIncomeTransaction" title="structure - ActionableInsight.NewIncomeTransaction">
+        Actionable​Insight.​New​Income​Transaction
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_MonthlyTransactionsSummary" title="structure - ActionableInsight.MonthlyTransactionsSummary">
+        Actionable​Insight.​Monthly​Transactions​Summary
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_Month" title="structure - ActionableInsight.Month">
+        Actionable​Insight.​Month
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_Week" title="structure - ActionableInsight.Week">
+        Actionable​Insight.​Week
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_Day" title="structure - ActionableInsight.Day">
+        Actionable​Insight.​Day
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_SuggestSetUpSavingsAccount" title="structure - ActionableInsight.SuggestSetUpSavingsAccount">
+        Actionable​Insight.​Suggest​Set​UpSavings​Account
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_SuggestSetUpSavingsAccount_AccountInfo" title="structure - ActionableInsight.SuggestSetUpSavingsAccount.AccountInfo">
+        Actionable​Insight.​Suggest​Set​UpSavings​Account.​Account​Info
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_ViewBudget" title="structure - InsightActionData.ViewBudget">
+        Insight​Action​Data.​View​Budget
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_CreateTransfer" title="structure - InsightActionData.CreateTransfer">
+        Insight​Action​Data.​Create​Transfer
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_ViewTransaction" title="structure - InsightActionData.ViewTransaction">
+        Insight​Action​Data.​View​Transaction
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_CategorizeSingleExpense" title="structure - InsightActionData.CategorizeSingleExpense">
+        Insight​Action​Data.​Categorize​Single​Expense
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_ViewTransactions" title="structure - InsightActionData.ViewTransactions">
+        Insight​Action​Data.​View​Transactions
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_CategorizeTransactions" title="structure - InsightActionData.CategorizeTransactions">
+        Insight​Action​Data.​Categorize​Transactions
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_ViewTransactionsByCategory" title="structure - InsightActionData.ViewTransactionsByCategory">
+        Insight​Action​Data.​View​Transactions​ByCategory
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightViewModel" title="structure - ActionableInsightViewModel">
+        Actionable​Insight​View​Model
+    </a>
+</dt>
+<dd>
+    <p>An actionable insight represent some kind of actionable event or insight derived from user data.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightViewModel_Insight" title="structure - ActionableInsightViewModel.Insight">
+        Actionable​Insight​View​Model.​Insight
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget" title="structure - Budget">
+        Budget
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget_RecurringPeriodicity" title="structure - Budget.RecurringPeriodicity">
+        Budget.​Recurring​Periodicity
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget_OneOffPeriodicity" title="structure - Budget.OneOffPeriodicity">
+        Budget.​One​Off​Periodicity
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Transaction" title="structure - Budget.Transaction">
+        Budget.​Transaction
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetails" title="structure - BudgetDetails">
+        Budget​Details
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Period" title="structure - Budget.Period">
+        Budget.​Period
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetSummary" title="structure - BudgetSummary">
+        Budget​Summary
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Category" title="structure - Category">
+        Category
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Category_Code" title="structure - Category.Code">
+        Category.​Code
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Period" title="structure - Period">
+        Period
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Statistic" title="structure - Statistic">
+        Statistic
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction" title="structure - Transaction">
+        Transaction
+    </a>
+</dt>
+<dd>
+    <p>A representation of a transaction.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery" title="structure - TransactionsQuery">
+        Transactions​Query
+    </a>
+</dt>
+<dd>
+    <p>The <code>TransactionQuery</code> is used to determine which transactions to show.
+If no queries are selected, all transactions will be available.</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/User" title="structure - User">
+        User
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/UserProfile" title="structure - UserProfile">
+        User​Profile
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Tink_Configuration" title="structure - Tink.Configuration">
+        Tink.​Configuration
+    </a>
+</dt>
+<dd>
+    <p>Configuration used to set up the Tink</p>
+
+</dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TinkError" title="structure - TinkError">
+        Tink​Error
+    </a>
+</dt>
+<dd>
+    <p>An error from Tink PFM SDK.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="enumerations">
+        <h2>Enumerations</h2>
+        <dl>
+            <dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Appearance" title="enumeration - Appearance">
+        Appearance
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/HTTPStatusCodeError" title="enumeration - HTTPStatusCodeError">
+        HTTPStatus​Code​Error
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Color" title="enumeration - Color">
+        Color
+    </a>
+</dt>
+<dd>
+    <p>A namespace for custom colors.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/EventTracker" title="enumeration - EventTracker">
+        Event​Tracker
+    </a>
+</dt>
+<dd>
+    <p>A namespace for setting up event tracking.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ScreenEvent" title="enumeration - ScreenEvent">
+        Screen​Event
+    </a>
+</dt>
+<dd>
+    <p>A screen event represents a single view displayed to the user.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController_EmptyState" title="enumeration - ActionableInsightsViewController.EmptyState">
+        Actionable​Insights​View​Controller.​Empty​State
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CategoryStatisticsViewController_Style" title="enumeration - CategoryStatisticsViewController.Style">
+        Category​Statistics​View​Controller.​Style
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController_Feature" title="enumeration - FinanceOverviewViewController.Feature">
+        Finance​Overview​View​Controller.​Feature
+    </a>
+</dt>
+<dd>
+    <p>A type that determines which sections should be shown in a <code>OverviewViewController</code>.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController_Feature_StatisticsData" title="enumeration - FinanceOverviewViewController.Feature.StatisticsData">
+        Finance​Overview​View​Controller.​Feature.​Statistics​Data
+    </a>
+</dt>
+<dd>
+    <p>A type that determines which statistics data to display.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Font" title="enumeration - Font">
+        Font
+    </a>
+</dt>
+<dd>
+    <p>A type that represents a specific font.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Font_Weight" title="enumeration - Font.Weight">
+        Font.​Weight
+    </a>
+</dt>
+<dd>
+    <p>A type that determines the weight of a font.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/HumanEnumeratedFormatter_Style" title="enumeration - HumanEnumeratedFormatter.Style">
+        Human​Enumerated​Formatter.​Style
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Account_Kind" title="enumeration - Account.Kind">
+        Account.​Kind
+    </a>
+</dt>
+<dd>
+    <p>The kind of the account.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope_ReadAccess" title="enumeration - Scope.ReadAccess">
+        Scope.​Read​Access
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope_ReadWriteAccess" title="enumeration - Scope.ReadWriteAccess">
+        Scope.​Read​Write​Access
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope_AuthorizationAccess" title="enumeration - Scope.AuthorizationAccess">
+        Scope.​Authorization​Access
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope_CredentialsAccess" title="enumeration - Scope.CredentialsAccess">
+        Scope.​Credentials​Access
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope_TransactionAccess" title="enumeration - Scope.TransactionAccess">
+        Scope.​Transaction​Access
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope_TransferAccess" title="enumeration - Scope.TransferAccess">
+        Scope.​Transfer​Access
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Scope_UserAccess" title="enumeration - Scope.UserAccess">
+        Scope.​User​Access
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ServiceError" title="enumeration - ServiceError">
+        Service​Error
+    </a>
+</dt>
+<dd>
+    <p>An error returned by Tink service requests when something went wrong.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_State" title="enumeration - ActionableInsight.State">
+        Actionable​Insight.​State
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight_Kind" title="enumeration - ActionableInsight.Kind">
+        Actionable​Insight.​Kind
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData" title="enumeration - InsightActionData">
+        Insight​Action​Data
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Periodicity" title="enumeration - Budget.Periodicity">
+        Budget.​Periodicity
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget_RecurringPeriodicity_PeriodUnit" title="enumeration - Budget.RecurringPeriodicity.PeriodUnit">
+        Budget.​Recurring​Periodicity.​Period​Unit
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Budget_Filter" title="enumeration - Budget.Filter">
+        Budget.​Filter
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Category_Kind" title="enumeration - Category.Kind">
+        Category.​Kind
+    </a>
+</dt>
+<dd>
+    <p>A type of category.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Period_Resolution" title="enumeration - Period.Resolution">
+        Period.​Resolution
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Statistic_Resolution" title="enumeration - Statistic.Resolution">
+        Statistic.​Resolution
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Statistic_Kind" title="enumeration - Statistic.Kind">
+        Statistic.​Kind
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/StatisticPeriod" title="enumeration - StatisticPeriod">
+        Statistic​Period
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery_Sort" title="enumeration - TransactionsQuery.Sort">
+        Transactions​Query.​Sort
+    </a>
+</dt>
+<dd>
+    <p>A type that determines how to sort the transactions.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery_Order" title="enumeration - TransactionsQuery.Order">
+        Transactions​Query.​Order
+    </a>
+</dt>
+<dd>
+    <p>A type that determines the order of the transactions.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQueryError" title="enumeration - TransactionsQueryError">
+        Transactions​Query​Error
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Environment" title="enumeration - Environment">
+        Environment
+    </a>
+</dt>
+<dd>
+    <p>Represents which endpoints Tink will use.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Tink_UserError" title="enumeration - Tink.UserError">
+        Tink.​User​Error
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/UserSession" title="enumeration - UserSession">
+        User​Session
+    </a>
+</dt>
+<dd>
+    <p>A user session to use with the Tink object.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TinkError_Status" title="enumeration - TinkError.Status">
+        Tink​Error.​Status
+    </a>
+</dt>
+<dd>
+    <p>The different types of errors that can occur.</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="protocols">
+        <h2>Protocols</h2>
+        <dl>
+            <dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AppearanceProviding" title="protocol - AppearanceProviding">
+        Appearance​Providing
+    </a>
+</dt>
+<dd>
+    <p>A type that can provide colors, fonts and icons for Tink views.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ColorProviding" title="protocol - ColorProviding">
+        Color​Providing
+    </a>
+</dt>
+<dd>
+    <p>A type that can provide colors for Tink views.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/EventTracking" title="protocol - EventTracking">
+        Event​Tracking
+    </a>
+</dt>
+<dd>
+    <p>Methods to implement for tracking user actions and presentation of screens.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AccountDetailsViewControllerDelegate" title="protocol - AccountDetailsViewControllerDelegate">
+        Account​Details​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A set of methods that your delegate object can implement to track when the user selects a transaction.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewControllerDelegate" title="protocol - ActionableInsightsViewControllerDelegate">
+        Actionable​Insights​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A set of methods that your delegate object should implement to get notified when the user selects an action that requires more user interaction.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetailsViewControllerDelegate" title="protocol - BudgetDetailsViewControllerDelegate">
+        Budget​Details​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A set of methods that your delegate object can implement to track when the user edit the budget.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CategorizeTransactionViewControllerDelegate" title="protocol - CategorizeTransactionViewControllerDelegate">
+        Categorize​Transaction​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A set of methods that your delegate object can implement to track when the user picks a category and what transactions to categorize, or to track when the categorization fails.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsViewControllerDelegate" title="protocol - TransactionsViewControllerDelegate">
+        Transactions​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A set of methods that your delegate object can implement to track when the user selects a transaction, or to track when the loading transactions fails.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FontProviding" title="protocol - FontProviding">
+        Font​Providing
+    </a>
+</dt>
+<dd>
+    <p>A type that can provide fonts for Tink views.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable" title="protocol - Cancellable">
+        Cancellable
+    </a>
+</dt>
+<dd>
+    <p>A type that represents something that can be cancelled.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Retriable" title="protocol - Retriable">
+        Retriable
+    </a>
+</dt>
+<dd>
+    <p>A type that represents something that can be retried.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/IconProviding" title="protocol - IconProviding">
+        Icon​Providing
+    </a>
+</dt>
+<dd>
+    <p>A type that can provide icons for Tink views.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AccountService" title="protocol - AccountService">
+        Account​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightService" title="protocol - ActionableInsightService">
+        Actionable​Insight​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/AuthenticationService" title="protocol - AuthenticationService">
+        Authentication​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetService" title="protocol - BudgetService">
+        Budget​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CalendarService" title="protocol - CalendarService">
+        Calendar​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/CategoryService" title="protocol - CategoryService">
+        Category​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/OAuthService" title="protocol - OAuthService">
+        OAuth​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/StatisticService" title="protocol - StatisticService">
+        Statistic​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionService" title="protocol - TransactionService">
+        Transaction​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/UserService" title="protocol - UserService">
+        User​Service
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/SessionManager" title="protocol - SessionManager">
+        Session​Manager
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+    <section id="typealiases">
+        <h2>Typealiases</h2>
+        <dl>
+            <dt class="typealias">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewAppearanceProvider" title="typealias - FinanceOverviewAppearanceProvider">
+        Finance​Overview​Appearance​Provider
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightListViewController" title="typealias - ActionableInsightListViewController">
+        Actionable​Insight​List​View​Controller
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightListViewControllerDelegate" title="typealias - ActionableInsightListViewControllerDelegate">
+        Actionable​Insight​List​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/RetryCancellable" title="typealias - RetryCancellable">
+        Retry​Cancellable
+    </a>
+</dt>
+<dd>
+    <p>A type that represents something that can be retried and cancelled.</p>
+
+</dd>
+<dt class="typealias">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/SessionCredential" title="typealias - SessionCredential">
+        Session​Credential
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-09-30T13:48:21+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
 </html>

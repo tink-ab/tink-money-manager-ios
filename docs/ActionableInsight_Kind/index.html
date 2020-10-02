@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinkPFMUI - ActionableInsight.Kind</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+            <strong>
+                TinkPFMUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#actionableinsight.kind.accountbalancelow">account​Balance​Low</a></li><li class="case"><a href="#actionableinsight.kind.budgetoverspent">budget​Overspent</a></li><li class="case"><a href="#actionableinsight.kind.budgetclosenegative">budget​Close​Negative</a></li><li class="case"><a href="#actionableinsight.kind.budgetclosepositive">budget​Close​Positive</a></li><li class="case"><a href="#actionableinsight.kind.budgetsuccess">budget​Success</a></li><li class="case"><a href="#actionableinsight.kind.budgetsummaryachieved">budget​Summary​Achieved</a></li><li class="case"><a href="#actionableinsight.kind.budgetsummaryoverspent">budget​Summary​Overspent</a></li><li class="case"><a href="#actionableinsight.kind.largeexpense">large​Expense</a></li><li class="case"><a href="#actionableinsight.kind.singleuncategorizedtransaction">single​Uncategorized​Transaction</a></li><li class="case"><a href="#actionableinsight.kind.doublecharge">double​Charge</a></li><li class="case"><a href="#actionableinsight.kind.weeklyuncategorizedtransactions">weekly​Uncategorized​Transactions</a></li><li class="case"><a href="#actionableinsight.kind.weeklysummaryexpensesbycategory">weekly​Summary​Expenses​ByCategory</a></li><li class="case"><a href="#actionableinsight.kind.weeklysummaryexpensesbyday">weekly​Summary​Expenses​ByDay</a></li><li class="case"><a href="#actionableinsight.kind.monthlysummaryexpensesbycategory">monthly​Summary​Expenses​ByCategory</a></li><li class="case"><a href="#actionableinsight.kind.weeklysummaryexpensetransactions">weekly​Summary​Expense​Transactions</a></li><li class="case"><a href="#actionableinsight.kind.monthlysummaryexpensetransactions">monthly​Summary​Expense​Transactions</a></li><li class="case"><a href="#actionableinsight.kind.newincometransaction">new​Income​Transaction</a></li><li class="case"><a href="#actionableinsight.kind.suggestsetupsavingsaccount">suggest​Set​UpSavings​Account</a></li><li class="case"><a href="#actionableinsight.kind.unknown">unknown</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Actionable​Insight.​Kind</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Kind</span></code></pre></body></html>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight">ActionableInsight</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
+
+        <div role="article" class="case" id="actionableinsight.kind.accountbalancelow">
+    <h3>
+        <code>account​Balance​Low</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">accountBalanceLow</span>(: <span class="type">AccountBalanceLowData</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.budgetoverspent">
+    <h3>
+        <code>budget​Overspent</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">budgetOverspent</span>(: <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetSummary"><span class="type">BudgetSummary</span></a>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.budgetclosenegative">
+    <h3>
+        <code>budget​Close​Negative</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">budgetCloseNegative</span>(: <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetSummary"><span class="type">BudgetSummary</span></a>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.budgetclosepositive">
+    <h3>
+        <code>budget​Close​Positive</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">budgetClosePositive</span>(: <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetSummary"><span class="type">BudgetSummary</span></a>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.budgetsuccess">
+    <h3>
+        <code>budget​Success</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">budgetSuccess</span>(: <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetSummary"><span class="type">BudgetSummary</span></a>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.budgetsummaryachieved">
+    <h3>
+        <code>budget​Summary​Achieved</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">budgetSummaryAchieved</span>(: <span class="type">BudgetPeriodSummary</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.budgetsummaryoverspent">
+    <h3>
+        <code>budget​Summary​Overspent</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">budgetSummaryOverspent</span>(: <span class="type">BudgetPeriodSummary</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.largeexpense">
+    <h3>
+        <code>large​Expense</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">largeExpense</span>(: <span class="type">LargeExpense</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.singleuncategorizedtransaction">
+    <h3>
+        <code>single​Uncategorized​Transaction</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">singleUncategorizedTransaction</span>(: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.doublecharge">
+    <h3>
+        <code>double​Charge</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">doubleCharge</span>(: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>])</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.weeklyuncategorizedtransactions">
+    <h3>
+        <code>weekly​Uncategorized​Transactions</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">weeklyUncategorizedTransactions</span>(: <span class="type">WeeklyTranscations</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.weeklysummaryexpensesbycategory">
+    <h3>
+        <code>weekly​Summary​Expenses​ByCategory</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">weeklySummaryExpensesByCategory</span>(: <span class="type">WeeklyExpensesByCategory</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.weeklysummaryexpensesbyday">
+    <h3>
+        <code>weekly​Summary​Expenses​ByDay</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">weeklySummaryExpensesByDay</span>(: <span class="type">WeeklyExpensesByDay</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.monthlysummaryexpensesbycategory">
+    <h3>
+        <code>monthly​Summary​Expenses​ByCategory</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">monthlySummaryExpensesByCategory</span>(: <span class="type">MonthlyExpensesByCategory</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.weeklysummaryexpensetransactions">
+    <h3>
+        <code>weekly​Summary​Expense​Transactions</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">weeklySummaryExpenseTransactions</span>(: <span class="type">WeeklyTransactionsSummary</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.monthlysummaryexpensetransactions">
+    <h3>
+        <code>monthly​Summary​Expense​Transactions</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">monthlySummaryExpenseTransactions</span>(: <span class="type">MonthlyTransactionsSummary</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.newincometransaction">
+    <h3>
+        <code>new​Income​Transaction</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">newIncomeTransaction</span>(: <span class="type">NewIncomeTransaction</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.suggestsetupsavingsaccount">
+    <h3>
+        <code>suggest​Set​UpSavings​Account</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">suggestSetUpSavingsAccount</span>(: <span class="type">SuggestSetUpSavingsAccount</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="actionableinsight.kind.unknown">
+    <h3>
+        <code>unknown</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">unknown</span></code></pre></body></html>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-09-30T13:48:23+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
