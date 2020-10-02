@@ -9,7 +9,7 @@ with Tink to authenticate and authorize users.
 
 ## Getting started
 
-Find the built `TinkPFMUI.xcframework` and drag it into the _Frameworks, Libraries, and Embedded Content_  section on your application targets’ _General_ tab
+Find the built `TinkPFMUI.xcframework` and `TinkCore.xcframework` and drag it into the _Frameworks, Libraries, and Embedded Content_  section on your application targets’ _General_ tab
 
 After that you need to open `AppDelegate.swift` and add a access token to the `setCredential` call.
 

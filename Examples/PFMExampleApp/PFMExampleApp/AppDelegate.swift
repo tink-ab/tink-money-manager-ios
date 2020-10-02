@@ -11,9 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         tabBarController.tabBar.isTranslucent = false
 
-        let configuration = Tink.Configuration(environment: .production)
+        let configuration = try! Tink.Configuration(clientID: "YOUR_CLIENT_ID", redirectURI: URL(string: "REDIRECT_URL")!, environment: .production)
         let tink = Tink(configuration: configuration)
-        tink.setCredential(.accessToken("YOUR_ACCESS_TOKEN"))
+        tink.userSession = .accessToken("YOUR_ACCESS_TOKEN")
 
         let colorProvider = ColorProvider()
         colorProvider.accent = .systemBlue
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         EventTracker.tracker = debugEventTracker
 
-        let overviewViewController = FinanceOverviewViewController(tink: tink, features: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
+        let overviewViewController = FinanceOverviewViewController(tink: tink, features: [.statistics([.expenses, .income]), .accounts, .latestTransactions, .budgets])
 
         overviewViewController.title = "Overview"
         overviewViewController.tabBarItem = UITabBarItem(title: "Overview", image: UIImage(systemName: "chart.pie.fill"), tag: 0)

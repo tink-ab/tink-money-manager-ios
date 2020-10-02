@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinkPFMUI - EventTracker</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+            <strong>
+                TinkPFMUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#eventtracker.tracker">tracker</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Event​Tracker</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">EventTracker</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>A namespace for setting up event tracking.</p>
+
+</div>
+<div class="discussion">
+    <p>Setting up the <code>EventTracker</code> allows you to track certain user events.</p>
+
+<p>A <em>Screen</em> event occurs when a user is presented a new screen within the PFM SDK.</p>
+
+<h2>Getting started</h2>
+
+<p>In order to listen to the different events sent by the SDK you need to implement the <code>EventTracking</code> protocol. A very simple implementation that simply prints the events could be:</p>
+
+<html><body><pre class="highlight"><code><span class="attribute">final</span> <span class="keyword">class</span> <span class="type">DebugEventTracker</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/EventTracking"><span class="type">EventTracking</span></a> {
+    <span class="keyword">func</span> <span class="function">track</span>(<span class="keyword">_</span> <span class="variable">event</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ScreenEvent"><span class="type">ScreenEvent</span></a>) {
+        <span class="variable">print</span>(<span class="string literal">"</span><span class="string literal">Screen: </span>\<span class="string literal">(</span><span class="variable">event</span>.<span class="type">name</span><span class="string literal">)</span><span class="string literal"/><span class="string literal">"</span>)
+    }
+}
+</code></pre></body></html>
+<p>The <code>EventTracking</code> implementation then need to be assigned to the <code>EventTracker</code>.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">debugEventTracker</span> = <span class="variable">DebugEventTracker</span>()
+<span class="variable">EventTracker</span>.<span class="type">tracker</span> = <span class="variable">debugEventTracker</span>
+</code></pre></body></html>
+<p>This is all you need to do to listen for the events.</p>
+
+<h2>Events</h2>
+
+<p>All the different events sent by Tink PFM SDK are presented below.</p>
+
+<p>The different screen events that can occur is wrapped in the <code>ScreenEvent</code> enumuration. All screens have a <code>name</code> property which is consistent across platforms.</p>
+
+<p>| <code>ScreenEvent</code>         | <code>name</code>                | Description                                                               |
+| -------------         | ------                | -----------                                                               |
+| <code>overview</code>            | Overview              | The overview screen.                                                      |
+| <code>expenses</code>            | Expenses              | The expenses screen.                                                      |
+| <code>income</code>              | Income                | The income screen.                                                        |
+| <code>transactions</code>        | Transactions          | The transaction list screen.                                              |
+| <code>categorySelection</code>   | Category Selection    | Screen where user selects a category.                                     |
+| <code>similarTransactions</code> | Similar Transactions  | Screen where user can select similar transactions.                        |
+| <code>accountDetails</code>      | Account Details       | Screen where user can see balance and transactions of a specific account. |
+| <code>events</code>              | Events                | Screen where user can see actionable insights.                            |
+| <code>eventsArchive</code>       | Events Archive        | Screen where user can see archived insights.                              |</p>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="eventtracker.tracker">
+    <h3>
+        <code>tracker</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">tracker</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/EventTracking"><span class="type">EventTracking</span></a>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Registers your <code>EventTracker</code> implementation so it will receive events when a user navigates or performs actions.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-09-30T13:48:20+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

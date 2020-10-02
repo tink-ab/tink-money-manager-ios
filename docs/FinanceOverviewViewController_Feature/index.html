@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinkPFMUI - FinanceOverviewViewController.Feature</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+            <strong>
+                TinkPFMUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#financeoverviewviewcontroller.feature.statistics">statistics</a></li><li class="case"><a href="#financeoverviewviewcontroller.feature.latesttransactions">latest​Transactions</a></li><li class="case"><a href="#financeoverviewviewcontroller.feature.accounts">accounts</a></li><li class="case"><a href="#financeoverviewviewcontroller.feature.actionableinsights">actionable​Insights</a></li><li class="case"><a href="#financeoverviewviewcontroller.feature.budgets">budgets</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Finance​Overview​View​Controller.​Feature</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">Feature</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>A type that determines which sections should be shown in a <code>OverviewViewController</code>.</p>
+
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Member Of</h3>
+<dl>
+    <dt class="class"><code><a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController">FinanceOverviewViewController</a></code></dt>
+<dd><p>A view controller for displaying an overview of a user's finances.</p>
+</dd>
+</dl>
+<h3>Nested Types</h3>
+<dl>
+    <dt class="enumeration"><code><a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController_Feature_StatisticsData">FinanceOverviewViewController.Feature.StatisticsData</a></code></dt>
+<dd><p>A type that determines which statistics data to display.</p>
+</dd>
+</dl>
+</section>
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
+
+        <div role="article" class="case" id="financeoverviewviewcontroller.feature.statistics">
+    <h3>
+        <code>statistics</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">statistics</span>(: [<span class="variable">StatisticsData</span>])</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>One or more representations of statistics data.</p>
+
+</div>
+</div>
+<div role="article" class="case" id="financeoverviewviewcontroller.feature.latesttransactions">
+    <h3>
+        <code>latest​Transactions</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">latestTransactions</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>A short list of the user's latest transactions.</p>
+
+</div>
+</div>
+<div role="article" class="case" id="financeoverviewviewcontroller.feature.accounts">
+    <h3>
+        <code>accounts</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">accounts</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>All the user's accounts.</p>
+
+</div>
+</div>
+<div role="article" class="case" id="financeoverviewviewcontroller.feature.actionableinsights">
+    <h3>
+        <code>actionable​Insights</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">actionableInsights</span>(<span class="variable">delegate</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewControllerDelegate"><span class="type">ActionableInsightsViewControllerDelegate</span></a>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Actionable insights summary.</p>
+
+</div>
+</div>
+<div role="article" class="case" id="financeoverviewviewcontroller.feature.budgets">
+    <h3>
+        <code>budgets</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">budgets</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>All the user's budgets.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-09-30T13:48:23+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

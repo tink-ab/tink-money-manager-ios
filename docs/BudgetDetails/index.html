@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinkPFMUI - BudgetDetails</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+            <strong>
+                TinkPFMUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#budgetdetails.init(budgetspecification:budgetperiods:dateinterval:totalspentamount:averagespentamount:)">init(budget​Specification:​budget​Periods:​date​Interval:​total​Spent​Amount:​average​Spent​Amount:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#budgetdetails.budgetspecification">budget​Specification</a></li><li class="variable"><a href="#budgetdetails.budgetperiods">budget​Periods</a></li><li class="variable"><a href="#budgetdetails.dateinterval">date​Interval</a></li><li class="variable"><a href="#budgetdetails.totalspentamount">total​Spent​Amount</a></li><li class="variable"><a href="#budgetdetails.averagespentamount">average​Spent​Amount</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Budget​Details</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">BudgetDetails</span></code></pre></body></html>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="budgetdetails.init(budgetspecification:budgetperiods:dateinterval:totalspentamount:averagespentamount:)">
+    <h3>
+        <code>init(budget​Specification:​budget​Periods:​date​Interval:​total​Spent​Amount:​average​Spent​Amount:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">budgetSpecification</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>, <span class="variable">budgetPeriods</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<a href="https://tink-ab.github.io/tink-pfm-ios/Period"><span class="type">Period</span></a>], <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>, <span class="variable">totalSpentAmount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?, <span class="variable">averageSpentAmount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?)</code></pre></body></html>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="budgetdetails.budgetspecification">
+    <h3>
+        <code>budget​Specification</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">budgetSpecification</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The budget.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="budgetdetails.budgetperiods">
+    <h3>
+        <code>budget​Periods</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">budgetPeriods</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<a href="https://tink-ab.github.io/tink-pfm-ios/Period"><span class="type">Period</span></a>]</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>List of budget periods.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="budgetdetails.dateinterval">
+    <h3>
+        <code>date​Interval</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">dateInterval</span>: <span class="type">DateInterval</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Period date interval</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="budgetdetails.totalspentamount">
+    <h3>
+        <code>total​Spent​Amount</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">totalSpentAmount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Total amount spent within the listed periods.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="budgetdetails.averagespentamount">
+    <h3>
+        <code>average​Spent​Amount</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">averageSpentAmount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Average period spending for the listed periods.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-09-30T13:48:20+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -3,22 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		205C2F92241F60FE00BD3CF1 /* TinkPFMUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = 205C2F94241F60FE00BD3CF1 /* TinkPFMUI.strings */; };
 		20C24BAD241A398200EB5927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C24BAC241A398200EB5927 /* Assets.xcassets */; };
+		9D4E7AD5250B9DF800AE88DB /* TinkCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */; };
+		9D4E7AD6250B9DF800AE88DB /* TinkCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9D4E7AE5250B9E6B00AE88DB /* TinkPFMUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E7AE4250B9E6B00AE88DB /* TinkPFMUI.xcframework */; };
+		9D4E7AE6250B9E6B00AE88DB /* TinkPFMUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E7AE4250B9E6B00AE88DB /* TinkPFMUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9DC592592395548000C9A5F1 /* DebugAnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */; };
 		9DDD67A82368850500507DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD67A72368850500507DF3 /* AppDelegate.swift */; };
 		9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		20DBE51A2424F86C005AA1B9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9D4E7AD6250B9DF800AE88DB /* TinkCore.xcframework in Embed Frameworks */,
+				9D4E7AE6250B9E6B00AE88DB /* TinkPFMUI.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		20183728242258FF00F07BC8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/TinkPFMUI.strings; sourceTree = "<group>"; };
 		20C24BAC241A398200EB5927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		20DBE5172424F86C005AA1B9 /* TinkPFMUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkPFMUI.xcframework; path = ../../build/TinkPFMUI.xcframework; sourceTree = "<group>"; };
 		20EDBBC8237AF43B00A225D1 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkCore.xcframework; path = ../../Frameworks/TinkCore.xcframework; sourceTree = "<group>"; };
+		9D4E7AE4250B9E6B00AE88DB /* TinkPFMUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkPFMUI.xcframework; path = ../../build/TinkPFMUI.xcframework; sourceTree = "<group>"; };
 		9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugAnalyticsIntegration.swift; sourceTree = "<group>"; };
 		9DDD67A42368850500507DF3 /* PFMExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PFMExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDD67A72368850500507DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,16 +51,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4E7AD5250B9DF800AE88DB /* TinkCore.xcframework in Frameworks */,
+				9D4E7AE5250B9E6B00AE88DB /* TinkPFMUI.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20DBE5162424F86C005AA1B9 /* Frameworks */ = {
+		9D4E7AD0250B9DE900AE88DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				20DBE5172424F86C005AA1B9 /* TinkPFMUI.xcframework */,
+				9D4E7AE4250B9E6B00AE88DB /* TinkPFMUI.xcframework */,
+				9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -50,7 +73,7 @@
 			children = (
 				9DDD67A62368850500507DF3 /* PFMExampleApp */,
 				9DDD67A52368850500507DF3 /* Products */,
-				20DBE5162424F86C005AA1B9 /* Frameworks */,
+				9D4E7AD0250B9DE900AE88DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,12 +108,15 @@
 				9DDD67A02368850500507DF3 /* Sources */,
 				9DDD67A12368850500507DF3 /* Frameworks */,
 				9DDD67A22368850500507DF3 /* Resources */,
+				20DBE51A2424F86C005AA1B9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PFMExampleApp;
+			packageProductDependencies = (
+			);
 			productName = PFMExampleApp;
 			productReference = 9DDD67A42368850500507DF3 /* PFMExampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +145,8 @@
 				sv,
 			);
 			mainGroup = 9DDD679B2368850500507DF3;
+			packageReferences = (
+			);
 			productRefGroup = 9DDD67A52368850500507DF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

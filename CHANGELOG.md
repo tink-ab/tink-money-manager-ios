@@ -1,3 +1,17 @@
+## Tink PFM 0.10.0
+- Added Budget functionality on the SDK.
+	- Configure `FinanceOverviewViewController` to display a budget on the overview.
+	- Configure `CreateBudgetViewController` to directly create a budget.
+	- Configure `BudgetDetailsViewController` to display the budget detail.
+- Fixed issues with monthly view of category statistics when there is no data at the start of a monthly period.
+- Shows loading indicator until category statistics data is available in some environments.
+- Now hides unsupported Actionable Insights from lists.
+- Loading indicators use the same color everywhere.
+- Icon shapes in actionable insights are customized by the same appearance property as other icons.
+- Improved support for devices with smaller screens.
+- Moved the networking layer and related models to the TinkCore framework.
+- Fixed swipe to go back gesture.
+
 ## Tink PFM 0.9.9
 - Latest transactions list on overview now refreshes when shown in some environments.
 
