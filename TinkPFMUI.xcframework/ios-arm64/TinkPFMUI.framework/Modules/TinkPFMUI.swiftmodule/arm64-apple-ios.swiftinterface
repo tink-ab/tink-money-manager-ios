@@ -178,6 +178,7 @@ public class IconProvider : TinkPFMUI.IconProviding {
   public var uncategorizedIcon: UIKit.UIImage
   public var categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat?
   public var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat?
+  public var notification: UIKit.UIImage
   public init()
   public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
   @objc deinit
@@ -239,6 +240,20 @@ public class FontProvider : TinkPFMUI.FontProviding {
 public protocol EventTracking : AnyObject {
   func track(_ screen: TinkPFMUI.ScreenEvent)
 }
+extension Tink.Configuration {
+  public init(clientID: Swift.String, environment: TinkCore.Environment = .production, certificateURL: Foundation.URL? = nil) throws
+}
+public struct Month : Swift.Hashable, Swift.Comparable {
+  public static func < (lhs: TinkPFMUI.Month, rhs: TinkPFMUI.Month) -> Swift.Bool
+  public var year: Swift.Int
+  public var month: Swift.Int
+  public init(year: Swift.Int, month: Swift.Int)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkPFMUI.Month, b: TinkPFMUI.Month) -> Swift.Bool
+}
 extension Tink {
   public func refresh()
   public func resetCache()
@@ -272,6 +287,7 @@ public protocol IconProviding {
   var uncategorizedIcon: UIKit.UIImage { get set }
   var categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
   var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
+  var notification: UIKit.UIImage { get set }
 }
 public enum ScreenEvent {
   case overview
@@ -387,19 +403,26 @@ public typealias ActionableInsightListViewController = TinkPFMUI.ActionableInsig
 public typealias ActionableInsightListViewControllerDelegate = TinkPFMUI.ActionableInsightsViewControllerDelegate
 public protocol ActionableInsightsViewControllerDelegate : AnyObject {
   func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, initiateTransferFromAccount source: Foundation.URL?, to destination: Foundation.URL?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
   func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
   func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkPFMUI.Month)
   func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showLeftToSpendForMonth month: TinkPFMUI.Month)
+  func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, refreshCredentialsWithID credentialsID: TinkCore.Credentials.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
 }
 extension ActionableInsightsViewControllerDelegate {
   public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
-  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind dataType: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
   public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
+  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
+  public func actionableInsightsViewController(_ viewController: TinkPFMUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkPFMUI.Month)
 }
 @objc @_hasMissingDesignatedInitializers final public class ActionableInsightsViewController : UIKit.UIViewController {
   public enum EmptyState {
