@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#insightactiondata.unknown">unknown</a></li><li class="case"><a href="#insightactiondata.acknowledge">acknowledge</a></li><li class="case"><a href="#insightactiondata.dismiss">dismiss</a></li><li class="case"><a href="#insightactiondata.viewbudget">view​Budget</a></li><li class="case"><a href="#insightactiondata.createtransfer">create​Transfer</a></li><li class="case"><a href="#insightactiondata.viewtransaction">view​Transaction</a></li><li class="case"><a href="#insightactiondata.categorizeexpense">categorize​Expense</a></li><li class="case"><a href="#insightactiondata.viewtransactions">view​Transactions</a></li><li class="case"><a href="#insightactiondata.categorizetransactions">categorize​Transactions</a></li><li class="case"><a href="#insightactiondata.viewtransactionsbycategory">view​Transactions​ByCategory</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#insightactiondata.unknown">unknown</a></li><li class="case"><a href="#insightactiondata.acknowledge">acknowledge</a></li><li class="case"><a href="#insightactiondata.dismiss">dismiss</a></li><li class="case"><a href="#insightactiondata.viewbudget">view​Budget</a></li><li class="case"><a href="#insightactiondata.createtransfer">create​Transfer</a></li><li class="case"><a href="#insightactiondata.viewtransaction">view​Transaction</a></li><li class="case"><a href="#insightactiondata.categorizeexpense">categorize​Expense</a></li><li class="case"><a href="#insightactiondata.viewtransactions">view​Transactions</a></li><li class="case"><a href="#insightactiondata.categorizetransactions">categorize​Transactions</a></li><li class="case"><a href="#insightactiondata.viewtransactionsbycategory">view​Transactions​ByCategory</a></li><li class="case"><a href="#insightactiondata.viewaccount">view​Account</a></li><li class="case"><a href="#insightactiondata.viewlefttospend">view​Left​ToSpend</a></li><li class="case"><a href="#insightactiondata.createbudget">create​Budget</a></li><li class="case"><a href="#insightactiondata.refreshcredentials">refresh​Credentials</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -56,6 +56,8 @@
 <dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_CategorizeTransactions">InsightActionData.CategorizeTransactions</a></code></dt>
 <dd></dd>
 <dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_ViewTransactionsByCategory">InsightActionData.ViewTransactionsByCategory</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData_BudgetSuggestion">InsightActionData.BudgetSuggestion</a></code></dt>
 <dd></dd>
 </dl>
 </section>
@@ -122,6 +124,30 @@
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">viewTransactionsByCategory</span>(: [<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">Code</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>]])</code></pre></body></html>
 </div>
+<div role="article" class="case" id="insightactiondata.viewaccount">
+    <h3>
+        <code>view​Account</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">viewAccount</span>(: <a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="insightactiondata.viewlefttospend">
+    <h3>
+        <code>view​Left​ToSpend</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">viewLeftToSpend</span>(: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight"><span class="type">ActionableInsight</span></a>.<a href="https://tink-ab.github.io/tink-pfm-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="insightactiondata.createbudget">
+    <h3>
+        <code>create​Budget</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">createBudget</span>(: <span class="type">BudgetSuggestion</span>)</code></pre></body></html>
+</div>
+<div role="article" class="case" id="insightactiondata.refreshcredentials">
+    <h3>
+        <code>refresh​Credentials</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">refreshCredentials</span>(: <span class="type">Credentials</span>.<span class="type">ID</span>)</code></pre></body></html>
+</div>
     </section>
 
 
@@ -131,7 +157,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-09-30T13:48:20+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2020-10-21T09:51:05+0200">21 October 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
