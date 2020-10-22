@@ -1,3 +1,29 @@
+## Tink PFM 0.11.0
+- Improvements to Actionable Insights
+    - Adds support for insight types:
+        - `CREDIT_CARD_LIMIT_CLOSE`
+        - `CREDIT_CARD_LIMIT_REACHED`
+        - `LEFT_TO_SPEND_POSITIVE_MID_MONTH`
+        - `LEFT_TO_SPEND_NEGATIVE_MID_MONTH`
+        - `LEFT_TO_SPEND_NEGATIVE_SUMMARY`
+        - `BUDGET_SUGGEST_CREATE_TOP_CATEGORY`
+        - `BUDGET_SUGGEST_CREATE_FIRST`
+        - `LEFT_TO_SPEND_POSITIVE_BEGINNING_MONTH`
+        - `LEFT_TO_SPEND_NEGATIVE_BEGINNING_MONTH`
+        - `LEFT_TO_SPEND_NEGATIVE`
+        - `SPENDING_BY_CATEGORY_INCREASED`
+        - `LEFT_TO_SPEND_POSITIVE_SUMMARY_SAVINGS_ACCOUNT`
+        - `LEFT_TO_SPEND_POSITIVE_FINAL_WEEK`
+        - `AGGREGATION_REFRESH_PSD2_CREDENTIAL`
+    - Hides actionable insights with unsupported actions.
+    - Monthly summary insights links to expense statistics pie chart instead of showing a list of transactions by default.
+    - Removed default handling to show or categorize multiple transactions.
+        - Implement delegate methods `actionableInsightsViewController(_:showTransactionsWithIDs:)` and `actionableInsightsViewController(_:categorizeTransactionsWithIDs:completionHandler:)` to handle actions related to multiple transactions.
+    - Added new card for monthly and weekly transaction summary.
+    - Adjusted fonts and icons used on actionable insights.
+- Now shows currency symbols in category statistics bar charts.
+- When configuring Tink, the redirect URI is now optional.
+
 ## Tink PFM 0.10.0
 - Added Budget functionality on the SDK.
 	- Configure `FinanceOverviewViewController` to display a budget on the overview.

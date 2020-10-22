@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showbudget:budgetperiodstart:)">actionable​Insights​View​Controller(_:​show​Budget:​budget​Period​Start:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:initiatetransferfromaccount:to:amount:currencycode:completionhandler:)">actionable​Insights​View​Controller(_:​initiate​Transfer​From​Account:​to:​amount:​currency​Code:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionwithid:)">actionable​Insights​View​Controller(_:​show​Transaction​With​ID:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:categorizetransactionwithid:completionhandler:)">actionable​Insights​View​Controller(_:​categorize​Transaction​With​ID:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionswithids:)">actionable​Insights​View​Controller(_:​show​Transactions​With​IDs:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:categorizetransactionswithids:completionhandler:)">actionable​Insights​View​Controller(_:​categorize​Transactions​With​IDs:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:imageforinsightwithkind:)">actionable​Insights​View​Controller(_:​image​For​Insight​With​Kind:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showbudget:budgetperiodstart:)">actionable​Insights​View​Controller(_:​show​Budget:​budget​Period​Start:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:createbudgetwithsuggestion:completionhandler:)">actionable​Insights​View​Controller(_:​create​Budget​With​Suggestion:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:initiatetransferfromaccount:to:amount:currencycode:completionhandler:)">actionable​Insights​View​Controller(_:​initiate​Transfer​From​Account:​to:​amount:​currency​Code:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showaccountwithid:)">actionable​Insights​View​Controller(_:​show​Account​With​ID:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionwithid:)">actionable​Insights​View​Controller(_:​show​Transaction​With​ID:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:categorizetransactionwithid:completionhandler:)">actionable​Insights​View​Controller(_:​categorize​Transaction​With​ID:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionswithids:)">actionable​Insights​View​Controller(_:​show​Transactions​With​IDs:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionsbycategorycode:)">actionable​Insights​View​Controller(_:​show​Transactions​ByCategory​Code:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionsbycategorycode:month:)">actionable​Insights​View​Controller(_:​show​Transactions​ByCategory​Code:​month:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:categorizetransactionswithids:completionhandler:)">actionable​Insights​View​Controller(_:​categorize​Transactions​With​IDs:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showlefttospendformonth:)">actionable​Insights​View​Controller(_:​show​Left​ToSpend​For​Month:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:refreshcredentialswithid:completionhandler:)">actionable​Insights​View​Controller(_:​refresh​Credentials​With​ID:​completion​Handler:​)</a></li><li class="function"><a href="#actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:imageforinsightwithkind:)">actionable​Insights​View​Controller(_:​image​For​Insight​With​Kind:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -134,6 +134,47 @@
   </tbody>
 </table>
 </div>
+<div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:createbudgetwithsuggestion:completionhandler:)">
+    <h3>
+        <code>actionable​Insights​View​Controller(_:​create​Budget​With​Suggestion:​completion​Handler:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">createBudgetWithSuggestion</span> <span class="variable">suggestion</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData"><span class="type">InsightActionData</span></a>.<span class="type">BudgetSuggestion</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Tells the delegate that it should create a budget.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>view​Controller</th>
+    <td><code class="type">Actionable​Insights​View​Controller</code></td>
+    <td><p>The view controller that called this method.</p>
+</td>
+</tr>
+<tr>
+    <th>suggestion</th>
+    <td><code class="type">Insight​Action​Data.​Budget​Suggestion</code></td>
+    <td><p>A suggestion of what budget to create.</p>
+</td>
+</tr>
+<tr>
+    <th>completion​Handler</th>
+    <td><code class="type">@escaping (Result&lt;Void, Error&gt;) -&gt; Void</code></td>
+    <td><p>A completion handler to call when the budget was created or failed.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
 <div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:initiatetransferfromaccount:to:amount:currencycode:completionhandler:)">
     <h3>
         <code>actionable​Insights​View​Controller(_:​initiate​Transfer​From​Account:​to:​amount:​currency​Code:​completion​Handler:​)</code>
@@ -188,6 +229,41 @@
     <th>completion​Handler</th>
     <td><code class="type">@escaping (Result&lt;Void, Error&gt;) -&gt; Void</code></td>
     <td><p>A completion handler to call when transfer was completed.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showaccountwithid:)">
+    <h3>
+        <code>actionable​Insights​View​Controller(_:​show​Account​With​ID:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showAccountWithID</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Tells the delegate that it should present a specific account.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>view​Controller</th>
+    <td><code class="type">Actionable​Insights​View​Controller</code></td>
+    <td><p>The view controller that called this method.</p>
+</td>
+</tr>
+<tr>
+    <th>id</th>
+    <td><code class="type">Account.​ID</code></td>
+    <td><p>The id of the account.</p>
 </td>
 </tr>
   </tbody>
@@ -308,6 +384,82 @@
   </tbody>
 </table>
 </div>
+<div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionsbycategorycode:)">
+    <h3>
+        <code>actionable​Insights​View​Controller(_:​show​Transactions​ByCategory​Code:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsByCategoryCode</span> <span class="variable">transactionIDsByCategoryCode</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">Code</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>]])</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Tells the delegate that it should present a list of transactions grouped by category.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>view​Controller</th>
+    <td><code class="type">Actionable​Insights​View​Controller</code></td>
+    <td><p>The view controller that called this method.</p>
+</td>
+</tr>
+<tr>
+    <th>transaction​IDsByCategory​Code</th>
+    <td><code class="type">[Tink​Core.​Category.​Code:​ [Transaction.​ID]]</code></td>
+    <td><p>The identifiers of the transactions grouped by category code.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showtransactionsbycategorycode:month:)">
+    <h3>
+        <code>actionable​Insights​View​Controller(_:​show​Transactions​ByCategory​Code:​month:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsByCategoryCode</span> <span class="variable">transactionIDsByCategoryCode</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">Code</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>]], <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Tells the delegate that it should present a list of transactions grouped by category for a specific month.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>view​Controller</th>
+    <td><code class="type">Actionable​Insights​View​Controller</code></td>
+    <td><p>The view controller that called this method.</p>
+</td>
+</tr>
+<tr>
+    <th>transaction​IDsByCategory​Code</th>
+    <td><code class="type">[Tink​Core.​Category.​Code:​ [Transaction.​ID]]</code></td>
+    <td><p>The identifiers of the transactions grouped by category code.</p>
+</td>
+</tr>
+<tr>
+    <th>month</th>
+    <td><code class="type">Month</code></td>
+    <td><p>The month the transactions are for.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
 <div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:categorizetransactionswithids:completionhandler:)">
     <h3>
         <code>actionable​Insights​View​Controller(_:​categorize​Transactions​With​IDs:​completion​Handler:​)</code>
@@ -348,6 +500,82 @@
     <th>completion​Handler</th>
     <td><code class="type">@escaping (Result&lt;Void, Error&gt;) -&gt; Void</code></td>
     <td><p>A completion handler to call when the transactions have been categorized, the user cancelled categorizing, or an error occurred when categorizing.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:showlefttospendformonth:)">
+    <h3>
+        <code>actionable​Insights​View​Controller(_:​show​Left​ToSpend​For​Month:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showLeftToSpendForMonth</span> <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Tells the delegate that is should present left to spend.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>view​Controller</th>
+    <td><code class="type">Actionable​Insights​View​Controller</code></td>
+    <td><p>The view controller that called this method.</p>
+</td>
+</tr>
+<tr>
+    <th>month</th>
+    <td><code class="type">Month</code></td>
+    <td><p>The month that should be displayed.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="actionableinsightsviewcontrollerdelegate.actionableinsightsviewcontroller(_:refreshcredentialswithid:completionhandler:)">
+    <h3>
+        <code>actionable​Insights​View​Controller(_:​refresh​Credentials​With​ID:​completion​Handler:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">refreshCredentialsWithID</span> <span class="variable">credentialsID</span>: <span class="type">Credentials</span>.<span class="type">ID</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Tells the delegate that is should refresh credentials.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>view​Controller</th>
+    <td><code class="type">Actionable​Insights​View​Controller</code></td>
+    <td><p>The view controller that called this method.</p>
+</td>
+</tr>
+<tr>
+    <th>credentials​ID</th>
+    <td><code class="type">Credentials.​ID</code></td>
+    <td><p>The identifier of the credentials that should be refreshed.</p>
+</td>
+</tr>
+<tr>
+    <th>completion​Handler</th>
+    <td><code class="type">@escaping (Result&lt;Void, Error&gt;) -&gt; Void</code></td>
+    <td><p>A completion handler to call when the credentials have been refreshed, the user cancelled refresh, or an error occurred when refreshing.</p>
 </td>
 </tr>
   </tbody>
@@ -397,7 +625,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-09-30T13:48:22+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2020-10-21T09:51:08+0200">21 October 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

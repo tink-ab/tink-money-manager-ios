@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'TinkPFMUI'
-  s.version  = '0.10.0'
+  s.version  = '0.11.0'
   s.license = { :type => 'Tink', :file => 'LICENSE' }
   s.authors  = { 'Tink AB' => 'mobile@tink.se' }
   s.homepage = 'https://tink.com'
@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
     test_spec.dependency 'SnapshotTesting', '~> 1.7'
   end
 
-  s.dependency "TinkCore", "~> 0.1.7"
+  s.dependency "TinkCore", "~> 0.2.0"
 end

@@ -102,6 +102,20 @@ public struct ActionableInsight {
     case monthlySummaryExpenseTransactions(TinkCore.ActionableInsight.MonthlyTransactionsSummary)
     case newIncomeTransaction(TinkCore.ActionableInsight.NewIncomeTransaction)
     case suggestSetUpSavingsAccount(TinkCore.ActionableInsight.SuggestSetUpSavingsAccount)
+    case creditCardLimitClose(TinkCore.ActionableInsight.CreditCardLimit)
+    case creditCardLimitReached(TinkCore.ActionableInsight.CreditCardLimit)
+    case leftToSpendPositiveMidMonth(TinkCore.ActionableInsight.LeftToSpendMidMonth)
+    case leftToSpendNegativeMidMonth(TinkCore.ActionableInsight.LeftToSpendMidMonth)
+    case leftToSpendNegativeSummary(TinkCore.ActionableInsight.LeftToSpendNegativeSummary)
+    case budgetSuggestCreateTopCategory(TinkCore.ActionableInsight.BudgetSuggestCreateTopCategory)
+    case budgetSuggestCreateFirst
+    case leftToSpendPositiveBeginningMonth(TinkCore.ActionableInsight.LeftToSpendBeginningMonth)
+    case leftToSpendNegativeBeginningMonth(TinkCore.ActionableInsight.LeftToSpendBeginningMonth)
+    case leftToSpendNegative(TinkCore.ActionableInsight.LeftToSpendNegative)
+    case spendingByCategoryIncreased(TinkCore.ActionableInsight.SpendingByCategoryIncreased)
+    case leftToSpendPositiveSummarySavingsAccount(TinkCore.ActionableInsight.LeftToSpendPositiveSummarySavingsAccount)
+    case leftToSpendPositiveFinalWeek(TinkCore.ActionableInsight.LeftToSpendPositiveFinalWeek)
+    case aggregationRefreshPSD2Credentials(TinkCore.ActionableInsight.AggregationRefreshPSD2Credentials)
     case unknown
   }
   public let id: TinkCore.ActionableInsight.ID
@@ -119,8 +133,14 @@ extension ActionableInsight {
     public init(accountID: TinkCore.Account.ID, balance: TinkCore.CurrencyDenominatedAmount)
   }
   public struct BudgetSummary {
-    public let budgetId: TinkCore.Budget.ID
+    public let budgetID: TinkCore.Budget.ID
     public let budgetPeriod: TinkCore.ActionableInsight.BudgetPeriod
+    public init(budgetID: TinkCore.Budget.ID, budgetPeriod: TinkCore.ActionableInsight.BudgetPeriod)
+    @available(*, deprecated, renamed: "budgetID")
+    public var budgetId: TinkCore.Budget.ID {
+      get
+    }
+    @available(*, deprecated, renamed: "init(budgetID:budgtePeriod:)")
     public init(budgetId: TinkCore.Budget.ID, budgetPeriod: TinkCore.ActionableInsight.BudgetPeriod)
   }
   public struct BudgetPeriod {
@@ -129,10 +149,27 @@ extension ActionableInsight {
     public let budgetAmount: TinkCore.CurrencyDenominatedAmount
     public init(dateInterval: Foundation.DateInterval, spentAmount: TinkCore.CurrencyDenominatedAmount, budgetAmount: TinkCore.CurrencyDenominatedAmount)
   }
+  public enum BudgetPeriodUnit {
+    case year
+    case month
+    case week
+    case unspecified
+    public static func == (a: TinkCore.ActionableInsight.BudgetPeriodUnit, b: TinkCore.ActionableInsight.BudgetPeriodUnit) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
   public struct BudgetPeriodSummary {
     public let achievedBudgets: [TinkCore.ActionableInsight.BudgetSummary]
     public let overspentBudgets: [TinkCore.ActionableInsight.BudgetSummary]
-    public let period: Swift.String
+    public let periodUnit: TinkCore.ActionableInsight.BudgetPeriodUnit
+    public init(achievedBudgets: [TinkCore.ActionableInsight.BudgetSummary], overspentBudgets: [TinkCore.ActionableInsight.BudgetSummary], periodUnit: TinkCore.ActionableInsight.BudgetPeriodUnit)
+    @available(*, deprecated, message: "Use `periodUnit` instead.")
+    public var period: Swift.String {
+      get
+    }
+    @available(*, deprecated, message: "Use `init(achievedBudgets:overspentBudgets:period:)` instead")
     public init(achievedBudgets: [TinkCore.ActionableInsight.BudgetSummary], overspentBudgets: [TinkCore.ActionableInsight.BudgetSummary], period: Swift.String)
   }
   public struct LargeExpense {
@@ -231,16 +268,95 @@ extension ActionableInsight {
     public let day: Swift.Int
     public init(year: Swift.Int, month: Swift.Int, day: Swift.Int)
   }
+  public struct AccountInfo {
+    public let id: TinkCore.Account.ID
+    public let name: Swift.String
+    public init(id: TinkCore.Account.ID, name: Swift.String)
+  }
   public struct SuggestSetUpSavingsAccount {
-    public struct AccountInfo {
-      public let id: TinkCore.Account.ID
-      public let name: Swift.String
-      public init(id: TinkCore.Account.ID, name: Swift.String)
-    }
+    @available(*, deprecated, message: "Use ActionableInsight.AccountInfo instead.")
+    public typealias AccountInfo = TinkCore.ActionableInsight.AccountInfo
     public let balance: TinkCore.CurrencyDenominatedAmount
-    public let savingsAccount: TinkCore.ActionableInsight.SuggestSetUpSavingsAccount.AccountInfo
-    public let currentAccount: TinkCore.ActionableInsight.SuggestSetUpSavingsAccount.AccountInfo
-    public init(balance: TinkCore.CurrencyDenominatedAmount, savingsAccount: TinkCore.ActionableInsight.SuggestSetUpSavingsAccount.AccountInfo, currentAccount: TinkCore.ActionableInsight.SuggestSetUpSavingsAccount.AccountInfo)
+    public let savingsAccount: TinkCore.ActionableInsight.AccountInfo
+    public let currentAccount: TinkCore.ActionableInsight.AccountInfo
+    public init(balance: TinkCore.CurrencyDenominatedAmount, savingsAccount: TinkCore.ActionableInsight.AccountInfo, currentAccount: TinkCore.ActionableInsight.AccountInfo)
+  }
+  public struct CreditCardLimit {
+    public let account: TinkCore.ActionableInsight.AccountInfo
+    public let availableCredit: TinkCore.CurrencyDenominatedAmount?
+    public init(account: TinkCore.ActionableInsight.AccountInfo, availableCredit: TinkCore.CurrencyDenominatedAmount?)
+  }
+  public struct LeftToSpendStatistics {
+    public let createdAt: Foundation.Date
+    public let currentLeftToSpend: TinkCore.CurrencyDenominatedAmount
+    public let averageLeftToSpend: TinkCore.CurrencyDenominatedAmount
+    public init(createdAt: Foundation.Date, currentLeftToSpend: TinkCore.CurrencyDenominatedAmount, averageLeftToSpend: TinkCore.CurrencyDenominatedAmount)
+  }
+  public struct LeftToSpendMidMonth {
+    public let month: TinkCore.ActionableInsight.Month
+    public let amountDifference: TinkCore.CurrencyDenominatedAmount
+    public let leftToSpendStatistics: TinkCore.ActionableInsight.LeftToSpendStatistics
+    public init(month: TinkCore.ActionableInsight.Month, amountDifference: TinkCore.CurrencyDenominatedAmount, leftToSpendStatistics: TinkCore.ActionableInsight.LeftToSpendStatistics)
+  }
+  public struct LeftToSpendNegativeSummary {
+    public let month: TinkCore.ActionableInsight.Month
+    public let leftToSpend: TinkCore.CurrencyDenominatedAmount
+    public init(month: TinkCore.ActionableInsight.Month, leftToSpend: TinkCore.CurrencyDenominatedAmount)
+  }
+  public struct BudgetSuggestCreateTopCategory {
+    public let categorySpending: TinkCore.ActionableInsight.CategorySpending
+    public let suggestedBudgetAmount: TinkCore.CurrencyDenominatedAmount
+    public init(categorySpending: TinkCore.ActionableInsight.CategorySpending, suggestedBudgetAmount: TinkCore.CurrencyDenominatedAmount)
+  }
+  public struct LeftToSpendBeginningMonth {
+    public let month: TinkCore.ActionableInsight.Month
+    public let amountDifference: TinkCore.CurrencyDenominatedAmount
+    public let totalExpense: TinkCore.CurrencyDenominatedAmount
+    public let leftToSpendStatistics: TinkCore.ActionableInsight.LeftToSpendStatistics
+    public init(month: TinkCore.ActionableInsight.Month, amountDifference: TinkCore.CurrencyDenominatedAmount, totalExpense: TinkCore.CurrencyDenominatedAmount, leftToSpendStatistics: TinkCore.ActionableInsight.LeftToSpendStatistics)
+  }
+  public struct LeftToSpendNegative {
+    public let month: TinkCore.ActionableInsight.Month
+    public let createdAt: Foundation.Date
+    public let leftToSpend: TinkCore.CurrencyDenominatedAmount
+    public init(month: TinkCore.ActionableInsight.Month, createdAt: Foundation.Date, leftToSpend: TinkCore.CurrencyDenominatedAmount)
+  }
+  public struct CategoryInfo {
+    public let id: TinkCore.Category.ID
+    public let code: TinkCore.Category.Code
+    public let name: Swift.String
+    public init(id: TinkCore.Category.ID, code: TinkCore.Category.Code, name: Swift.String)
+  }
+  public struct SpendingByCategoryIncreased {
+    public let category: TinkCore.ActionableInsight.CategoryInfo
+    public let lastMonth: TinkCore.ActionableInsight.Month
+    public let lastMonthSpending: TinkCore.CurrencyDenominatedAmount
+    public let twoMonthsAgoSpending: TinkCore.CurrencyDenominatedAmount
+    public let percentage: Swift.Double
+    public init(category: TinkCore.ActionableInsight.CategoryInfo, lastMonth: TinkCore.ActionableInsight.Month, lastMonthSpending: TinkCore.CurrencyDenominatedAmount, twoMonthsAgoSpending: TinkCore.CurrencyDenominatedAmount, percentage: Swift.Double)
+  }
+  public struct LeftToSpendPositiveSummarySavingsAccount {
+    public let month: TinkCore.ActionableInsight.Month
+    public let leftAmount: TinkCore.CurrencyDenominatedAmount
+    public init(month: TinkCore.ActionableInsight.Month, leftAmount: TinkCore.CurrencyDenominatedAmount)
+  }
+  public struct LeftToSpendPositiveFinalWeek {
+    public let month: TinkCore.ActionableInsight.Month
+    public let amountDifference: TinkCore.CurrencyDenominatedAmount
+    public let leftToSpendStatistics: TinkCore.ActionableInsight.LeftToSpendStatistics
+    public let leftToSpendPerDay: TinkCore.CurrencyDenominatedAmount
+    public init(month: TinkCore.ActionableInsight.Month, amountDifference: TinkCore.CurrencyDenominatedAmount, leftToSpendStatistics: TinkCore.ActionableInsight.LeftToSpendStatistics, leftToSpendPerDay: TinkCore.CurrencyDenominatedAmount)
+  }
+  public struct ProviderInfo {
+    public let id: TinkCore.Provider.ID
+    public let displayName: Swift.String
+    public init(id: TinkCore.Provider.ID, displayName: Swift.String)
+  }
+  public struct AggregationRefreshPSD2Credentials {
+    public let credentialsID: TinkCore.Credentials.ID
+    public let provider: TinkCore.ActionableInsight.ProviderInfo
+    public let sessionExpiryDate: Foundation.Date
+    public init(credentialsID: TinkCore.Credentials.ID, provider: TinkCore.ActionableInsight.ProviderInfo, sessionExpiryDate: Foundation.Date)
   }
 }
 public enum InsightActionData {
@@ -275,6 +391,12 @@ public enum InsightActionData {
     public let transactionIdsByCategory: [TinkCore.Category.Code : [TinkCore.Transaction.ID]]
     public init(transactionIdsByCategory: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
   }
+  public struct BudgetSuggestion {
+    public let filters: [TinkCore.Budget.Filter]
+    public let amount: TinkCore.CurrencyDenominatedAmount?
+    public let periodicity: TinkCore.Budget.Periodicity?
+    public init(filters: [TinkCore.Budget.Filter], amount: TinkCore.CurrencyDenominatedAmount?, periodicity: TinkCore.Budget.Periodicity?)
+  }
   case unknown
   case acknowledge
   case dismiss
@@ -285,6 +407,10 @@ public enum InsightActionData {
   case viewTransactions([TinkCore.Transaction.ID])
   case categorizeTransactions([TinkCore.Transaction.ID])
   case viewTransactionsByCategory([TinkCore.Category.Code : [TinkCore.Transaction.ID]])
+  case viewAccount(TinkCore.Account.ID)
+  case viewLeftToSpend(TinkCore.ActionableInsight.Month)
+  case createBudget(TinkCore.InsightActionData.BudgetSuggestion)
+  case refreshCredentials(TinkCore.Credentials.ID)
 }
 public protocol ActionableInsightService {
   func insights(completion: @escaping (Swift.Result<[TinkCore.ActionableInsight], Swift.Error>) -> Swift.Void) -> TinkCore.RetryCancellable?
@@ -1272,6 +1398,8 @@ public enum UserSession {
 }
 extension TinkCore.Account.Kind : Swift.Equatable {}
 extension TinkCore.Account.Kind : Swift.Hashable {}
+extension TinkCore.ActionableInsight.BudgetPeriodUnit : Swift.Equatable {}
+extension TinkCore.ActionableInsight.BudgetPeriodUnit : Swift.Hashable {}
 extension TinkCore.Budget.RecurringPeriodicity.PeriodUnit : Swift.Equatable {}
 extension TinkCore.Budget.RecurringPeriodicity.PeriodUnit : Swift.Hashable {}
 extension TinkCore.Category.Kind : Swift.RawRepresentable {}

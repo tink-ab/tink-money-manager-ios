@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#actionableinsight.budgetsummary.init(budgetid:budgetperiod:)">init(budget​Id:​budget​Period:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#actionableinsight.budgetsummary.budgetid">budget​Id</a></li><li class="variable"><a href="#actionableinsight.budgetsummary.budgetperiod">budget​Period</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#actionableinsight.budgetsummary.init(budgetid:budgetperiod:)">init(budget​ID:​budget​Period:​)</a></li><li class="initializer"><a href="#actionableinsight.budgetsummary.init(budgetid:budgetperiod:)">init(budget​Id:​budget​Period:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#actionableinsight.budgetsummary.budgetid">budget​ID</a></li><li class="variable"><a href="#actionableinsight.budgetsummary.budgetperiod">budget​Period</a></li><li class="variable"><a href="#actionableinsight.budgetsummary.budgetid">budget​Id</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -52,9 +52,15 @@
 
         <div role="article" class="initializer" id="actionableinsight.budgetsummary.init(budgetid:budgetperiod:)">
     <h3>
+        <code>init(budget​ID:​budget​Period:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">budgetID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">budgetPeriod</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight"><span class="type">ActionableInsight</span></a>.<span class="type">BudgetPeriod</span>)</code></pre></body></html>
+</div>
+<div role="article" class="initializer" id="actionableinsight.budgetsummary.init(budgetid:budgetperiod:)">
+    <h3>
         <code>init(budget​Id:​budget​Period:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">budgetId</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">budgetPeriod</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight"><span class="type">ActionableInsight</span></a>.<span class="type">BudgetPeriod</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"init(budgetID:budgtePeriod:)"</span>) <span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">budgetId</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">budgetPeriod</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight"><span class="type">ActionableInsight</span></a>.<span class="type">BudgetPeriod</span>)</code></pre></body></html>
 </div>
     </section>
     <section id="properties">
@@ -62,15 +68,21 @@
 
         <div role="article" class="variable" id="actionableinsight.budgetsummary.budgetid">
     <h3>
-        <code>budget​Id</code>
+        <code>budget​ID</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">budgetId</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">budgetID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span></code></pre></body></html>
 </div>
 <div role="article" class="variable" id="actionableinsight.budgetsummary.budgetperiod">
     <h3>
         <code>budget​Period</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">budgetPeriod</span>: <span class="type">BudgetPeriod</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="actionableinsight.budgetsummary.budgetid">
+    <h3>
+        <code>budget​Id</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">budgetId</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span></code></pre></body></html>
 </div>
     </section>
 
@@ -81,7 +93,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-09-30T13:48:21+0200">30 September 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2020-10-21T09:51:07+0200">21 October 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
