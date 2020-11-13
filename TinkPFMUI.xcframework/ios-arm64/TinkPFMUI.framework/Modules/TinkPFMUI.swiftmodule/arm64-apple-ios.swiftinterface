@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkPFMUI
 import CoreGraphics
 import Foundation
@@ -24,6 +24,7 @@ extension FinanceOverviewViewController {
     case accounts
     case actionableInsights(delegate: TinkPFMUI.ActionableInsightsViewControllerDelegate)
     case budgets
+    case custom(UIKit.UIView)
   }
 }
 public struct ActionableInsightViewModel {
@@ -81,6 +82,21 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
   @objc override dynamic public init(rootViewController: UIKit.UIViewController)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
 }
+public protocol EditBudgetViewControllerDelegate : AnyObject {
+  func editBudgetViewController(_ viewController: TinkPFMUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
+  func editBudgetViewController(_ viewController: TinkPFMUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
+  func editBudgetViewController(_ viewController: TinkPFMUI.EditBudgetViewController, didFailWithError error: Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers final public class EditBudgetViewController : UIKit.UINavigationController {
+  weak final public var editBudgetViewControllerDelegate: TinkPFMUI.EditBudgetViewControllerDelegate?
+  convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
+  @objc override final public func viewDidLoad()
+  @objc deinit
+  @available(iOS 5.0, *)
+  @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
 @objc final public class CategoryStatisticsViewController : UIKit.UINavigationController {
   public enum Style {
     case pieChart, barChart
@@ -94,6 +110,7 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
   final public let style: TinkPFMUI.CategoryStatisticsViewController.Style
   final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool
   public init(tink: TinkCore.Tink = .shared, categoryType: TinkCore.Category.Kind, style: TinkPFMUI.CategoryStatisticsViewController.Style = .pieChart)
+  @available(*, unavailable)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
   @available(iOS 5.0, *)
@@ -193,11 +210,16 @@ public protocol BudgetDetailsViewControllerDelegate : AnyObject {
 @objc @_hasMissingDesignatedInitializers final public class BudgetDetailsViewController : UIKit.UIViewController {
   weak final public var delegate: TinkPFMUI.BudgetDetailsViewControllerDelegate?
   convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
 }
 extension BudgetDetailsViewController {
   @objc override final public func viewDidLoad()
+}
+extension BudgetDetailsViewController : TinkPFMUI.EditBudgetViewControllerDelegate {
+  final public func editBudgetViewController(_ viewController: TinkPFMUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
+  final public func editBudgetViewController(_ viewController: TinkPFMUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
+  final public func editBudgetViewController(_ viewController: TinkPFMUI.EditBudgetViewController, didFailWithError error: Swift.Error)
 }
 public protocol AccountDetailsViewControllerDelegate : AnyObject {
   func accountDetailsViewController(_ viewController: TinkPFMUI.AccountDetailsViewController, didSelectTransaction transaction: TinkCore.Transaction)
@@ -207,6 +229,7 @@ public protocol AccountDetailsViewControllerDelegate : AnyObject {
   convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
   @available(*, deprecated, renamed: "init(tink:accountID:)")
   convenience public init(tink: TinkCore.Tink = .shared, accountId: TinkCore.Account.ID)
+  @available(*, unavailable)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
@@ -434,8 +457,8 @@ extension ActionableInsightsViewControllerDelegate {
     set
   }
   convenience public init(tink: TinkCore.Tink = .shared, delegate: TinkPFMUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
 }
 extension ActionableInsightsViewController {
   @objc override final public func viewDidLoad()

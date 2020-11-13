@@ -23,6 +23,12 @@ Then the SDK will use that string instead of the default ones when running on a 
 | `ActionableInsights.List.EmptyState` | No new events | Text for message to display if there are no actionable insights. |
 | `ActionableInsights.List.Title` | Events | Title for actionable insights list. |
 | `ActionableInsights.WeeklyExpensesByDay.Legend` | Average | Legend for weekly expenses by day insight. |
+| `ActionableInsights.TransactionSummary.LastWeekTotalCount` | %d transactions last week | Description for the number of transactions that happened last week. |
+| `ActionableInsights.TransactionSummary.LastMonthTotalCount` | %d transactions last month | Description for the number of transactions that happened last month. |
+| `ActionableInsights.TransactionSummary.TotalExpenses` | %@ in total expenses | Description for sum of transactions that happened during the last month or week. |
+| `ActionableInsights.TransactionSummary.MostCommonTransaction` | Most common was %@ (%d) | Description for most common transaction and how many times it happened during last month or week. |
+| `ActionableInsights.TransactionSummary.LargestExpense.Title` | %@ was your largest expense | Description for the largest transaction that happened during last month or week. |
+| `ActionableInsights.TransactionSummary.LargestExpense.Detail` | To %@ (%@) | Description for where and when the largest transaction that happened during last month or week. |
 
 ## Categorization
 
