@@ -1,20 +1,22 @@
-Pod::Spec.new do |s|
-  s.name     = 'TinkPFMUI'
-  s.version  = '0.11.0'
-  s.license = { :type => 'Tink', :file => 'LICENSE' }
-  s.authors  = { 'Tink AB' => 'mobile@tink.se' }
-  s.homepage = 'https://tink.com'
-  s.summary = 'Tink PFM UI SDK.'
-  s.source = { :git => "https://github.com/tink-ab/tink-pfm-ios.git", :tag => s.version }
+Pod::Spec.new do |spec|
+  spec.name         = "TinkPFMUI"
+  spec.version      = "0.11.1"
+  spec.license      = { :type => "Tink", :file => "LICENSE" }
+  spec.authors      = { "Tink AB" => "mobile@tink.se" }
+  spec.homepage     = "https://tink.com"
+  spec.summary      = "Tink PFM UI SDK."
+  spec.source       = { :git => "https://github.com/tink-ab/tink-pfm-ios.git", :tag => spec.version }
 
-  s.ios.deployment_target = '11.0'
+  spec.ios.deployment_target = "11.0"
 
-  s.vendored_frameworks = 'TinkPFMUI.xcframework'
+  spec.vendored_frameworks = "TinkPFMUI.xcframework"
 
-  s.test_spec 'Tests' do |test_spec|
-    test_spec.source_files = 'Tests/**/*.swift'
-    test_spec.dependency 'SnapshotTesting', '~> 1.7'
+  spec.swift_version = ["5.1", "5.2", "5.3"]
+
+  spec.test_spec "Tests" do |test_spec|
+    test_spec.source_files = "Tests/**/*.swift"
+    test_spec.dependency "SnapshotTesting", "~> 1.7"
   end
 
-  s.dependency "TinkCore", "~> 0.2.0"
+  spec.dependency "TinkCore", "~> 0.3.0"
 end
