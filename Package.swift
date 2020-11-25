@@ -20,7 +20,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TinkPFMUI",
-            url: "https://github.com/tink-ab/tink-pfm-ios/releases/download/0.11.1/TinkPFMUI.xcframework.zip", checksum: "a34b9f1661c9a817604e5ae8fec7389b1c1bb165129ea4aa17595b19b19bdd1f"
+            path: "TinkPFMUI.xcframework"
         ),
         .target(name: "TinkPFMUITarget",
                 dependencies: [
