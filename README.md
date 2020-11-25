@@ -30,28 +30,29 @@ Tink PFM SDK needs a valid access token for a specific user to function correctl
 See [this link](https://docs.tink.com/api/#oauth) for more info on how this is done. Once you have an access token you pass it on to your `Tink` instance.
 
 ```swift 
-Tink.shared.setCredential(.accessToken(<#String#>))
+Tink.shared.userSession = .accessToken(<#T##String#>)
 ```
 
 ## Displaying the Finance Overview
 
-Create a `FinanceOverviewViewController` and provide which sections should be displayed. Then add it to e.g. a `UITabBarController`.
+Create a `FinanceOverviewViewController` and provide which features should be displayed. The `FinanceOverviewViewController` is designed to be used in a navigation controller so you need to embed it in one.
 ```swift
-let financeOverviewViewController = FinanceOverviewViewController(layoutSections: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
-tabBarController.viewControllers?.append(financeOverviewViewController)
+let financeOverviewViewController = FinanceOverviewViewController(features: [.statistics([.expenses, .income]), .accounts, .latestTransactions])
+let navigationController = UINavigationController(rootViewController: financeOverviewViewController)
+// Present or add to a UITabBarController for instance.  
 ```
 
 ## Refreshing access tokens
 User access tokens expire after a set amount of time. You can keep your user logged in by exchanging your refresh token for a new access token (see Tink docs) and passing it to the Tink PFM SDK. This will overwrite the token that the fragment was initialzed with. If needed you can also refresh the statistics, accounts, and latest transactions:
 ```swift 
-Tink.shared.setCredential(.accessToken(<#String#>))
+Tink.shared.userSession = .accessToken(<#String#>)
 Tink.shared.refresh()
 ```
 
 ## Customization 
 
 To configure colors, font or icons you update the `Appearance.provider`.
-This needs to be done before initializing the `FinanceOverviewViewController` or any of the other View Controllers provided by this SDK.
+This needs to be done before initializing the `FinanceOverviewViewController` or any of the other View Controllers provided by the PFM SDK.
 
 ### Colors
 
@@ -106,7 +107,7 @@ iconProvider.entertainment = <#UIImage#>
 iconProvider.shopping = <#UIImage#>
 iconProvider.categoryIconBackgroundCornerRadiusFactor = <#CGFloat#>
 
-Appearance.provider = AppearenceProvider(colors: colorProvider, fonts: fontProvder, icons: iconProvider)
+Appearance.provider = AppearanceProvider(colors: colorProvider, fonts: fontProvder, icons: iconProvider)
 ```
 
 ## Caching
