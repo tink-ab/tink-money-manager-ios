@@ -30,6 +30,59 @@ Then the SDK will use that string instead of the default ones when running on a 
 | `ActionableInsights.TransactionSummary.LargestExpense.Title` | %@ was your largest expense | Description for the largest transaction that happened during last month or week. |
 | `ActionableInsights.TransactionSummary.LargestExpense.Detail` | To %@ (%@) | Description for where and when the largest transaction that happened during last month or week. |
 
+## Budget
+
+| Key | Default | Description |  
+| -------- | -------- | -------- |
+| `Budget.Generic.EditButton` | Edit | Title for budget edit button. |
+| `Budget.Generic.DeleteButton` | Delete | Title for the button to delete a budget. |
+| `Budget.Generic.NextButton` | Next | Title of button to next step when creating a budget. |
+| `Budget.Alert.Delete.Title` | Delete budget? | Title for message to ask if budget should be deleted. |
+| `Budget.Alert.Delete.Message` | Are you sure you want to delete the budget “%@”? | Message to ask if budget should be deleted. |
+| `Budget.CreateBudget.Title` | Create budget | Title of the select category modal shown when creating a budget. |
+| `Budget.CreateBudget.CreateWithKeyword` | Create with keyword | Title for create a budget with keyword. |
+| `Budget.Target.Name.Placeholder` | Name | Name text field placeholder text shown when creating or editing budget. |
+| `Budget.Target.Amount.Placeholder` | Amount | Amount text field placeholder text shown when creating or editing budget. |
+| `Budget.Target.Period.Placeholder` | Budget period | Period type selection field placeholder text shown when creating or editing budget. |
+| `Budget.Target.StartPeriod.Placeholder` | Period start date | Period start date field placeholder text shown when creating or editing budget. |
+| `Budget.Target.EndPeriod.Placeholder` | Period end date | Period end date field placeholder text shown when creating or editing budget. |
+| `Budget.Target.Average.PeriodWeek` | week | Week formatter long text. |
+| `Budget.Target.Average.PeriodYear` | year | Year formatter long text. |
+| `Budget.Target.Average.PeriodMonth` | month | Month formatter long text. |
+| `Budget.Target.Average` | Average %@ / %@ | Formatter for average spending per time period. |
+| `Budget.Target.SaveButton` | Save changes | Edit button text for editing budget flow. |
+| `Budget.Target.CreateButton` | Create budget | Create button text for editing budget flow. |
+| `Budget.Transactions.EmptyState` | No transactions | Title for budgets overview. |
+| `Budget.Progress.Over` | %@ over budget | Title for budget progress over budget. |
+| `Budget.Progress.LeftFrom` | %@ left of %@ | Title for budget progress left from budget. |
+| `Budget.Progress.Spent` | %@ spent | Title for budget spent. |
+| `Budget.Detail.Weekly.Title` | Weekly | Title for budgets. |
+| `Budget.Detail.Monthly.Title` | Monthly | Title for budgets. |
+| `Budget.Detail.Yearly.Title` | Yearly | Title for budgets. |
+| `Budget.Detail.SeeTransactions` | See transactions | See budget detail transactions text. |
+| `Budget.Detail.Progress.StartIn` | Starts in %d days | Budget detail view starts in days text. |
+| `Budget.Detail.Progress.Completed.Days` | Completed %d days ago | Budget detail view completed in days text. |
+| `Budget.Detail.Progress.Completed.Months` | Completed %d months ago | Budget detail view completed in days text. |
+| `Budget.Detail.Progress.RemaingTime.OneDay` | One day remaining | Budget detail view for one remaining day. |
+| `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget detail view remaining days. |
+| `Budget.Detail.Progress.Spent` | You have no remaining budget for this period | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
+| `Budget.Detail.Progress.Over` | You spent over your budget for this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
+| `Budget.Detail.Progress.Left.Yearly` | You can spend %@ per year and still remain within your budget | Budget detail remaining budget yearly. |
+| `Budget.Detail.Progress.Left.Monthly` | You can spend %@ per month and still remain within your budget | Budget detail remaining budget monthly. |
+| `Budget.Detail.Progress.Left.Weekly` | You can spend %@ per week and still remain within your budget | Budget detail remaining budget weekly. |
+| `Budget.Detail.Progress.Left.Daily` | You can spend %@ per day and still remain within your budget | Budget detail remaining budget daily. |
+| `Budget.Detail.Progress.Left` | You can spend %@ and still remain within your budget | Budget detail remaining budget within period. |
+| `Budget.Detail.Progress.Managed` | You managed your budget for this period | Budget detail managed budget text. |
+| `Budget.Detail.Progress.NotStarted` | Budget hasn't started yet | Budget detail budget has not started. |
+| `Budget.Detail.Overview.Title` | Over time | Title for budgets overview. |
+| `Budget.Detail.Overview.Empty` | Here you will see your historical spending on %@. But now you don’t have any! | Text for the empty budgets overview. |
+| `Budget.Detail.Overview.WeekDescription` | You made your budget %@ of the time since week %@ | Budget overview week description text. |
+| `Budget.Detail.Overview.ThreeMonthDescription` | You made your budget %@ of the time over the last year | Budget overview 3 months description text. |
+| `Budget.Detail.Overview.PreviousYearDescription` | You made your budget %@ of the time | Budget overview last year description text. |
+| `Budget.Detail.Overview.YearDescription` | You made your budget %@ of the time since %@ | Budget overview year description text. |
+
+
+
 ## Categorization
 
 | Key | Default | Description |  
@@ -54,7 +107,7 @@ Then the SDK will use that string instead of the default ones when running on a 
 | `CategoryStatistics.FilterPeriod.AllTime` | All time | Description for option to not filter category statistics within a specific time range. |
 | `CategoryStatistics.FilterPeriod.CancelButton` | Cancel | Cancel button for sheet with options to filter category statistics over time by different time periods. |
 | `CategoryStatistics.FilterPeriod.Last6Months` | Last 6 months | Description for option to filter category statistics within the last 6 months. |
-| `CategoryStatistics.FilterPeriod.Last12Months` | Last 12 months | Description for option to filter category statistics within the last 12 months |
+| `CategoryStatistics.FilterPeriod.Last12Months` | Last 12 months | Description for option to filter category statistics within the last 12 months. |
 | `CategoryStatistics.FilterPeriod.Title` | Time period | Title for sheet with options to filter category statistics overtime by different time periods. |
 | `CategoryStatistics.Generic.TransactionsButton` | Transactions | Title of button to list transactions for the currently shown statistics. |
 | `CategoryStatistics.GroupedTransactions.Title.Other` | Transactions | Title for list of transactions that are not one with the largest amounts of the category. |
@@ -83,6 +136,7 @@ Then the SDK will use that string instead of the default ones when running on a 
 | `Generic.OverTime.AverageSubtitle` | %@ in average per month | Subtitle with average per month shown on over time views. |
 | `Generic.OverTime.TabTitle` | Over time | Title for tab showing bar chart of data over time. |
 | `Generic.Transfers.Title` | Transfers | Title for category statistics representing only transfers. |
+| `Generic.Cancel` | Cancel | Title for button that cancels an action or event. |
 
 ## Overview
 
