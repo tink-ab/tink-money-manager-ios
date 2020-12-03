@@ -1,4 +1,0 @@
-framework module TinkCore {
-  header "TinkCore-Swift.h"
-  requires objc
-}

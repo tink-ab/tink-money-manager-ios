@@ -630,15 +630,28 @@ public struct ClientDescription {
   public let isVerified: Swift.Bool
   public let isAggregator: Swift.Bool
 }
+public protocol Configuration {
+  var clientID: Swift.String { get }
+  var appURI: Foundation.URL? { get }
+  var environment: TinkCore.Tink.Environment { get }
+  var certificateURL: Foundation.URL? { get }
+}
 extension Tink {
-  public struct Configuration {
+  public struct Configuration : TinkCore.Configuration {
     public var clientID: Swift.String
     public var redirectURI: Foundation.URL
-    public var environment: TinkCore.Environment
-    public var restCertificateURL: Foundation.URL?
-    public init(clientID: Swift.String, redirectURI: Foundation.URL, environment: TinkCore.Environment = .production, certificateURL: Foundation.URL? = nil) throws
+    public var appURI: Foundation.URL? {
+      get
+    }
+    public var environment: TinkCore.Tink.Environment
+    public var certificateURL: Foundation.URL?
+    @available(*, renamed: "certificateURL")
+    public var restCertificateURL: Foundation.URL? {
+      get
+    }
+    public init(clientID: Swift.String, redirectURI: Foundation.URL, environment: TinkCore.Tink.Environment = .production, certificateURL: Foundation.URL? = nil) throws
     @available(*, deprecated, message: "Use init(clientID:redirectURI:environment:certificateURL:) instead")
-    public init(clientID: Swift.String, redirectURI: Foundation.URL, environment: TinkCore.Environment = .production, grpcCertificateURL: Foundation.URL? = nil, restCertificateURL: Foundation.URL? = nil) throws
+    public init(clientID: Swift.String, redirectURI: Foundation.URL, environment: TinkCore.Tink.Environment = .production, grpcCertificateURL: Foundation.URL? = nil, restCertificateURL: Foundation.URL? = nil) throws
   }
 }
 public struct Credentials : Swift.Identifiable {
@@ -756,9 +769,13 @@ extension CurrencyDenominatedAmount {
   public static func * (lhs: TinkCore.CurrencyDenominatedAmount, rhs: TinkCore.CurrencyDenominatedAmount) -> TinkCore.CurrencyDenominatedAmount
   public static func / (lhs: TinkCore.CurrencyDenominatedAmount, rhs: TinkCore.CurrencyDenominatedAmount) -> TinkCore.CurrencyDenominatedAmount
 }
-public enum Environment {
-  case production
-  case custom(restURL: Foundation.URL)
+@available(*, deprecated, renamed: "Tink.Environment")
+public typealias Environment = TinkCore.Tink.Environment
+extension Tink {
+  public enum Environment {
+    case production
+    case custom(restURL: Foundation.URL)
+  }
 }
 extension Provider {
   public struct FinancialInstitution : Swift.Hashable {
@@ -1267,9 +1284,9 @@ public class Tink {
     get
     set
   }
-  public init(configuration: TinkCore.Tink.Configuration)
-  public static func configure(with configuration: TinkCore.Tink.Configuration)
-  final public let configuration: TinkCore.Tink.Configuration
+  public init(configuration: TinkCore.Configuration)
+  public static func configure(with configuration: TinkCore.Configuration)
+  final public let configuration: TinkCore.Configuration
   public var services: TinkCore.ServiceContainer {
     get
   }
