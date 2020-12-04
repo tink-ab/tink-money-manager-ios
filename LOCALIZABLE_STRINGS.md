@@ -29,6 +29,7 @@ Then the SDK will use that string instead of the default ones when running on a 
 | `ActionableInsights.TransactionSummary.MostCommonTransaction` | Most common was %@ (%d) | Description for most common transaction and how many times it happened during last month or week. |
 | `ActionableInsights.TransactionSummary.LargestExpense.Title` | %@ was your largest expense | Description for the largest transaction that happened during last month or week. |
 | `ActionableInsights.TransactionSummary.LargestExpense.Detail` | To %@ (%@) | Description for where and when the largest transaction that happened during last month or week. |
+| `ActionableInsights.BudgetSuggestCreateTopCategory.SuggestedAmountDetail.Detail` | Save up to %@ \nper year | Description of saved amount per year for insight suggesting creating a budget based on spending in a category. |
 
 ## Budget
 
@@ -156,3 +157,13 @@ Then the SDK will use that string instead of the default ones when running on a 
 | Key | Default | Description |  
 | -------- | -------- | -------- |
 | `Transactions.NoTransactions` | No transactions available | Text to display in the transaction list when there are no transactions. |
+| `Transaction.Detail.ChangeCategory` | Change | Title for the button used to initiate a categorization of a transaction. |
+| `Transaction.Detail.Edit` | Edit | Text on button in navigation bar leading to the edit transaction flow. |
+| `Transaction.Edit.Title` | Edit | Title for the view where you edit a specific transaction. |
+| `Transaction.Edit.Date.Title` | Date | Title for text field for choosing the date of a transaction. |
+| `Transaction.Edit.SaveButton` | Save | Navigation button for saving changes to a transaction. |
+| `Transaction.Edit.Description.Original` | Original description: %@ | Help text below description field describing the original description. |
+| `Transaction.Edit.Description.Placeholder` | Description | Text field placeholder text on the field where you edit a description of a transaction. |
+| `Transaction.Edit.DiscardSheet.Title` | Are you sure you want to discard your changes? | Title for the sheet when the user tries to cancel the edit transaction screen when there are changes. |
+| `Transaction.Edit.DiscardSheet.Discard` | Discard | Discard action title for the sheet when the user tries to cancel the edit transaction screen when there are changes. |
+| `Transaction.Edit.DiscardSheet.Continue` | Continue | Discard action title for the sheet when the user tries to cancel the edit transaction screen when there are changes. |
