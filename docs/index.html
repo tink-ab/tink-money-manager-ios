@@ -100,6 +100,15 @@ Required scopes: <code>accounts:read</code>, <code>categories:read</code>, <code
 
 </dd>
 <dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/EditBudgetViewController" title="class - EditBudgetViewController">
+        Edit​Budget​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that can be used to edit a budget.</p>
+
+</dd>
+<dt class="class">
     <a href="https://tink-ab.github.io/tink-pfm-ios/CategorizeTransactionViewController" title="class - CategorizeTransactionViewController">
         Categorize​Transaction​View​Controller
     </a>
@@ -128,12 +137,39 @@ Required scopes: <code>statistics:read</code>, <code>transactions:read</code>, <
 
 </dd>
 <dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController_Configuration" title="class - FinanceOverviewViewController.Configuration">
+        Finance​Overview​View​Controller.​Configuration
+    </a>
+</dt>
+<dd>
+    <p>The configuration allows the Finance Overview screen to be customized in more detail, allowing you to customize the experience to your users needs.</p>
+
+</dd>
+<dt class="class">
     <a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController" title="class - FinanceOverviewViewController">
         Finance​Overview​View​Controller
     </a>
 </dt>
 <dd>
     <p>A view controller for displaying an overview of a user's finances.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionDetailsViewController" title="class - TransactionDetailsViewController">
+        Transaction​Details​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that displays details about a specific transaction.</p>
+
+</dd>
+<dt class="class">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionEditViewController" title="class - TransactionEditViewController">
+        Transaction​Edit​View​Controller
+    </a>
+</dt>
+<dd>
+    <p>A view controller that you can use to edit a transaction.</p>
 
 </dd>
 <dt class="class">
@@ -817,6 +853,14 @@ If no queries are selected, all transactions will be available.</p>
     <p>An error from Tink PFM SDK.</p>
 
 </dd>
+<dt class="structure">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TinkPFMConfiguration" title="structure - TinkPFMConfiguration">
+        Tink​PFMConfiguration
+    </a>
+</dt>
+<dd>
+    
+</dd>
         </dl>
     </section>
     <section id="enumerations">
@@ -897,6 +941,15 @@ If no queries are selected, all transactions will be available.</p>
 </dt>
 <dd>
     <p>A type that determines which statistics data to display.</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/FinanceOverviewViewController_Configuration_TranscationItemAction" title="enumeration - FinanceOverviewViewController.Configuration.TranscationItemAction">
+        Finance​Overview​View​Controller.​Configuration.​Transcation​Item​Action
+    </a>
+</dt>
+<dd>
+    <p>Action to do when tapping a transaction row.</p>
 
 </dd>
 <dt class="enumeration">
@@ -1123,8 +1176,8 @@ If no queries are selected, all transactions will be available.</p>
     
 </dd>
 <dt class="enumeration">
-    <a href="https://tink-ab.github.io/tink-pfm-ios/Environment" title="enumeration - Environment">
-        Environment
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Tink_Environment" title="enumeration - Tink.Environment">
+        Tink.​Environment
     </a>
 </dt>
 <dd>
@@ -1217,12 +1270,30 @@ If no queries are selected, all transactions will be available.</p>
 
 </dd>
 <dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/EditBudgetViewControllerDelegate" title="protocol - EditBudgetViewControllerDelegate">
+        Edit​Budget​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A set of methods that your delegate object can implement to track when the user edit(update or delete) the budget.</p>
+
+</dd>
+<dt class="protocol">
     <a href="https://tink-ab.github.io/tink-pfm-ios/CategorizeTransactionViewControllerDelegate" title="protocol - CategorizeTransactionViewControllerDelegate">
         Categorize​Transaction​View​Controller​Delegate
     </a>
 </dt>
 <dd>
     <p>A set of methods that your delegate object can implement to track when the user picks a category and what transactions to categorize, or to track when the categorization fails.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionEditViewControllerDelegate" title="protocol - TransactionEditViewControllerDelegate">
+        Transaction​Edit​View​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    <p>A set of methods that your delegate object can implement to track when the user cancel the edit transaction, or to track when the edit transaction succeeded.</p>
 
 </dd>
 <dt class="protocol">
@@ -1351,6 +1422,14 @@ If no queries are selected, all transactions will be available.</p>
     
 </dd>
 <dt class="protocol">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Configuration" title="protocol - Configuration">
+        Configuration
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
     <a href="https://tink-ab.github.io/tink-pfm-ios/SessionManager" title="protocol - SessionManager">
         Session​Manager
     </a>
@@ -1397,6 +1476,14 @@ If no queries are selected, all transactions will be available.</p>
 
 </dd>
 <dt class="typealias">
+    <a href="https://tink-ab.github.io/tink-pfm-ios/Environment" title="typealias - Environment">
+        Environment
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
     <a href="https://tink-ab.github.io/tink-pfm-ios/SessionCredential" title="typealias - SessionCredential">
         Session​Credential
     </a>
@@ -1411,7 +1498,7 @@ If no queries are selected, all transactions will be available.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-10-21T09:51:06+0200">21 October 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2020-12-07T15:05:52+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
