@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#transaction.id">ID</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#transaction.init(id:accountid:amount:categoryid:description:date:inserted:isupcomingorinfuture:)">init(id:​account​ID:​amount:​category​ID:​description:​date:​inserted:​is​Upcoming​OrInFuture:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#transaction.accountid">account​ID</a></li><li class="variable"><a href="#transaction.amount">amount</a></li><li class="variable"><a href="#transaction.categoryid">category​ID</a></li><li class="variable"><a href="#transaction.description">description</a></li><li class="variable"><a href="#transaction.date">date</a></li><li class="variable"><a href="#transaction.id">id</a></li><li class="variable"><a href="#transaction.inserted">inserted</a></li><li class="variable"><a href="#transaction.isupcomingorinfuture">is​Upcoming​OrInFuture</a></li></ul></li></ol>
+            <ol><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#transaction.id">ID</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#transaction.init(id:accountid:amount:categoryid:description:date:inserted:isupcomingorinfuture:)">init(id:​account​ID:​amount:​category​ID:​description:​date:​inserted:​is​Upcoming​OrInFuture:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#transaction.accountid">account​ID</a></li><li class="variable"><a href="#transaction.amount">amount</a></li><li class="variable"><a href="#transaction.categoryid">category​ID</a></li><li class="variable"><a href="#transaction.description">description</a></li><li class="variable"><a href="#transaction.date">date</a></li><li class="variable"><a href="#transaction.id">id</a></li><li class="variable"><a href="#transaction.inserted">inserted</a></li><li class="variable"><a href="#transaction.isupcomingorinfuture">is​Upcoming​OrInFuture</a></li><li class="variable"><a href="#transaction.notes">notes</a></li><li class="variable"><a href="#transaction.originaldescription">original​Description</a></li><li class="variable"><a href="#transaction.originaldate">original​Date</a></li><li class="variable"><a href="#transaction.originalamount">original​Amount</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -64,7 +64,7 @@
     <h3>
         <code>init(id:​account​ID:​amount:​category​ID:​description:​date:​inserted:​is​Upcoming​OrInFuture:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">id</span>: <span class="type">ID</span>, <span class="variable">accountID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?, <span class="variable">categoryID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>, <span class="variable">description</span>: <span class="type">String</span>, <span class="variable">date</span>: <span class="type">Date</span>?, <span class="variable">inserted</span>: <span class="type">Date</span>?, <span class="variable">isUpcomingOrInFuture</span>: <span class="type">Bool</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">id</span>: <span class="type">ID</span>, <span class="variable">accountID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>, <span class="variable">categoryID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>, <span class="variable">description</span>: <span class="type">String</span>, <span class="variable">date</span>: <span class="type">Date</span>, <span class="variable">inserted</span>: <span class="type">Date</span>, <span class="variable">isUpcomingOrInFuture</span>: <span class="type">Bool</span>)</code></pre></body></html>
 </div>
     </section>
     <section id="properties">
@@ -75,30 +75,50 @@
         <code>account​ID</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">accountID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The internal identifier of the account that the transaction belongs to.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="transaction.amount">
     <h3>
         <code>amount</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The amount of the transaction.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="transaction.categoryid">
     <h3>
         <code>category​ID</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">categoryID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The category of the transaction.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="transaction.description">
     <h3>
         <code>description</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">description</span>: <span class="type">String</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The description of the transaction.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="transaction.date">
     <h3>
         <code>date</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">date</span>: <span class="type">Date</span>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">date</span>: <span class="type">Date</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The date the transaction was executed.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="transaction.id">
     <h3>
@@ -114,13 +134,61 @@
     <h3>
         <code>inserted</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">inserted</span>: <span class="type">Date</span>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">inserted</span>: <span class="type">Date</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The timestamp of when the transaction was first saved to database.</p>
+
+</div>
 </div>
 <div role="article" class="variable" id="transaction.isupcomingorinfuture">
     <h3>
         <code>is​Upcoming​OrInFuture</code>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">isUpcomingOrInFuture</span>: <span class="type">Bool</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>Indicates if this is an upcoming transaction not booked yet.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="transaction.notes">
+    <h3>
+        <code>notes</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">notes</span>: <span class="type">String</span>?</code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>A free-text field modifiable by the user. Any 'word' (whitespace separated), prefixed with a #, is considered a tag. These tags become searchable.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="transaction.originaldescription">
+    <h3>
+        <code>original​Description</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">originalDescription</span>: <span class="type">String</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The orginal description of the transaction. This will not change even if the owner of the transaction has changed the description.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="transaction.originaldate">
+    <h3>
+        <code>original​Date</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">originalDate</span>: <span class="type">Date</span></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The orginal date of the transaction. This will not change even if the owner of the transaction has changed the date.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="transaction.originalamount">
+    <h3>
+        <code>original​Amount</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">originalAmount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a></code></pre></body></html>
+<div class="summary" role="doc-abstract">
+    <p>The orginal amount of the transaction. This will not change even if the owner of the transaction has changed the amount.</p>
+
+</div>
 </div>
     </section>
 
@@ -131,7 +199,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-10-21T09:51:07+0200">21 October 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2020-12-07T15:05:52+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
