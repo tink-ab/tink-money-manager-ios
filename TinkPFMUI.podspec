@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "TinkPFMUI"
-  spec.version      = "0.12.0"
+  spec.version      = "0.12.1"
   spec.license      = { :type => "Tink", :file => "LICENSE" }
   spec.authors      = { "Tink AB" => "mobile@tink.se" }
   spec.homepage     = "https://tink.com"
