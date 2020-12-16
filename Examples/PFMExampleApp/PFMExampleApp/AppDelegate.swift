@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let tabBarController = UITabBarController()
 
-        let configuration = try! Tink.Configuration(clientID: "YOUR_CLIENT_ID", redirectURI: URL(string: "REDIRECT_URL")!, environment: .production)
+        let configuration = TinkPFMConfiguration(clientID: "YOUR_CLIENT_ID")
         let tink = Tink(configuration: configuration)
         tink.userSession = .accessToken("YOUR_ACCESS_TOKEN")
 
