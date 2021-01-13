@@ -15,12 +15,12 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMinor(from: "0.4.0"))
+        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMinor(from: "0.5.0"))
     ],
     targets: [
         .binaryTarget(
             name: "TinkPFMUI",
-            url: "https://github.com/tink-ab/tink-pfm-ios/releases/download/0.12.1/TinkPFMUI.xcframework.zip", checksum: "853614a538b802504916af82dea4e0a0ddbd54ebe7d0923fbba9c6f8d5c1505a"
+            url: "https://github.com/tink-ab/tink-pfm-ios/releases/download/0.13.0/TinkPFMUI.xcframework.zip", checksum: "f0363dbe15ae5dede9b6c41839b28ee79de2582aeecca5a1d2cc066fa029ccdd"
         ),
         .target(name: "TinkPFMUITarget",
                 dependencies: [

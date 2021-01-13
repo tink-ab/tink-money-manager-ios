@@ -77,6 +77,7 @@ public class ColorProvider : TinkPFMUI.ColorProviding {
 @objc @_hasMissingDesignatedInitializers final public class CreateBudgetViewController : UIKit.UINavigationController {
   convenience public init(tink: TinkCore.Tink = .shared, completion: @escaping (Swift.Result<TinkCore.Budget, Swift.Error>) -> Swift.Void)
   @objc override final public func viewDidLoad()
+  @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
   @available(iOS 5.0, *)
   @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
@@ -92,6 +93,7 @@ public protocol EditBudgetViewControllerDelegate : AnyObject {
   weak final public var editBudgetViewControllerDelegate: TinkPFMUI.EditBudgetViewControllerDelegate?
   convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
   @objc override final public func viewDidLoad()
+  @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
   @available(iOS 5.0, *)
   @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
@@ -219,6 +221,7 @@ public protocol BudgetDetailsViewControllerDelegate : AnyObject {
 }
 extension BudgetDetailsViewController {
   @objc override final public func viewDidLoad()
+  @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension BudgetDetailsViewController : TinkPFMUI.EditBudgetViewControllerDelegate {
   final public func editBudgetViewController(_ viewController: TinkPFMUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
@@ -334,6 +337,10 @@ public enum ScreenEvent {
   case categorySelection
   case similarTransactions
   case accountDetails
+  case createBudget
+  case editBudget
+  case budgetDetails
+  case budgetTransactions
   case events
   case eventsArchive
   case transactionDetails
