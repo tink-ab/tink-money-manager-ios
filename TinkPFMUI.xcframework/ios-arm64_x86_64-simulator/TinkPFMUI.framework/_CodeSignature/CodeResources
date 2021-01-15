@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/TinkPFMUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cDB2UZxgWd9fokA3Z2JvWsFMHX4=
+		DusXMvRiy0Vo/6cBfGYTZlvwsfI=
 		</data>
 		<key>Modules/TinkPFMUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/TinkPFMUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		cDB2UZxgWd9fokA3Z2JvWsFMHX4=
+		DusXMvRiy0Vo/6cBfGYTZlvwsfI=
 		</data>
 		<key>Modules/TinkPFMUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/TinkPFMUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0JPCSa6WPV6wgvp7HDGkl6sKTwY=
+		c1IEys7XDJj5pO7OY5DUYvqvvsI=
 		</data>
 		<key>Modules/TinkPFMUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/TinkPFMUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		0JPCSa6WPV6wgvp7HDGkl6sKTwY=
+		c1IEys7XDJj5pO7OY5DUYvqvvsI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -88,7 +88,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G3JVL2l2vKc+7vdA83Mp8bFQGLyOaTxYEMzKrhJYgA4=
+			duwU9zLbSMVi68XUyNEso344PLcgVYZogN0pzjZhY90=
 			</data>
 		</dict>
 		<key>Modules/TinkPFMUI.swiftmodule/arm64.swiftdoc</key>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G3JVL2l2vKc+7vdA83Mp8bFQGLyOaTxYEMzKrhJYgA4=
+			duwU9zLbSMVi68XUyNEso344PLcgVYZogN0pzjZhY90=
 			</data>
 		</dict>
 		<key>Modules/TinkPFMUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -130,7 +130,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AOWD0y21cbqnQhfTO6qLbk3zF/qNjiPqbOWq2Pd7tNY=
+			2iSlN1A5p34JKnCX4cXlnpoNWlwkIIn/LMd7mbxg/Bc=
 			</data>
 		</dict>
 		<key>Modules/TinkPFMUI.swiftmodule/x86_64.swiftdoc</key>
@@ -151,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AOWD0y21cbqnQhfTO6qLbk3zF/qNjiPqbOWq2Pd7tNY=
+			2iSlN1A5p34JKnCX4cXlnpoNWlwkIIn/LMd7mbxg/Bc=
 			</data>
 		</dict>
 	</dict>
