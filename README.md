@@ -1,3 +1,8 @@
+![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)
+![Languages](https://img.shields.io/badge/languages-swift-orange.svg)
+![CocoaPods](https://img.shields.io/cocoapods/v/TinkPFMUI.svg)
+![Swift Package Manager](https://img.shields.io/badge/SPM-supported-DE5C43.svg)
+
 # Tink PFM SDK for iOS
 
 ## Prerequisites
@@ -5,7 +10,20 @@
 1. Follow the [getting started guide](https://docs.tink.com/resources/getting-started/set-up-your-account) to set up your Tink account. 
 2. [Get an access token](https://docs.tink.com/resources/getting-started/get-access-token) with the [scopes](https://docs.tink.com/api/#introduction-authentication-authentication-scopes) required for the features you intend to use.
 
+## Requirements
+
+- iOS 11.0
+- Xcode 11.4
+
 ## Installation
+
+### Swift Package Manager
+
+1. Follow these instructions to [link a target to a package product](https://help.apple.com/xcode/mac/current/#/devb83d64851).
+
+2. Enter this URL `https://github.com/tink-ab/tink-pfm-ios` when asked for a package repository.
+
+3. When Xcode is done resolving `tink-pfm-ios` and asks you to choose package products, select  `TinkPFMUI`.
 
 ### Using CocoaPods
 Refer to their [guide](https://guides.cocoapods.org/using/using-cocoapods.html) for usage and installation instructions.

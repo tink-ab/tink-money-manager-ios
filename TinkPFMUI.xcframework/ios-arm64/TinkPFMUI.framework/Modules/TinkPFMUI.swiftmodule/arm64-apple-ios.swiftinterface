@@ -13,6 +13,7 @@ extension FinanceOverviewViewController {
     public enum StatisticsData {
       case expenses
       case income
+      case leftToSpend
       public static func == (a: TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData, b: TinkPFMUI.FinanceOverviewViewController.Feature.StatisticsData) -> Swift.Bool
       public var hashValue: Swift.Int {
         get
@@ -209,9 +210,9 @@ public class IconProvider : TinkPFMUI.IconProviding {
 public enum Color {
 }
 public protocol BudgetDetailsViewControllerDelegate : AnyObject {
-  func viewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
-  func viewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
-  func viewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
+  func budgetDetailsViewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
+  func budgetDetailsViewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
+  func budgetDetailsViewController(_ viewController: TinkPFMUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
 }
 @objc @_hasMissingDesignatedInitializers final public class BudgetDetailsViewController : UIKit.UIViewController {
   weak final public var delegate: TinkPFMUI.BudgetDetailsViewControllerDelegate?
@@ -284,8 +285,8 @@ extension Tink {
   public func resetCache()
 }
 public protocol TransactionEditViewControllerDelegate : AnyObject {
-  func viewControllerDidCancel(_ viewController: TinkPFMUI.TransactionEditViewController)
-  func viewControllerDidEditSuccessfully(_ viewController: TinkPFMUI.TransactionEditViewController, transaction: TinkCore.Transaction)
+  func transactionEditViewControllerDidCancel(_ viewController: TinkPFMUI.TransactionEditViewController)
+  func transactionEditViewControllerDidEditSuccessfully(_ viewController: TinkPFMUI.TransactionEditViewController, transaction: TinkCore.Transaction)
 }
 @objc @_hasMissingDesignatedInitializers final public class TransactionEditViewController : UIKit.UIViewController {
   public init(tink: TinkCore.Tink = .shared, transaction: TinkCore.Transaction)
@@ -333,6 +334,7 @@ public enum ScreenEvent {
   case overview
   case expenses
   case income
+  case leftToSpend
   case transactions
   case categorySelection
   case similarTransactions
@@ -431,8 +433,8 @@ extension TransactionDetailsViewController : UIKit.UIAdaptivePresentationControl
   @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 extension TransactionDetailsViewController : TinkPFMUI.TransactionEditViewControllerDelegate {
-  final public func viewControllerDidCancel(_ viewController: TinkPFMUI.TransactionEditViewController)
-  final public func viewControllerDidEditSuccessfully(_ viewController: TinkPFMUI.TransactionEditViewController, transaction: TinkCore.Transaction)
+  final public func transactionEditViewControllerDidCancel(_ viewController: TinkPFMUI.TransactionEditViewController)
+  final public func transactionEditViewControllerDidEditSuccessfully(_ viewController: TinkPFMUI.TransactionEditViewController, transaction: TinkCore.Transaction)
 }
 @available(*, unavailable, renamed: "AppearanceProvider")
 public typealias FinanceOverviewAppearanceProvider = TinkPFMUI.AppearanceProvider
@@ -597,6 +599,24 @@ public protocol ColorProviding {
   var incomeIconBackgroundColor: UIKit.UIColor? { get set }
   var transfersIconBackgroundColor: UIKit.UIColor? { get set }
   var uncategorizedIconBackgroundColor: UIKit.UIColor? { get set }
+}
+@objc @_hasMissingDesignatedInitializers final public class LeftToSpendViewController : UIKit.UIViewController {
+  final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
+    get
+    set
+  }
+  convenience public init(tink: TinkCore.Tink = .shared)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension LeftToSpendViewController {
+  @objc override final public func viewDidLoad()
+}
+extension LeftToSpendViewController : TinkPFMUI.TransactionsViewControllerDelegate {
+  final public func transactionsViewController(_ viewController: TinkPFMUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+}
+extension LeftToSpendViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 @objc @_hasMissingDesignatedInitializers final public class FinanceOverviewViewController : UIKit.UIViewController {
   final public var configuration: TinkPFMUI.FinanceOverviewViewController.Configuration {
