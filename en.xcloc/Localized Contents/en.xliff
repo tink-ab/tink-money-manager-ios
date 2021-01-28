@@ -772,16 +772,4 @@
       </trans-unit>
     </body>
   </file>
-  <file original="TinkPFMSDKTester/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.4" build-num="12D4e"/>
-    </header>
-    <body>
-      <trans-unit id="CFBundleName" xml:space="preserve">
-        <source>TinkPFMTester</source>
-        <target>TinkPFMTester</target>
-        <note>Bundle name</note>
-      </trans-unit>
-    </body>
-  </file>
 </xliff>
