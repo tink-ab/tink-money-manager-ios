@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Sources/TinkPFMUI/en.lproj/TinkPFMUI.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.4" build-num="12D4e"/>
+    </header>
+    <body>
+      <trans-unit id="AccountDetail.Header.AccountNumberFormat" xml:space="preserve">
+        <source>Account number: %@</source>
+        <target>Account number: %@</target>
+        <note>String format for displaying account number in account detail header.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.Archive.EmptyState" xml:space="preserve">
+        <source>ActionableInsights.Archive.EmptyState</source>
+        <target>ActionableInsights.Archive.EmptyState</target>
+        <note>Text for message to display if there are no archived actionable insights.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.Archive.Title" xml:space="preserve">
+        <source>Archive</source>
+        <target>Archive</target>
+        <note>Title for list of archived insights.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.ArchivedInsight.ActionDescription" xml:space="preserve">
+        <source>ActionableInsights.ArchivedInsight.ActionDescription</source>
+        <target>ActionableInsights.ArchivedInsight.ActionDescription</target>
+        <note>Text shown to describe when an insight was archived.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.BudgetSuggestCreateTopCategory.SuggestedAmountDetail" xml:space="preserve">
+        <source>Save up to %@ per year</source>
+        <target>Save up to %@ per year</target>
+        <note>Description of saved amount per year for insight suggesting creating a budget based on spending in a category.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.List.ArchiveButton" xml:space="preserve">
+        <source>Archive</source>
+        <target>Archive</target>
+        <note>Button title for button to present archived insights list.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.List.EmptyState" xml:space="preserve">
+        <source>ActionableInsights.List.EmptyState</source>
+        <target>ActionableInsights.List.EmptyState</target>
+        <note>Text for message to display if there are no actionable insights.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.List.Title" xml:space="preserve">
+        <source>Events</source>
+        <target>Events</target>
+        <note>Title for actionable insights list.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.SuggestCategories.TransactionCount" xml:space="preserve">
+        <source>%d expenses</source>
+        <target>%d expenses</target>
+        <note>Formatting of transaction count in actionable insight.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.TransactionSummary.LargestExpense.Detail" xml:space="preserve">
+        <source>To %1$@ (%2$@)</source>
+        <target>To %1$@ (%2$@)</target>
+        <note>Description for where and when the largest transaction that happened during last month or week.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.TransactionSummary.LargestExpense.Title" xml:space="preserve">
+        <source>%@ was your largest expense</source>
+        <target>%@ was your largest expense</target>
+        <note>Description for the largest transaction that happened during last month or week.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.TransactionSummary.LastMonthTotalCount" xml:space="preserve">
+        <source>%d transactions last month</source>
+        <target>%d transactions last month</target>
+        <note>Description for the number of transactions that happened last month.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.TransactionSummary.LastWeekTotalCount" xml:space="preserve">
+        <source>%d transactions last week</source>
+        <target>%d transactions last week</target>
+        <note>Description for the number of transactions that happened last week.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.TransactionSummary.MostCommonTransaction" xml:space="preserve">
+        <source>Most common was %1$@ (%2$d)</source>
+        <target>Most common was %1$@ (%2$d)</target>
+        <note>Description for most common transaction and how many times it happened during last month or week.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.TransactionSummary.TotalExpenses" xml:space="preserve">
+        <source>%@ in total expenses</source>
+        <target>%@ in total expenses</target>
+        <note>Description for sum of transactions that happened during the last month or week.</note>
+      </trans-unit>
+      <trans-unit id="ActionableInsights.WeeklyExpensesByDay.Legend" xml:space="preserve">
+        <source>Average</source>
+        <target>Average</target>
+        <note>Legend for weekly expenses by day insight.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Alert.Delete.Message" xml:space="preserve">
+        <source>Are you sure you want to delete the budget “%@”?</source>
+        <target>Are you sure you want to delete the budget “%@”?</target>
+        <note>Message to ask if budget should be deleted.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Alert.Delete.Title" xml:space="preserve">
+        <source>Delete budget?</source>
+        <target>Delete budget?</target>
+        <note>Title for message to ask if budget should be deleted.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Category.AllExpenses" xml:space="preserve">
+        <source>All expenses</source>
+        <target>All expenses</target>
+        <note>Formatter name for all expenses category.</note>
+      </trans-unit>
+      <trans-unit id="Budget.CreateBudget.CreateWithKeyword" xml:space="preserve">
+        <source>Create with keyword</source>
+        <target>Create with keyword</target>
+        <note>Title for create a budget with keyword.</note>
+      </trans-unit>
+      <trans-unit id="Budget.CreateBudget.Title" xml:space="preserve">
+        <source>Create budget</source>
+        <target>Create budget</target>
+        <note>Title of the select category modal shown when creating a budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Monthly.Title" xml:space="preserve">
+        <source>Monthly</source>
+        <target>Monthly</target>
+        <note>Title for budgets.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.Empty" xml:space="preserve">
+        <source>Budget.Detail.Overview.Empty</source>
+        <target>Budget.Detail.Overview.Empty</target>
+        <note>Text for the empty budgets overview.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.PreviousYearDescription" xml:space="preserve">
+        <source>You made your budget %@ of the time</source>
+        <target>You made your budget %@ of the time</target>
+        <note>Budget overview last year description text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.ThreeMonthDescription" xml:space="preserve">
+        <source>You made your budget %@ of the time over the last year</source>
+        <target>You made your budget %@ of the time over the last year</target>
+        <note>Budget overview 3 months description text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.Title" xml:space="preserve">
+        <source>Over time</source>
+        <target>Over time</target>
+        <note>Title for budgets overview.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.WeekDescription" xml:space="preserve">
+        <source>You made your budget %1$@ of the time since week %2$@</source>
+        <target>You made your budget %1$@ of the time since week %2$@</target>
+        <note>Budget overview week description text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.YearDescription" xml:space="preserve">
+        <source>You made your budget %1$@ of the time since %2$@</source>
+        <target>You made your budget %1$@ of the time since %2$@</target>
+        <note>Budget overview year description text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.Days" xml:space="preserve">
+        <source>Completed %d days ago</source>
+        <target>Completed %d days ago</target>
+        <note>Budget detail view completed in days text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.Months" xml:space="preserve">
+        <source>Completed %d months ago</source>
+        <target>Completed %d months ago</target>
+        <note>Budget detail view completed in days text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Left" xml:space="preserve">
+        <source>You can spend %@ and still remain within your budget</source>
+        <target>You can spend %@ and still remain within your budget</target>
+        <note>Budget detail remaining budget within period.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Left.Daily" xml:space="preserve">
+        <source>You can spend %@ per day and still remain within your budget</source>
+        <target>You can spend %@ per day and still remain within your budget</target>
+        <note>Budget detail remaining budget daily.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Left.From" xml:space="preserve">
+        <source>left of %@</source>
+        <target>left of %@</target>
+        <note>Budget detail view progress left from text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Left.Monthly" xml:space="preserve">
+        <source>You can spend %@ per month and still remain within your budget</source>
+        <target>You can spend %@ per month and still remain within your budget</target>
+        <note>Budget detail remaining budget monthly.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Left.Weekly" xml:space="preserve">
+        <source>You can spend %@ per week and still remain within your budget</source>
+        <target>You can spend %@ per week and still remain within your budget</target>
+        <note>Budget detail remaining budget weekly.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Left.Yearly" xml:space="preserve">
+        <source>You can spend %@ per year and still remain within your budget</source>
+        <target>You can spend %@ per year and still remain within your budget</target>
+        <note>Budget detail remaining budget yearly.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Managed" xml:space="preserve">
+        <source>You managed your budget for this period</source>
+        <target>You managed your budget for this period</target>
+        <note>Budget detail managed budget text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.NotStarted" xml:space="preserve">
+        <source>Budget hasn't started yet</source>
+        <target>Budget hasn't started yet</target>
+        <note>Budget detail budget has not started.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Over" xml:space="preserve">
+        <source>You spent over your budget for this period</source>
+        <target>You spent over your budget for this period</target>
+        <note>Description text shown on budget detail view when user spent more than their budget target for the current period.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleDays" xml:space="preserve">
+        <source>%d days remaining</source>
+        <target>%d days remaining</target>
+        <note>Budget detail view remaining days.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.OneDay" xml:space="preserve">
+        <source>One day remaining</source>
+        <target>One day remaining</target>
+        <note>Budget detail view for one remaining day.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Spent" xml:space="preserve">
+        <source>You have no remaining budget for this period</source>
+        <target>You have no remaining budget for this period</target>
+        <note>Description text shown on budget detail view when user spent as much as the budget target for the current period.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartIn" xml:space="preserve">
+        <source>Starts in %d days</source>
+        <target>Starts in %d days</target>
+        <note>Budget detail view starts in days text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.SeeTransactions" xml:space="preserve">
+        <source>See transactions</source>
+        <target>See transactions</target>
+        <note>See budget detail transactions text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Weekly.Title" xml:space="preserve">
+        <source>Weekly</source>
+        <target>Weekly</target>
+        <note>Title for budgets.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Yearly.Title" xml:space="preserve">
+        <source>Yearly</source>
+        <target>Yearly</target>
+        <note>Title for budgets.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Edit.Filter.Title" xml:space="preserve">
+        <source>Filter</source>
+        <target>Filter</target>
+        <note>Title of the select category picker shown when editing a budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Edit.Title" xml:space="preserve">
+        <source>Edit budget</source>
+        <target>Edit budget</target>
+        <note>Edit budget title.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Generic.CancelButton" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>Title for the cancel button that will dismiss the select category modal shown when creating a budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Generic.DeleteButton" xml:space="preserve">
+        <source>Delete</source>
+        <target>Delete</target>
+        <note>Title for the button to delete a budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Generic.EditButton" xml:space="preserve">
+        <source>Edit</source>
+        <target>Edit</target>
+        <note>Title for budget edit button.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Generic.NextButton" xml:space="preserve">
+        <source>Next</source>
+        <target>Next</target>
+        <note>Title of button to next step when creating a budget</note>
+      </trans-unit>
+      <trans-unit id="Budget.Generic.SelectButton" xml:space="preserve">
+        <source>Select</source>
+        <target>Select</target>
+        <note>Select button text for editing budget flow</note>
+      </trans-unit>
+      <trans-unit id="Budget.Period.Type.Custom" xml:space="preserve">
+        <source>Custom</source>
+        <target>Custom</target>
+        <note>Custom budget period type.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Period.Type.Month" xml:space="preserve">
+        <source>Monthly</source>
+        <target>Monthly</target>
+        <note>Monthly budget period type.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Period.Type.Week" xml:space="preserve">
+        <source>Weekly</source>
+        <target>Weekly</target>
+        <note>Weekly budget period type.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Period.Type.Year" xml:space="preserve">
+        <source>Yearly</source>
+        <target>Yearly</target>
+        <note>Yearly budget period type.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Progress.LeftFrom" xml:space="preserve">
+        <source>%1$@ left of %2$@</source>
+        <target>%1$@ left of %2$@</target>
+        <note>Title for budget progress left from budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Progress.Over" xml:space="preserve">
+        <source>%@ over budget</source>
+        <target>%@ over budget</target>
+        <note>Title for budget progress over budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Progress.Spent" xml:space="preserve">
+        <source>%@ spent</source>
+        <target>%@ spent</target>
+        <note>Title for budget spent.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.Amount.Placeholder" xml:space="preserve">
+        <source>Amount</source>
+        <target>Amount</target>
+        <note>Amount text field placeholder text shown when creating or editing budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.Average" xml:space="preserve">
+        <source>Average %1$@ / %2$@</source>
+        <target>Average %1$@ / %2$@</target>
+        <note>Formatter for average spending per time period.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.Average.PeriodMonth" xml:space="preserve">
+        <source>month</source>
+        <target>month</target>
+        <note>Month formatter long text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.Average.PeriodWeek" xml:space="preserve">
+        <source>week</source>
+        <target>week</target>
+        <note>Week formatter long text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.Average.PeriodYear" xml:space="preserve">
+        <source>year</source>
+        <target>year</target>
+        <note>Year formatter long text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.CategoryFilter.Placeholder" xml:space="preserve">
+        <source>Category</source>
+        <target>Category</target>
+        <note>Period filter field placeholder text when editing budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.CreateButton" xml:space="preserve">
+        <source>Create budget</source>
+        <target>Create budget</target>
+        <note>Create button text for editing budget flow.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.EndPeriod.Placeholder" xml:space="preserve">
+        <source>End date</source>
+        <target>End date</target>
+        <note>Period end date field placeholder text shown when creating or editing budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.KeywordFilter.Placeholder" xml:space="preserve">
+        <source>Keyword</source>
+        <target>Keyword</target>
+        <note>Period filter field placeholder text when editing budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.Name.Placeholder" xml:space="preserve">
+        <source>Name</source>
+        <target>Name</target>
+        <note>Name text field placeholder text shown when creating or editing budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.Period.Placeholder" xml:space="preserve">
+        <source>Budget period</source>
+        <target>Budget period</target>
+        <note>Period type selection field placeholder text shown when creating or editing budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.SaveButton" xml:space="preserve">
+        <source>Save changes</source>
+        <target>Save changes</target>
+        <note>Edit button text for editing budget flow.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Target.StartPeriod.Placeholder" xml:space="preserve">
+        <source>Start date</source>
+        <target>Start date</target>
+        <note>Period start date field placeholder text shown when creating or editing budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Transactions.EmptyState" xml:space="preserve">
+        <source>No transactions</source>
+        <target>No transactions</target>
+        <note>Title for budgets overview.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.CategoryPicker.CancelButton" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>Title for the cancel button that will dismiss the select category modal shown when categorizing a transaction.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.CategoryPicker.NoCategoriesError.Message" xml:space="preserve">
+        <source>Could not load any categories.</source>
+        <target>Could not load any categories.</target>
+        <note>Message to show when no categories are found.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.CategoryPicker.NoCategoriesError.Title" xml:space="preserve">
+        <source>Error</source>
+        <target>Error</target>
+        <note>Title to show in when no categories are found.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.CategoryPicker.Title" xml:space="preserve">
+        <source>Select a category</source>
+        <target>Select a category</target>
+        <note>Title of the select category modal shown when categorizing a transaction.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.SimilarTransactions.ChangeSelectedButton.HasSelectedTransactions" xml:space="preserve">
+        <source>Change %d Selected</source>
+        <target>Change %d Selected</target>
+        <note>Default button title for select button if the user has one or more similar transactions.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.SimilarTransactions.ChangeSelectedButton.NoSelectedTransactions" xml:space="preserve">
+        <source>Change Selected</source>
+        <target>Change Selected</target>
+        <note>Default button title for select button if the user has deselected all similar transactions.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.SimilarTransactions.Description" xml:space="preserve">
+        <source>Do you want to categorize these transactions as %@ also</source>
+        <target>Do you want to categorize these transactions as %@ also</target>
+        <note>Description text shown above list of similar transactions shown after selecting a category when categorizing a transaction.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.SimilarTransactions.SelectAll" xml:space="preserve">
+        <source>Select all</source>
+        <target>Select all</target>
+        <note>Right bar button title for selecting all similar transactions.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.SimilarTransactions.SkipButton" xml:space="preserve">
+        <source>Skip</source>
+        <target>Skip</target>
+        <note>Button title for for button to skip selecting any similar transactions.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.SimilarTransactions.Title" xml:space="preserve">
+        <source>Similar Transactions</source>
+        <target>Similar Transactions</target>
+        <note>Title for similar transactions screen.</note>
+      </trans-unit>
+      <trans-unit id="Categorization.SimilarTransactions.UnselectAll" xml:space="preserve">
+        <source>Unselect all</source>
+        <target>Unselect all</target>
+        <note>Right bar button title for unselecting all similar transactions.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.CategoryPicker.SelectButton" xml:space="preserve">
+        <source>Select</source>
+        <target>Select</target>
+        <note>Title for select button in category picker modal to filter statistics on the over time screen.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.CategoryPicker.Title" xml:space="preserve">
+        <source>Categories</source>
+        <target>Categories</target>
+        <note>Title for category picker modal to filter statistics on over time screen.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.CategoryPicker.Title.ShowAll" xml:space="preserve">
+        <source>All categories</source>
+        <target>All categories</target>
+        <note>Description of option to not filter statistics by a category but instead show statistics for all categories.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.FilterPeriod.AllTime" xml:space="preserve">
+        <source>All time</source>
+        <target>All time</target>
+        <note>Description for option to not filter category statistics within a specific time range.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.FilterPeriod.CancelButton" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>Cancel button for sheet with options to filter category statistics over time by different time periods.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.FilterPeriod.Last6Months" xml:space="preserve">
+        <source>Last 6 months</source>
+        <target>Last 6 months</target>
+        <note>Description for option to filter category statistics within the last 6 months.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.FilterPeriod.Last12Months" xml:space="preserve">
+        <source>Last 12 months</source>
+        <target>Last 12 months</target>
+        <note>Description for option to filter category statistics within the last 12 months.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.FilterPeriod.Title" xml:space="preserve">
+        <source>Time period</source>
+        <target>Time period</target>
+        <note>Title for sheet with options to filter category statistics overtime by different time periods.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.Generic.TransactionsButton" xml:space="preserve">
+        <source>Transactions</source>
+        <target>Transactions</target>
+        <note>Title of button to list transactions for the currently shown statistics.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.GroupedTransactions.Title.Other" xml:space="preserve">
+        <source>Transactions</source>
+        <target>Transactions</target>
+        <note>Title for list of transactions that are not one with the largest amounts of the category.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.GroupedTransactions.Title.Top" xml:space="preserve">
+        <source>Transactions</source>
+        <target>Transactions</target>
+        <note>Title for list of transactions that are similar in the same category.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.OverTime.FilterCategoryButton.AllCategories" xml:space="preserve">
+        <source>All categories</source>
+        <target>All categories</target>
+        <note>Title for button to show list of categories to filter statistics by.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.OverTime.LongPressSubtitle.Expenses" xml:space="preserve">
+        <source>Spent in %@</source>
+        <target>Spent in %@</target>
+        <note>Subtitle shown when user long press bar in chart for expenses category statistics.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.OverTime.LongPressSubtitle.FilterCategory" xml:space="preserve">
+        <source>%1$@ in %2$@</source>
+        <target>%1$@ in %2$@</target>
+        <note>Subtitle shown when user long press bar in chart for category statistics with a category filter set.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.OverTime.LongPressSubtitle.Income" xml:space="preserve">
+        <source>Income in %@</source>
+        <target>Income in %@</target>
+        <note>Subtitle shown when user long press bar in chart for income category statistics.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.OverTime.LongPressSubtitle.Transfer" xml:space="preserve">
+        <source>Transferred in %@</source>
+        <target>Transferred in %@</target>
+        <note>Subtitle shown when user long press bar in chart for transfer category statistics.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.TopTransactions.Other" xml:space="preserve">
+        <source>Other</source>
+        <target>Other</target>
+        <note>Title of list item representing a group of transactions that are not one with the largest amounts of the category.</note>
+      </trans-unit>
+      <trans-unit id="CategoryStatistics.Transactions.Title" xml:space="preserve">
+        <source>Transactions</source>
+        <target>Transactions</target>
+        <note>Title for list of transactions representing the currently shown statistics.</note>
+      </trans-unit>
+      <trans-unit id="Generic.AmountFormatter.Abbreviation.Millions" xml:space="preserve">
+        <source> m</source>
+        <target> m</target>
+        <note>Short suffix to use when formatting amounts larger than a million.</note>
+      </trans-unit>
+      <trans-unit id="Generic.AmountFormatter.Abbreviation.Thousands" xml:space="preserve">
+        <source> k</source>
+        <target> k</target>
+        <note>Short suffix to use when formatting amounts larger than a 10 000.</note>
+      </trans-unit>
+      <trans-unit id="Generic.Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>Cancel button for canceling.</note>
+      </trans-unit>
+      <trans-unit id="Generic.DateRangeFormatter.YearSpan" xml:space="preserve">
+        <source>%1$@ – %2$@</source>
+        <target>%1$@ – %2$@</target>
+        <note>How two dates in different years should be formatted, e.g. 25 Dec - 24 Jan.</note>
+      </trans-unit>
+      <trans-unit id="Generic.ErrorAlert.DismissButton" xml:space="preserve">
+        <source>OK</source>
+        <target>OK</target>
+        <note>Title of button to dismiss a generic error alert.</note>
+      </trans-unit>
+      <trans-unit id="Generic.ErrorAlert.Message" xml:space="preserve">
+        <source>Something went wrong.</source>
+        <target>Something went wrong.</target>
+        <note>Message to show in a generic error alert.</note>
+      </trans-unit>
+      <trans-unit id="Generic.ErrorAlert.Title" xml:space="preserve">
+        <source>Error</source>
+        <target>Error</target>
+        <note>Title to show in a generic error alert.</note>
+      </trans-unit>
+      <trans-unit id="Generic.Expenses.Title" xml:space="preserve">
+        <source>Expenses</source>
+        <target>Expenses</target>
+        <note>Title for category statistics representing only expenses.</note>
+      </trans-unit>
+      <trans-unit id="Generic.Income.Title" xml:space="preserve">
+        <source>Income</source>
+        <target>Income</target>
+        <note>Title for category statistics representing only incomes.</note>
+      </trans-unit>
+      <trans-unit id="Generic.LeftToSpend.Title" xml:space="preserve">
+        <source>Left to spend</source>
+        <target>Left to spend</target>
+        <note>Title for left to spend statistics.</note>
+      </trans-unit>
+      <trans-unit id="Generic.Monthly.TabTitle" xml:space="preserve">
+        <source>Monthly</source>
+        <target>Monthly</target>
+        <note>Title for tab showing chart of data for one month.</note>
+      </trans-unit>
+      <trans-unit id="Generic.OverTime.AverageSubtitle" xml:space="preserve">
+        <source>%@ in average per month</source>
+        <target>%@ in average per month</target>
+        <note>Subtitle with average per month shown on over time views.</note>
+      </trans-unit>
+      <trans-unit id="Generic.OverTime.TabTitle" xml:space="preserve">
+        <source>Over time</source>
+        <target>Over time</target>
+        <note>Title for tab showing bar chart of data over time.</note>
+      </trans-unit>
+      <trans-unit id="Generic.Transfers.Title" xml:space="preserve">
+        <source>Transfers</source>
+        <target>Transfers</target>
+        <note>Title for category statistics representing only transfers.</note>
+      </trans-unit>
+      <trans-unit id="Human.Enumerated.formatter.And" xml:space="preserve">
+        <source>and</source>
+        <target>and</target>
+        <note>Human enumerated formatter text for and.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.OverTime.LongPressSubtitle" xml:space="preserve">
+        <source>Left to spend in %@</source>
+        <target>Left to spend in %@</target>
+        <note>Subtitle shown when user long press bar in chart for left to spend statistics.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Current.DaysLeft" xml:space="preserve">
+        <source>You can spend %1$@ per day until next salary in %2$d days.</source>
+        <target>You can spend %1$@ per day until next salary in %2$d days.</target>
+        <note>Left to spend per day until next salary in a number of days.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Current.LastDay" xml:space="preserve">
+        <source>You have %@ left to spend today.</source>
+        <target>You have %@ left to spend today.</target>
+        <note>Left to spend today.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Current.Less" xml:space="preserve">
+        <source>You have %@ less than you usually have this time of the month</source>
+        <target>You have %@ less than you usually have this time of the month</target>
+        <note>Left to spend per is less than usual.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Current.More" xml:space="preserve">
+        <source>You have %@ more than you usually have this time of the month</source>
+        <target>You have %@ more than you usually have this time of the month</target>
+        <note>Left to spend is more than usual.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Current.OneDayLeft" xml:space="preserve">
+        <source>You can spend %@ until tomorrow.</source>
+        <target>You can spend %@ until tomorrow.</target>
+        <note>Left to spend per day until next salary tomorrow.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Past.BelowAverage" xml:space="preserve">
+        <source>You spent %@ below your average.</source>
+        <target>You spent %@ below your average.</target>
+        <note>Left to spend less than average for previous month.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Past.Default" xml:space="preserve">
+        <source>You have an average of %1$@ Left to Spend in %2$@</source>
+        <target>You have an average of %1$@ Left to Spend in %2$@</target>
+        <note>Left to spend less default.</note>
+      </trans-unit>
+      <trans-unit id="LeftToSpend.Progress.Past.OverAverage" xml:space="preserve">
+        <source>You spent %@ over your average.</source>
+        <target>You spent %@ over your average.</target>
+        <note>Left to spend more than average for previous month.</note>
+      </trans-unit>
+      <trans-unit id="Overview.Accounts.EmptyState" xml:space="preserve">
+        <source>Overview.Accounts.EmptyState</source>
+        <target>Overview.Accounts.EmptyState</target>
+        <note>Text to display in overview when there are no accounts.</note>
+      </trans-unit>
+      <trans-unit id="Overview.ActionableInsights.RecentInsights" xml:space="preserve">
+        <source>recent events</source>
+        <target>recent events</target>
+        <note>Recent insights suffix.</note>
+      </trans-unit>
+      <trans-unit id="Overview.ActionableInsights.RecentInsights.Singular" xml:space="preserve">
+        <source>recent event</source>
+        <target>recent event</target>
+        <note>Recent insight suffix.</note>
+      </trans-unit>
+      <trans-unit id="Overview.ActionableInsights.ViewButton" xml:space="preserve">
+        <source>View</source>
+        <target>View</target>
+        <note>Title for button to view actionable insights.</note>
+      </trans-unit>
+      <trans-unit id="Overview.ActionableInsightsArchive.Title" xml:space="preserve">
+        <source>View archived events</source>
+        <target>View archived events</target>
+        <note>Title for card to show archived actionable insights.</note>
+      </trans-unit>
+      <trans-unit id="Overview.AllTransactions.Title" xml:space="preserve">
+        <source>All transactions</source>
+        <target>All transactions</target>
+        <note>Title for list of all transactions.</note>
+      </trans-unit>
+      <trans-unit id="Overview.Budgets.EmptyNewBudgetButton" xml:space="preserve">
+        <source>Create new budget</source>
+        <target>Create new budget</target>
+        <note>Title for button to add new budget.</note>
+      </trans-unit>
+      <trans-unit id="Overview.Budgets.NewBudgetButton" xml:space="preserve">
+        <source>New budget</source>
+        <target>New budget</target>
+        <note>Title for button to add new budget.</note>
+      </trans-unit>
+      <trans-unit id="Overview.Budgets.Title" xml:space="preserve">
+        <source>Budget</source>
+        <target>Budget</target>
+        <note>Title for budgets.</note>
+      </trans-unit>
+      <trans-unit id="Overview.LatestTransactions.SeeAllButton" xml:space="preserve">
+        <source>See all</source>
+        <target>See all</target>
+        <note>Title for button to see all transactions.</note>
+      </trans-unit>
+      <trans-unit id="Overview.LatestTransactions.Title" xml:space="preserve">
+        <source>Latest transactions</source>
+        <target>Latest transactions</target>
+        <note>Title for latest transactions list.</note>
+      </trans-unit>
+      <trans-unit id="Overview.NoDataAvailable" xml:space="preserve">
+        <source>No statistics available</source>
+        <target>No statistics available</target>
+        <note>No statistics data available.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Detail.ChangeCategory" xml:space="preserve">
+        <source>Change</source>
+        <target>Change</target>
+        <note>Title for the button used to initiate a categorization of a transaction.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Detail.Edit" xml:space="preserve">
+        <source>Transaction.Detail.Edit</source>
+        <target>Transaction.Detail.Edit</target>
+        <note>Text on button in navigation bar leading to the edit transaction flow.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.Date.Title" xml:space="preserve">
+        <source>Date</source>
+        <target>Date</target>
+        <note>Title for text field for choosing the date of a transaction.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.Description.Original" xml:space="preserve">
+        <source>Original description: %@</source>
+        <target>Original description: %@</target>
+        <note>Help text below description field describing the original description.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.Description.Placeholder" xml:space="preserve">
+        <source>Transaction.Edit.Description.Placeholder</source>
+        <target>Transaction.Edit.Description.Placeholder</target>
+        <note>Text field placeholder text on the field where you edit a description of a transaction.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.DiscardSheet.Continue" xml:space="preserve">
+        <source>Continue</source>
+        <target>Continue</target>
+        <note>Discard action title for the sheet when the user tries to cancel the edit transaction screen when there are changes.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.DiscardSheet.Discard" xml:space="preserve">
+        <source>Discard</source>
+        <target>Discard</target>
+        <note>Discard action title for the sheet when the user tries to cancel the edit transaction screen when there are changes.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.DiscardSheet.Title" xml:space="preserve">
+        <source>Are you sure you want to discard your changes?</source>
+        <target>Are you sure you want to discard your changes?</target>
+        <note>Title for the sheet when the user tries to cancel the edit transaction screen when there are changes.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.SaveButton" xml:space="preserve">
+        <source>Save</source>
+        <target>Save</target>
+        <note>Navigation button for saving changes to a transaction.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.Title" xml:space="preserve">
+        <source>Edit</source>
+        <target>Edit</target>
+        <note>Title for the view where you edit a specific transaction.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Generic.Error" xml:space="preserve">
+        <source>Transaction.Generic.Error</source>
+        <target>Transaction.Generic.Error</target>
+        <note>Text when failing to fetch transaction.</note>
+      </trans-unit>
+      <trans-unit id="Transactions.NoTransactions" xml:space="preserve">
+        <source>Transactions.NoTransactions</source>
+        <target>Transactions.NoTransactions</target>
+        <note>Text to display in the transaction list when there are no transactions.</note>
+      </trans-unit>
+      <trans-unit id="Week.Of.Year.Long" xml:space="preserve">
+        <source>week</source>
+        <target>week</target>
+        <note>Week of the year formatter long text.</note>
+      </trans-unit>
+      <trans-unit id="Week.Of.Year.Short" xml:space="preserve">
+        <source>w</source>
+        <target>w</target>
+        <note>Week of the year formatter short text.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="TinkPFMSDKTester/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.4" build-num="12D4e"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>TinkPFMTester</source>
+        <target>TinkPFMTester</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
