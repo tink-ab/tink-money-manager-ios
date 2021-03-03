@@ -23,14 +23,14 @@
 
 2. Enter this URL `https://github.com/tink-ab/tink-money-manager-ios` when asked for a package repository.
 
-3. When Xcode is done resolving `tink-money-manager-ios` and asks you to choose package products, select  `TinkPFMUI`.
+3. When Xcode is done resolving `tink-money-manager-ios` and asks you to choose package products, select  `TinkMoneyManagerUI`.
 
 ### Using CocoaPods
 Refer to their [guide](https://guides.cocoapods.org/using/using-cocoapods.html) for usage and installation instructions.
 
-1. Add TinkPFMUI to your Podfile.
+1. Add `TinkMoneyManagerUI` to your Podfile.
     ```
-    pod "TinkPFMUI"
+    pod "TinkMoneyManagerUI"
     ```
 
 2. Run `pod install` in your project directory.
@@ -38,9 +38,9 @@ Refer to their [guide](https://guides.cocoapods.org/using/using-cocoapods.html) 
 3. Open your `.xcworkspace` file to see the project in Xcode.
 
 ### Manual Installation
-Drag the `TinkPFMUI.xcframework` and `TinkCore.xcframework` into the  _Frameworks, Libraries, and Embedded Content_ section on your application targets’ _General_ tab. 
+Drag the `TinkMoneyManagerUI.xcframework` and `TinkCore.xcframework` into the  _Frameworks, Libraries, and Embedded Content_ section on your application targets’ _General_ tab. 
 
-You should now be able to `import TinkPFMUI` within your project.
+You should now be able to `import TinkMoneyManagerUI` within your project.
 
 ## Fetching data
 
@@ -163,9 +163,15 @@ Or by disabling all _Device Orientations_ except `Portrait` in the _Deployment I
 ## Example
 This example project shows how to setup and use the `FinanceOverviewViewController` in your app.
 
-- [Example App](Examples/PFMExampleApp)
+- [Example App](Examples/FinanceOverviewExample)
 
 ## Documentation
 For more detailed usage and full documentation, please refer to our guide.
 
 - [Money Manager SDK for iOS](https://docs.tink.com/resources/pfm-sdk-ios)
+
+## [Tink](https://tink.com)
+Tink was founded in 2012 with the aim of changing the banking industry for the better. We have built Europe’s most robust open banking platform – with the broadest, deepest connectivity and powerful services that create value out of the financial data.
+
+## Support
+👋 We are continuously working on improving the developer experience of our API offering. [Contact us](https://support.tink.com) for support, questions or suggestions.
