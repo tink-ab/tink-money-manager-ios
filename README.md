@@ -3,7 +3,7 @@
 ![CocoaPods](https://img.shields.io/cocoapods/v/TinkPFMUI.svg)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-supported-DE5C43.svg)
 
-# Tink PFM SDK for iOS
+# Tink Money Manager for iOS
 
 ## Prerequisites
 
