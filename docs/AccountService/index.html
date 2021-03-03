@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - AccountService</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - AccountService</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#accountservice.accounts(completion:)">accounts(completion:​)</a></li></ul></li></ol>
+            <ol><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#accountservice.accounts(completion:)">accounts(completion:​)</a></li><li class="function"><a href="#accountservice.update(id:name:type:accountnumber:isfavorite:ownership:accountexclusion:completion:)">update(id:​name:​type:​account​Number:​is​Favorite:​ownership:​account​Exclusion:​completion:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -49,7 +49,13 @@
     <h3>
         <code>accounts(completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">accounts</span>(<span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">accounts</span>(<span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+</div>
+<div role="article" class="function" id="accountservice.update(id:name:type:accountnumber:isfavorite:ownership:accountexclusion:completion:)">
+    <h3>
+        <code>update(id:​name:​type:​account​Number:​is​Favorite:​ownership:​account​Exclusion:​completion:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">update</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>, <span class="variable">name</span>: <span class="type">String</span>?, <span class="variable">type</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>.<span class="type">Kind</span>?, <span class="variable">accountNumber</span>: <span class="type">String</span>?, <span class="variable">isFavorite</span>: <span class="type">Bool</span>?, <span class="variable">ownership</span>: <span class="type">Double</span>?, <span class="variable">accountExclusion</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>.<span class="type">AccountExclusion</span>?, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
     </section>
         </article>
@@ -57,7 +63,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:56+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:13+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

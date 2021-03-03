@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - Scope.AuthorizationAccess</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - Scope.AuthorizationAccess</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#scope.authorizationaccess.revoke">revoke</a></li><li class="case"><a href="#scope.authorizationaccess.grant">grant</a></li><li class="case"><a href="#scope.authorizationaccess.read">read</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#scope.authorizationaccess.read">read</a></li><li class="case"><a href="#scope.authorizationaccess.grant">grant</a></li><li class="case"><a href="#scope.authorizationaccess.revoke">revoke</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -37,7 +37,7 @@
     <code class="name">Scope.​Authorization​Access</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">enum</span> <span class="type">AuthorizationAccess</span></code></pre></body></html>
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">AuthorizationAccess</span></code></pre></body></html>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
         <figure>
@@ -54,7 +54,7 @@
 <!-- Scope.AuthorizationAccess -->
 <g id="node1" class="node enumeration current">
 <title>Scope.AuthorizationAccess</title>
-<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-pfm-ios/Scope_AuthorizationAccess" xlink:title="Scope.AuthorizationAccess">
+<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-money-manager-ios/Scope_AuthorizationAccess" xlink:title="Scope.AuthorizationAccess">
 <path fill="none" stroke="black" stroke-width="3" d="M531.5,-108C531.5,-108 332.5,-108 332.5,-108 326.5,-108 320.5,-102 320.5,-96 320.5,-96 320.5,-84 320.5,-84 320.5,-78 326.5,-72 332.5,-72 332.5,-72 531.5,-72 531.5,-72 537.5,-72 543.5,-78 543.5,-84 543.5,-84 543.5,-96 543.5,-96 543.5,-102 537.5,-108 531.5,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">Scope.AuthorizationAccess</text>
 </a>
@@ -80,7 +80,7 @@
 </figure>
         <h3>Member Of</h3>
 <dl>
-    <dt class="structure"><code><a href="https://tink-ab.github.io/tink-pfm-ios/Scope">Scope</a></code></dt>
+    <dt class="structure"><code><a href="https://tink-ab.github.io/tink-money-manager-ios/Scope">Scope</a></code></dt>
 <dd><p>Access to Tink is divided into scopes which grant access to different API endpoints.
 Each API customer has a set of scopes which control the maximum permitted data access.
 To see the total set of scopes that you can use, go to app settings in the Tink Console.</p>
@@ -94,11 +94,11 @@ To see the total set of scopes that you can use, go to app settings in the Tink 
     <section id="enumeration cases">
         <h2>Enumeration Cases</h2>
 
-        <div role="article" class="case" id="scope.authorizationaccess.revoke">
+        <div role="article" class="case" id="scope.authorizationaccess.read">
     <h3>
-        <code>revoke</code>
+        <code>read</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">revoke</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">read</span></code></pre></body></html>
 </div>
 <div role="article" class="case" id="scope.authorizationaccess.grant">
     <h3>
@@ -106,11 +106,11 @@ To see the total set of scopes that you can use, go to app settings in the Tink 
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">grant</span></code></pre></body></html>
 </div>
-<div role="article" class="case" id="scope.authorizationaccess.read">
+<div role="article" class="case" id="scope.authorizationaccess.revoke">
     <h3>
-        <code>read</code>
+        <code>revoke</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">read</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">case</span> <span class="variable">revoke</span></code></pre></body></html>
 </div>
     </section>
 
@@ -121,7 +121,7 @@ To see the total set of scopes that you can use, go to app settings in the Tink 
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:54+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:18+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

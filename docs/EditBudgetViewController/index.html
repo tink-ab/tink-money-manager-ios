@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - EditBudgetViewController</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - EditBudgetViewController</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#editbudgetviewcontroller.init(tink:budgetid:)">init(tink:​budget​ID:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#editbudgetviewcontroller.editbudgetviewcontrollerdelegate">edit​Budget​View​Controller​Delegate</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#editbudgetviewcontroller.viewdidload()">view​Did​Load()</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#editbudgetviewcontroller.init(tink:budgetid:)">init(tink:​budget​ID:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#editbudgetviewcontroller.editbudgetviewcontrollerdelegate">edit​Budget​View​Controller​Delegate</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#editbudgetviewcontroller.viewdidload()">view​Did​Load()</a></li><li class="function"><a href="#editbudgetviewcontroller.viewdidappear(_:)">view​Did​Appear(_:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -73,7 +73,7 @@
 <!-- EditBudgetViewController -->
 <g id="node1" class="node class current">
 <title>EditBudgetViewController</title>
-<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-pfm-ios/EditBudgetViewController" xlink:title="EditBudgetViewController">
+<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-money-manager-ios/EditBudgetViewController" xlink:title="EditBudgetViewController">
 <path fill="none" stroke="black" stroke-width="3" d="M528,-108C528,-108 336,-108 336,-108 330,-108 324,-102 324,-96 324,-96 324,-84 324,-84 324,-78 330,-72 336,-72 336,-72 528,-72 528,-72 534,-72 540,-78 540,-84 540,-84 540,-96 540,-96 540,-102 534,-108 528,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">EditBudgetViewController</text>
 </a>
@@ -109,7 +109,7 @@
     <h3>
         <code>init(tink:​budget​ID:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">budgetID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">budgetID</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initializes a new view controller.</p>
 
@@ -148,7 +148,7 @@
     <h3>
         <code>edit​Budget​View​Controller​Delegate</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">editBudgetViewControllerDelegate</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/EditBudgetViewControllerDelegate"><span class="type">EditBudgetViewControllerDelegate</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">editBudgetViewControllerDelegate</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/EditBudgetViewControllerDelegate"><span class="type">EditBudgetViewControllerDelegate</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>An object that conforms to the <code>EditBudgetViewControllerDelegate</code> protocol.</p>
 
@@ -164,6 +164,12 @@
     </h3>
     <html><body><pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">viewDidLoad</span>()</code></pre></body></html>
 </div>
+<div role="article" class="function" id="editbudgetviewcontroller.viewdidappear(_:)">
+    <h3>
+        <code>view​Did​Appear(_:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">viewDidAppear</span>(<span class="keyword">_</span> <span class="variable">animated</span>: <span class="type">Bool</span>)</code></pre></body></html>
+</div>
     </section>
 
 
@@ -173,7 +179,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:54+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:19+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

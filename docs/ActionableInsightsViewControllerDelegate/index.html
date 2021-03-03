@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - ActionableInsightsViewControllerDelegate</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - ActionableInsightsViewControllerDelegate</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -58,7 +58,7 @@
 <!-- ActionableInsightsViewControllerDelegate -->
 <g id="node1" class="node protocol current">
 <title>ActionableInsightsViewControllerDelegate</title>
-<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewControllerDelegate" xlink:title="ActionableInsightsViewControllerDelegate">
+<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewControllerDelegate" xlink:title="ActionableInsightsViewControllerDelegate">
 <path fill="none" stroke="black" stroke-width="3" d="M593.5,-108C593.5,-108 270.5,-108 270.5,-108 264.5,-108 258.5,-102 258.5,-96 258.5,-96 258.5,-84 258.5,-84 258.5,-78 264.5,-72 270.5,-72 270.5,-72 593.5,-72 593.5,-72 599.5,-72 605.5,-78 605.5,-84 605.5,-84 605.5,-96 605.5,-96 605.5,-102 599.5,-108 593.5,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">ActionableInsightsViewControllerDelegate</text>
 </a>
@@ -97,7 +97,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Budget:​budget​Period​Start:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showBudget</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">budgetPeriodStart</span>: <span class="type">Date</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showBudget</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">budgetPeriodStart</span>: <span class="type">Date</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should present a specific budget.</p>
 
@@ -138,7 +138,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​create​Budget​With​Suggestion:​completion​Handler:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">createBudgetWithSuggestion</span> <span class="variable">suggestion</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/InsightActionData"><span class="type">InsightActionData</span></a>.<span class="type">BudgetSuggestion</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">createBudgetWithSuggestion</span> <span class="variable">suggestion</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/InsightActionData"><span class="type">InsightActionData</span></a>.<span class="type">BudgetSuggestion</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should create a budget.</p>
 
@@ -179,7 +179,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​initiate​Transfer​From​Account:​to:​amount:​currency​Code:​completion​Handler:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">initiateTransferFromAccount</span> <span class="variable">source</span>: <span class="type">URL</span>?, <span class="variable">to</span> <span class="variable">destination</span>: <span class="type">URL</span>?, <span class="variable">amount</span>: <span class="type">Double</span>?, <span class="variable">currencyCode</span>: <span class="type">String</span>?, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">initiateTransferFromAccount</span> <span class="variable">source</span>: <span class="type">URL</span>?, <span class="variable">to</span> <span class="variable">destination</span>: <span class="type">URL</span>?, <span class="variable">amount</span>: <span class="type">Double</span>?, <span class="variable">currencyCode</span>: <span class="type">String</span>?, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should make a transfer.</p>
 
@@ -238,7 +238,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Account​With​ID:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showAccountWithID</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showAccountWithID</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should present a specific account.</p>
 
@@ -273,7 +273,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Transaction​With​ID:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionWithID</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionWithID</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should present a specific transaction.</p>
 
@@ -308,7 +308,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​categorize​Transaction​With​ID:​completion​Handler:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">categorizeTransactionWithID</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">categorizeTransactionWithID</span> <span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should categorize a specific transaction.</p>
 
@@ -353,7 +353,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Transactions​With​IDs:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsWithIDs</span> <span class="variable">ids</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>])</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsWithIDs</span> <span class="variable">ids</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>])</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should present a list of transactions.</p>
 
@@ -388,7 +388,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Transactions​With​IDs:​month:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsWithIDs</span> <span class="variable">ids</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>], <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsWithIDs</span> <span class="variable">ids</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>], <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should present a list of transactions for a specific month.</p>
 
@@ -429,7 +429,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Transactions​ByCategory​Code:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsByCategoryCode</span> <span class="variable">transactionIDsByCategoryCode</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">Code</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>]])</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsByCategoryCode</span> <span class="variable">transactionIDsByCategoryCode</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">Code</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>]])</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should present a list of transactions grouped by category.</p>
 
@@ -464,7 +464,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Transactions​ByCategory​Code:​month:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsByCategoryCode</span> <span class="variable">transactionIDsByCategoryCode</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">Code</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>]], <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showTransactionsByCategoryCode</span> <span class="variable">transactionIDsByCategoryCode</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">Code</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>]], <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that it should present a list of transactions grouped by category for a specific month.</p>
 
@@ -505,7 +505,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​categorize​Transactions​With​IDs:​completion​Handler:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">categorizeTransactionsWithIDs</span> <span class="variable">ids</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>], <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">categorizeTransactionsWithIDs</span> <span class="variable">ids</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>], <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that is should categorize a list of transactions.</p>
 
@@ -550,7 +550,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​show​Left​ToSpend​For​Month:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showLeftToSpendForMonth</span> <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">showLeftToSpendForMonth</span> <span class="variable">month</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Month"><span class="type">Month</span></a>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that is should present left to spend.</p>
 
@@ -585,7 +585,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​refresh​Credentials​With​ID:​completion​Handler:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">refreshCredentialsWithID</span> <span class="variable">credentialsID</span>: <span class="type">Credentials</span>.<span class="type">ID</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsightsViewController"><span class="type">ActionableInsightsViewController</span></a>, <span class="variable">refreshCredentialsWithID</span> <span class="variable">credentialsID</span>: <span class="type">Credentials</span>.<span class="type">ID</span>, <span class="variable">completionHandler</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that is should refresh credentials.</p>
 
@@ -626,7 +626,7 @@
     <h3>
         <code>actionable​Insights​View​Controller(_:​image​For​Insight​With​Kind:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <span class="type">UIViewController</span>, <span class="variable">imageForInsightWithKind</span> <span class="variable">kind</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ActionableInsight"><span class="type">ActionableInsight</span></a>.<span class="type">Kind</span>) -&gt; <span class="type">UIImage</span>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">actionableInsightsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <span class="type">UIViewController</span>, <span class="variable">imageForInsightWithKind</span> <span class="variable">kind</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ActionableInsight"><span class="type">ActionableInsight</span></a>.<span class="type">Kind</span>) -&gt; <span class="type">UIImage</span>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Asks the delegate for a image to display instead of the default representation for a specific insight type.</p>
 
@@ -666,7 +666,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:55+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:14+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

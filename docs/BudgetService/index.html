@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - BudgetService</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - BudgetService</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -49,43 +49,43 @@
     <h3>
         <code>budgets(include​Archived:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgets</span>(<span class="variable">includeArchived</span>: <span class="type">Bool</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgets</span>(<span class="variable">includeArchived</span>: <span class="type">Bool</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="budgetservice.create(name:amount:filter:periodicity:completion:)">
     <h3>
         <code>create(name:​amount:​filter:​periodicity:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">create</span>(<span class="variable">name</span>: <span class="type">String</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>, <span class="variable">filter</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Filter</span>], <span class="variable">periodicity</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Periodicity</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">create</span>(<span class="variable">name</span>: <span class="type">String</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>, <span class="variable">filter</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Filter</span>], <span class="variable">periodicity</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Periodicity</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="budgetservice.update(id:name:amount:filter:periodicity:completion:)">
     <h3>
         <code>update(id:​name:​amount:​filter:​periodicity:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">update</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">name</span>: <span class="type">String</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>, <span class="variable">filter</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Filter</span>], <span class="variable">periodicity</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Periodicity</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">update</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">name</span>: <span class="type">String</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>, <span class="variable">filter</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Filter</span>], <span class="variable">periodicity</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">Periodicity</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="budgetservice.transactionsforbudget(id:dateinterval:completion:)">
     <h3>
         <code>transactions​For​Budget(id:​date​Interval:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transactionsForBudget</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transactionsForBudget</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="budgetservice.budgetsummaries(includearchived:completion:)">
     <h3>
         <code>budget​Summaries(include​Archived:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgetSummaries</span>(<span class="variable">includeArchived</span>: <span class="type">Bool</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-pfm-ios/BudgetSummary"><span class="type">BudgetSummary</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgetSummaries</span>(<span class="variable">includeArchived</span>: <span class="type">Bool</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-money-manager-ios/BudgetSummary"><span class="type">BudgetSummary</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="budgetservice.budgetdetails(id:dateinterval:completion:)">
     <h3>
         <code>budget​Details(id:​date​Interval:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgetDetails</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetails"><span class="type">BudgetDetails</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgetDetails</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-money-manager-ios/BudgetDetails"><span class="type">BudgetDetails</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="budgetservice.archive(id:completion:)">
     <h3>
         <code>archive(id:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">archive</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">archive</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>.<span class="type">ID</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
     </section>
         </article>
@@ -93,7 +93,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:56+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:16+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
