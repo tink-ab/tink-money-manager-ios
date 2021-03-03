@@ -4,31 +4,31 @@
 import PackageDescription
 
 let package = Package(
-    name: "TinkPFMUI",
+    name: "TinkMoneyManager",
     platforms: [
         .iOS(.v11)
     ],
     products: [
         .library(
-            name: "TinkPFMUI",
-            targets: ["TinkPFMUITarget"]
+            name: "TinkMoneyManagerUI",
+            targets: ["TinkMoneyManagerUITarget"]
         ),
     ],
     dependencies: [
-        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMinor(from: "0.5.0"))
+        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMinor(from: "0.7.0"))
     ],
     targets: [
         .binaryTarget(
-            name: "TinkPFMUI",
-            url: "https://github.com/tink-ab/tink-pfm-ios/releases/download/0.14.0/TinkPFMUI.xcframework.zip", checksum: "722ee4fea6693f43e152d57d0ccc74d0e1d4c24b61281a3192cb97ac1d53ce81"
+            name: "TinkMoneyManagerUI",
+            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/0.15.0/TinkMoneyManagerUI.xcframework.zip", checksum: "5e11012f8b724a8ed17ab6c6eacacedd7e3f011b5a82e09cc200f343b8f2a224"
         ),
         .target(
-            name: "TinkPFMUITarget",
+            name: "TinkMoneyManagerUITarget",
             dependencies: [
-                .target(name: "TinkPFMUI"),
-                .product(name: "TinkCoreXCFramework", package: "TinkCore")
+                .target(name: "TinkMoneyManagerUI"),
+                .product(name: "TinkCore", package: "TinkCore")
             ],
-            path: "TinkPFMUITarget"
+            path: "TinkMoneyManagerUITarget"
         ),
     ]
 )
