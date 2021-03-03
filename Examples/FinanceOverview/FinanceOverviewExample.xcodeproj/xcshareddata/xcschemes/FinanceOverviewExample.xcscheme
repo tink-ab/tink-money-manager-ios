@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9DDD67A32368850500507DF3"
-               BuildableName = "PFMExampleApp.app"
-               BlueprintName = "PFMExampleApp"
-               ReferencedContainer = "container:PFMExampleApp.xcodeproj">
+               BuildableName = "FinanceOverviewExample.app"
+               BlueprintName = "FinanceOverviewExample"
+               ReferencedContainer = "container:FinanceOverviewExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9DDD67A32368850500507DF3"
-            BuildableName = "PFMExampleApp.app"
-            BlueprintName = "PFMExampleApp"
-            ReferencedContainer = "container:PFMExampleApp.xcodeproj">
+            BuildableName = "FinanceOverviewExample.app"
+            BlueprintName = "FinanceOverviewExample"
+            ReferencedContainer = "container:FinanceOverviewExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9DDD67A32368850500507DF3"
-            BuildableName = "PFMExampleApp.app"
-            BlueprintName = "PFMExampleApp"
-            ReferencedContainer = "container:PFMExampleApp.xcodeproj">
+            BuildableName = "FinanceOverviewExample.app"
+            BlueprintName = "FinanceOverviewExample"
+            ReferencedContainer = "container:FinanceOverviewExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

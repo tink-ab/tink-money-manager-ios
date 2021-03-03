@@ -1,5 +1,5 @@
 import UIKit
-import TinkPFMUI
+import TinkMoneyManagerUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let tabBarController = UITabBarController()
 
-        let configuration = TinkPFMConfiguration(clientID: "YOUR_CLIENT_ID")
+        let configuration = TinkMoneyManagerConfiguration(clientID: "YOUR_CLIENT_ID")
         let tink = Tink(configuration: configuration)
         tink.userSession = .accessToken("YOUR_ACCESS_TOKEN")
 

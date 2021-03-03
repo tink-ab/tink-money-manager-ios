@@ -7,40 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		205C2F92241F60FE00BD3CF1 /* TinkPFMUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = 205C2F94241F60FE00BD3CF1 /* TinkPFMUI.strings */; };
 		20C24BAD241A398200EB5927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C24BAC241A398200EB5927 /* Assets.xcassets */; };
-		6B6F8FEB252C69450022A909 /* TinkPFMUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6F8FEA252C69450022A909 /* TinkPFMUI.xcframework */; };
-		6B6F8FEC252C69450022A909 /* TinkPFMUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6F8FEA252C69450022A909 /* TinkPFMUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9D4E7AD5250B9DF800AE88DB /* TinkCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */; };
-		9D4E7AD6250B9DF800AE88DB /* TinkCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8FDC12E925DD407800655EF1 /* TinkMoneyManagerUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FDC12E825DD407800655EF1 /* TinkMoneyManagerUI */; };
 		9DC592592395548000C9A5F1 /* DebugAnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */; };
 		9DDD67A82368850500507DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD67A72368850500507DF3 /* AppDelegate.swift */; };
 		9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		20DBE51A2424F86C005AA1B9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9D4E7AD6250B9DF800AE88DB /* TinkCore.xcframework in Embed Frameworks */,
-				6B6F8FEC252C69450022A909 /* TinkPFMUI.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		20183728242258FF00F07BC8 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/TinkPFMUI.strings; sourceTree = "<group>"; };
+		209B492325D692F900182B4A /* tink-pfm-sdk-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "tink-pfm-sdk-ios"; path = ../..; sourceTree = "<group>"; };
 		20C24BAC241A398200EB5927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		20EDBBC8237AF43B00A225D1 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		6B6F8FEA252C69450022A909 /* TinkPFMUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkPFMUI.xcframework; path = ../../TinkPFMUI.xcframework; sourceTree = "<group>"; };
-		9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkCore.xcframework; path = ../../TinkCore.xcframework; sourceTree = "<group>"; };
 		9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugAnalyticsIntegration.swift; sourceTree = "<group>"; };
-		9DDD67A42368850500507DF3 /* PFMExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PFMExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DDD67A42368850500507DF3 /* FinanceOverviewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceOverviewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDD67A72368850500507DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDD67B32368850700507DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DDD67B52368850700507DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,8 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D4E7AD5250B9DF800AE88DB /* TinkCore.xcframework in Frameworks */,
-				6B6F8FEB252C69450022A909 /* TinkPFMUI.xcframework in Frameworks */,
+				8FDC12E925DD407800655EF1 /* TinkMoneyManagerUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +39,7 @@
 		9D4E7AD0250B9DE900AE88DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B6F8FEA252C69450022A909 /* TinkPFMUI.xcframework */,
-				9D4E7AD4250B9DF800AE88DB /* TinkCore.xcframework */,
+				209B492325D692F900182B4A /* tink-pfm-sdk-ios */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -71,7 +47,7 @@
 		9DDD679B2368850500507DF3 = {
 			isa = PBXGroup;
 			children = (
-				9DDD67A62368850500507DF3 /* PFMExampleApp */,
+				9DDD67A62368850500507DF3 /* FinanceOverviewExample */,
 				9DDD67A52368850500507DF3 /* Products */,
 				9D4E7AD0250B9DE900AE88DB /* Frameworks */,
 			);
@@ -80,12 +56,12 @@
 		9DDD67A52368850500507DF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9DDD67A42368850500507DF3 /* PFMExampleApp.app */,
+				9DDD67A42368850500507DF3 /* FinanceOverviewExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9DDD67A62368850500507DF3 /* PFMExampleApp */ = {
+		9DDD67A62368850500507DF3 /* FinanceOverviewExample */ = {
 			isa = PBXGroup;
 			children = (
 				9DDD67A72368850500507DF3 /* AppDelegate.swift */,
@@ -93,32 +69,31 @@
 				9DDD67B52368850700507DF3 /* Info.plist */,
 				20C24BAC241A398200EB5927 /* Assets.xcassets */,
 				9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */,
-				205C2F94241F60FE00BD3CF1 /* TinkPFMUI.strings */,
 			);
-			path = PFMExampleApp;
+			path = FinanceOverviewExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9DDD67A32368850500507DF3 /* PFMExampleApp */ = {
+		9DDD67A32368850500507DF3 /* FinanceOverviewExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DDD67B82368850700507DF3 /* Build configuration list for PBXNativeTarget "PFMExampleApp" */;
+			buildConfigurationList = 9DDD67B82368850700507DF3 /* Build configuration list for PBXNativeTarget "FinanceOverviewExample" */;
 			buildPhases = (
 				9DDD67A02368850500507DF3 /* Sources */,
 				9DDD67A12368850500507DF3 /* Frameworks */,
 				9DDD67A22368850500507DF3 /* Resources */,
-				20DBE51A2424F86C005AA1B9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PFMExampleApp;
+			name = FinanceOverviewExample;
 			packageProductDependencies = (
+				8FDC12E825DD407800655EF1 /* TinkMoneyManagerUI */,
 			);
 			productName = PFMExampleApp;
-			productReference = 9DDD67A42368850500507DF3 /* PFMExampleApp.app */;
+			productReference = 9DDD67A42368850500507DF3 /* FinanceOverviewExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,14 +110,13 @@
 					};
 				};
 			};
-			buildConfigurationList = 9DDD679F2368850500507DF3 /* Build configuration list for PBXProject "PFMExampleApp" */;
+			buildConfigurationList = 9DDD679F2368850500507DF3 /* Build configuration list for PBXProject "FinanceOverviewExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
-				sv,
 			);
 			mainGroup = 9DDD679B2368850500507DF3;
 			packageReferences = (
@@ -151,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9DDD67A32368850500507DF3 /* PFMExampleApp */,
+				9DDD67A32368850500507DF3 /* FinanceOverviewExample */,
 			);
 		};
 /* End PBXProject section */
@@ -161,7 +135,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				205C2F92241F60FE00BD3CF1 /* TinkPFMUI.strings in Resources */,
 				9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */,
 				20C24BAD241A398200EB5927 /* Assets.xcassets in Resources */,
 			);
@@ -182,19 +155,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		205C2F94241F60FE00BD3CF1 /* TinkPFMUI.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20183728242258FF00F07BC8 /* sv */,
-			);
-			name = TinkPFMUI.strings;
-			sourceTree = "<group>";
-		};
 		9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9DDD67B32368850700507DF3 /* Base */,
-				20EDBBC8237AF43B00A225D1 /* sv */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -325,12 +289,12 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PFMExampleApp/Info.plist;
+				INFOPLIST_FILE = FinanceOverviewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tink.PFMExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tink.MoneyManager.FinanceOverviewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -345,12 +309,12 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = PFMExampleApp/Info.plist;
+				INFOPLIST_FILE = FinanceOverviewExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tink.PFMExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tink.MoneyManager.FinanceOverviewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -361,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9DDD679F2368850500507DF3 /* Build configuration list for PBXProject "PFMExampleApp" */ = {
+		9DDD679F2368850500507DF3 /* Build configuration list for PBXProject "FinanceOverviewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DDD67B62368850700507DF3 /* Debug */,
@@ -370,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9DDD67B82368850700507DF3 /* Build configuration list for PBXNativeTarget "PFMExampleApp" */ = {
+		9DDD67B82368850700507DF3 /* Build configuration list for PBXNativeTarget "FinanceOverviewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DDD67B92368850700507DF3 /* Debug */,
@@ -380,6 +344,13 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FDC12E825DD407800655EF1 /* TinkMoneyManagerUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TinkMoneyManagerUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DDD679C2368850500507DF3 /* Project object */;
 }

@@ -1,5 +1,5 @@
 import Foundation
-import TinkPFMUI
+import TinkMoneyManagerUI
 import os.log
 
 final class DebugEventTracker: EventTracking {

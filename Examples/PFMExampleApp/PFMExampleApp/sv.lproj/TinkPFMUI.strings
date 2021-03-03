@@ -1,6 +1,0 @@
-/* Title for the cancel button that will dismiss the select category modal shown when categorizing a transaction. */
-"Categorization.CategoryPicker.CancelButton" = "Avbryt";
-
-/* Default title of the select category modal shown when categorizing a transaction.
-   Title of the select category modal shown when categorizing a transaction. */
-"Categorization.CategoryPicker.Title" = "Välj en kategori";
