@@ -1,6 +1,6 @@
 # Localizable Strings
 
-All strings in the Tink PFM SDK are by default in English. To localize the strings in your app you can provide your own strings by specifying strings for a specific set of keys in a strings file named `TinkPFMUI`.
+All strings in this SDK are by default in English. To localize the strings in your app you can provide your own strings by specifying strings for a specific set of keys in a strings file named `TinkPFMUI`.
 
 For example: To add a Italian translation for the latest transactions title displayed in the financial overview, add `"Tink.Overview.LatestTransactions.Title" = "Ultime transazioni";` to your `it.lproj/TinkPFMUI.strings` file in your app bundle. 
 Then the SDK will use that string instead of the default ones when running on a device that has the language setting set to prefer Italian. 

@@ -3,7 +3,7 @@
 ![CocoaPods](https://img.shields.io/cocoapods/v/TinkPFMUI.svg)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-supported-DE5C43.svg)
 
-# Tink PFM SDK for iOS
+# Tink Money Manager for iOS
 
 ## Prerequisites
 
@@ -21,9 +21,9 @@
 
 1. Follow these instructions to [link a target to a package product](https://help.apple.com/xcode/mac/current/#/devb83d64851).
 
-2. Enter this URL `https://github.com/tink-ab/tink-pfm-ios` when asked for a package repository.
+2. Enter this URL `https://github.com/tink-ab/tink-money-manager-ios` when asked for a package repository.
 
-3. When Xcode is done resolving `tink-pfm-ios` and asks you to choose package products, select  `TinkPFMUI`.
+3. When Xcode is done resolving `tink-money-manager-ios` and asks you to choose package products, select  `TinkPFMUI`.
 
 ### Using CocoaPods
 Refer to their [guide](https://guides.cocoapods.org/using/using-cocoapods.html) for usage and installation instructions.
@@ -44,7 +44,7 @@ You should now be able to `import TinkPFMUI` within your project.
 
 ## Fetching data
 
-Tink PFM SDK needs a valid access token for a specific user to function correctly. Since Tink PFM SDK does not handle any type of authentication, this needs to be done by your backend. 
+The SDK needs a valid access token for a specific user to function correctly. Since the SDK does not handle any type of authentication, this needs to be done by your backend. 
 See [this link](https://docs.tink.com/api/#oauth) for more info on how this is done. Once you have an access token you pass it on to your `Tink` instance.
 
 ```swift 
@@ -61,7 +61,7 @@ let navigationController = UINavigationController(rootViewController: financeOve
 ```
 
 ## Refreshing access tokens
-User access tokens expire after a set amount of time. You can keep your user logged in by exchanging your refresh token for a new access token (see Tink docs) and passing it to the Tink PFM SDK. This will overwrite the token that the fragment was initialzed with. If needed you can also refresh the statistics, accounts, and latest transactions:
+User access tokens expire after a set amount of time. You can keep your user logged in by exchanging your refresh token for a new access token (see Tink docs) and updating the `Tink` instance you use. If needed you can also refresh the statistics, accounts, and latest transactions:
 ```swift 
 Tink.shared.userSession = .accessToken(<#String#>)
 Tink.shared.refresh()
@@ -70,7 +70,7 @@ Tink.shared.refresh()
 ## Customization 
 
 To configure colors, font or icons you update the `Appearance.provider`.
-This needs to be done before initializing the `FinanceOverviewViewController` or any of the other View Controllers provided by the PFM SDK.
+This needs to be done before initializing the `FinanceOverviewViewController` or any of the other view controllers provided by this SDK.
 
 ### Colors
 
@@ -104,7 +104,7 @@ Appearance.provider.colors = colorProvider
 You can decide if you want to change all icons or just some icons. It is also possible to customize the icons background corner radiuses with  `categoryIconBackgroundCornerRadiusFactor`. This can be set with a factor from `0.0` to `1.0` where `0.0` results in a square shape and `1.0` , which is the default value, makes a circle.
 
 ### Themes
-You can configure colors, font and icons by providing Tink PFM SDK with a `ColorProviding` , `IconProviding` and `FontProviding` type respectively. Tink PFM SDK also provides a `AppearanceProvider` type that can be used to easily customize the Tink PFM SDK views. 
+You can configure colors, font and icons by providing the SDK with a `ColorProviding` , `IconProviding` and `FontProviding` type respectively. The SDK also provides a `AppearanceProvider` type that can be used to easily customize the views. 
 
 ```swift
 let colorProvider = ColorProvider()
@@ -141,16 +141,16 @@ Numerical and time-based information such as transaction amounts and dates are f
 
 Since some user-facing text is sent from the Tink API we recommend you to set the `locale` of the Tink user model to match the user's preference for a consistent user experience.
 
-User-facing text in Tink PFM SDK are in English by default. 
-To add translations for other locales, refer to Localizable Strings document provided with the SDK.
+User-facing text in the SDK are in English by default. 
+To add translations for other locales, refer to the [Localizable Strings guide](LOCALIZABLE_STRINGS.md).
 
 ## Additional requirements
 
 ### Locking screen orientation
 
-View controllers from Tink PFM SDK should always be displayed in a portrait orientation since they currently do not support landscape orientations. 
+View controllers from the SDK should always be displayed in a portrait orientation since they currently do not support landscape orientations. 
 If presented in a landscape orientation, it will cause unexpected results and a suboptimal user experience.
-Disable other orientations than portrait by either overriding `supportedInterfaceOrientations` in the view controller that presents the view controller you're using from Tink PFM SDK.
+Disable other orientations than portrait by either overriding `supportedInterfaceOrientations` in the view controller that presents the view controller you're using from the SDK.
 
 ```swift
 override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -166,6 +166,6 @@ This example project shows how to setup and use the `FinanceOverviewViewControll
 - [Example App](Examples/PFMExampleApp)
 
 ## Documentation
-For more detailed usage and full documentation, please refer to our PFM SDK for iOS guide.
+For more detailed usage and full documentation, please refer to our guide.
 
-- [PFM SDK for iOS](https://docs.tink.com/resources/pfm-sdk-ios)
+- [Money Manager SDK for iOS](https://docs.tink.com/resources/pfm-sdk-ios)

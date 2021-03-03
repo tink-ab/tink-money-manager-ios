@@ -1,22 +1,22 @@
-TERMS AND CONDITIONS FOR TINK PFM SDK - v.1.0
+TERMS AND CONDITIONS FOR TINK MONEY MANAGER SDK - v.1.1
 
 1. Introduction
 
-1.1. The PFM SDK is provided to customers of Tink that have subscribed to Tink’s PFM service under a Technology License and Services Agreement.
-1.2. By installing and/or using PFM SDK, you agree to be bound by the terms and conditions of this Agreement and warrant that you are authorized to enter into agreements on behalf of the Licensee. 
+1.1. The Money Manager SDK is provided to customers of Tink that have subscribed to Tink’s Money Manager service under a Technology License and Services Agreement.
+1.2. By installing and/or using Money Manager SDK, you agree to be bound by the terms and conditions of this Agreement and warrant that you are authorized to enter into agreements on behalf of the Licensee.
 
 2. Definitions 
 
-2.1. "Affiliate" means, with respect to an entity, that another entity is controlling, controlled by, or under common control with that entity where “control” shall mean direct or indirect ownership of fifty percent or more of the share capital or voting interest in such company or other entity.
-2.2. “Licensee” means the natural person or a legal entity that is granted the license to the PFM SDK or otherwise uses the license to the PFM SDK in accordance with this Agreement.
+2.1. “Affiliate” means, with respect to an entity, that another entity is controlling, controlled by, or under common control with that entity where “control” shall mean direct or indirect ownership of fifty percent or more of the share capital or voting interest in such company or other entity.
+2.2. “Licensee” means the natural person or a legal entity that is granted the license to the Money Manager SDK or otherwise uses the license to the Money Manager SDK in accordance with this Agreement.
 2.3. “Party” means Licensee and Tink respectively and “Parties” means Licensee and Tink jointly.
 2.4. “Agreement” means these terms and conditions.
-2.5. “Technology License and Services Agreement” means the agreement between the Parties for the provision of PFM and/or payment services.
+2.5. “Technology License and Services Agreement” means the agreement between the Parties for the provision of Money Manager and/or payment services.
 
 3. License
 
-3.1. Tink grants Licensee a personal, non-exclusive, non-transferable right to install and use the copy of the PFM SDK in the form provided, solely for use in connection with Tink products and services under the Technology License and Services Agreement. 
-3.2. Licensee has no right to copy or otherwise reproduce, modify, decompile, disassemble, reverse engineer, or by any other means attempt to recreate the source code of the PFM SDK except as expressly authorized herein or to the extent permitted under compulsory law, provided, however, where the Licensee has such rights under compulsory law, Licensee will provide Tink with reasonably detailed information regarding any intended copying, reproducing, modification, decompilation, disassembling, reverse engineering or re-creating of the source code. 
+3.1. Tink grants Licensee a personal, non-exclusive, non-transferable right to install and use the copy of the Money Manager SDK in the form provided, solely for use in connection with Tink products and services under the Technology License and Services Agreement.
+3.2. Licensee has no right to copy or otherwise reproduce, modify, decompile, disassemble, reverse engineer, or by any other means attempt to recreate the source code of the Money Manager SDK except as expressly authorized herein or to the extent permitted under compulsory law, provided, however, where the Licensee has such rights under compulsory law, Licensee will provide Tink with reasonably detailed information regarding any intended copying, reproducing, modification, decompilation, disassembling, reverse engineering or re-creating of the source code. 
 
 4. Third party tools
 
@@ -24,34 +24,34 @@ TERMS AND CONDITIONS FOR TINK PFM SDK - v.1.0
 
 5. Intellectual Property Rights
 
-5.1. The title to and ownership of, and all intellectual property rights, including but not limited to copyright, and all other rights to, the PFM SDK, including any derivatives thereof, shall remain with Tink or its third-party licensors. Thus, this Agreement does not imply that any other rights are granted to the Licensee other than the non-exclusive license as set out in Section 3.  
-5.2. Nothing in this Agreement gives Licensee a right to use any of Tink’ trade names, trademarks, service marks, logos, domain names, or other distinctive brand features except to the extent such brand features are included in the PFM SDK.
+5.1. The title to and ownership of, and all intellectual property rights, including but not limited to copyright, and all other rights to, the Money Manager SDK, including any derivatives thereof, shall remain with Tink or its third-party licensors. Thus, this Agreement does not imply that any other rights are granted to the Licensee other than the non-exclusive license as set out in Section 3.
+5.2. Nothing in this Agreement gives Licensee a right to use any of Tink’ trade names, trademarks, service marks, logos, domain names, or other distinctive brand features except to the extent such brand features are included in the Money Manager SDK.
 
 6. Warranty
 
-6.1. Except as expressly specified herein, the PFM SDK and any additional services are provided “as is” and “as available” without warranty of any kind, express or implied. Tink does not warrant that the PFM SDK will be compatible with any licensee application or environment or otherwise meet Licensee´s requirements, or that operation will be uninterrupted or error-free.
+6.1. Except as expressly specified herein, the Money Manager SDK and any additional services are provided “as is” and “as available” without warranty of any kind, express or implied. Tink does not warrant that the Money Manager SDK will be compatible with any licensee application or environment or otherwise meet Licensee´s requirements, or that operation will be uninterrupted or error-free.
 
 7. Limitation of Liability
 
-7.1. Licensee assumes the entire risk of using the PFM SDK. Tink is under no circumstances liable for direct damages, indirect damages, special damages, consequential damages such as, but not limited to, loss of profits or loss of data, which may result from the use of the PFM SDK. 
+7.1. Licensee assumes the entire risk of using the Money Manager SDK. Tink is under no circumstances liable for direct damages, indirect damages, special damages, consequential damages such as, but not limited to, loss of profits or loss of data, which may result from the use of the Money Manager SDK.
 
 8. Indemnification
 
-8.1. To the maximum extent permitted by law, the Licensee agrees to defend, indemnify and hold harmless Tink, Tink’s Affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including attorneys’ fees) relating to (i) the Licensee’s use of the PFM SDK, (ii) any application the Licensee develops with the use of the PFM SDK, including a claim that such application infringes or threatens to infringe any intellectual property right of any person, and (iii) any non-compliance by the Licensee with this Agreement.
+8.1. To the maximum extent permitted by law, the Licensee agrees to defend, indemnify and hold harmless Tink, Tink’s Affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including attorneys’ fees) relating to (i) the Licensee’s use of the Money Manager SDK, (ii) any application the Licensee develops with the use of the Money Manager SDK, including a claim that such application infringes or threatens to infringe any intellectual property right of any person, and (iii) any non-compliance by the Licensee with this Agreement.
 
 9. Support
 
-9.1. Tink has no obligation to provide support for the PFM SDK or any applications developed by Licensee using the PFM SDK.
+9.1. Tink has no obligation to provide support for the Money Manager SDK or any applications developed by Licensee using the Money Manager SDK.
 
 10. New Versions
 
-10.1. The terms and conditions of this Agreement applies automatically to new releases or changes of the PFM SDK, unless Tink provides other terms along with the update or change. 
+10.1. The terms and conditions of this Agreement applies automatically to new releases or changes of the Money Manager SDK, unless Tink provides other terms along with the update or change.
 
 11. Termination
 
 11.1. Without prejudice to any other rights or remedies, each Party may terminate the Agreement at its sole discretion at any time. 
-11.2. The Agreement will also terminate if Licensee fails to comply with the terms of the Agreement or are otherwise in violation of the Swedish Copyright Act (1960:729) or other applicable laws or regulations relating to the license or the PFM SDK under this Agreement.
-11.3. All rights granted to the Licensee, including but not limited to the right to use the PFM SDK, will immediately cease upon termination of the Agreement.
+11.2. The Agreement will also terminate if Licensee fails to comply with the terms of the Agreement or are otherwise in violation of the Swedish Copyright Act (1960:729) or other applicable laws or regulations relating to the license or the Money Manager SDK under this Agreement.
+11.3. All rights granted to the Licensee, including but not limited to the right to use the Money Manager SDK, will immediately cease upon termination of the Agreement.
 
 12. Waiver
 
