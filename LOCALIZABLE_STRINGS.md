@@ -1,8 +1,8 @@
 # Localizable Strings
 
-All strings in this SDK are by default in English. To localize the strings in your app you can provide your own strings by specifying strings for a specific set of keys in a strings file named `TinkPFMUI`.
+All strings in the SDK are by default in English. To localize the strings in your app you can provide your own strings by specifying strings for a specific set of keys in a strings file named `TinkMoneyManagerUI`.
 
-For example: To add a Italian translation for the latest transactions title displayed in the financial overview, add `"Tink.Overview.LatestTransactions.Title" = "Ultime transazioni";` to your `it.lproj/TinkPFMUI.strings` file in your app bundle. 
+For example: To add a Italian translation for the latest transactions title displayed in the financial overview, add `"Tink.Overview.LatestTransactions.Title" = "Ultime transazioni";` to your `it.lproj/TinkMoneyManagerUI.strings` file in your app bundle. 
 Then the SDK will use that string instead of the default ones when running on a device that has the language setting set to prefer Italian. 
 
 You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com/xcode/mac/current/#/dev5a03f5aa1), provided in this repo in the `en.xcloc` folder as a basis for adding new translations. For example to send to an external localization service for translations.
@@ -15,7 +15,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `ActionableInsights.ArchivedInsight.ActionDescription` | You answered %@ | Text shown to describe when an insight was archived. |
 | `ActionableInsights.BudgetSuggestCreateTopCategory.SuggestedAmountDetail` | Save up to %@ per year | Description of saved amount per year for insight suggesting creating a budget based on spending in a category. |
 | `ActionableInsights.List.ArchiveButton` | Archive | Button title for button to present archived insights list. |
-| `ActionableInsights.List.EmptyState` | No new events | Text for message to display if there are no actionable insights. |
+| `ActionableInsights.List.EmptyState` | No new events! Check the archive if you want see your previous events. | Text for message to display if there are no actionable insights. |
 | `ActionableInsights.List.Title` | Events | Title for actionable insights list. |
 | `ActionableInsights.SuggestCategories.TransactionCount` | %d expenses | Formatting of transaction count in actionable insight. |
 | `ActionableInsights.TransactionSummary.LargestExpense.Detail` | To %1$@ (%2$@) | Description for where and when the largest transaction that happened during last month or week. |
@@ -67,7 +67,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Period.Type.Week` | Weekly | Weekly budget period type. |
 | `Budget.Period.Type.Year` | Yearly | Yearly budget period type. |
 | `Budget.Progress.LeftFrom` | %1$@ left of %2$@ | Title for budget progress left from budget. |
-| `Budget.Progress.Over` | %@ over budget | Title for budget progress over budget. |
+| `Budget.Progress.Over` | %1$@ over budget of %2$@ | Title for budget progress over budget. |
 | `Budget.Progress.Spent` | %@ spent | Title for budget spent. |
 | `Budget.Target.Amount.Placeholder` | Amount | Amount text field placeholder text shown when creating or editing budget. |
 | `Budget.Target.Average` | Average %1$@ / %2$@ | Formatter for average spending per time period. |

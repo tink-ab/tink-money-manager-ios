@@ -1,0 +1,4 @@
+framework module TinkMoneyManagerUI {
+  header "TinkMoneyManagerUI-Swift.h"
+  requires objc
+}

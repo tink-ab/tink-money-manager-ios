@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - TransactionsViewController</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - TransactionsViewController</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -55,8 +55,8 @@ Required scopes: <code>transactions:write</code>, <code>transactions:read</code>
 
 <p>To respond to the selection of a transaction you must provide a delegate that conforms to the <code>TransactionsViewControllerDelegate</code>.</p>
 
-<html><body><pre class="highlight"><code><span class="keyword">extension</span> <span class="type">&lt;#Class#&gt;</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsViewControllerDelegate"><span class="type">TransactionsViewControllerDelegate</span></a> {
-    <span class="keyword">func</span> <span class="function">transactionsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <span class="type">TransactionsViewController</span>, <span class="variable">didSelectTransaction</span> <span class="variable">transaction</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>) {
+<html><body><pre class="highlight"><code><span class="keyword">extension</span> <span class="type">&lt;#Class#&gt;</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsViewControllerDelegate"><span class="type">TransactionsViewControllerDelegate</span></a> {
+    <span class="keyword">func</span> <span class="function">transactionsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <span class="type">TransactionsViewController</span>, <span class="variable">didSelectTransaction</span> <span class="variable">transaction</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>) {
         <span class="placeholder">&lt;#code#&gt;</span>
     }
 }
@@ -84,33 +84,33 @@ Required scopes: <code>transactions:write</code>, <code>transactions:read</code>
 <!-- TransactionsViewController -->
 <g id="node1" class="node class current">
 <title>TransactionsViewController</title>
-<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-pfm-ios/TransactionsViewController" xlink:title="TransactionsViewController">
+<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsViewController" xlink:title="TransactionsViewController">
 <path fill="none" stroke="black" stroke-width="3" d="M535.5,-108C535.5,-108 328.5,-108 328.5,-108 322.5,-108 316.5,-102 316.5,-96 316.5,-96 316.5,-84 316.5,-84 316.5,-78 322.5,-72 328.5,-72 328.5,-72 535.5,-72 535.5,-72 541.5,-72 547.5,-78 547.5,-84 547.5,-84 547.5,-96 547.5,-96 547.5,-102 541.5,-108 535.5,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">TransactionsViewController</text>
 </a>
 </g>
 </g>
-<!-- UIViewController -->
+<!-- UITableViewDelegate -->
 <g id="node2" class="node unknown">
-<title>UIViewController</title>
+<title>UITableViewDelegate</title>
 <path fill="none" stroke="black" d="M303,-36C303,-36 111,-36 111,-36 105,-36 99,-30 99,-24 99,-24 99,-12 99,-12 99,-6 105,0 111,0 111,0 303,0 303,0 309,0 315,-6 315,-12 315,-12 315,-24 315,-24 315,-30 309,-36 303,-36"/>
-<text text-anchor="middle" x="207" y="-14.3" font-family="Menlo" font-size="14.00">UIViewController</text>
+<text text-anchor="middle" x="207" y="-14.3" font-family="Menlo" font-size="14.00">UITableViewDelegate</text>
 </g>
-<!-- TransactionsViewController&#45;&gt;UIViewController -->
+<!-- TransactionsViewController&#45;&gt;UITableViewDelegate -->
 <g id="edge1" class="edge conformsTo">
-<title>TransactionsViewController&#45;&gt;UIViewController</title>
+<title>TransactionsViewController&#45;&gt;UITableViewDelegate</title>
 <path fill="none" stroke="black" d="M377.25,-71.97C345.4,-62.06 305.08,-49.51 271.67,-39.12"/>
 <polygon fill="black" stroke="black" points="272.59,-35.74 262,-36.11 270.51,-42.42 272.59,-35.74"/>
 </g>
-<!-- UITableViewDelegate -->
+<!-- UIViewController -->
 <g id="node3" class="node unknown">
-<title>UITableViewDelegate</title>
+<title>UIViewController</title>
 <path fill="none" stroke="black" d="M753,-36C753,-36 561,-36 561,-36 555,-36 549,-30 549,-24 549,-24 549,-12 549,-12 549,-6 555,0 561,0 561,0 753,0 753,0 759,0 765,-6 765,-12 765,-12 765,-24 765,-24 765,-30 759,-36 753,-36"/>
-<text text-anchor="middle" x="657" y="-14.3" font-family="Menlo" font-size="14.00">UITableViewDelegate</text>
+<text text-anchor="middle" x="657" y="-14.3" font-family="Menlo" font-size="14.00">UIViewController</text>
 </g>
-<!-- TransactionsViewController&#45;&gt;UITableViewDelegate -->
+<!-- TransactionsViewController&#45;&gt;UIViewController -->
 <g id="edge2" class="edge conformsTo">
-<title>TransactionsViewController&#45;&gt;UITableViewDelegate</title>
+<title>TransactionsViewController&#45;&gt;UIViewController</title>
 <path fill="none" stroke="black" d="M486.75,-71.97C518.6,-62.06 558.92,-49.51 592.33,-39.12"/>
 <polygon fill="black" stroke="black" points="593.49,-42.42 602,-36.11 591.41,-35.74 593.49,-42.42"/>
 </g>
@@ -133,7 +133,7 @@ Required scopes: <code>transactions:write</code>, <code>transactions:read</code>
     <h3>
         <code>init(tink:​query:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">query</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery"><span class="type">TransactionsQuery</span></a> = <span class="variable">TransactionsQuery</span>())</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">query</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsQuery"><span class="type">TransactionsQuery</span></a> = <span class="variable">TransactionsQuery</span>())</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initializes a new view controller.</p>
 
@@ -172,7 +172,7 @@ Required scopes: <code>transactions:write</code>, <code>transactions:read</code>
     <h3>
         <code>delegate</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">delegate</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsViewControllerDelegate"><span class="type">TransactionsViewControllerDelegate</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">delegate</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsViewControllerDelegate"><span class="type">TransactionsViewControllerDelegate</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>An object that conforms to the <code>TransactionsViewControllerDelegate</code> protocol.</p>
 
@@ -260,7 +260,7 @@ Required scopes: <code>transactions:write</code>, <code>transactions:read</code>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:54+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:14+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

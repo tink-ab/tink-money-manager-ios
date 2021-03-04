@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - CategorizeTransactionViewController</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - CategorizeTransactionViewController</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -69,8 +69,8 @@ For example, if the transaction has a negative amount you might only want to all
 <html><body><pre class="highlight"><code><span class="variable">categorizeTransactionViewController</span>.<span class="type">delegate</span> = <span class="placeholder">&lt;#delegateInstance#&gt;</span>
 <span class="variable">present</span>(<span class="variable">categorizeTransactionViewController</span>, <span class="variable">animated</span>: <span class="keyword">true</span>)
 </code></pre></body></html>
-<html><body><pre class="highlight"><code><span class="keyword">extension</span> <span class="type">&lt;#Class#&gt;</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CategorizeTransactionViewControllerDelegate"><span class="type">CategorizeTransactionViewControllerDelegate</span></a> {
-    <span class="keyword">func</span> <span class="function">categorizeTransactionViewController</span>(<span class="keyword">_</span> <span class="variable">controller</span>: <span class="type">CategorizeTransactionViewController</span>, <span class="variable">didCategorize</span> <span class="variable">transactions</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>], <span class="variable">category</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>) {
+<html><body><pre class="highlight"><code><span class="keyword">extension</span> <span class="type">&lt;#Class#&gt;</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/CategorizeTransactionViewControllerDelegate"><span class="type">CategorizeTransactionViewControllerDelegate</span></a> {
+    <span class="keyword">func</span> <span class="function">categorizeTransactionViewController</span>(<span class="keyword">_</span> <span class="variable">controller</span>: <span class="type">CategorizeTransactionViewController</span>, <span class="variable">didCategorize</span> <span class="variable">transactions</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>], <span class="variable">category</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>) {
         <span class="variable">dismiss</span>(<span class="variable">animated</span>: <span class="keyword">true</span>)
     }
 
@@ -100,7 +100,7 @@ For example, if the transaction has a negative amount you might only want to all
 <!-- CategorizeTransactionViewController -->
 <g id="node1" class="node class current">
 <title>CategorizeTransactionViewController</title>
-<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-pfm-ios/CategorizeTransactionViewController" xlink:title="CategorizeTransactionViewController">
+<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-money-manager-ios/CategorizeTransactionViewController" xlink:title="CategorizeTransactionViewController">
 <path fill="none" stroke="black" stroke-width="3" d="M572.5,-108C572.5,-108 291.5,-108 291.5,-108 285.5,-108 279.5,-102 279.5,-96 279.5,-96 279.5,-84 279.5,-84 279.5,-78 285.5,-72 291.5,-72 291.5,-72 572.5,-72 572.5,-72 578.5,-72 584.5,-78 584.5,-84 584.5,-84 584.5,-96 584.5,-96 584.5,-102 578.5,-108 572.5,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">CategorizeTransactionViewController</text>
 </a>
@@ -136,7 +136,7 @@ For example, if the transaction has a negative amount you might only want to all
     <h3>
         <code>init(tink:​transaction​ID:​category​Types:​category​ID:​show​Similar​Transactions:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">transactionID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">categoryTypes</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">Kind</span>], <span class="variable">categoryID</span>: <span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>? = <span class="keyword">nil</span>, <span class="variable">showSimilarTransactions</span>: <span class="type">Bool</span> = <span class="keyword">true</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">transactionID</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">categoryTypes</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">Kind</span>], <span class="variable">categoryID</span>: <span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>? = <span class="keyword">nil</span>, <span class="variable">showSimilarTransactions</span>: <span class="type">Bool</span> = <span class="keyword">true</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initializes a new view controller.</p>
 
@@ -189,7 +189,7 @@ For example, if the transaction has a negative amount you might only want to all
     <h3>
         <code>init(tink:​transaction​Id:​category​Types:​category​Id:​show​Similar​Transactions:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"init(tink:transactionID:categoryTypes:categoryID:showSimilarTransactions:)"</span>) <span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">transactionId</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">categoryTypes</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">Kind</span>], <span class="variable">categoryId</span>: <span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>? = <span class="keyword">nil</span>, <span class="variable">showSimilarTransactions</span>: <span class="type">Bool</span> = <span class="keyword">true</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(*, <span class="variable">deprecated</span>, <span class="variable">renamed</span>: <span class="string literal">"init(tink:transactionID:categoryTypes:categoryID:showSimilarTransactions:)"</span>) <span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="variable">tink</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Tink"><span class="type">Tink</span></a> = .<span class="variable">shared</span>, <span class="variable">transactionId</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">categoryTypes</span>: [<span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">Kind</span>], <span class="variable">categoryId</span>: <span class="type">TinkCore</span>.<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>? = <span class="keyword">nil</span>, <span class="variable">showSimilarTransactions</span>: <span class="type">Bool</span> = <span class="keyword">true</span>)</code></pre></body></html>
 </div>
     </section>
     <section id="properties">
@@ -199,7 +199,7 @@ For example, if the transaction has a negative amount you might only want to all
     <h3>
         <code>categorize​Transaction​Delegate</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">categorizeTransactionDelegate</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CategorizeTransactionViewControllerDelegate"><span class="type">CategorizeTransactionViewControllerDelegate</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">categorizeTransactionDelegate</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/CategorizeTransactionViewControllerDelegate"><span class="type">CategorizeTransactionViewControllerDelegate</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>An object that conforms to the <code>CategorizeTransactionViewControllerDelegate</code> protocol.</p>
 
@@ -236,7 +236,7 @@ For example, if the transaction has a negative amount you might only want to all
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:54+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:19+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

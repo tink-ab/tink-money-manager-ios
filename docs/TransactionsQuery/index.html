@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - TransactionsQuery</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - TransactionsQuery</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -59,7 +59,7 @@ If no queries are selected, all transactions will be available.</p>
 <!-- TransactionsQuery -->
 <g id="node1" class="node structure current">
 <title>TransactionsQuery</title>
-<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery" xlink:title="TransactionsQuery">
+<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsQuery" xlink:title="TransactionsQuery">
 <path fill="none" stroke="black" stroke-width="3" d="M528,-108C528,-108 336,-108 336,-108 330,-108 324,-102 324,-96 324,-96 324,-84 324,-84 324,-78 330,-72 336,-72 336,-72 528,-72 528,-72 534,-72 540,-78 540,-84 540,-84 540,-96 540,-96 540,-102 534,-108 528,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">TransactionsQuery</text>
 </a>
@@ -85,10 +85,10 @@ If no queries are selected, all transactions will be available.</p>
 </figure>
         <h3>Nested Types</h3>
 <dl>
-    <dt class="enumeration"><code><a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery_Sort">TransactionsQuery.Sort</a></code></dt>
+    <dt class="enumeration"><code><a href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsQuery_Sort">TransactionsQuery.Sort</a></code></dt>
 <dd><p>A type that determines how to sort the transactions.</p>
 </dd>
-<dt class="enumeration"><code><a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery_Order">TransactionsQuery.Order</a></code></dt>
+<dt class="enumeration"><code><a href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsQuery_Order">TransactionsQuery.Order</a></code></dt>
 <dd><p>A type that determines the order of the transactions.</p>
 </dd>
 </dl>
@@ -104,7 +104,7 @@ If no queries are selected, all transactions will be available.</p>
     <h3>
         <code>init(account​IDs:​category​IDs:​date​Interval:​query:​include​Upcoming:​sort:​order:​limit:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">accountIDs</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>] = [], <span class="variable">categoryIDs</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>] = [], <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>? = <span class="keyword">nil</span>, <span class="variable">query</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">includeUpcoming</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">sort</span>: <span class="type">Sort</span> = .<span class="variable">date</span>, <span class="variable">order</span>: <span class="type">Order</span> = .<span class="variable">descending</span>, <span class="variable">limit</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">accountIDs</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>] = [], <span class="variable">categoryIDs</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>] = [], <span class="variable">dateInterval</span>: <span class="type">DateInterval</span>? = <span class="keyword">nil</span>, <span class="variable">query</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">includeUpcoming</span>: <span class="type">Bool</span> = <span class="keyword">false</span>, <span class="variable">sort</span>: <span class="type">Sort</span> = .<span class="variable">date</span>, <span class="variable">order</span>: <span class="type">Order</span> = .<span class="variable">descending</span>, <span class="variable">limit</span>: <span class="type">Int</span>? = <span class="keyword">nil</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Initialize a new <code>TransactionQuery</code></p>
 
@@ -179,7 +179,7 @@ If no queries are selected, all transactions will be available.</p>
     <h3>
         <code>account​IDs</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">accountIDs</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">accountIDs</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Account"><span class="type">Account</span></a>.<span class="type">ID</span>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>A list of account ids to include transactions from.</p>
 
@@ -189,7 +189,7 @@ If no queries are selected, all transactions will be available.</p>
     <h3>
         <code>category​IDs</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">categoryIDs</span>: [<a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">categoryIDs</span>: [<a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>]</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>A list of caregory ids to include transactions from.</p>
 
@@ -264,7 +264,7 @@ If no queries are selected, all transactions will be available.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:55+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:15+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

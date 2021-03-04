@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - BudgetDetailsViewControllerDelegate</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - BudgetDetailsViewControllerDelegate</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#budgetdetailsviewcontrollerdelegate.viewcontroller(_:didupdatebudget:)">view​Controller(_:​did​Update​Budget:​)</a></li><li class="function"><a href="#budgetdetailsviewcontrollerdelegate.viewcontroller(_:diddeletebudget:)">view​Controller(_:​did​Delete​Budget:​)</a></li><li class="function"><a href="#budgetdetailsviewcontrollerdelegate.viewcontroller(_:didfailwitherror:)">view​Controller(_:​did​Fail​With​Error:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#budgetdetailsviewcontrollerdelegate.budgetdetailsviewcontroller(_:didupdatebudget:)">budget​Details​View​Controller(_:​did​Update​Budget:​)</a></li><li class="function"><a href="#budgetdetailsviewcontrollerdelegate.budgetdetailsviewcontroller(_:diddeletebudget:)">budget​Details​View​Controller(_:​did​Delete​Budget:​)</a></li><li class="function"><a href="#budgetdetailsviewcontrollerdelegate.budgetdetailsviewcontroller(_:didfailwitherror:)">budget​Details​View​Controller(_:​did​Fail​With​Error:​)</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -58,7 +58,7 @@
 <!-- BudgetDetailsViewControllerDelegate -->
 <g id="node1" class="node protocol current">
 <title>BudgetDetailsViewControllerDelegate</title>
-<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetailsViewControllerDelegate" xlink:title="BudgetDetailsViewControllerDelegate">
+<g id="a_node1"><a xlink:href="https://tink-ab.github.io/tink-money-manager-ios/BudgetDetailsViewControllerDelegate" xlink:title="BudgetDetailsViewControllerDelegate">
 <path fill="none" stroke="black" stroke-width="3" d="M572.5,-108C572.5,-108 291.5,-108 291.5,-108 285.5,-108 279.5,-102 279.5,-96 279.5,-96 279.5,-84 279.5,-84 279.5,-78 285.5,-72 291.5,-72 291.5,-72 572.5,-72 572.5,-72 578.5,-72 584.5,-78 584.5,-84 584.5,-84 584.5,-96 584.5,-96 584.5,-102 578.5,-108 572.5,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00">BudgetDetailsViewControllerDelegate</text>
 </a>
@@ -93,11 +93,11 @@
     <section id="requirements">
         <h2>Requirements</h2>
 
-        <div role="article" class="function" id="budgetdetailsviewcontrollerdelegate.viewcontroller(_:didupdatebudget:)">
+        <div role="article" class="function" id="budgetdetailsviewcontrollerdelegate.budgetdetailsviewcontroller(_:didupdatebudget:)">
     <h3>
-        <code>view​Controller(_:​did​Update​Budget:​)</code>
+        <code>budget​Details​View​Controller(_:​did​Update​Budget:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">viewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetailsViewController"><span class="type">BudgetDetailsViewController</span></a>, <span class="variable">didUpdateBudget</span> <span class="variable">budget</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgetDetailsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/BudgetDetailsViewController"><span class="type">BudgetDetailsViewController</span></a>, <span class="variable">didUpdateBudget</span> <span class="variable">budget</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that the user updated a budget.</p>
 
@@ -128,11 +128,11 @@
   </tbody>
 </table>
 </div>
-<div role="article" class="function" id="budgetdetailsviewcontrollerdelegate.viewcontroller(_:diddeletebudget:)">
+<div role="article" class="function" id="budgetdetailsviewcontrollerdelegate.budgetdetailsviewcontroller(_:diddeletebudget:)">
     <h3>
-        <code>view​Controller(_:​did​Delete​Budget:​)</code>
+        <code>budget​Details​View​Controller(_:​did​Delete​Budget:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">viewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetailsViewController"><span class="type">BudgetDetailsViewController</span></a>, <span class="variable">didDeleteBudget</span> <span class="variable">budget</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Budget"><span class="type">Budget</span></a>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgetDetailsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/BudgetDetailsViewController"><span class="type">BudgetDetailsViewController</span></a>, <span class="variable">didDeleteBudget</span> <span class="variable">budget</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Budget"><span class="type">Budget</span></a>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that the user deleted a budget.</p>
 
@@ -163,11 +163,11 @@
   </tbody>
 </table>
 </div>
-<div role="article" class="function" id="budgetdetailsviewcontrollerdelegate.viewcontroller(_:didfailwitherror:)">
+<div role="article" class="function" id="budgetdetailsviewcontrollerdelegate.budgetdetailsviewcontroller(_:didfailwitherror:)">
     <h3>
-        <code>view​Controller(_:​did​Fail​With​Error:​)</code>
+        <code>budget​Details​View​Controller(_:​did​Fail​With​Error:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">viewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/BudgetDetailsViewController"><span class="type">BudgetDetailsViewController</span></a>, <span class="variable">didFailWithError</span> <span class="variable">error</span>: <span class="type">Error</span>)</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">budgetDetailsViewController</span>(<span class="keyword">_</span> <span class="variable">viewController</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/BudgetDetailsViewController"><span class="type">BudgetDetailsViewController</span></a>, <span class="variable">didFailWithError</span> <span class="variable">error</span>: <span class="type">Error</span>)</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Tells the delegate that an error occurred when the user attempted to edit the budget.</p>
 
@@ -204,7 +204,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:54+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:17+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

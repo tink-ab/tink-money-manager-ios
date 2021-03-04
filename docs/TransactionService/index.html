@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - TransactionService</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - TransactionService</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -49,31 +49,31 @@
     <h3>
         <code>transactions(query:​offset:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transactions</span>(<span class="variable">query</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/TransactionsQuery"><span class="type">TransactionsQuery</span></a>, <span class="variable">offset</span>: <span class="type">Int</span>?, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;([<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>], <span class="type">Bool</span>), <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transactions</span>(<span class="variable">query</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/TransactionsQuery"><span class="type">TransactionsQuery</span></a>, <span class="variable">offset</span>: <span class="type">Int</span>?, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;([<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>], <span class="type">Bool</span>), <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="transactionservice.categorize(_:as:completion:)">
     <h3>
         <code>categorize(_:​as:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">categorize</span>(<span class="keyword">_</span> <span class="variable">transactionIDs</span>: [<span class="type">String</span>], <span class="variable">as</span> <span class="variable">newCategoryID</span>: <span class="type">String</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">categorize</span>(<span class="keyword">_</span> <span class="variable">transactionIDs</span>: [<span class="type">String</span>], <span class="variable">as</span> <span class="variable">newCategoryID</span>: <span class="type">String</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<span class="type">Void</span>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="transactionservice.transactionssimilar(to:ifcategorizedas:completion:)">
     <h3>
         <code>transactions​Similar(to:​if​Categorized​As:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transactionsSimilar</span>(<span class="variable">to</span> <span class="variable">transactionID</span>: <span class="type">String</span>, <span class="variable">ifCategorizedAs</span> <span class="variable">categoryID</span>: <span class="type">String</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transactionsSimilar</span>(<span class="variable">to</span> <span class="variable">transactionID</span>: <span class="type">String</span>, <span class="variable">ifCategorizedAs</span> <span class="variable">categoryID</span>: <span class="type">String</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;[<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>], <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="transactionservice.transaction(id:completion:)">
     <h3>
         <code>transaction(id:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transaction</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">transaction</span>(<span class="variable">id</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="function" id="transactionservice.update(transactionid:amount:categoryid:date:description:notes:completion:)">
     <h3>
         <code>update(transaction​ID:​amount:​category​ID:​date:​description:​notes:​completion:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">update</span>(<span class="variable">transactionID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>, <span class="variable">categoryID</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>, <span class="variable">date</span>: <span class="type">Date</span>, <span class="variable">description</span>: <span class="type">String</span>, <span class="variable">notes</span>: <span class="type">String</span>?, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-pfm-ios/Transaction"><span class="type">Transaction</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-pfm-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">func</span> <span class="function">update</span>(<span class="variable">transactionID</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>.<span class="type">ID</span>, <span class="variable">amount</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/CurrencyDenominatedAmount"><span class="type">CurrencyDenominatedAmount</span></a>, <span class="variable">categoryID</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/Category"><span class="type">Category</span></a>.<span class="type">ID</span>, <span class="variable">date</span>: <span class="type">Date</span>, <span class="variable">description</span>: <span class="type">String</span>, <span class="variable">notes</span>: <span class="type">String</span>?, <span class="variable">completion</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">Result</span>&lt;<a href="https://tink-ab.github.io/tink-money-manager-ios/Transaction"><span class="type">Transaction</span></a>, <span class="type">Error</span>&gt;) -&gt; <span class="type">Void</span>) -&gt; <a href="https://tink-ab.github.io/tink-money-manager-ios/Cancellable"><span class="type">Cancellable</span></a>?</code></pre></body></html>
 </div>
     </section>
         </article>
@@ -81,7 +81,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:52+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:16+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>

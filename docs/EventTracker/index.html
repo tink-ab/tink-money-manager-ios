@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinkPFMUI - EventTracker</title>
-    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-pfm-ios/all.css" media="all" />
+    <title>TinkMoneyManagerUI - EventTracker</title>
+    <link rel="stylesheet" type="text/css" href="https://tink-ab.github.io/tink-money-manager-ios/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="https://tink-ab.github.io/tink-pfm-ios/">
+        <a href="https://tink-ab.github.io/tink-money-manager-ios/">
             <strong>
-                TinkPFMUI
+                TinkMoneyManagerUI
             </strong>
             <span>Documentation</span>
         </a>
@@ -45,14 +45,14 @@
 <div class="discussion">
     <p>Setting up the <code>EventTracker</code> allows you to track certain user events.</p>
 
-<p>A <em>Screen</em> event occurs when a user is presented a new screen within the PFM SDK.</p>
+<p>A <em>Screen</em> event occurs when a user is presented a new screen within the SDK.</p>
 
 <h2>Getting started</h2>
 
 <p>In order to listen to the different events sent by the SDK you need to implement the <code>EventTracking</code> protocol. A very simple implementation that simply prints the events could be:</p>
 
-<html><body><pre class="highlight"><code><span class="attribute">final</span> <span class="keyword">class</span> <span class="type">DebugEventTracker</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/EventTracking"><span class="type">EventTracking</span></a> {
-    <span class="keyword">func</span> <span class="function">track</span>(<span class="keyword">_</span> <span class="variable">event</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/ScreenEvent"><span class="type">ScreenEvent</span></a>) {
+<html><body><pre class="highlight"><code><span class="attribute">final</span> <span class="keyword">class</span> <span class="type">DebugEventTracker</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/EventTracking"><span class="type">EventTracking</span></a> {
+    <span class="keyword">func</span> <span class="function">track</span>(<span class="keyword">_</span> <span class="variable">event</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/ScreenEvent"><span class="type">ScreenEvent</span></a>) {
         <span class="variable">print</span>(<span class="string literal">"</span><span class="string literal">Screen: </span>\<span class="string literal">(</span><span class="variable">event</span>.<span class="type">name</span><span class="string literal">)</span><span class="string literal"/><span class="string literal">"</span>)
     }
 }
@@ -66,7 +66,7 @@
 
 <h2>Events</h2>
 
-<p>All the different events sent by Tink PFM SDK are presented below.</p>
+<p>All the different events sent by Tink Money Manager are presented below.</p>
 
 <p>The different screen events that can occur is wrapped in the <code>ScreenEvent</code> enumuration. All screens have a <code>name</code> property which is consistent across platforms.</p>
 
@@ -75,6 +75,7 @@
 | <code>overview</code>            | Overview              | The overview screen.                                                      |
 | <code>expenses</code>            | Expenses              | The expenses screen.                                                      |
 | <code>income</code>              | Income                | The income screen.                                                        |
+| <code>leftToSpend</code>         | Left To Spend         | The left to spend screen.                                                 |
 | <code>transactions</code>        | Transactions          | The transaction list screen.                                              |
 | <code>categorySelection</code>   | Category Selection    | Screen where user selects a category.                                     |
 | <code>similarTransactions</code> | Similar Transactions  | Screen where user can select similar transactions.                        |
@@ -91,7 +92,7 @@
     <h3>
         <code>tracker</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">tracker</span>: <a href="https://tink-ab.github.io/tink-pfm-ios/EventTracking"><span class="type">EventTracking</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">tracker</span>: <a href="https://tink-ab.github.io/tink-money-manager-ios/EventTracking"><span class="type">EventTracking</span></a>?</code></pre></body></html>
 <div class="summary" role="doc-abstract">
     <p>Registers your <code>EventTracker</code> implementation so it will receive events when a user navigates or performs actions.</p>
 
@@ -106,7 +107,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2020-12-07T15:05:56+0100">7 December 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-03-03T10:28:18+0100">3 March 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
