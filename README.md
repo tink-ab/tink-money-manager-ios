@@ -1,6 +1,6 @@
 ![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)
 ![Languages](https://img.shields.io/badge/languages-swift-orange.svg)
-![CocoaPods](https://img.shields.io/cocoapods/v/TinkPFMUI.svg)
+![CocoaPods](https://img.shields.io/cocoapods/v/TinkMoneyManagerUI.svg)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-supported-DE5C43.svg)
 
 # Tink Money Manager for iOS
