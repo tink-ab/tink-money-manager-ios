@@ -13,6 +13,7 @@ public protocol AccountDetailsViewControllerDelegate : AnyObject {
 }
 @objc @_hasMissingDesignatedInitializers final public class AccountDetailsViewController : UIKit.UIViewController {
   weak final public var delegate: TinkMoneyManagerUI.AccountDetailsViewControllerDelegate?
+  final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
   convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
   @available(*, deprecated, renamed: "init(tink:accountID:)")
   convenience public init(tink: TinkCore.Tink = .shared, accountId: TinkCore.Account.ID)
@@ -29,6 +30,52 @@ extension AccountDetailsViewController : TinkMoneyManagerUI.TransactionsViewCont
   final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
 }
 extension AccountDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+public protocol AccountsViewControllerDelegate : AnyObject {
+  func accountsViewController(_ viewController: TinkMoneyManagerUI.AccountsViewController, didSelectAccount account: TinkCore.Account)
+}
+@objc @_hasMissingDesignatedInitializers final public class AccountsViewController : UIKit.UIViewController {
+  weak final public var delegate: TinkMoneyManagerUI.AccountsViewControllerDelegate?
+  final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
+  public enum Grouping {
+    case none
+    case kind
+    case custom(grouping: ([TinkCore.Account]) -> [TinkMoneyManagerUI.CustomAccountGroup])
+  }
+  public enum Predicate {
+    case all
+    case financialInstitution(TinkCore.Provider.FinancialInstitution.ID)
+    case favorite(Swift.Bool)
+    case kind(TinkCore.Account.Kind)
+    case credentials(TinkCore.Credentials.ID)
+    case custom((TinkCore.Account) -> Swift.Bool)
+  }
+  convenience public init(tink: TinkCore.Tink = .shared, grouping: TinkMoneyManagerUI.AccountsViewController.Grouping = .none, predicate: TinkMoneyManagerUI.AccountsViewController.Predicate = .all)
+  @objc override final public func viewDidLoad()
+  @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension AccountsViewController : UIKit.UICollectionViewDataSource {
+  @objc final public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, viewForSupplementaryElementOfKind kind: Swift.String, at indexPath: Foundation.IndexPath) -> UIKit.UICollectionReusableView
+}
+extension AccountsViewController : UIKit.UICollectionViewDelegate {
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @available(iOS 13.0, *)
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, contextMenuConfigurationForItemAt indexPath: Foundation.IndexPath, point: CoreGraphics.CGPoint) -> UIKit.UIContextMenuConfiguration?
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, shouldShowMenuForItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, canPerformAction action: ObjectiveC.Selector, forItemAt indexPath: Foundation.IndexPath, withSender sender: Any?) -> Swift.Bool
+  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, performAction action: ObjectiveC.Selector, forItemAt indexPath: Foundation.IndexPath, withSender sender: Any?)
+}
+extension AccountsViewController {
+  final public func clearSelection(animated: Swift.Bool)
+}
+extension AccountsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 public struct ActionableInsightViewModel {
@@ -123,11 +170,19 @@ public protocol AppearanceProviding {
   var iconProviding: TinkMoneyManagerUI.IconProviding { get }
   @available(*, deprecated, renamed: "fonts")
   var fontProviding: TinkMoneyManagerUI.FontProviding { get }
+  var groupStyle: TinkMoneyManagerUI.GroupStyle { get set }
+  var itemListStyle: TinkMoneyManagerUI.ItemListStyle { get set }
+  var carouselStyle: TinkMoneyManagerUI.CarouselStyle { get set }
+  var notificationStyle: TinkMoneyManagerUI.ItemStyle { get set }
 }
 public struct AppearanceProvider : TinkMoneyManagerUI.AppearanceProviding {
   public var colors: TinkMoneyManagerUI.ColorProviding
   public var icons: TinkMoneyManagerUI.IconProviding
   public var fonts: TinkMoneyManagerUI.FontProviding
+  public var groupStyle: TinkMoneyManagerUI.GroupStyle
+  public var itemListStyle: TinkMoneyManagerUI.ItemListStyle
+  public var carouselStyle: TinkMoneyManagerUI.CarouselStyle
+  public var notificationStyle: TinkMoneyManagerUI.ItemStyle
   @available(*, deprecated, renamed: "colors")
   public var colorProviding: TinkMoneyManagerUI.ColorProviding {
     get
@@ -162,6 +217,10 @@ public protocol BudgetDetailsViewControllerDelegate : AnyObject {
 }
 @objc @_hasMissingDesignatedInitializers final public class BudgetDetailsViewController : UIKit.UIViewController {
   weak final public var delegate: TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate?
+  final public var configuration: TinkMoneyManagerUI.TransactionItemActionConfigurable {
+    get
+    set
+  }
   convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc deinit
@@ -174,6 +233,16 @@ extension BudgetDetailsViewController : TinkMoneyManagerUI.EditBudgetViewControl
   final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
   final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
   final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: Swift.Error)
+}
+public protocol CarouselStyle {
+  var item: TinkMoneyManagerUI.ItemStyle { get }
+  var insets: UIKit.UIEdgeInsets { get }
+  var spacing: CoreGraphics.CGFloat { get }
+}
+public struct CardCarouselStyle : TinkMoneyManagerUI.CarouselStyle {
+  public var item: TinkMoneyManagerUI.ItemStyle
+  public var insets: UIKit.UIEdgeInsets
+  public var spacing: CoreGraphics.CGFloat
 }
 public protocol CategorizeTransactionViewControllerDelegate : AnyObject {
   func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
@@ -312,6 +381,20 @@ public protocol ColorProviding {
   var transfersIconBackgroundColor: UIKit.UIColor? { get set }
   var uncategorizedIconBackgroundColor: UIKit.UIColor? { get set }
 }
+public typealias TransactionItemAction = TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction
+public protocol TransactionItemActionConfigurable {
+  var transactionItemAction: TinkMoneyManagerUI.TransactionItemAction { get set }
+}
+public protocol EditAccountFieldsConfigurable {
+  var editAccountFields: TinkMoneyManagerUI.EditAccountFields { get set }
+}
+public protocol NoAccountsActionConfigurable {
+  var noAccountsAction: TinkMoneyManagerUI.NoAccountsAction { get set }
+}
+public enum NoAccountsAction {
+  case none
+  case addAccount(onTap: () -> Swift.Void)
+}
 @objc @_hasMissingDesignatedInitializers final public class CreateBudgetViewController : UIKit.UINavigationController {
   convenience public init(tink: TinkCore.Tink = .shared, completion: @escaping (Swift.Result<TinkCore.Budget, Swift.Error>) -> Swift.Void)
   @objc override final public func viewDidLoad()
@@ -321,6 +404,60 @@ public protocol ColorProviding {
   @objc override dynamic public init(rootViewController: UIKit.UIViewController)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc deinit
+}
+public struct CustomAccountGroup {
+  public var accounts: [TinkCore.Account]
+  public var title: Swift.String
+  public var infoText: Swift.String
+  public init(accounts: [TinkCore.Account], title: Swift.String, infoText: Swift.String? = nil)
+}
+public struct EditAccountFields : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let name: TinkMoneyManagerUI.EditAccountFields
+  public static let kind: TinkMoneyManagerUI.EditAccountFields
+  public static let isIncluded: TinkMoneyManagerUI.EditAccountFields
+  public static let isShared: TinkMoneyManagerUI.EditAccountFields
+  public static let isFavorite: TinkMoneyManagerUI.EditAccountFields
+  public static let all: TinkMoneyManagerUI.EditAccountFields
+  public typealias Element = TinkMoneyManagerUI.EditAccountFields
+  public typealias ArrayLiteralElement = TinkMoneyManagerUI.EditAccountFields
+  public typealias RawValue = Swift.Int
+}
+public protocol EditAccountViewControllerDelegate : AnyObject {
+  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didUpdate account: TinkCore.Account)
+  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didFailToUpdate error: Swift.Error)
+  func editAccountViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditAccountViewController)
+}
+@objc @_hasMissingDesignatedInitializers final public class EditAccountViewController : UIKit.UIViewController {
+  final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable
+  final public let accountID: TinkCore.Account.ID
+  weak final public var delegate: TinkMoneyManagerUI.EditAccountViewControllerDelegate?
+  final public var account: TinkCore.Account? {
+    get
+  }
+  convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
+  @objc override final public func viewDidLoad()
+  @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension EditAccountViewController : UIKit.UIPickerViewDataSource {
+  @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @objc final public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+}
+extension EditAccountViewController : UIKit.UIPickerViewDelegate {
+  @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+}
+extension EditAccountViewController : UIKit.UITextFieldDelegate {
+  @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+}
+extension EditAccountViewController : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
 public protocol EditBudgetViewControllerDelegate : AnyObject {
   func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
@@ -337,6 +474,21 @@ public protocol EditBudgetViewControllerDelegate : AnyObject {
   @objc override dynamic public init(rootViewController: UIKit.UIViewController)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc deinit
+}
+public protocol EditTransactionViewControllerDelegate : AnyObject {
+  func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
+  func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkCore.Transaction)
+}
+@objc @_hasMissingDesignatedInitializers final public class EditTransactionViewController : UIKit.UIViewController {
+  public init(tink: TinkCore.Tink = .shared, transaction: TinkCore.Transaction)
+  @objc override final public func loadView()
+  @objc override final public func viewDidLoad()
+  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension EditTransactionViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @objc final public func presentationControllerDidAttemptToDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 public enum EventTracker {
   public static var tracker: TinkMoneyManagerUI.EventTracking?
@@ -358,30 +510,33 @@ extension FinanceOverviewViewController {
     }
     case statistics([TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData])
     case latestTransactions
-    case accounts
+    case accounts(TinkMoneyManagerUI.AccountsViewController.Predicate)
     case actionableInsights(delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
     case budgets
     case custom(UIKit.UIView)
+    public static let accounts: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
   }
 }
 extension FinanceOverviewViewController {
-  @_hasMissingDesignatedInitializers public class Configuration {
-    public enum TranscationItemAction {
+  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable {
+    public enum TransactionItemAction {
       case showDetails
       case categorize
-      public static func == (a: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TranscationItemAction, b: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TranscationItemAction) -> Swift.Bool
+      public static func == (a: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction, b: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction) -> Swift.Bool
       public var hashValue: Swift.Int {
         get
       }
       public func hash(into hasher: inout Swift.Hasher)
     }
-    public var transactionItemAction: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TranscationItemAction
-    @objc deinit
+    public var transactionItemAction: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction
+    public var editAccountFields: TinkMoneyManagerUI.EditAccountFields
+    public var noAccountsAction: TinkMoneyManagerUI.NoAccountsAction
   }
 }
 @objc @_hasMissingDesignatedInitializers final public class FinanceOverviewViewController : UIKit.UIViewController {
-  final public var configuration: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration {
+  final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
+    set
   }
   final public var hidesTopBarWhenPushed: Swift.Bool
   final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
@@ -436,6 +591,22 @@ public class FontProvider : TinkMoneyManagerUI.FontProviding {
 public protocol FontProviding {
   func font(for weight: TinkMoneyManagerUI.Font.Weight) -> TinkMoneyManagerUI.Font
 }
+public protocol GroupStyle {
+  var cornerRadius: CoreGraphics.CGFloat { get }
+  var insets: UIKit.UIEdgeInsets { get }
+  var spacing: CoreGraphics.CGFloat { get }
+  var shadow: TinkMoneyManagerUI.Shadow { get }
+}
+public struct CardGroupStyle : TinkMoneyManagerUI.GroupStyle {
+  public var cornerRadius: CoreGraphics.CGFloat
+  public var insets: UIKit.UIEdgeInsets
+  public var spacing: CoreGraphics.CGFloat
+  public var shadow: TinkMoneyManagerUI.Shadow
+  public init(cornerRadius: CoreGraphics.CGFloat, insets: UIKit.UIEdgeInsets, spacing: CoreGraphics.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
+  public static var `default`: TinkMoneyManagerUI.CardGroupStyle {
+    get
+  }
+}
 public class IconProvider : TinkMoneyManagerUI.IconProviding {
   public var account: UIKit.UIImage
   public var add: UIKit.UIImage
@@ -466,6 +637,7 @@ public class IconProvider : TinkMoneyManagerUI.IconProviding {
   public var categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat?
   public var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat?
   public var notification: UIKit.UIImage
+  public var list: UIKit.UIImage
   public init()
   public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
   @objc deinit
@@ -500,6 +672,7 @@ public protocol IconProviding {
   var categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
   var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
   var notification: UIKit.UIImage { get set }
+  var list: UIKit.UIImage { get set }
 }
 public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLiteral, Swift.Codable {
   public let value: Swift.String
@@ -515,6 +688,25 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
   public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
+}
+public protocol ItemListStyle {
+  var item: TinkMoneyManagerUI.ItemStyle { get }
+  var insets: UIKit.UIEdgeInsets { get }
+  var spacing: CoreGraphics.CGFloat { get }
+}
+public struct CardItemListStyle : TinkMoneyManagerUI.ItemListStyle {
+  public var item: TinkMoneyManagerUI.ItemStyle
+  public var insets: UIKit.UIEdgeInsets
+  public var spacing: CoreGraphics.CGFloat
+}
+public protocol ItemStyle {
+  var cornerRadius: CoreGraphics.CGFloat { get }
+  var shadow: TinkMoneyManagerUI.Shadow { get }
+}
+public struct CardItemStyle : TinkMoneyManagerUI.ItemStyle {
+  public var cornerRadius: CoreGraphics.CGFloat
+  public var shadow: TinkMoneyManagerUI.Shadow
+  public init(cornerRadius: CoreGraphics.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
 }
 @objc @_hasMissingDesignatedInitializers final public class LeftToSpendViewController : UIKit.UIViewController {
   final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
@@ -557,7 +749,9 @@ public enum ScreenEvent {
   case transactions
   case categorySelection
   case similarTransactions
+  case accounts
   case accountDetails
+  case editAccount
   case createBudget
   case editBudget
   case budgetDetails
@@ -573,6 +767,19 @@ public enum ScreenEvent {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
+}
+public struct Shadow {
+  public var opacity: CoreGraphics.CGFloat
+  public var radius: CoreGraphics.CGFloat
+  public var offset: UIKit.UIOffset
+  public var color: UIKit.UIColor
+  public init(opacity: CoreGraphics.CGFloat, radius: CoreGraphics.CGFloat, offset: UIKit.UIOffset, color: UIKit.UIColor)
+  public static var none: TinkMoneyManagerUI.Shadow {
+    get
+  }
+  public static var `default`: TinkMoneyManagerUI.Shadow {
+    get
+  }
 }
 extension Tink.Configuration {
   @available(*, deprecated, message: "Use TinkMoneyManagerConfiguration(clientID:environment:certificateURL:) instead.")
@@ -607,6 +814,7 @@ public typealias TinkPFMConfiguration = TinkMoneyManagerUI.TinkMoneyManagerConfi
 public struct TinkMoneyManagerConfiguration : TinkCore.Configuration {
   public let clientID: Swift.String
   public let appURI: Foundation.URL?
+  public let callbackURI: Foundation.URL?
   public let environment: TinkCore.Tink.Environment
   public let certificateURL: Foundation.URL?
   public init(clientID: Swift.String, environment: TinkCore.Tink.Environment = .production, certificateURL: Foundation.URL? = nil)
@@ -631,24 +839,9 @@ extension TransactionDetailsViewController : UIKit.UITableViewDelegate {
 extension TransactionDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
-extension TransactionDetailsViewController : TinkMoneyManagerUI.TransactionEditViewControllerDelegate {
-  final public func transactionEditViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.TransactionEditViewController)
-  final public func transactionEditViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.TransactionEditViewController, transaction: TinkCore.Transaction)
-}
-public protocol TransactionEditViewControllerDelegate : AnyObject {
-  func transactionEditViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.TransactionEditViewController)
-  func transactionEditViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.TransactionEditViewController, transaction: TinkCore.Transaction)
-}
-@objc @_hasMissingDesignatedInitializers final public class TransactionEditViewController : UIKit.UIViewController {
-  public init(tink: TinkCore.Tink = .shared, transaction: TinkCore.Transaction)
-  @objc override final public func loadView()
-  @objc override final public func viewDidLoad()
-  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc deinit
-}
-extension TransactionEditViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @objc final public func presentationControllerDidAttemptToDismiss(_ presentationController: UIKit.UIPresentationController)
+extension TransactionDetailsViewController : TinkMoneyManagerUI.EditTransactionViewControllerDelegate {
+  final public func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
+  final public func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkCore.Transaction)
 }
 public protocol TransactionsViewControllerDelegate : AnyObject {
   func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
@@ -683,8 +876,8 @@ extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Equa
 extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Hashable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Equatable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Hashable {}
-extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TranscationItemAction : Swift.Equatable {}
-extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TranscationItemAction : Swift.Hashable {}
+extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction : Swift.Equatable {}
+extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction : Swift.Hashable {}
 extension TinkMoneyManagerUI.Font.Weight : Swift.Equatable {}
 extension TinkMoneyManagerUI.Font.Weight : Swift.Hashable {}
 extension TinkMoneyManagerUI.ScreenEvent : Swift.Equatable {}
