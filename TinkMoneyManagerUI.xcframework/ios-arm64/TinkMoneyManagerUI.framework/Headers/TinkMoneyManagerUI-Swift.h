@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
@@ -226,6 +227,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI28AccountDetailsViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+
 @class UIPresentationController;
 
 @interface AccountDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
@@ -239,6 +241,66 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI28AccountDetailsViewController")
 - (void)viewDidAppear:(BOOL)animated;
 @end
 
+
+
+/// A <code>AccountsViewController</code> displays a list of accounts.
+/// This view controller is designed to be used in a <code>UINavigationController</code> but can be used standalone also.
+/// \code
+/// let accountsViewController = AccountsViewController(tink: <#Tink#>)
+/// show(accountsViewController, sender: <#Any#>)
+///
+/// \endcode<h2>Configuration options</h2>
+/// The <code>configuration</code> allows the Account fields in edit screen to be customized in more detail.
+/// <ul>
+///   <li>
+///     Use the <code>transactionItemAction</code> to configure the view to present when tapping on a transaction item row.
+///   </li>
+///   <li>
+///     Use the <code>accountEditableField</code> to configure which fields should be editable in the edit form.
+///   </li>
+/// </ul>
+/// <h2>Responding to User Selection</h2>
+/// <code>AccountsViewController</code> clears its selection every time an account being selected and a detail view is presented in response.
+/// If you present a modal in response to a account selection you might need to deselect the transaction. To do that you can call the <code>clearSelection(animated:)</code> method.
+/// \code
+/// accountsViewController.clearSelection(animated: true)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI22AccountsViewController")
+@interface AccountsViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+@interface AccountsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
+- (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
+@end
+
+@class UICollectionView;
+@class UICollectionViewCell;
+@class UICollectionReusableView;
+
+@interface AccountsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDataSource>
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionReusableView * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView viewForSupplementaryElementOfKind:(NSString * _Nonnull)kind atIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UIContextMenuConfiguration;
+
+@interface AccountsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (UIContextMenuConfiguration * _Nullable)collectionView:(UICollectionView * _Nonnull)collectionView contextMenuConfigurationForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath point:(CGPoint)point SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=13.0);
+- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView canPerformAction:(SEL _Nonnull)action forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView performAction:(SEL _Nonnull)action forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath withSender:(id _Nullable)sender;
+@end
 
 
 /// A view controller that displays a list actionable insights.
@@ -282,8 +344,6 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
-@class UICollectionView;
-@class UICollectionViewCell;
 
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -292,11 +352,11 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
+
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 @end
-
 
 
 /// A view controller that displays details of a budget.
@@ -462,6 +522,56 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI26CreateBudgetViewController")
 
 
 
+/// A view controller that can be used to edit an account.
+/// Required scopes: <code>accounts:write</code>, <code>accounts:read</code>.
+/// note:
+/// This view controller is designed to be presented modally.
+/// When creating the view controller, specify the ID for which account to edit.
+/// \code
+/// let editAccountViewController = EditAccountViewController(accountID: <#Account.ID#>)
+/// present(editAccountViewController, animated: true)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI25EditAccountViewController")
+@interface EditAccountViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+@class UIPickerView;
+
+@interface EditAccountViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIPickerViewDataSource>
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@class NSAttributedString;
+
+@interface EditAccountViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIPickerViewDelegate>
+- (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (NSAttributedString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITextField;
+
+@interface EditAccountViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITextFieldDelegate>
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+@end
+
+@class UITableView;
+@class UITableViewCell;
+
+@interface EditAccountViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDataSource, UITableViewDelegate>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
 /// A view controller that can be used to edit a budget.
 /// Use the <code>EditBudgetViewController</code> when you want to let the user either update the name, amount and period of the budget or delete the budget.
 /// Required scopes: <code>budgets:write</code>, <code>budgets:read</code>.
@@ -484,6 +594,35 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI24EditBudgetViewController")
 @end
 
 
+@class UITraitCollection;
+
+/// A view controller that you can use to edit a transaction.
+/// Required scopes: <code>transactions:categorize</code> and <code>categories:read</code>.
+/// <h2>Overview</h2>
+/// Use the <code>EditTransactionViewController</code> when you want let the user to edit a transaction.
+/// note:
+/// It is suitable for use in a <code>UINavigationController</code>.
+/// \code
+/// let transactionsViewController = EditTransactionViewController(transaction: <#Transaction#>)
+/// let navigationController = UINavigationController(rootViewController: transactionsViewController)
+/// show(navigationController, sender: <#Any#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI29EditTransactionViewController")
+@interface EditTransactionViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)loadView;
+- (void)viewDidLoad;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+@interface EditTransactionViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
+- (void)presentationControllerDidAttemptToDismiss:(UIPresentationController * _Nonnull)presentationController;
+@end
+
 
 /// A view controller for displaying an overview of a user’s finances.
 /// A <code>FinanceOverviewViewController</code> displays an interface with sections of cards and graphs representing the user’s latest data.
@@ -497,15 +636,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -543,10 +682,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 @end
 
 
+
 @interface LeftToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 
@@ -591,47 +730,16 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32TransactionDetailsViewController")
 @end
 
 
-@class UITableView;
 
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDelegate>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 @end
 
-@class UITableViewCell;
 
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@end
-
-@class UITraitCollection;
-
-/// A view controller that you can use to edit a transaction.
-/// Required scopes: <code>transactions:categorize</code> and <code>categories:read</code>.
-/// <h2>Overview</h2>
-/// Use the <code>TransactionEditViewController</code> when you want let the user to edit a transaction.
-/// note:
-/// It is suitable for use in a <code>UINavigationController</code>.
-/// \code
-/// let transactionsViewController = TransactionEditViewController(transaction: <#Transaction#>)
-/// let navigationController = UINavigationController(rootViewController: transactionsViewController)
-/// show(navigationController, sender: <#Any#>)
-///
-/// \endcode
-SWIFT_CLASS("_TtC18TinkMoneyManagerUI29TransactionEditViewController")
-@interface TransactionEditViewController : UIViewController
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)loadView;
-- (void)viewDidLoad;
-- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-
-@interface TransactionEditViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
-- (void)presentationControllerDidAttemptToDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
 
 
