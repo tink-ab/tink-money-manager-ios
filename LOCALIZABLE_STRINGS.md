@@ -10,6 +10,32 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | Key | Default | Description |  
 | -------- | -------- | -------- |
 | `AccountDetail.Header.AccountNumberFormat` | Account number: %@ | String format for displaying account number in account detail header. |
+| `Accounts.Generic.CancelButton` | Cancel | Title for cancelling changes done to the account settings. |
+| `Accounts.Generic.EditButton` | Edit | Title for account edit button. |
+| `Accounts.Generic.NoAccountAvailable` | No accounts available | Title for empty account list view. |
+| `Accounts.Generic.SaveButton` | Save | Title for saving changes done to the account settings. |
+| `Accounts.Grouping.EverydayAccounts` | Everyday accounts | Title for accounts grouped by everyday kind. |
+| `Accounts.Grouping.Loans` | Loans | Title for accounts grouped by loans kind. |
+| `Accounts.Grouping.Other` | Other | Title for accounts grouped by other kind. |
+| `Accounts.Grouping.Savings` | Saving accounts | Title for accounts grouped by savings kind. |
+| `Accounts.Kind.Checking` | Checking | Title for checking accounts. |
+| `Accounts.Kind.CreditCard` | Credit Card | Title for credit card accounts. |
+| `Accounts.Kind.External` | External | Title for external accounts. |
+| `Accounts.Kind.Investment` | Investment | Title for investment accounts. |
+| `Accounts.Kind.Loan` | Loan | Title for loaning accounts. |
+| `Accounts.Kind.Mortgage` | Mortgage | Title for mortgage accounts. |
+| `Accounts.Kind.Other` | Other | Title for other accounts. |
+| `Accounts.Kind.Pension` | Pension | Title for pension accounts. |
+| `Accounts.Kind.Savings` | Savings | Title for savings accounts. |
+| `Accounts.Settings.AccountName` | Account name | Title for account name setting. |
+| `Accounts.Settings.AccountType` | Account type | Title for account type settings. |
+| `Accounts.Settings.Favorite.Description` | Balance is shown in the overview | Description for favorite account settings. |
+| `Accounts.Settings.Favorite.Title` | Favorite | Title for favorite account settings. |
+| `Accounts.Settings.Included.Description` | This account is shown in your statistics | Description for the included account settings. |
+| `Accounts.Settings.Included.Title` | Included | Title for included accounts setting. |
+| `Accounts.Settings.Shared.Description` | 50% is included in your statistics | Description for Shared account settings. |
+| `Accounts.Settings.Shared.Title` | Shared account | Title for Shared account settings. |
+| `Accounts.Title` | Accounts | Title for accounts list. |
 | `ActionableInsights.Archive.EmptyState` | No archived events | Text for message to display if there are no archived actionable insights. |
 | `ActionableInsights.Archive.Title` | Archive | Title for list of archived insights. |
 | `ActionableInsights.ArchivedInsight.ActionDescription` | You answered %@ | Text shown to describe when an insight was archived. |
@@ -62,6 +88,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Generic.EditButton` | Edit | Title for budget edit button. |
 | `Budget.Generic.NextButton` | Next | Title of button to next step when creating a budget |
 | `Budget.Generic.SelectButton` | Select | Select button text for editing budget flow |
+| `Budget.Generic.SelectCategory` | Next | Title of button to next step when selecting a category to create a budget |
 | `Budget.Period.Type.Custom` | Custom | Custom budget period type. |
 | `Budget.Period.Type.Month` | Monthly | Monthly budget period type. |
 | `Budget.Period.Type.Week` | Weekly | Weekly budget period type. |
@@ -115,6 +142,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Generic.AmountFormatter.Abbreviation.Millions` |  m | Short suffix to use when formatting amounts larger than a million. |
 | `Generic.AmountFormatter.Abbreviation.Thousands` |  k | Short suffix to use when formatting amounts larger than a 10 000. |
 | `Generic.Cancel` | Cancel | Cancel button for canceling. |
+| `Generic.Copy` | Copy | Copy text for copying. |
 | `Generic.DateRangeFormatter.YearSpan` | %1$@ – %2$@ | How two dates in different years should be formatted, e.g. 25 Dec - 24 Jan. |
 | `Generic.ErrorAlert.DismissButton` | OK | Title of button to dismiss a generic error alert. |
 | `Generic.ErrorAlert.Message` | Something went wrong. | Message to show in a generic error alert. |
@@ -136,7 +164,9 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `LeftToSpend.Progress.Past.BelowAverage` | You spent %@ below your average. | Left to spend less than average for previous month. |
 | `LeftToSpend.Progress.Past.Default` | You have an average of %1$@ Left to Spend in %2$@ | Left to spend less default. |
 | `LeftToSpend.Progress.Past.OverAverage` | You spent %@ over your average. | Left to spend more than average for previous month. |
+| `Overview.Accounts.AddBankOrCard` | Add bank or card | Optional text to display in overview when there are no accounts. |
 | `Overview.Accounts.EmptyState` | No accounts | Text to display in overview when there are no accounts. |
+| `Overview.Accounts.SeeAll` | See all accounts | Title on card in overview to show all accounts. |
 | `Overview.ActionableInsights.RecentInsights` | recent events | Recent insights suffix. |
 | `Overview.ActionableInsights.RecentInsights.Singular` | recent event | Recent insight suffix. |
 | `Overview.ActionableInsights.ViewButton` | View | Title for button to view actionable insights. |
