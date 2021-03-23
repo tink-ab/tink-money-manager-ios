@@ -58,20 +58,6 @@ public protocol AccountsViewControllerDelegate : AnyObject {
   @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
 }
-extension AccountsViewController : UIKit.UICollectionViewDataSource {
-  @objc final public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, viewForSupplementaryElementOfKind kind: Swift.String, at indexPath: Foundation.IndexPath) -> UIKit.UICollectionReusableView
-}
-extension AccountsViewController : UIKit.UICollectionViewDelegate {
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
-  @available(iOS 13.0, *)
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, contextMenuConfigurationForItemAt indexPath: Foundation.IndexPath, point: CoreGraphics.CGPoint) -> UIKit.UIContextMenuConfiguration?
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, shouldShowMenuForItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, canPerformAction action: ObjectiveC.Selector, forItemAt indexPath: Foundation.IndexPath, withSender sender: Any?) -> Swift.Bool
-  @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, performAction action: ObjectiveC.Selector, forItemAt indexPath: Foundation.IndexPath, withSender sender: Any?)
-}
 extension AccountsViewController {
   final public func clearSelection(animated: Swift.Bool)
 }
@@ -638,6 +624,7 @@ public class IconProvider : TinkMoneyManagerUI.IconProviding {
   public var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat?
   public var notification: UIKit.UIImage
   public var list: UIKit.UIImage
+  public var improveCategorization: UIKit.UIImage
   public init()
   public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
   @objc deinit
@@ -673,6 +660,7 @@ public protocol IconProviding {
   var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
   var notification: UIKit.UIImage { get set }
   var list: UIKit.UIImage { get set }
+  var improveCategorization: UIKit.UIImage { get set }
 }
 public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLiteral, Swift.Codable {
   public let value: Swift.String

@@ -190,7 +190,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
@@ -283,26 +282,6 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI22AccountsViewController")
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
 
-@class UICollectionView;
-@class UICollectionViewCell;
-@class UICollectionReusableView;
-
-@interface AccountsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (UICollectionReusableView * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView viewForSupplementaryElementOfKind:(NSString * _Nonnull)kind atIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@end
-
-@class UIContextMenuConfiguration;
-
-@interface AccountsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDelegate>
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (UIContextMenuConfiguration * _Nullable)collectionView:(UICollectionView * _Nonnull)collectionView contextMenuConfigurationForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath point:(CGPoint)point SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=13.0);
-- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView canPerformAction:(SEL _Nonnull)action forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView performAction:(SEL _Nonnull)action forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath withSender:(id _Nullable)sender;
-@end
 
 
 /// A view controller that displays a list actionable insights.
@@ -346,6 +325,8 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
+@class UICollectionView;
+@class UICollectionViewCell;
 
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -684,10 +665,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 @end
 
 
-
 @interface LeftToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
+
 
 
 
@@ -1007,7 +988,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
@@ -1100,26 +1080,6 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI22AccountsViewController")
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
 
-@class UICollectionView;
-@class UICollectionViewCell;
-@class UICollectionReusableView;
-
-@interface AccountsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (UICollectionReusableView * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView viewForSupplementaryElementOfKind:(NSString * _Nonnull)kind atIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-@end
-
-@class UIContextMenuConfiguration;
-
-@interface AccountsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDelegate>
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (UIContextMenuConfiguration * _Nullable)collectionView:(UICollectionView * _Nonnull)collectionView contextMenuConfigurationForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath point:(CGPoint)point SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=13.0);
-- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView canPerformAction:(SEL _Nonnull)action forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView performAction:(SEL _Nonnull)action forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath withSender:(id _Nullable)sender;
-@end
 
 
 /// A view controller that displays a list actionable insights.
@@ -1163,6 +1123,8 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
+@class UICollectionView;
+@class UICollectionViewCell;
 
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -1501,10 +1463,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 @end
 
 
-
 @interface LeftToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
+
 
 
 
