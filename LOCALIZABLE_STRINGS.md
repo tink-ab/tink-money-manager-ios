@@ -144,6 +144,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Generic.Cancel` | Cancel | Cancel button for canceling. |
 | `Generic.Copy` | Copy | Copy text for copying. |
 | `Generic.DateRangeFormatter.YearSpan` | %1$@ – %2$@ | How two dates in different years should be formatted, e.g. 25 Dec - 24 Jan. |
+| `Generic.Done` | Done | Done button text. |
 | `Generic.ErrorAlert.DismissButton` | OK | Title of button to dismiss a generic error alert. |
 | `Generic.ErrorAlert.Message` | Something went wrong. | Message to show in a generic error alert. |
 | `Generic.ErrorAlert.Title` | Error | Title to show in a generic error alert. |
@@ -155,6 +156,17 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Generic.OverTime.TabTitle` | Over time | Title for tab showing bar chart of data over time. |
 | `Generic.Transfers.Title` | Transfers | Title for category statistics representing only transfers. |
 | `Human.Enumerated.formatter.And` | and | Human enumerated formatter text for and. |
+| `ImproveCategorizationLevel.CategorizationError` | There was an error categorizing | Error shown when categorization fails in improve categorization level modal. |
+| `ImproveCategorizationLevel.Overview.CategorizeButton` | Categorize | Title for the button on the improve categorization card shown on the finance overview. |
+| `ImproveCategorizationLevel.Overview.Detail` | We found %d transactions without a category. | Detail for the improve categorization card shown on the finance overview. |
+| `ImproveCategorizationLevel.Overview.DismissButton` | Dismiss | Title for the dismiss button on the improve categorization card shown on the finance overview. |
+| `ImproveCategorizationLevel.Overview.Title` | Improve your categorization | Title for the improve categorization card shown on the finance overview. |
+| `ImproveCategorizationLevel.Success.Improvement` | Your categorization just got %@ better! | Text for the categorization level successfully improved. |
+| `ImproveCategorizationLevel.Success.Level` | %@ of your transactions are now categorized. | Text for the current categorization level. |
+| `ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions` | %d transactions categorized. | Text for the number of transactions that were successfully categorized. |
+| `ImproveCategorizationLevel.Success.OneCategorizedTransaction` | %d transaction categorized. | Text for one transaction that was successfully categorized. |
+| `ImproveCategorizationLevel.Success.UnknownImprovement` | Your categorization just got better! | Text for the categorization level successfully improved. |
+| `ImproveCategorizationLevel.Title` | Improve categorization | Title for the improve categorization modal. |
 | `LeftToSpend.OverTime.LongPressSubtitle` | Left to spend in %@ | Subtitle shown when user long press bar in chart for left to spend statistics. |
 | `LeftToSpend.Progress.Current.DaysLeft` | You can spend %1$@ per day until next salary in %2$d days. | Left to spend per day until next salary in a number of days. |
 | `LeftToSpend.Progress.Current.LastDay` | You have %@ left to spend today. | Left to spend today. |
