@@ -680,6 +680,11 @@
         <target>%1$@ – %2$@</target>
         <note>How two dates in different years should be formatted, e.g. 25 Dec - 24 Jan.</note>
       </trans-unit>
+      <trans-unit id="Generic.Done" xml:space="preserve">
+        <source>Done</source>
+        <target>Done</target>
+        <note>Done button text.</note>
+      </trans-unit>
       <trans-unit id="Generic.ErrorAlert.DismissButton" xml:space="preserve">
         <source>OK</source>
         <target>OK</target>
@@ -734,6 +739,61 @@
         <source>and</source>
         <target>and</target>
         <note>Human enumerated formatter text for and.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.CategorizationError" xml:space="preserve">
+        <source>There was an error categorizing</source>
+        <target>There was an error categorizing</target>
+        <note>Error shown when categorization fails in improve categorization level modal.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Overview.CategorizeButton" xml:space="preserve">
+        <source>Categorize</source>
+        <target>Categorize</target>
+        <note>Title for the button on the improve categorization card shown on the finance overview.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Overview.Detail" xml:space="preserve">
+        <source>We found %d transactions without a category.</source>
+        <target>We found %d transactions without a category.</target>
+        <note>Detail for the improve categorization card shown on the finance overview.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Overview.DismissButton" xml:space="preserve">
+        <source>Dismiss</source>
+        <target>Dismiss</target>
+        <note>Title for the dismiss button on the improve categorization card shown on the finance overview.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Overview.Title" xml:space="preserve">
+        <source>Improve your categorization</source>
+        <target>Improve your categorization</target>
+        <note>Title for the improve categorization card shown on the finance overview.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Success.Improvement" xml:space="preserve">
+        <source>ImproveCategorizationLevel.Success.Improvement</source>
+        <target>ImproveCategorizationLevel.Success.Improvement</target>
+        <note>Text for the categorization level successfully improved.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Success.Level" xml:space="preserve">
+        <source>ImproveCategorizationLevel.Success.Level</source>
+        <target>ImproveCategorizationLevel.Success.Level</target>
+        <note>Text for the current categorization level.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions" xml:space="preserve">
+        <source>ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions</source>
+        <target>ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions</target>
+        <note>Text for the number of transactions that were successfully categorized.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Success.OneCategorizedTransaction" xml:space="preserve">
+        <source>ImproveCategorizationLevel.Success.OneCategorizedTransaction</source>
+        <target>ImproveCategorizationLevel.Success.OneCategorizedTransaction</target>
+        <note>Text for one transaction that was successfully categorized.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Success.UnknownImprovement" xml:space="preserve">
+        <source>ImproveCategorizationLevel.Success.UnknownImprovement</source>
+        <target>ImproveCategorizationLevel.Success.UnknownImprovement</target>
+        <note>Text for the categorization level successfully improved.</note>
+      </trans-unit>
+      <trans-unit id="ImproveCategorizationLevel.Title" xml:space="preserve">
+        <source>Improve categorization</source>
+        <target>Improve categorization</target>
+        <note>Title for the improve categorization modal.</note>
       </trans-unit>
       <trans-unit id="LeftToSpend.OverTime.LongPressSubtitle" xml:space="preserve">
         <source>Left to spend in %@</source>
