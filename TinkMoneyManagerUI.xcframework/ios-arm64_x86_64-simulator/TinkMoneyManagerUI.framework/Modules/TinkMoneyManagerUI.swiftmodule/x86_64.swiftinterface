@@ -75,7 +75,9 @@ public typealias ActionableInsightListViewControllerDelegate = TinkMoneyManagerU
 public protocol ActionableInsightsViewControllerDelegate : AnyObject {
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  @available(*, deprecated, message: "Use actionableInsightsViewController(_ viewController: ActionableInsightsViewController, initiateTransferFromAccount:to:amount:currencyCode:completionHandler:) instead")
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount source: Foundation.URL?, to destination: Foundation.URL?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
@@ -96,6 +98,7 @@ extension ActionableInsightsViewControllerDelegate {
   public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
   public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkMoneyManagerUI.Month)
   public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID], month: TinkMoneyManagerUI.Month)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
 }
 @objc @_hasMissingDesignatedInitializers final public class ActionableInsightsViewController : UIKit.UIViewController {
   public enum EmptyState {
@@ -125,6 +128,9 @@ extension ActionableInsightsViewController : TinkMoneyManagerUI.CategorizeTransa
 }
 extension ActionableInsightsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension ActionableInsightsViewController : TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate {
+  final public func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
 }
 public enum Appearance {
   public static var provider: TinkMoneyManagerUI.AppearanceProviding
@@ -499,8 +505,10 @@ extension FinanceOverviewViewController {
     case accounts(TinkMoneyManagerUI.AccountsViewController.Predicate)
     case actionableInsights(delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
     case budgets
+    case improveCategorizationLevel(predicate: (TinkCore.SuggestTransactionsResponse) -> Swift.Bool)
     case custom(UIKit.UIView)
     public static let accounts: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
+    public static let improveCategorizationLevel: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
   }
 }
 extension FinanceOverviewViewController {
@@ -677,6 +685,17 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
 }
+public protocol ImproveCategorizationLevelViewControllerDelegate : AnyObject {
+  func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
+}
+@objc @_hasMissingDesignatedInitializers final public class ImproveCategorizationLevelViewController : UIKit.UIViewController {
+  weak final public var delegate: TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate?
+  convenience public init(tink: TinkCore.Tink = .shared, transactions: [TinkCore.Transaction])
+  convenience public init(tink: TinkCore.Tink = .shared, transactionIDs: [TinkCore.Transaction.ID])
+  @objc deinit
+  @objc override final public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
 public protocol ItemListStyle {
   var item: TinkMoneyManagerUI.ItemStyle { get }
   var insets: UIKit.UIEdgeInsets { get }
@@ -728,6 +747,7 @@ public struct Month : Swift.Hashable, Swift.Comparable {
 extension Tink {
   public func refresh()
   public func resetCache()
+  public func fetchTransactionsToImproveCategorization(evaluateEverything: Swift.Bool? = nil, completion: @escaping (Swift.Result<[TinkCore.Transaction], Swift.Error>) -> Swift.Void) -> TinkCore.Cancellable?
 }
 public enum ScreenEvent {
   case overview
@@ -747,6 +767,7 @@ public enum ScreenEvent {
   case events
   case eventsArchive
   case transactionDetails
+  case improveCategorizationLevel
   public var name: Swift.String {
     get
   }
@@ -856,6 +877,10 @@ extension TransactionsViewController {
 extension TransactionsViewController : UIKit.UITableViewDelegate {
   @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
   @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+public struct TransferIdentity {
+  public var account: Foundation.URL?
+  public var accountNumber: Swift.String?
 }
 extension UserSession : Swift.Equatable {
   public static func == (lhs: TinkCore.UserSession, rhs: TinkCore.UserSession) -> Swift.Bool

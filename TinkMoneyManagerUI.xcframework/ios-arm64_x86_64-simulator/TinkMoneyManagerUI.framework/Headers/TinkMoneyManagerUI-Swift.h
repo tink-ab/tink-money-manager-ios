@@ -336,6 +336,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
+
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
@@ -619,15 +620,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -639,6 +640,23 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewWillDisappear:(BOOL)animated;
+@end
+
+
+
+/// A <code>ImproveCategorizationLevelViewController</code> displays a cluster of transactions that are either uncategorized or have a low categorization score and lets the user categorize these in a few simple steps.
+/// This view controller is designed to be used in a <code>UINavigationController</code> but can be used standalone also.
+/// \code
+/// let improveCategorizationLevelViewController = ImproveCategorizationLevelViewController(tink: <#Tink#>, transactions: <#[Transaction]#>)
+/// let navigationController = UINavigationController(rootViewController: improveCategorizationLevelViewController)
+/// show(navigationController, sender: <#Any#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI40ImproveCategorizationLevelViewController")
+@interface ImproveCategorizationLevelViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
@@ -665,10 +683,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 @end
 
 
+
 @interface LeftToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 
@@ -1134,6 +1152,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
+
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
@@ -1417,15 +1436,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1437,6 +1456,23 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewWillDisappear:(BOOL)animated;
+@end
+
+
+
+/// A <code>ImproveCategorizationLevelViewController</code> displays a cluster of transactions that are either uncategorized or have a low categorization score and lets the user categorize these in a few simple steps.
+/// This view controller is designed to be used in a <code>UINavigationController</code> but can be used standalone also.
+/// \code
+/// let improveCategorizationLevelViewController = ImproveCategorizationLevelViewController(tink: <#Tink#>, transactions: <#[Transaction]#>)
+/// let navigationController = UINavigationController(rootViewController: improveCategorizationLevelViewController)
+/// show(navigationController, sender: <#Any#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI40ImproveCategorizationLevelViewController")
+@interface ImproveCategorizationLevelViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1463,10 +1499,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 @end
 
 
+
 @interface LeftToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 
