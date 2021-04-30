@@ -160,10 +160,10 @@ override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
 
 Or by disabling all _Device Orientations_ except `Portrait` in the _Deployment Info_ section on your application targets’ _General_ tab.  
 
-## Example
-This example project shows how to setup and use the `FinanceOverviewViewController` in your app.
+## Sample
+This sample project shows how to setup and use the `FinanceOverviewViewController` in your app.
 
-- [Example App](Examples/FinanceOverviewExample)
+- [Sample App](Samples/FinanceOverviewExample)
 
 ## Documentation
 For more detailed usage and full documentation, please refer to our guide.

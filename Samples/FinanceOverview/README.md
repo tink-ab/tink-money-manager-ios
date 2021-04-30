@@ -1,9 +1,9 @@
 ![Platform](https://img.shields.io/badge/platform-iOS-orange.svg)
 ![Languages](https://img.shields.io/badge/languages-swift-orange.svg)
 
-# Finance Overview Example 
+# Finance Overview Sample 
 
-This example project shows how to use Tink Money Manager SDK on iOS. The project demonstrates how to configure and display the `FinanceOverviewViewController` within a `UITabBarController`. 
+This sample project shows how to use Tink Money Manager SDK on iOS. The project demonstrates how to configure and display the `FinanceOverviewViewController` within a `UITabBarController`. 
 
 ## Prerequisites
 
@@ -19,6 +19,6 @@ Open `AppDelegate.swift` and replace `YOUR_CLIENT_ID` and `YOUR_ACCESS_TOKEN` wi
 
 ## Getting started
 
-## Running the example app
+## Running the sample app
 1. Open `FinanceOverviewExample.xcodeproj` in Xcode.
-2. Press the run button. If all went well, this should launch a simulator with the example app running.
+2. Press the run button. If all went well, this should launch a simulator with the sample app running.
