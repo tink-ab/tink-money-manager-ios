@@ -7,10 +7,18 @@ This example project shows how to use Tink Money Manager SDK on iOS. The project
 
 ## Prerequisites
 
-Before you can use the SDK, you need to create a developer account at [Tink Console](https://console.tink.com/). You will also need to have a working integration with Tink to authenticate and authorize users. 
+1. Before you can use the SDK, you need to create a developer account at [Tink Console](https://console.tink.com/).
+2. Follow the [getting started guide](https://docs.tink.com/resources/getting-started/set-up-your-account) to retrieve your `client_id`.
+3. You will also need to have a working integration with Tink to authenticate and authorize users.
 
-## Getting started
+## Configuration
 
 Open `AppDelegate.swift` and replace `YOUR_CLIENT_ID` and `YOUR_ACCESS_TOKEN` with your client id and user access token respectively.
 
-You should now be able to run the test project and try it out.
+If you don't have an access token already, please follow our [guide](https://docs.tink.com/resources/getting-started/get-access-token) on how to generate a new API token. Note that these can expire, so make sure that you're using one that's currently active.
+
+## Getting started
+
+## Running the example app
+1. Open `FinanceOverviewExample.xcodeproj` in Xcode.
+2. Press the run button. If all went well, this should launch a simulator with the example app running.
