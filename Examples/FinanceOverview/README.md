@@ -13,9 +13,9 @@ This example project shows how to use Tink Money Manager SDK on iOS. The project
 
 ## Configuration
 
-Open `AppDelegate.swift` and replace `YOUR_CLIENT_ID` and `YOUR_ACCESS_TOKEN` with your client id and user access token respectively.
+Make sure you have a valid access token, if not, please follow our [guide](https://docs.tink.com/resources/getting-started/get-access-token) on how to generate a new API token. Note that these can expire, so make sure that you're using one that's currently active.
 
-If you don't have an access token already, please follow our [guide](https://docs.tink.com/resources/getting-started/get-access-token) on how to generate a new API token. Note that these can expire, so make sure that you're using one that's currently active.
+Open `AppDelegate.swift` and replace `YOUR_CLIENT_ID` and `YOUR_ACCESS_TOKEN` with your client id and user access token respectively.
 
 ## Getting started
 
