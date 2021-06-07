@@ -57,12 +57,12 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.CreateBudget.CreateWithKeyword` | Create with keyword | Title for create a budget with keyword. |
 | `Budget.CreateBudget.Title` | Create budget | Title of the select category modal shown when creating a budget. |
 | `Budget.Detail.Monthly.Title` | Monthly | Title for budgets. |
+| `Budget.Detail.Overview.CurrentMonthDescription` | You have %@ left on your budget this month | Budget overview current month description text. |
+| `Budget.Detail.Overview.CurrentWeekDescription` | You have %@ left on your budget this week | Budget overview current week description text. |
+| `Budget.Detail.Overview.CurrentYearDescription` | You have %@ left on your budget this year | Budget overview current year description text. |
+| `Budget.Detail.Overview.Description` | You made your budget %@ of the time since you created the budget | Budget overview description text. |
 | `Budget.Detail.Overview.Empty` | Here you will see your historical spending on %@. But now you don’t have any! | Text for the empty budgets overview. |
-| `Budget.Detail.Overview.PreviousYearDescription` | You made your budget %@ of the time | Budget overview last year description text. |
-| `Budget.Detail.Overview.ThreeMonthDescription` | You made your budget %@ of the time over the last year | Budget overview 3 months description text. |
 | `Budget.Detail.Overview.Title` | Over time | Title for budgets overview. |
-| `Budget.Detail.Overview.WeekDescription` | You made your budget %1$@ of the time since week %2$@ | Budget overview week description text. |
-| `Budget.Detail.Overview.YearDescription` | You made your budget %1$@ of the time since %2$@ | Budget overview year description text. |
 | `Budget.Detail.Progress.Completed.Days` | Completed %d days ago | Budget detail view completed in days text. |
 | `Budget.Detail.Progress.Completed.Months` | Completed %d months ago | Budget detail view completed in days text. |
 | `Budget.Detail.Progress.Left` | You can spend %@ and still remain within your budget | Budget detail remaining budget within period. |
@@ -109,7 +109,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Target.Period.Placeholder` | Budget period | Period type selection field placeholder text shown when creating or editing budget. |
 | `Budget.Target.SaveButton` | Save changes | Edit button text for editing budget flow. |
 | `Budget.Target.StartPeriod.Placeholder` | Start date | Period start date field placeholder text shown when creating or editing budget. |
-| `Budget.Transactions.EmptyState` | No transactions | Title for budgets overview. |
+| `Budget.Transactions.EmptyState` | Here you will see your transactions related to your %@ budget. Currently, you don’t have any! | Title for budgets transaction empty state. |
 | `Categorization.CategoryPicker.CancelButton` | Cancel | Title for the cancel button that will dismiss the select category modal shown when categorizing a transaction. |
 | `Categorization.CategoryPicker.NoCategoriesError.Message` | Could not load any categories. | Message to show when no categories are found. |
 | `Categorization.CategoryPicker.NoCategoriesError.Title` | Error | Title to show in when no categories are found. |
