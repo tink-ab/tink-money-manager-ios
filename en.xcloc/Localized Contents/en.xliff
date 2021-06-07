@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Sources/Entrypoints/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.4" build-num="12D4e"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Entrypoints</source>
+        <target>Entrypoints</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Sources/FinanceOverview/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.4" build-num="12D4e"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>FinanceOverview</source>
+        <target>FinanceOverview</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Sources/TinkMoneyManagerUI/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.4" build-num="12D4e"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>TinkMoneyManagerUI</source>
+        <target>TinkMoneyManagerUI</target>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
   <file original="Sources/TinkMoneyManagerUI/en.lproj/TinkMoneyManagerUI.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.4" build-num="12D4e"/>
@@ -245,35 +281,35 @@
         <target>Monthly</target>
         <note>Title for budgets.</note>
       </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.CurrentMonthDescription" xml:space="preserve">
+        <source>You have %@ left on your budget this month</source>
+        <target>You have %@ left on your budget this month</target>
+        <note>Budget overview current month description text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.CurrentWeekDescription" xml:space="preserve">
+        <source>You have %@ left on your budget this week</source>
+        <target>You have %@ left on your budget this week</target>
+        <note>Budget overview current week description text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.CurrentYearDescription" xml:space="preserve">
+        <source>You have %@ left on your budget this year</source>
+        <target>You have %@ left on your budget this year</target>
+        <note>Budget overview current year description text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Overview.Description" xml:space="preserve">
+        <source>You made your budget %@ of the time since you created the budget</source>
+        <target>You made your budget %@ of the time since you created the budget</target>
+        <note>Budget overview description text.</note>
+      </trans-unit>
       <trans-unit id="Budget.Detail.Overview.Empty" xml:space="preserve">
         <source>Budget.Detail.Overview.Empty</source>
         <target>Budget.Detail.Overview.Empty</target>
         <note>Text for the empty budgets overview.</note>
       </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.PreviousYearDescription" xml:space="preserve">
-        <source>You made your budget %@ of the time</source>
-        <target>You made your budget %@ of the time</target>
-        <note>Budget overview last year description text.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.ThreeMonthDescription" xml:space="preserve">
-        <source>You made your budget %@ of the time over the last year</source>
-        <target>You made your budget %@ of the time over the last year</target>
-        <note>Budget overview 3 months description text.</note>
-      </trans-unit>
       <trans-unit id="Budget.Detail.Overview.Title" xml:space="preserve">
         <source>Over time</source>
         <target>Over time</target>
         <note>Title for budgets overview.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.WeekDescription" xml:space="preserve">
-        <source>You made your budget %1$@ of the time since week %2$@</source>
-        <target>You made your budget %1$@ of the time since week %2$@</target>
-        <note>Budget overview week description text.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.YearDescription" xml:space="preserve">
-        <source>You made your budget %1$@ of the time since %2$@</source>
-        <target>You made your budget %1$@ of the time since %2$@</target>
-        <note>Budget overview year description text.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Completed.Days" xml:space="preserve">
         <source>Completed %d days ago</source>
@@ -506,9 +542,9 @@
         <note>Period start date field placeholder text shown when creating or editing budget.</note>
       </trans-unit>
       <trans-unit id="Budget.Transactions.EmptyState" xml:space="preserve">
-        <source>No transactions</source>
-        <target>No transactions</target>
-        <note>Title for budgets overview.</note>
+        <source>Here you will see your transactions related to your %@ budget. Currently, you don’t have any!</source>
+        <target>Here you will see your transactions related to your %@ budget. Currently, you don’t have any!</target>
+        <note>Title for budgets transaction empty state.</note>
       </trans-unit>
       <trans-unit id="Categorization.CategoryPicker.CancelButton" xml:space="preserve">
         <source>Cancel</source>
