@@ -15,12 +15,12 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMajor(from: "1.3.0"))
+        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMajor(from: "1.4.0"))
     ],
     targets: [
         .binaryTarget(
             name: "TinkMoneyManagerUI",
-            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/0.17.0/TinkMoneyManagerUI.xcframework.zip", checksum: "e4716f99a5639ff3e88b03601deefa04b20e444ec50e48796cb2bd87c26e4145"
+            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/0.18.0/TinkMoneyManagerUI.xcframework.zip", checksum: "a1633cba9c45ffc7e4d8e841e51fdbbafb1a8a13f6e9c1a573aee581ee45e019"
         ),
         .target(
             name: "TinkMoneyManagerUITarget",
