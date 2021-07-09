@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkMoneyManagerUI
 import CoreGraphics
 import Foundation
@@ -19,8 +19,8 @@ public protocol AccountDetailsViewControllerDelegate : AnyObject {
   convenience public init(tink: TinkCore.Tink = .shared, accountId: TinkCore.Account.ID)
   @available(*, unavailable)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
 }
 extension AccountDetailsViewController {
   @objc override final public func viewDidLoad()
@@ -55,8 +55,8 @@ public protocol AccountsViewControllerDelegate : AnyObject {
   @objc override final public func viewDidLoad()
   @objc override final public func viewWillAppear(_ animated: Swift.Bool)
   @objc override final public func viewDidAppear(_ animated: Swift.Bool)
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
 }
 extension AccountsViewController {
   final public func clearSelection(animated: Swift.Bool)
@@ -110,12 +110,14 @@ extension ActionableInsightsViewControllerDelegate {
     set
   }
   convenience public init(tink: TinkCore.Tink = .shared, delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
 }
 extension ActionableInsightsViewController {
   @objc override final public func viewDidLoad()
+  @objc override final public func viewDidLayoutSubviews()
   @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
 }
 extension ActionableInsightsViewController : UIKit.UICollectionViewDataSource {
   @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
@@ -268,17 +270,17 @@ extension CategorizeTransactionViewController {
   @objc open func navigationControllerPreferredInterfaceOrientationForPresentation(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientation
   @objc open func navigationController(_ navigationController: UIKit.UINavigationController, interactionControllerFor animationController: UIKit.UIViewControllerAnimatedTransitioning) -> UIKit.UIViewControllerInteractiveTransitioning?
   @objc open func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc final public class CategoryStatisticsViewController : UIKit.UINavigationController {
   public enum Style {
     case pieChart, barChart
     public static func == (a: TinkMoneyManagerUI.CategoryStatisticsViewController.Style, b: TinkMoneyManagerUI.CategoryStatisticsViewController.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   final public let categoryType: TinkCore.Category.Kind
   final public let style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style
@@ -286,11 +288,11 @@ extension CategorizeTransactionViewController {
   public init(tink: TinkCore.Tink = .shared, categoryType: TinkCore.Category.Kind, style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style = .pieChart)
   @available(*, unavailable)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
   @available(iOS 5.0, *)
   @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
   @objc override dynamic public init(rootViewController: UIKit.UIViewController)
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
 }
 extension CategoryStatisticsViewController {
   @objc override final public func viewDidLoad()
@@ -412,8 +414,8 @@ public struct EditAccountFields : Swift.OptionSet {
   public static let isShared: TinkMoneyManagerUI.EditAccountFields
   public static let isFavorite: TinkMoneyManagerUI.EditAccountFields
   public static let all: TinkMoneyManagerUI.EditAccountFields
-  public typealias Element = TinkMoneyManagerUI.EditAccountFields
   public typealias ArrayLiteralElement = TinkMoneyManagerUI.EditAccountFields
+  public typealias Element = TinkMoneyManagerUI.EditAccountFields
   public typealias RawValue = Swift.Int
 }
 public protocol EditAccountViewControllerDelegate : AnyObject {
@@ -476,8 +478,8 @@ public protocol EditTransactionViewControllerDelegate : AnyObject {
   @objc override final public func loadView()
   @objc override final public func viewDidLoad()
   @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
 }
 extension EditTransactionViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @objc final public func presentationControllerDidAttemptToDismiss(_ presentationController: UIKit.UIPresentationController)
@@ -495,10 +497,10 @@ extension FinanceOverviewViewController {
       case income
       case leftToSpend
       public static func == (a: TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData, b: TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
       public var hashValue: Swift.Int {
         get
       }
-      public func hash(into hasher: inout Swift.Hasher)
     }
     case statistics([TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData])
     case latestTransactions
@@ -517,10 +519,10 @@ extension FinanceOverviewViewController {
       case showDetails
       case categorize
       public static func == (a: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction, b: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
       public var hashValue: Swift.Int {
         get
       }
-      public func hash(into hasher: inout Swift.Hasher)
     }
     public var transactionItemAction: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction
     public var editAccountFields: TinkMoneyManagerUI.EditAccountFields
@@ -540,8 +542,8 @@ extension FinanceOverviewViewController {
   @available(*, deprecated, message: "Use init(tink:features:) instead and embed this view controller inside a UINavigationController.")
   convenience public init(tink: TinkCore.Tink = .shared, layoutSections: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
   convenience public init(tink: TinkCore.Tink = .shared, features: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
 }
 extension FinanceOverviewViewController {
   @objc override final public func viewDidLoad()
@@ -566,10 +568,10 @@ extension Font {
     case semibold
     case bold
     public static func == (a: TinkMoneyManagerUI.Font.Weight, b: TinkMoneyManagerUI.Font.Weight) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
 }
 public class FontProvider : TinkMoneyManagerUI.FontProviding {
@@ -676,14 +678,14 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
   public init(stringLiteral value: Swift.String)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public typealias StringLiteralType = Swift.String
-  public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
-  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
-  public typealias UnicodeScalarLiteralType = Swift.String
 }
 public protocol ImproveCategorizationLevelViewControllerDelegate : AnyObject {
   func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
@@ -738,11 +740,11 @@ public struct Month : Swift.Hashable, Swift.Comparable {
   public var year: Swift.Int
   public var month: Swift.Int
   public init(year: Swift.Int, month: Swift.Int)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.Month, b: TinkMoneyManagerUI.Month) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: TinkMoneyManagerUI.Month, b: TinkMoneyManagerUI.Month) -> Swift.Bool
 }
 extension Tink {
   public func refresh()
@@ -772,10 +774,10 @@ public enum ScreenEvent {
     get
   }
   public static func == (a: TinkMoneyManagerUI.ScreenEvent, b: TinkMoneyManagerUI.ScreenEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public struct Shadow {
   public var opacity: CoreGraphics.CGFloat
@@ -809,10 +811,10 @@ public struct TinkError : Swift.Error {
     case preconditionFailed
     case unavailableForLegalReasons
     public static func == (a: TinkMoneyManagerUI.TinkError.Status, b: TinkMoneyManagerUI.TinkError.Status) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public let status: TinkMoneyManagerUI.TinkError.Status
   public let message: Swift.String?
@@ -834,8 +836,8 @@ public struct TinkMoneyManagerConfiguration : TinkCore.Configuration {
   @objc override final public func viewDidLoad()
   @objc override final public func viewDidLayoutSubviews()
   @objc override final public func viewDidAppear(_ animated: Swift.Bool)
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
 }
 extension TransactionDetailsViewController : UIKit.UITableViewDataSource {
   @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
