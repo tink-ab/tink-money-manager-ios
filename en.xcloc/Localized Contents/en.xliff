@@ -257,6 +257,21 @@
         <target>Monthly</target>
         <note>Title for budgets.</note>
       </trans-unit>
+      <trans-unit id="Budget.Detail.OverView.OverCurrentMonthDescription" xml:space="preserve">
+        <source>You spent %@ over your budget for this month</source>
+        <target>You spent %@ over your budget for this month</target>
+        <note>Description text shown on budget detail view when user spent more than their budget target for the current month.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.OverView.OverCurrentWeekDescription" xml:space="preserve">
+        <source>You spent %@ over your budget for this week</source>
+        <target>You spent %@ over your budget for this week</target>
+        <note>Description text shown on budget detail view when user spent more than their budget target for the current week.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.OverView.OverCurrentYearDescription" xml:space="preserve">
+        <source>You spent %@ over your budget for this year</source>
+        <target>You spent %@ over your budget for this year</target>
+        <note>Description text shown on budget detail view when user spent more than their budget target for the current year.</note>
+      </trans-unit>
       <trans-unit id="Budget.Detail.Overview.CurrentMonthDescription" xml:space="preserve">
         <source>You have %@ left on your budget this month</source>
         <target>You have %@ left on your budget this month</target>
