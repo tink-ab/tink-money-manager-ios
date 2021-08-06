@@ -504,7 +504,7 @@ extension FinanceOverviewViewController {
     }
     case statistics([TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData])
     case latestTransactions
-    case accounts(TinkMoneyManagerUI.AccountsViewController.Predicate)
+    case accounts(TinkMoneyManagerUI.AccountsViewController.Predicate, TinkMoneyManagerUI.AccountsViewController.Grouping)
     case actionableInsights(delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
     case budgets
     case improveCategorizationLevel(predicate: (TinkCore.SuggestTransactionsResponse) -> Swift.Bool)
@@ -635,8 +635,9 @@ public class IconProvider : TinkMoneyManagerUI.IconProviding {
   public var notification: UIKit.UIImage
   public var list: UIKit.UIImage
   public var improveCategorization: UIKit.UIImage
+  public var ingestedAccount: UIKit.UIImage?
   public init()
-  public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
+  public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, ingestedAccount: UIKit.UIImage? = nil, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
   @objc deinit
 }
 public protocol IconProviding {
@@ -671,6 +672,7 @@ public protocol IconProviding {
   var notification: UIKit.UIImage { get set }
   var list: UIKit.UIImage { get set }
   var improveCategorization: UIKit.UIImage { get set }
+  var ingestedAccount: UIKit.UIImage? { get set }
 }
 public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLiteral, Swift.Codable {
   public let value: Swift.String

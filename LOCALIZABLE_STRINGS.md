@@ -62,6 +62,9 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Overview.CurrentYearDescription` | You have %@ left on your budget this year | Budget overview current year description text. |
 | `Budget.Detail.Overview.Description` | You made your budget %@ of the time since you created the budget | Budget overview description text. |
 | `Budget.Detail.Overview.Empty` | Here you will see your historical spending on %@. But now you don’t have any! | Text for the empty budgets overview. |
+| `Budget.Detail.OverView.OverCurrentMonthDescription` | You spent %@ over your budget for this month | Description text shown on budget detail view when user spent more than their budget target for the current month. |
+| `Budget.Detail.OverView.OverCurrentWeekDescription` | You spent %@ over your budget for this week | Description text shown on budget detail view when user spent more than their budget target for the current week. |
+| `Budget.Detail.OverView.OverCurrentYearDescription` | You spent %@ over your budget for this year | Description text shown on budget detail view when user spent more than their budget target for the current year. |
 | `Budget.Detail.Overview.Title` | Over time | Title for budgets overview. |
 | `Budget.Detail.Progress.Completed.Days` | Completed %d days ago | Budget detail view completed in days text. |
 | `Budget.Detail.Progress.Completed.Months` | Completed %d months ago | Budget detail view completed in days text. |
