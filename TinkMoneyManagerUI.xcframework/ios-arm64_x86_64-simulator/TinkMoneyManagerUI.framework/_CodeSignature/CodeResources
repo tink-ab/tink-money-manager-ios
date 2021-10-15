@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		W8HZWSfeHXwxZTK4qIGWdqQinAs=
+		7rTIUrGSnnhnt1mAs9/ntQlRDf0=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		W8HZWSfeHXwxZTK4qIGWdqQinAs=
+		7rTIUrGSnnhnt1mAs9/ntQlRDf0=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3pN6TjpTAkDshpKcau21HQ3j32A=
+		KSMHe7qjR1ZGL4f9aeopfoYVaHQ=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		3pN6TjpTAkDshpKcau21HQ3j32A=
+		KSMHe7qjR1ZGL4f9aeopfoYVaHQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -103,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nB2VR/ne1ZORY4WebRaMI9tEalGYOolxO84e8NidPio=
+			C8S9dcjsibjit4sLcD4DElfI4ikl3EBL4dEu7EqI/Xg=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftdoc</key>
@@ -124,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nB2VR/ne1ZORY4WebRaMI9tEalGYOolxO84e8NidPio=
+			C8S9dcjsibjit4sLcD4DElfI4ikl3EBL4dEu7EqI/Xg=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -145,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xtPyVlcS4cDSLgTHX1VGvkdhZO3L1P9jYMqDY1OVRJc=
+			89bLuTtiaXTSVsjqGmZvvIIwG25Mid9QJtHPMsT9OYE=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftdoc</key>
@@ -166,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xtPyVlcS4cDSLgTHX1VGvkdhZO3L1P9jYMqDY1OVRJc=
+			89bLuTtiaXTSVsjqGmZvvIIwG25Mid9QJtHPMsT9OYE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
