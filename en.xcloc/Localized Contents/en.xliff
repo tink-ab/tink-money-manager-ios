@@ -405,6 +405,13 @@
         <target>Edit</target>
         <note>Title for budget edit button.</note>
       </trans-unit>
+      <trans-unit id="Budget.Generic.EmptyList" xml:space="preserve">
+        <source>You have no budgets. Create your first
+ budget to help you spend less!</source>
+        <target>You have no budgets. Create your first
+ budget to help you spend less!</target>
+        <note>Description when list of budgets is empty</note>
+      </trans-unit>
       <trans-unit id="Budget.Generic.NextButton" xml:space="preserve">
         <source>Next</source>
         <target>Next</target>
@@ -895,6 +902,11 @@
         <target>All transactions</target>
         <note>Title for list of all transactions.</note>
       </trans-unit>
+      <trans-unit id="Overview.Budgets.CreateNewBudgetButton" xml:space="preserve">
+        <source>Create new</source>
+        <target>Create new</target>
+        <note>Title for navigation bar button to add new budget.</note>
+      </trans-unit>
       <trans-unit id="Overview.Budgets.EmptyNewBudgetButton" xml:space="preserve">
         <source>Create new budget</source>
         <target>Create new budget</target>
@@ -909,6 +921,11 @@
         <source>Budget</source>
         <target>Budget</target>
         <note>Title for budgets.</note>
+      </trans-unit>
+      <trans-unit id="Overview.BudgetsList.Title" xml:space="preserve">
+        <source>Budgets</source>
+        <target>Budgets</target>
+        <note>Title for budgets list.</note>
       </trans-unit>
       <trans-unit id="Overview.LatestTransactions.SeeAllButton" xml:space="preserve">
         <source>See all</source>

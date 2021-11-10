@@ -261,7 +261,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI28AccountDetailsViewController")
 /// </ul>
 /// <h2>Responding to User Selection</h2>
 /// <code>AccountsViewController</code> clears its selection every time an account being selected and a detail view is presented in response.
-/// If you present a modal in response to a account selection you might need to deselect the transaction. To do that you can call the <code>clearSelection(animated:)</code> method.
+/// If you present a modal in response to an account selection you might need to deselect the transaction. To do that you can call the <code>clearSelection(animated:)</code> method.
 /// \code
 /// accountsViewController.clearSelection(animated: true)
 ///
@@ -367,6 +367,23 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI27BudgetDetailsViewController")
 @interface BudgetDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
+@end
+
+
+
+
+/// A <code>BudgetsViewController</code> displays a list of budgets.
+/// This view controller is designed to be used in a <code>UINavigationController</code> but can be used standalone also.
+/// \code
+/// let budgetsViewController = BudgetsViewController(tink: <#Tink#>)
+/// show(budgetsViewController, sender: <#Any#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI21BudgetsViewController")
+@interface BudgetsViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
 
@@ -622,15 +639,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 

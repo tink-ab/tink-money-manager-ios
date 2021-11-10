@@ -89,6 +89,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Generic.CancelButton` | Cancel | Title for the cancel button that will dismiss the select category modal shown when creating a budget. |
 | `Budget.Generic.DeleteButton` | Delete | Title for the button to delete a budget. |
 | `Budget.Generic.EditButton` | Edit | Title for budget edit button. |
+| `Budget.Generic.EmptyList` | You have no budgets. Create your first\n budget to help you spend less! | Description when list of budgets is empty |
 | `Budget.Generic.NextButton` | Next | Title of button to next step when creating a budget |
 | `Budget.Generic.SelectButton` | Select | Select button text for editing budget flow |
 | `Budget.Generic.SelectCategory` | Next | Title of button to next step when selecting a category to create a budget |
@@ -187,9 +188,11 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Overview.ActionableInsights.ViewButton` | View | Title for button to view actionable insights. |
 | `Overview.ActionableInsightsArchive.Title` | View archived events | Title for card to show archived actionable insights. |
 | `Overview.AllTransactions.Title` | All transactions | Title for list of all transactions. |
+| `Overview.Budgets.CreateNewBudgetButton` | Create new | Title for navigation bar button to add new budget. |
 | `Overview.Budgets.EmptyNewBudgetButton` | Create new budget | Title for button to add new budget. |
 | `Overview.Budgets.NewBudgetButton` | New budget | Title for button to add new budget. |
 | `Overview.Budgets.Title` | Budget | Title for budgets. |
+| `Overview.BudgetsList.Title` | Budgets | Title for budgets list. |
 | `Overview.LatestTransactions.SeeAllButton` | See all | Title for button to see all transactions. |
 | `Overview.LatestTransactions.Title` | Latest transactions | Title for latest transactions list. |
 | `Overview.NoDataAvailable` | No statistics available | No statistics data available. |
@@ -204,6 +207,6 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Transaction.Edit.SaveButton` | Save | Navigation button for saving changes to a transaction. |
 | `Transaction.Edit.Title` | Edit | Title for the view where you edit a specific transaction. |
 | `Transaction.Generic.Error` | No transaction details available | Text when failing to fetch transaction. |
-| `Transactions.NoTransactions` | No transactions available | Text to display in the transaction list when there are no transactions. |
+| `Transactions.NoTransactions` | You haven’t made any transactions yet | Text to display in the transaction list when there are no transactions. |
 | `Week.Of.Year.Long` | week | Week of the year formatter long text. |
 | `Week.Of.Year.Short` | w | Week of the year formatter short text. |
