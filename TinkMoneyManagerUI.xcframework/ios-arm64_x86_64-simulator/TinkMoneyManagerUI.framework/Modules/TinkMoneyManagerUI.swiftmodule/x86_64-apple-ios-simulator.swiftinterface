@@ -68,6 +68,19 @@ public struct ActionableInsightViewModel {
   public struct Insight {
   }
 }
+extension ActionableInsightsViewControllerDelegate {
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind dataType: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkMoneyManagerUI.Month)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID], month: TinkMoneyManagerUI.Month)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
+}
 @available(*, deprecated, renamed: "ActionableInsightsViewController")
 public typealias ActionableInsightListViewController = TinkMoneyManagerUI.ActionableInsightsViewController
 @available(*, deprecated, renamed: "ActionableInsightsViewControllerDelegate")
@@ -82,23 +95,15 @@ public protocol ActionableInsightsViewControllerDelegate : AnyObject {
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
+  @available(*, deprecated, message: "Use actionableInsightsViewController(_ viewController: ActionableInsightsViewController, showTransactionsWithIDs:) method instead")
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID], month: TinkMoneyManagerUI.Month)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
+  @available(*, deprecated, message: "Use actionableInsightsViewController(_ viewController: ActionableInsightsViewController, showTransactionsByCategoryCode:) method instead")
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkMoneyManagerUI.Month)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showLeftToSpendForMonth month: TinkMoneyManagerUI.Month)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, refreshCredentialsWithID credentialsID: TinkCore.Credentials.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
-}
-extension ActionableInsightsViewControllerDelegate {
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind dataType: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkMoneyManagerUI.Month)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID], month: TinkMoneyManagerUI.Month)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
 }
 @objc @_hasMissingDesignatedInitializers final public class ActionableInsightsViewController : UIKit.UIViewController {
   public enum EmptyState {
@@ -168,15 +173,24 @@ public protocol AppearanceProviding {
   var itemListStyle: TinkMoneyManagerUI.ItemListStyle { get set }
   var carouselStyle: TinkMoneyManagerUI.CarouselStyle { get set }
   var notificationStyle: TinkMoneyManagerUI.ItemStyle { get set }
+  var budgetColors: TinkMoneyManagerUI.ColorProviding { get set }
 }
 public struct AppearanceProvider : TinkMoneyManagerUI.AppearanceProviding {
-  public var colors: TinkMoneyManagerUI.ColorProviding
+  public var colors: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
   public var icons: TinkMoneyManagerUI.IconProviding
   public var fonts: TinkMoneyManagerUI.FontProviding
   public var groupStyle: TinkMoneyManagerUI.GroupStyle
   public var itemListStyle: TinkMoneyManagerUI.ItemListStyle
   public var carouselStyle: TinkMoneyManagerUI.CarouselStyle
   public var notificationStyle: TinkMoneyManagerUI.ItemStyle
+  public var budgetColors: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
+  public var _budgetColors: TinkMoneyManagerUI.ColorProviding?
   @available(*, deprecated, renamed: "colors")
   public var colorProviding: TinkMoneyManagerUI.ColorProviding {
     get
@@ -192,7 +206,7 @@ public struct AppearanceProvider : TinkMoneyManagerUI.AppearanceProviding {
     get
     set
   }
-  public init(colors: TinkMoneyManagerUI.ColorProvider? = nil, fonts: TinkMoneyManagerUI.FontProvider? = nil, icons: TinkMoneyManagerUI.IconProvider? = nil)
+  public init(colors: TinkMoneyManagerUI.ColorProvider? = nil, fonts: TinkMoneyManagerUI.FontProvider? = nil, icons: TinkMoneyManagerUI.IconProvider? = nil, budgetColors: TinkMoneyManagerUI.ColorProvider? = nil)
   @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
   public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, account: UIKit.UIImage, budget: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
   @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
@@ -227,6 +241,17 @@ extension BudgetDetailsViewController : TinkMoneyManagerUI.EditBudgetViewControl
   final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
   final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
   final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers final public class BudgetsViewController : UIKit.UIViewController {
+  convenience public init(tink: TinkCore.Tink = .shared)
+  @objc override final public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension BudgetsViewController : TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate {
+  final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
+  final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
+  final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
 }
 public protocol CarouselStyle {
   var item: TinkMoneyManagerUI.ItemStyle { get }
