@@ -183,6 +183,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Overview.Accounts.AddBankOrCard` | Add bank or card | Optional text to display in overview when there are no accounts. |
 | `Overview.Accounts.EmptyState` | No accounts | Text to display in overview when there are no accounts. |
 | `Overview.Accounts.SeeAll` | See all accounts | Title on card in overview to show all accounts. |
+| `Overview.ActionableInsights.NoEvents` | No new events | Title for card when there are no insights. |
 | `Overview.ActionableInsights.RecentInsights` | recent events | Recent insights suffix. |
 | `Overview.ActionableInsights.RecentInsights.Singular` | recent event | Recent insight suffix. |
 | `Overview.ActionableInsights.ViewButton` | View | Title for button to view actionable insights. |
