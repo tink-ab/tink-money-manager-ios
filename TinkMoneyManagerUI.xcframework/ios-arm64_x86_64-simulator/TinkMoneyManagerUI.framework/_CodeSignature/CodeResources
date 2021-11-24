@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/TinkMoneyManagerUI-Swift.h</key>
 		<data>
-		E+s6+B40v7SuShc2tud2Ioewlas=
+		DfklJUN6TdwAyEx+CufQ731KBlA=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		kOYZP/KhvIivYvc4aAPRdBgVI6Q=
+		TIb0CWEJhNoZMpgYh0/2RITcGpY=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		n6Yv8z8aJcjVlFPRVSUvd1QSE/4=
+		ZDYFR5bv3RFpLIhlWNkfNPvFWVw=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		kOYZP/KhvIivYvc4aAPRdBgVI6Q=
+		TIb0CWEJhNoZMpgYh0/2RITcGpY=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		n6Yv8z8aJcjVlFPRVSUvd1QSE/4=
+		ZDYFR5bv3RFpLIhlWNkfNPvFWVw=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5QQ2MwfxxHUk/Q0oDxuJ3W8Gu+Q=
+		1/J8Ww9AFp2mLSx3eGsRhF1cC+w=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Nf2D6GnMmvYakLoonAxJ39VOTOQ=
+		uQRwVx6DIama8yPliWNKNw04/w0=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		5QQ2MwfxxHUk/Q0oDxuJ3W8Gu+Q=
+		1/J8Ww9AFp2mLSx3eGsRhF1cC+w=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		Nf2D6GnMmvYakLoonAxJ39VOTOQ=
+		uQRwVx6DIama8yPliWNKNw04/w0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -82,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j9A2vSSm5ZZckKXKjP/StvRfqqNOVov6auJO4iHPqfg=
+			NdmROkFzfGv7BWBxEfToPtScWxgtmNqicO4ZwdhTFmU=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -96,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/rB4stGLIh20Q9fnlLxx6LfMr/KUOz203E1+j+dfr9c=
+			Eo0Z4v8dfp0JDK0n0X1j8IBx+VO6Be1e3CC2NH8W97M=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Wdsa1z//yE7Wd8zlAWSBoq4z2vDJRfdg2fIYESlemE=
+			ju7HXnZjV3L0KwZCUvUiC8MjYsp0Rwq+YSX20NpfMQo=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftdoc</key>
@@ -117,14 +117,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/rB4stGLIh20Q9fnlLxx6LfMr/KUOz203E1+j+dfr9c=
+			Eo0Z4v8dfp0JDK0n0X1j8IBx+VO6Be1e3CC2NH8W97M=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Wdsa1z//yE7Wd8zlAWSBoq4z2vDJRfdg2fIYESlemE=
+			ju7HXnZjV3L0KwZCUvUiC8MjYsp0Rwq+YSX20NpfMQo=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -138,14 +138,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YulMjuqBHlfg6lPgjTW2c+Yib4SY0++ZOqJYM08XF60=
+			MXZwO9GjjNO3yyqmzemskPbZKnCcNVsxAOttiEXWNZI=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k6cP2+ZELxcejV9Ok1gVedy3RZzeXwRPVvBB3UNUlvs=
+			32KxDb2YS9gIFzyK4FZCTZtAxY2Jar7rKgfmuXMbUEA=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftdoc</key>
@@ -159,14 +159,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YulMjuqBHlfg6lPgjTW2c+Yib4SY0++ZOqJYM08XF60=
+			MXZwO9GjjNO3yyqmzemskPbZKnCcNVsxAOttiEXWNZI=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k6cP2+ZELxcejV9Ok1gVedy3RZzeXwRPVvBB3UNUlvs=
+			32KxDb2YS9gIFzyK4FZCTZtAxY2Jar7rKgfmuXMbUEA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

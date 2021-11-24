@@ -877,6 +877,11 @@
         <target>See all accounts</target>
         <note>Title on card in overview to show all accounts.</note>
       </trans-unit>
+      <trans-unit id="Overview.ActionableInsights.NoEvents" xml:space="preserve">
+        <source>No new events</source>
+        <target>No new events</target>
+        <note>Title for card when there are no insights.</note>
+      </trans-unit>
       <trans-unit id="Overview.ActionableInsights.RecentInsights" xml:space="preserve">
         <source>recent events</source>
         <target>recent events</target>

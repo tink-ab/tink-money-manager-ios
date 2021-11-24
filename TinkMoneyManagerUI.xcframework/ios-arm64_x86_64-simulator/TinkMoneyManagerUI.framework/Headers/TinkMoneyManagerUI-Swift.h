@@ -321,10 +321,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
+
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 @class UICollectionView;
@@ -335,6 +335,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 
@@ -1159,10 +1160,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 
 
 
+
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 @class UICollectionView;
@@ -1173,6 +1174,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 

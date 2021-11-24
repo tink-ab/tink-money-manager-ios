@@ -8,7 +8,7 @@
 ## Prerequisites
 
 1. Follow the [getting started guide](https://docs.tink.com/resources/getting-started/set-up-your-account) to set up your Tink account. 
-2. [Get an access token](https://docs.tink.com/resources/getting-started/get-access-token) with the [scopes](https://docs.tink.com/api/#introduction-authentication-authentication-scopes) required for the features you intend to use.
+2. [Get an access token](https://docs.tink.com/resources/getting-started/get-access-token) with the [scopes](https://docs.tink.com/api#introduction/authentication/authorization-scopes) required for the features you intend to use.
 
 ## Requirements
 
@@ -45,7 +45,7 @@ You should now be able to `import TinkMoneyManagerUI` within your project.
 ## Fetching data
 
 The SDK needs a valid access token for a specific user to function correctly. Since the SDK does not handle any type of authentication, this needs to be done by your backend. 
-See [this link](https://docs.tink.com/api/#oauth) for more info on how this is done. Once you have an access token you pass it on to your `Tink` instance.
+See [this link](https://docs.tink.com/api#general/oauth) for more info on how this is done. Once you have an access token you pass it on to your `Tink` instance.
 
 ```swift 
 Tink.shared.userSession = .accessToken(<#T##String#>)
@@ -163,7 +163,7 @@ Or by disabling all _Device Orientations_ except `Portrait` in the _Deployment I
 ## Example
 This example project shows how to setup and use the `FinanceOverviewViewController` in your app.
 
-- [Example App](Examples/FinanceOverviewExample)
+- [Example App](Samples/FinanceOverview)
 
 ## Documentation
 For more detailed usage and full documentation, please refer to our guide.
