@@ -139,6 +139,9 @@ extension ActionableInsightsViewController : UIKit.UIAdaptivePresentationControl
 extension ActionableInsightsViewController : TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate {
   final public func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
 }
+extension ActionableInsightsViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
+  final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+}
 public enum Appearance {
   public static var provider: TinkMoneyManagerUI.AppearanceProviding
   @available(*, deprecated, renamed: "provider.colors")
