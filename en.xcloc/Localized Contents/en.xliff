@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="Sources/TinkMoneyManagerUI/en.lproj/TinkMoneyManagerUI.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5.1" build-num="12E507"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="AccountDetail.Header.AccountNumberFormat" xml:space="preserve">
@@ -141,8 +141,8 @@
         <note>Title for accounts list.</note>
       </trans-unit>
       <trans-unit id="ActionableInsights.Archive.EmptyState" xml:space="preserve">
-        <source>ActionableInsights.Archive.EmptyState</source>
-        <target>ActionableInsights.Archive.EmptyState</target>
+        <source>No archived events</source>
+        <target>No archived events</target>
         <note>Text for message to display if there are no archived actionable insights.</note>
       </trans-unit>
       <trans-unit id="ActionableInsights.Archive.Title" xml:space="preserve">
@@ -151,8 +151,8 @@
         <note>Title for list of archived insights.</note>
       </trans-unit>
       <trans-unit id="ActionableInsights.ArchivedInsight.ActionDescription" xml:space="preserve">
-        <source>ActionableInsights.ArchivedInsight.ActionDescription</source>
-        <target>ActionableInsights.ArchivedInsight.ActionDescription</target>
+        <source>You answered %@</source>
+        <target>You answered %@</target>
         <note>Text shown to describe when an insight was archived.</note>
       </trans-unit>
       <trans-unit id="ActionableInsights.BudgetSuggestCreateTopCategory.SuggestedAmountDetail" xml:space="preserve">
@@ -166,8 +166,8 @@
         <note>Button title for button to present archived insights list.</note>
       </trans-unit>
       <trans-unit id="ActionableInsights.List.EmptyState" xml:space="preserve">
-        <source>ActionableInsights.List.EmptyState</source>
-        <target>ActionableInsights.List.EmptyState</target>
+        <source>No new events! Check the archive if you want see your previous events.</source>
+        <target>No new events! Check the archive if you want see your previous events.</target>
         <note>Text for message to display if there are no actionable insights.</note>
       </trans-unit>
       <trans-unit id="ActionableInsights.List.Title" xml:space="preserve">
@@ -246,18 +246,18 @@
         <note>Title for budgets.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.OverView.OverCurrentMonthDescription" xml:space="preserve">
-        <source>You spent %@ over your budget for this month</source>
-        <target>You spent %@ over your budget for this month</target>
+        <source>You have gone %@ over your budget for this month</source>
+        <target>You have gone %@ over your budget for this month</target>
         <note>Description text shown on budget detail view when user spent more than their budget target for the current month.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.OverView.OverCurrentWeekDescription" xml:space="preserve">
-        <source>You spent %@ over your budget for this week</source>
-        <target>You spent %@ over your budget for this week</target>
+        <source>You have gone %@ over your budget for this week</source>
+        <target>You have gone %@ over your budget for this week</target>
         <note>Description text shown on budget detail view when user spent more than their budget target for the current week.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.OverView.OverCurrentYearDescription" xml:space="preserve">
-        <source>You spent %@ over your budget for this year</source>
-        <target>You spent %@ over your budget for this year</target>
+        <source>You have gone %@ over your budget for this year</source>
+        <target>You have gone %@ over your budget for this year</target>
         <note>Description text shown on budget detail view when user spent more than their budget target for the current year.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Overview.CurrentMonthDescription" xml:space="preserve">
@@ -279,11 +279,6 @@
         <source>You made your budget %@ of the time since you created the budget</source>
         <target>You made your budget %@ of the time since you created the budget</target>
         <note>Budget overview description text.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.Empty" xml:space="preserve">
-        <source>Budget.Detail.Overview.Empty</source>
-        <target>Budget.Detail.Overview.Empty</target>
-        <note>Text for the empty budgets overview.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Overview.Title" xml:space="preserve">
         <source>Over time</source>
@@ -341,8 +336,8 @@
         <note>Budget detail budget has not started.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Over" xml:space="preserve">
-        <source>You spent over your budget for this period</source>
-        <target>You spent over your budget for this period</target>
+        <source>You have gone over your budget for this period</source>
+        <target>You have gone over your budget for this period</target>
         <note>Description text shown on budget detail view when user spent more than their budget target for the current period.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleDays" xml:space="preserve">
@@ -528,8 +523,8 @@
         <note>Period start date field placeholder text shown when creating or editing budget.</note>
       </trans-unit>
       <trans-unit id="Budget.Transactions.EmptyState" xml:space="preserve">
-        <source>Here you will see your transactions related to your %@ budget. Currently, you don’t have any!</source>
-        <target>Here you will see your transactions related to your %@ budget. Currently, you don’t have any!</target>
+        <source>Here you will see your historical spending on %@. But currently you don't have any.</source>
+        <target>Here you will see your historical spending on %@. But currently you don't have any.</target>
         <note>Title for budgets transaction empty state.</note>
       </trans-unit>
       <trans-unit id="Categorization.CategoryPicker.CancelButton" xml:space="preserve">
@@ -788,28 +783,28 @@
         <note>Title for the improve categorization card shown on the finance overview.</note>
       </trans-unit>
       <trans-unit id="ImproveCategorizationLevel.Success.Improvement" xml:space="preserve">
-        <source>ImproveCategorizationLevel.Success.Improvement</source>
-        <target>ImproveCategorizationLevel.Success.Improvement</target>
+        <source>Your categorization just got %@ better!</source>
+        <target>Your categorization just got %@ better!</target>
         <note>Text for the categorization level successfully improved.</note>
       </trans-unit>
       <trans-unit id="ImproveCategorizationLevel.Success.Level" xml:space="preserve">
-        <source>ImproveCategorizationLevel.Success.Level</source>
-        <target>ImproveCategorizationLevel.Success.Level</target>
+        <source>%@ of your transactions are now categorized.</source>
+        <target>%@ of your transactions are now categorized.</target>
         <note>Text for the current categorization level.</note>
       </trans-unit>
       <trans-unit id="ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions" xml:space="preserve">
-        <source>ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions</source>
-        <target>ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions</target>
+        <source>%d transactions categorized.</source>
+        <target>%d transactions categorized.</target>
         <note>Text for the number of transactions that were successfully categorized.</note>
       </trans-unit>
       <trans-unit id="ImproveCategorizationLevel.Success.OneCategorizedTransaction" xml:space="preserve">
-        <source>ImproveCategorizationLevel.Success.OneCategorizedTransaction</source>
-        <target>ImproveCategorizationLevel.Success.OneCategorizedTransaction</target>
+        <source>%d transaction categorized.</source>
+        <target>%d transaction categorized.</target>
         <note>Text for one transaction that was successfully categorized.</note>
       </trans-unit>
       <trans-unit id="ImproveCategorizationLevel.Success.UnknownImprovement" xml:space="preserve">
-        <source>ImproveCategorizationLevel.Success.UnknownImprovement</source>
-        <target>ImproveCategorizationLevel.Success.UnknownImprovement</target>
+        <source>Your categorization just got better!</source>
+        <target>Your categorization just got better!</target>
         <note>Text for the categorization level successfully improved.</note>
       </trans-unit>
       <trans-unit id="ImproveCategorizationLevel.Title" xml:space="preserve">
@@ -868,8 +863,8 @@
         <note>Optional text to display in overview when there are no accounts.</note>
       </trans-unit>
       <trans-unit id="Overview.Accounts.EmptyState" xml:space="preserve">
-        <source>Overview.Accounts.EmptyState</source>
-        <target>Overview.Accounts.EmptyState</target>
+        <source>No accounts</source>
+        <target>No accounts</target>
         <note>Text to display in overview when there are no accounts.</note>
       </trans-unit>
       <trans-unit id="Overview.Accounts.SeeAll" xml:space="preserve">
@@ -953,8 +948,8 @@
         <note>Title for the button used to initiate a categorization of a transaction.</note>
       </trans-unit>
       <trans-unit id="Transaction.Detail.Edit" xml:space="preserve">
-        <source>Transaction.Detail.Edit</source>
-        <target>Transaction.Detail.Edit</target>
+        <source>Edit</source>
+        <target>Edit</target>
         <note>Text on button in navigation bar leading to the edit transaction flow.</note>
       </trans-unit>
       <trans-unit id="Transaction.Edit.Date.Title" xml:space="preserve">
@@ -968,8 +963,8 @@
         <note>Help text below description field describing the original description.</note>
       </trans-unit>
       <trans-unit id="Transaction.Edit.Description.Placeholder" xml:space="preserve">
-        <source>Transaction.Edit.Description.Placeholder</source>
-        <target>Transaction.Edit.Description.Placeholder</target>
+        <source>Description</source>
+        <target>Description</target>
         <note>Text field placeholder text on the field where you edit a description of a transaction.</note>
       </trans-unit>
       <trans-unit id="Transaction.Edit.DiscardSheet.Continue" xml:space="preserve">
@@ -998,13 +993,13 @@
         <note>Title for the view where you edit a specific transaction.</note>
       </trans-unit>
       <trans-unit id="Transaction.Generic.Error" xml:space="preserve">
-        <source>Transaction.Generic.Error</source>
-        <target>Transaction.Generic.Error</target>
+        <source>No transaction details available</source>
+        <target>No transaction details available</target>
         <note>Text when failing to fetch transaction.</note>
       </trans-unit>
       <trans-unit id="Transactions.NoTransactions" xml:space="preserve">
-        <source>Transactions.NoTransactions</source>
-        <target>Transactions.NoTransactions</target>
+        <source>You haven’t made any transactions yet</source>
+        <target>You haven’t made any transactions yet</target>
         <note>Text to display in the transaction list when there are no transactions.</note>
       </trans-unit>
       <trans-unit id="Week.Of.Year.Long" xml:space="preserve">
@@ -1021,7 +1016,7 @@
   </file>
   <file original="Sources/TinkMoneyManagerUIUITestsHost/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="12.5.1" build-num="12E507"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.1" build-num="13A1030d"/>
     </header>
     <body>
       <trans-unit id="CFBundleName" xml:space="preserve">

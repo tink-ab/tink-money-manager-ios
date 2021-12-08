@@ -61,10 +61,9 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Overview.CurrentWeekDescription` | You have %@ left on your budget this week | Budget overview current week description text. |
 | `Budget.Detail.Overview.CurrentYearDescription` | You have %@ left on your budget this year | Budget overview current year description text. |
 | `Budget.Detail.Overview.Description` | You made your budget %@ of the time since you created the budget | Budget overview description text. |
-| `Budget.Detail.Overview.Empty` | Here you will see your historical spending on %@. But now you don’t have any! | Text for the empty budgets overview. |
-| `Budget.Detail.OverView.OverCurrentMonthDescription` | You spent %@ over your budget for this month | Description text shown on budget detail view when user spent more than their budget target for the current month. |
-| `Budget.Detail.OverView.OverCurrentWeekDescription` | You spent %@ over your budget for this week | Description text shown on budget detail view when user spent more than their budget target for the current week. |
-| `Budget.Detail.OverView.OverCurrentYearDescription` | You spent %@ over your budget for this year | Description text shown on budget detail view when user spent more than their budget target for the current year. |
+| `Budget.Detail.OverView.OverCurrentMonthDescription` | You have gone %@ over your budget for this month | Description text shown on budget detail view when user spent more than their budget target for the current month. |
+| `Budget.Detail.OverView.OverCurrentWeekDescription` | You have gone %@ over your budget for this week | Description text shown on budget detail view when user spent more than their budget target for the current week. |
+| `Budget.Detail.OverView.OverCurrentYearDescription` | You have gone %@ over your budget for this year | Description text shown on budget detail view when user spent more than their budget target for the current year. |
 | `Budget.Detail.Overview.Title` | Over time | Title for budgets overview. |
 | `Budget.Detail.Progress.Completed.Days` | Completed %d days ago | Budget detail view completed in days text. |
 | `Budget.Detail.Progress.Completed.Months` | Completed %d months ago | Budget detail view completed in days text. |
@@ -76,7 +75,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Progress.Left.Yearly` | You can spend %@ per year and still remain within your budget | Budget detail remaining budget yearly. |
 | `Budget.Detail.Progress.Managed` | You managed your budget for this period | Budget detail managed budget text. |
 | `Budget.Detail.Progress.NotStarted` | Budget hasn't started yet | Budget detail budget has not started. |
-| `Budget.Detail.Progress.Over` | You spent over your budget for this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
+| `Budget.Detail.Progress.Over` | You have gone over your budget for this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
 | `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget detail view remaining days. |
 | `Budget.Detail.Progress.RemaingTime.OneDay` | One day remaining | Budget detail view for one remaining day. |
 | `Budget.Detail.Progress.Spent` | You have no remaining budget for this period | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
@@ -113,7 +112,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Target.Period.Placeholder` | Budget period | Period type selection field placeholder text shown when creating or editing budget. |
 | `Budget.Target.SaveButton` | Save changes | Edit button text for editing budget flow. |
 | `Budget.Target.StartPeriod.Placeholder` | Start date | Period start date field placeholder text shown when creating or editing budget. |
-| `Budget.Transactions.EmptyState` | Here you will see your transactions related to your %@ budget. Currently, you don’t have any! | Title for budgets transaction empty state. |
+| `Budget.Transactions.EmptyState` | Here you will see your historical spending on %@. But currently you don't have any. | Title for budgets transaction empty state. |
 | `Categorization.CategoryPicker.CancelButton` | Cancel | Title for the cancel button that will dismiss the select category modal shown when categorizing a transaction. |
 | `Categorization.CategoryPicker.NoCategoriesError.Message` | Could not load any categories. | Message to show when no categories are found. |
 | `Categorization.CategoryPicker.NoCategoriesError.Title` | Error | Title to show in when no categories are found. |
