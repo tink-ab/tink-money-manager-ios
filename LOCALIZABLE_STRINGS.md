@@ -78,7 +78,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Progress.Over` | You have gone over your budget for this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
 | `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget detail view remaining days. |
 | `Budget.Detail.Progress.RemaingTime.OneDay` | One day remaining | Budget detail view for one remaining day. |
-| `Budget.Detail.Progress.Spent` | You have no remaining budget for this period | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
+| `Budget.Detail.Progress.Spent` | You are about to exceed your budget for this period. | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
 | `Budget.Detail.Progress.StartIn` | Starts in %d days | Budget detail view starts in days text. |
 | `Budget.Detail.SeeTransactions` | See transactions | See budget detail transactions text. |
 | `Budget.Detail.Weekly.Title` | Weekly | Title for budgets. |
