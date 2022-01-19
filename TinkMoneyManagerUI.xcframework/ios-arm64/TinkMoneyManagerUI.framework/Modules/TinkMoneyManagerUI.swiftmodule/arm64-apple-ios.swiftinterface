@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkMoneyManagerUI
 import CoreGraphics
 import Foundation
@@ -105,10 +105,12 @@ public protocol ActionableInsightsViewControllerDelegate : AnyObject {
   func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ActionableInsightsViewController : UIKit.UIViewController {
+  @available(*, deprecated, message: "Customizing the empty state will be deprecated.")
   public enum EmptyState {
     case `default`
     case custom(UIKit.UIView)
   }
+  @available(*, deprecated, message: "Customizing the empty state will be deprecated.")
   @_Concurrency.MainActor(unsafe) final public var emptyState: TinkMoneyManagerUI.ActionableInsightsViewController.EmptyState {
     get
     set
@@ -318,6 +320,7 @@ extension TinkMoneyManagerUI.CategorizeTransactionViewController {
   }
   @_Concurrency.MainActor(unsafe) final public let categoryType: TinkCore.Category.Kind
   @_Concurrency.MainActor(unsafe) final public let style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style
+  @available(*, deprecated, message: "Currency symbols will always show in statistics.")
   @_Concurrency.MainActor(unsafe) final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool
   @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, categoryType: TinkCore.Category.Kind, style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style = .pieChart)
   @available(*, unavailable)
@@ -329,8 +332,6 @@ extension TinkMoneyManagerUI.CategoryStatisticsViewController {
 }
 extension TinkMoneyManagerUI.CategoryStatisticsViewController : UIKit.UIGestureRecognizerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
-}
-public enum Color {
 }
 public class ColorProvider : TinkMoneyManagerUI.ColorProviding {
   public var background: UIKit.UIColor
@@ -471,6 +472,7 @@ extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UIPickerViewDeleg
   @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
 }
 extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
 }
 extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
@@ -503,6 +505,9 @@ public protocol EditTransactionViewControllerDelegate : AnyObject {
 }
 extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerDidAttemptToDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
 }
 public enum EventTracker {
   public static var tracker: TinkMoneyManagerUI.EventTracking?
@@ -555,6 +560,7 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     set
   }
   @_Concurrency.MainActor(unsafe) final public var hidesTopBarWhenPushed: Swift.Bool
+  @available(*, deprecated, message: "Currency symbols will always show in statistics.")
   @_Concurrency.MainActor(unsafe) final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
     get
     set
@@ -569,6 +575,7 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewSafeAreaInsetsDidChange()
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController : UIKit.UIScrollViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
@@ -738,6 +745,7 @@ public struct CardItemStyle : TinkMoneyManagerUI.ItemStyle {
   public init(cornerRadius: CoreGraphics.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LeftToSpendViewController : UIKit.UIViewController {
+  @available(*, deprecated, message: "Currency symbols will always show in statistics.")
   @_Concurrency.MainActor(unsafe) final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
     get
     set
