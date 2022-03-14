@@ -79,6 +79,7 @@ extension TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate {
   public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
   public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
 }
 @available(*, deprecated, renamed: "ActionableInsightsViewController")
 public typealias ActionableInsightListViewController = TinkMoneyManagerUI.ActionableInsightsViewController
@@ -773,6 +774,7 @@ public struct Month : Swift.Hashable, Swift.Comparable {
     get
   }
 }
+public let version: Swift.String
 extension TinkCore.Tink {
   public func refresh()
   public func resetCache()
