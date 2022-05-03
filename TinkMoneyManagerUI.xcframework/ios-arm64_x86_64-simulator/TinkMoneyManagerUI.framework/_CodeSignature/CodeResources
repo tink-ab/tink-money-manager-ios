@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hKW2hQFX3IiblyqT9/GGPNVj7/g=
+		G/ZHEMyX2+yqNrOfqUh4ZTtY+7Y=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KKdlZBL+UNhc2h9dan2XtwA0vNw=
+		qFRNzuICUp+goChd/Sy4K8HhKlI=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		KKdlZBL+UNhc2h9dan2XtwA0vNw=
+		qFRNzuICUp+goChd/Sy4K8HhKlI=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EcITxjcSD5xK+oCwcYaYTaDN7+Y=
+		/HduzK4fcTCKpFl296CMIAoCAQg=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		EcITxjcSD5xK+oCwcYaYTaDN7+Y=
+		/HduzK4fcTCKpFl296CMIAoCAQg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -103,7 +103,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nQgOMFJvDqPXZh2WCBF4BPwWpRqR+k5fx0JQCpekQi0=
+			lP3e/hghYgKpWft3fvs36lMALqqJztwI6Ht/mxVJrBM=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64.swiftdoc</key>
@@ -124,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nQgOMFJvDqPXZh2WCBF4BPwWpRqR+k5fx0JQCpekQi0=
+			lP3e/hghYgKpWft3fvs36lMALqqJztwI6Ht/mxVJrBM=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -145,7 +145,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LFJQILyb1lQMJipQdlXuKbDQ24a6DQRLFvl7oNBz2Rk=
+			EfzaxR3H3N2OxDEk8zCtzyeorJiT7DBrLfYX7bHeOC8=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64.swiftdoc</key>
@@ -166,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LFJQILyb1lQMJipQdlXuKbDQ24a6DQRLFvl7oNBz2Rk=
+			EfzaxR3H3N2OxDEk8zCtzyeorJiT7DBrLfYX7bHeOC8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
