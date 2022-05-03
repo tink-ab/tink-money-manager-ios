@@ -17,7 +17,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Accounts.Grouping.EverydayAccounts` | Everyday accounts | Title for accounts grouped by everyday kind. |
 | `Accounts.Grouping.Loans` | Loans | Title for accounts grouped by loans kind. |
 | `Accounts.Grouping.Other` | Other | Title for accounts grouped by other kind. |
-| `Accounts.Grouping.Savings` | Saving accounts | Title for accounts grouped by savings kind. |
+| `Accounts.Grouping.Savings` | Savings accounts | Title for accounts grouped by savings kind. |
 | `Accounts.Kind.Checking` | Checking | Title for checking accounts. |
 | `Accounts.Kind.CreditCard` | Credit Card | Title for credit card accounts. |
 | `Accounts.Kind.External` | External | Title for external accounts. |

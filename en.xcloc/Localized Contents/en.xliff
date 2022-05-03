@@ -46,8 +46,8 @@
         <note>Title for accounts grouped by other kind.</note>
       </trans-unit>
       <trans-unit id="Accounts.Grouping.Savings" xml:space="preserve">
-        <source>Saving accounts</source>
-        <target>Saving accounts</target>
+        <source>Savings accounts</source>
+        <target>Savings accounts</target>
         <note>Title for accounts grouped by savings kind.</note>
       </trans-unit>
       <trans-unit id="Accounts.Kind.Checking" xml:space="preserve">
