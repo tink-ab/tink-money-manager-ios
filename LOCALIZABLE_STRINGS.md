@@ -65,12 +65,13 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.OverView.OverCurrentWeekDescription` | You have gone %@ over your budget for this week | Description text shown on budget detail view when user spent more than their budget target for the current week. |
 | `Budget.Detail.OverView.OverCurrentYearDescription` | You have gone %@ over your budget for this year | Description text shown on budget detail view when user spent more than their budget target for the current year. |
 | `Budget.Detail.Overview.Title` | Over time | Title for budgets overview. |
-| `Budget.Detail.Progress.Completed.Days` | Completed %d days ago | Budget detail view completed in days text. |
-| `Budget.Detail.Progress.Completed.Months` | Completed %d months ago | Budget detail view completed in days text. |
+| `Budget.Detail.Progress.Completed.Days` | Closed %d days ago | Budget detail view completed in days text. |
+| `Budget.Detail.Progress.Completed.Months` | Closed %d months ago | Budget detail view completed in days text. |
 | `Budget.Detail.Progress.Left` | You can spend %@ and still remain within your budget | Budget detail remaining budget within period. |
 | `Budget.Detail.Progress.Left.Daily` | You can spend %@ per day and still remain within your budget | Budget detail remaining budget daily. |
 | `Budget.Detail.Progress.Left.From` | left of %@ | Budget detail view progress left from text. |
 | `Budget.Detail.Progress.Left.Monthly` | You can spend %@ per month and still remain within your budget | Budget detail remaining budget monthly. |
+| `Budget.Detail.Progress.Left.Total` | You have %@ remaining of your budget | Budget detail remaining budget yearly. |
 | `Budget.Detail.Progress.Left.Weekly` | You can spend %@ per week and still remain within your budget | Budget detail remaining budget weekly. |
 | `Budget.Detail.Progress.Left.Yearly` | You can spend %@ per year and still remain within your budget | Budget detail remaining budget yearly. |
 | `Budget.Detail.Progress.Managed` | You managed your budget for this period | Budget detail managed budget text. |
@@ -78,7 +79,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Progress.Over` | You have gone over your budget for this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
 | `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget detail view remaining days. |
 | `Budget.Detail.Progress.RemaingTime.OneDay` | One day remaining | Budget detail view for one remaining day. |
-| `Budget.Detail.Progress.Spent` | You are about to exceed your budget for this period. | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
+| `Budget.Detail.Progress.Spent` | You have no remaining budget for this period. | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
 | `Budget.Detail.Progress.StartIn` | Starts in %d days | Budget detail view starts in days text. |
 | `Budget.Detail.SeeTransactions` | See transactions | See budget detail transactions text. |
 | `Budget.Detail.Weekly.Title` | Weekly | Title for budgets. |
@@ -181,7 +182,9 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `LeftToSpend.Progress.Past.OverAverage` | You spent %@ over your average. | Left to spend more than average for previous month. |
 | `Overview.Accounts.AddBankOrCard` | Add bank or card | Optional text to display in overview when there are no accounts. |
 | `Overview.Accounts.EmptyState` | No accounts | Text to display in overview when there are no accounts. |
+| `Overview.Accounts.Header` | Favorite accounts | Text displayed above accounts cards sections in the financial overview. |
 | `Overview.Accounts.SeeAll` | See all accounts | Title on card in overview to show all accounts. |
+| `Overview.Accounts.SeeAllShortended` | See all | Title on card in overview to show all accounts. |
 | `Overview.ActionableInsights.NoEvents` | No new events | Title for card when there are no insights. |
 | `Overview.ActionableInsights.RecentInsights` | recent events | Recent insights suffix. |
 | `Overview.ActionableInsights.RecentInsights.Singular` | recent event | Recent insight suffix. |

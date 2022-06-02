@@ -286,13 +286,13 @@
         <note>Title for budgets overview.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Completed.Days" xml:space="preserve">
-        <source>Completed %d days ago</source>
-        <target>Completed %d days ago</target>
+        <source>Closed %d days ago</source>
+        <target>Closed %d days ago</target>
         <note>Budget detail view completed in days text.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Completed.Months" xml:space="preserve">
-        <source>Completed %d months ago</source>
-        <target>Completed %d months ago</target>
+        <source>Closed %d months ago</source>
+        <target>Closed %d months ago</target>
         <note>Budget detail view completed in days text.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Left" xml:space="preserve">
@@ -314,6 +314,11 @@
         <source>You can spend %@ per month and still remain within your budget</source>
         <target>You can spend %@ per month and still remain within your budget</target>
         <note>Budget detail remaining budget monthly.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Left.Total" xml:space="preserve">
+        <source>You have %@ remaining of your budget</source>
+        <target>You have %@ remaining of your budget</target>
+        <note>Budget detail remaining budget yearly.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Left.Weekly" xml:space="preserve">
         <source>You can spend %@ per week and still remain within your budget</source>
@@ -351,8 +356,8 @@
         <note>Budget detail view for one remaining day.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Spent" xml:space="preserve">
-        <source>You are about to exceed your budget for this period.</source>
-        <target>You are about to exceed your budget for this period.</target>
+        <source>You have no remaining budget for this period.</source>
+        <target>You have no remaining budget for this period.</target>
         <note>Description text shown on budget detail view when user spent as much as the budget target for the current period.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.StartIn" xml:space="preserve">
@@ -867,9 +872,19 @@
         <target>No accounts</target>
         <note>Text to display in overview when there are no accounts.</note>
       </trans-unit>
+      <trans-unit id="Overview.Accounts.Header" xml:space="preserve">
+        <source>Favorite accounts</source>
+        <target>Favorite accounts</target>
+        <note>Text displayed above accounts cards sections in the financial overview.</note>
+      </trans-unit>
       <trans-unit id="Overview.Accounts.SeeAll" xml:space="preserve">
         <source>See all accounts</source>
         <target>See all accounts</target>
+        <note>Title on card in overview to show all accounts.</note>
+      </trans-unit>
+      <trans-unit id="Overview.Accounts.SeeAllShortended" xml:space="preserve">
+        <source>See all</source>
+        <target>See all</target>
         <note>Title on card in overview to show all accounts.</note>
       </trans-unit>
       <trans-unit id="Overview.ActionableInsights.NoEvents" xml:space="preserve">
