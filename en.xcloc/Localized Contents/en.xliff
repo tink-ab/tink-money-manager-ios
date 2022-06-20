@@ -967,6 +967,16 @@
         <target>Edit</target>
         <note>Text on button in navigation bar leading to the edit transaction flow.</note>
       </trans-unit>
+      <trans-unit id="Transaction.Detail.PendingTransaction.Description" xml:space="preserve">
+        <source>Details of a pending transactions can change before being confirmed.</source>
+        <target>Details of a pending transactions can change before being confirmed.</target>
+        <note>Body of the informative pending transaction view.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Detail.PendingTransaction.Title" xml:space="preserve">
+        <source>Pending transaction</source>
+        <target>Pending transaction</target>
+        <note>Title of the informative pending transaction view.</note>
+      </trans-unit>
       <trans-unit id="Transaction.Edit.Date.Title" xml:space="preserve">
         <source>Date</source>
         <target>Date</target>
@@ -997,6 +1007,16 @@
         <target>Are you sure you want to discard your changes?</target>
         <note>Title for the sheet when the user tries to cancel the edit transaction screen when there are changes.</note>
       </trans-unit>
+      <trans-unit id="Transaction.Edit.NotificationSheet.Description" xml:space="preserve">
+        <source>Pending transactions are not editable until they are confirmed by the bank.</source>
+        <target>Pending transactions are not editable until they are confirmed by the bank.</target>
+        <note>Body of the not editable transaction sheet.</note>
+      </trans-unit>
+      <trans-unit id="Transaction.Edit.NotificationSheet.Title" xml:space="preserve">
+        <source>Not editable</source>
+        <target>Not editable</target>
+        <note>Title of the not editable transaction sheet.</note>
+      </trans-unit>
       <trans-unit id="Transaction.Edit.SaveButton" xml:space="preserve">
         <source>Save</source>
         <target>Save</target>
@@ -1012,10 +1032,20 @@
         <target>No transaction details available</target>
         <note>Text when failing to fetch transaction.</note>
       </trans-unit>
+      <trans-unit id="Transaction.Pending.Title" xml:space="preserve">
+        <source>Pending</source>
+        <target>Pending</target>
+        <note>Description for a pending transaction.</note>
+      </trans-unit>
       <trans-unit id="Transactions.NoTransactions" xml:space="preserve">
         <source>You haven’t made any transactions yet</source>
         <target>You haven’t made any transactions yet</target>
         <note>Text to display in the transaction list when there are no transactions.</note>
+      </trans-unit>
+      <trans-unit id="Transactions.PendingStatus" xml:space="preserve">
+        <source>Pending</source>
+        <target>Pending</target>
+        <note>Text to indicate that the transaction is in the pending state.</note>
       </trans-unit>
       <trans-unit id="Week.Of.Year.Long" xml:space="preserve">
         <source>week</source>

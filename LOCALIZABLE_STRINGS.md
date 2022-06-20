@@ -201,15 +201,21 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Overview.NoDataAvailable` | No statistics available | No statistics data available. |
 | `Transaction.Detail.ChangeCategory` | Change | Title for the button used to initiate a categorization of a transaction. |
 | `Transaction.Detail.Edit` | Edit | Text on button in navigation bar leading to the edit transaction flow. |
+| `Transaction.Detail.PendingTransaction.Description` | Details of a pending transactions can change before being confirmed. | Body of the informative pending transaction view. |
+| `Transaction.Detail.PendingTransaction.Title` | Pending transaction | Title of the informative pending transaction view. |
 | `Transaction.Edit.Date.Title` | Date | Title for text field for choosing the date of a transaction. |
 | `Transaction.Edit.Description.Original` | Original description: %@ | Help text below description field describing the original description. |
 | `Transaction.Edit.Description.Placeholder` | Description | Text field placeholder text on the field where you edit a description of a transaction. |
 | `Transaction.Edit.DiscardSheet.Continue` | Continue | Discard action title for the sheet when the user tries to cancel the edit transaction screen when there are changes. |
 | `Transaction.Edit.DiscardSheet.Discard` | Discard | Discard action title for the sheet when the user tries to cancel the edit transaction screen when there are changes. |
 | `Transaction.Edit.DiscardSheet.Title` | Are you sure you want to discard your changes? | Title for the sheet when the user tries to cancel the edit transaction screen when there are changes. |
+| `Transaction.Edit.NotificationSheet.Description` | Pending transactions are not editable until they are confirmed by the bank. | Body of the not editable transaction sheet. |
+| `Transaction.Edit.NotificationSheet.Title` | Not editable | Title of the not editable transaction sheet. |
 | `Transaction.Edit.SaveButton` | Save | Navigation button for saving changes to a transaction. |
 | `Transaction.Edit.Title` | Edit | Title for the view where you edit a specific transaction. |
 | `Transaction.Generic.Error` | No transaction details available | Text when failing to fetch transaction. |
+| `Transaction.Pending.Title` | Pending | Description for a pending transaction. |
 | `Transactions.NoTransactions` | You haven’t made any transactions yet | Text to display in the transaction list when there are no transactions. |
+| `Transactions.PendingStatus` | Pending | Text to indicate that the transaction is in the pending state. |
 | `Week.Of.Year.Long` | week | Week of the year formatter long text. |
 | `Week.Of.Year.Short` | w | Week of the year formatter short text. |
