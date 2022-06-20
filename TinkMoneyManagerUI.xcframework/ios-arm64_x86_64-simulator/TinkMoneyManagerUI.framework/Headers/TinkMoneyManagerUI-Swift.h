@@ -648,15 +648,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -747,8 +747,8 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 SWIFT_CLASS("_TtC18TinkMoneyManagerUI32TransactionDetailsViewController")
 @interface TransactionDetailsViewController : UIViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)loadView;
 - (void)viewDidLoad;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -760,11 +760,11 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32TransactionDetailsViewController")
 @end
 
 
-
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDelegate>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 @end
+
 
 
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDataSource>
@@ -822,6 +822,8 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI26TransactionsViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 @end
+
+
 
 
 
@@ -1494,15 +1496,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1593,8 +1595,8 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 SWIFT_CLASS("_TtC18TinkMoneyManagerUI32TransactionDetailsViewController")
 @interface TransactionDetailsViewController : UIViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (void)loadView;
 - (void)viewDidLoad;
+- (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -1606,11 +1608,11 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32TransactionDetailsViewController")
 @end
 
 
-
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDelegate>
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 @end
+
 
 
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDataSource>
@@ -1668,6 +1670,8 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI26TransactionsViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 @end
+
+
 
 
 

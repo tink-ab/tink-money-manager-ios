@@ -417,9 +417,21 @@ public protocol EditAccountFieldsConfigurable {
 public protocol NoAccountsActionConfigurable {
   var noAccountsAction: TinkMoneyManagerUI.NoAccountsAction { get set }
 }
+public protocol EditingPendingTransactionsConfigurable {
+  var editingPendingTransactions: TinkMoneyManagerUI.EditingPendingTransactions { get set }
+}
 public enum NoAccountsAction {
   case none
   case addAccount(onTap: () -> Swift.Void)
+}
+public enum EditingPendingTransactions {
+  case enabled
+  case disabled
+  public static func == (a: TinkMoneyManagerUI.EditingPendingTransactions, b: TinkMoneyManagerUI.EditingPendingTransactions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CreateBudgetViewController : UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, completion: @escaping (Swift.Result<TinkCore.Budget, Swift.Error>) -> Swift.Void)
@@ -540,7 +552,7 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
   }
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController {
-  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable {
+  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable, TinkMoneyManagerUI.EditingPendingTransactionsConfigurable {
     public enum TransactionItemAction {
       case showDetails
       case categorize
@@ -553,10 +565,11 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     public var transactionItemAction: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction
     public var editAccountFields: TinkMoneyManagerUI.EditAccountFields
     public var noAccountsAction: TinkMoneyManagerUI.NoAccountsAction
+    public var editingPendingTransactions: TinkMoneyManagerUI.EditingPendingTransactions
   }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class FinanceOverviewViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
+  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
     set
   }
@@ -861,8 +874,8 @@ public struct TinkMoneyManagerConfiguration : TinkCore.Configuration {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionDetailsViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, transactionID: TinkCore.Transaction.ID)
-  @_Concurrency.MainActor(unsafe) @objc override final public func loadView()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
@@ -916,6 +929,8 @@ extension TinkCore.UserSession : Swift.Equatable {
 }
 extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Equatable {}
 extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Hashable {}
+extension TinkMoneyManagerUI.EditingPendingTransactions : Swift.Equatable {}
+extension TinkMoneyManagerUI.EditingPendingTransactions : Swift.Hashable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Equatable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Hashable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction : Swift.Equatable {}
