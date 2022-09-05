@@ -363,7 +363,17 @@
       <trans-unit id="Budget.Detail.Progress.StartIn" xml:space="preserve">
         <source>Starts in %d days</source>
         <target>Starts in %d days</target>
-        <note>Budget detail view starts in days text.</note>
+        <note>Title in budget detail view chart describing the number of days before the budget starts.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartsAtDate" xml:space="preserve">
+        <source>Starts %@</source>
+        <target>Starts %@</target>
+        <note>Title in budget detail view chart describing the exact date the budget starts.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartsTomorrow" xml:space="preserve">
+        <source>Starts tomorrow</source>
+        <target>Starts tomorrow</target>
+        <note>Title in budget detail view chart describing that budget starts tomorrow.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.SeeTransactions" xml:space="preserve">
         <source>See transactions</source>
@@ -875,7 +885,7 @@
       <trans-unit id="Overview.Accounts.Header" xml:space="preserve">
         <source>Favorite accounts</source>
         <target>Favorite accounts</target>
-        <note>Text displayed above accounts cards sections in the financial overview.</note>
+        <note>Text displayed above accounts cards sections in the financial overview when the favorite predicate is used.</note>
       </trans-unit>
       <trans-unit id="Overview.Accounts.SeeAll" xml:space="preserve">
         <source>See all accounts</source>
@@ -886,6 +896,11 @@
         <source>See all</source>
         <target>See all</target>
         <note>Title on card in overview to show all accounts.</note>
+      </trans-unit>
+      <trans-unit id="Overview.Accounts.Title" xml:space="preserve">
+        <source>Accounts</source>
+        <target>Accounts</target>
+        <note>Text displayed above accounts cards sections in the financial overview.</note>
       </trans-unit>
       <trans-unit id="Overview.ActionableInsights.NoEvents" xml:space="preserve">
         <source>No new events</source>
