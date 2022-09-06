@@ -80,7 +80,9 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget detail view remaining days. |
 | `Budget.Detail.Progress.RemaingTime.OneDay` | One day remaining | Budget detail view for one remaining day. |
 | `Budget.Detail.Progress.Spent` | You have no remaining budget for this period. | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
-| `Budget.Detail.Progress.StartIn` | Starts in %d days | Budget detail view starts in days text. |
+| `Budget.Detail.Progress.StartIn` | Starts in %d days | Title in budget detail view chart describing the number of days before the budget starts. |
+| `Budget.Detail.Progress.StartsAtDate` | Starts %@ | Title in budget detail view chart describing the exact date the budget starts. |
+| `Budget.Detail.Progress.StartsTomorrow` | Starts tomorrow | Title in budget detail view chart describing that budget starts tomorrow. |
 | `Budget.Detail.SeeTransactions` | See transactions | See budget detail transactions text. |
 | `Budget.Detail.Weekly.Title` | Weekly | Title for budgets. |
 | `Budget.Detail.Yearly.Title` | Yearly | Title for budgets. |
@@ -182,9 +184,10 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `LeftToSpend.Progress.Past.OverAverage` | You spent %@ over your average. | Left to spend more than average for previous month. |
 | `Overview.Accounts.AddBankOrCard` | Add bank or card | Optional text to display in overview when there are no accounts. |
 | `Overview.Accounts.EmptyState` | No accounts | Text to display in overview when there are no accounts. |
-| `Overview.Accounts.Header` | Favorite accounts | Text displayed above accounts cards sections in the financial overview. |
+| `Overview.Accounts.Header` | Favorite accounts | Text displayed above accounts cards sections in the financial overview when the favorite predicate is used. |
 | `Overview.Accounts.SeeAll` | See all accounts | Title on card in overview to show all accounts. |
 | `Overview.Accounts.SeeAllShortended` | See all | Title on card in overview to show all accounts. |
+| `Overview.Accounts.Title` | Accounts | Text displayed above accounts cards sections in the financial overview. |
 | `Overview.ActionableInsights.NoEvents` | No new events | Title for card when there are no insights. |
 | `Overview.ActionableInsights.RecentInsights` | recent events | Recent insights suffix. |
 | `Overview.ActionableInsights.RecentInsights.Singular` | recent event | Recent insight suffix. |
