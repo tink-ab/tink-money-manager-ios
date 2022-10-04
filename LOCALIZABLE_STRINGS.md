@@ -65,24 +65,43 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.OverView.OverCurrentWeekDescription` | You have gone %@ over your budget for this week | Description text shown on budget detail view when user spent more than their budget target for the current week. |
 | `Budget.Detail.OverView.OverCurrentYearDescription` | You have gone %@ over your budget for this year | Description text shown on budget detail view when user spent more than their budget target for the current year. |
 | `Budget.Detail.Overview.Title` | Over time | Title for budgets overview. |
-| `Budget.Detail.Progress.Completed.Days` | Closed %d days ago | Budget detail view completed in days text. |
-| `Budget.Detail.Progress.Completed.Months` | Closed %d months ago | Budget detail view completed in days text. |
+| `Budget.Detail.Progress.Completed.Days` | Closed %d days ago | Text in Budget chart when budget was closed multiple days ago. |
+| `Budget.Detail.Progress.Completed.Months` | Closed %d months ago | Text in Budget chart when budget was closed multiple months ago. |
+| `Budget.Detail.Progress.Completed.MultipleMonthsAndDays` | Closed %1$d months and %2$d days ago | Text in Budget chart when budget was closed multiple months and days ago. |
+| `Budget.Detail.Progress.Completed.MultipleMonthsAndSingleDay` | Closed %d months and 1 day ago | Text in Budget chart when budget was closed multiple months and a day ago. |
+| `Budget.Detail.Progress.Completed.SingleMonth` | Closed 1 month ago | Text in Budget chart when budget was closed one months ago. |
+| `Budget.Detail.Progress.Completed.SingleMonthAndDay` | Closed 1 month and 1 day ago | Text in Budget chart when budget was closed one month and a day ago. |
+| `Budget.Detail.Progress.Completed.SingleMonthAndMultipleDays` | Closed 1 month and %d days ago | Text in Budget chart when budget was closed 1 month and multiple days ago. |
+| `Budget.Detail.Progress.Completed.Yesterday` | Closed yesterday | Text in Budget chart when budget was closed yesterday. |
 | `Budget.Detail.Progress.Left` | You can spend %@ and still remain within your budget | Budget detail remaining budget within period. |
 | `Budget.Detail.Progress.Left.Daily` | You can spend %@ per day and still remain within your budget | Budget detail remaining budget daily. |
-| `Budget.Detail.Progress.Left.From` | left of %@ | Budget detail view progress left from text. |
+| `Budget.Detail.Progress.Left.From` | left of %@ | Budget chart bottom text, left from text total. |
 | `Budget.Detail.Progress.Left.Monthly` | You can spend %@ per month and still remain within your budget | Budget detail remaining budget monthly. |
 | `Budget.Detail.Progress.Left.Total` | You have %@ remaining of your budget | Budget detail remaining budget yearly. |
 | `Budget.Detail.Progress.Left.Weekly` | You can spend %@ per week and still remain within your budget | Budget detail remaining budget weekly. |
 | `Budget.Detail.Progress.Left.Yearly` | You can spend %@ per year and still remain within your budget | Budget detail remaining budget yearly. |
-| `Budget.Detail.Progress.Managed` | You managed your budget for this period | Budget detail managed budget text. |
+| `Budget.Detail.Progress.Managed` | You managed your budget this period | Budget detail managed budget text. |
 | `Budget.Detail.Progress.NotStarted` | Budget hasn't started yet | Budget detail budget has not started. |
-| `Budget.Detail.Progress.Over` | You have gone over your budget for this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
-| `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget detail view remaining days. |
-| `Budget.Detail.Progress.RemaingTime.OneDay` | One day remaining | Budget detail view for one remaining day. |
-| `Budget.Detail.Progress.Spent` | You have no remaining budget for this period. | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
-| `Budget.Detail.Progress.StartIn` | Starts in %d days | Title in budget detail view chart describing the number of days before the budget starts. |
-| `Budget.Detail.Progress.StartsAtDate` | Starts %@ | Title in budget detail view chart describing the exact date the budget starts. |
-| `Budget.Detail.Progress.StartsTomorrow` | Starts tomorrow | Title in budget detail view chart describing that budget starts tomorrow. |
+| `Budget.Detail.Progress.Over` | You went over your budget this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
+| `Budget.Detail.Progress.RemaingTime.LastDay` | Ends today | Budget chart text when on last day of budget. |
+| `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget chart text number of remaining days. |
+| `Budget.Detail.Progress.RemaingTime.MultipleMonths` | %d months remaining | Budget chart text number of months remaining. |
+| `Budget.Detail.Progress.RemaingTime.MultipleMonthsAndDays` | %1$d months and %2$d days remaining | Budget chart text with multiple months and days remaining. |
+| `Budget.Detail.Progress.RemaingTime.MultipleMonthsAndSingleDay` | %d months and 1 day remaining | Budget chart text number of months and a single day remaining. |
+| `Budget.Detail.Progress.RemaingTime.OneDay` | Ends tomorrow | Budget chart text when one day remaining of the budget. |
+| `Budget.Detail.Progress.RemaingTime.SingleMonth` | 1 month remaining | Budget chart text exactly 1 month remaining. |
+| `Budget.Detail.Progress.RemaingTime.SingleMonthAndDay` | 1 month and 1 day remaining | Budget chart text exactly 1 month and 1 day remaining. |
+| `Budget.Detail.Progress.RemaingTime.SingleMonthAndMultipleDays` | 1 month and %d days remaining | Budget chart text  with exactly one month multiple days remaining. |
+| `Budget.Detail.Progress.Spent` | You have no remaining budget for this period | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
+| `Budget.Detail.Progress.StartIn` | Starts in %d days | Budget chart text starts in multiple days. |
+| `Budget.Detail.Progress.StartIn.MultipleMonths` | Starts in %d months | Budget detail view starts in months text. |
+| `Budget.Detail.Progress.StartIn.MultipleMonthsAndDays` | Starts in %1$d months and %2$d days | Budget chart text starts in multiple months and days. |
+| `Budget.Detail.Progress.StartIn.MultipleMonthsAndSingleDay` | Starts in %d months and 1 day | Budget chart text starts in multiple months and 1 day. |
+| `Budget.Detail.Progress.StartIn.OneMonth` | Starts in 1 month | Budget chart text starts in 1 month text. |
+| `Budget.Detail.Progress.StartIn.OneMonthAndOneDay` | Starts in 1 month and 1 day | Budget chart text starts in 1 month and 1 day text. |
+| `Budget.Detail.Progress.StartIn.SingleMonthAndMultipleDays` | Starts in 1 month and %d days | Budget chart text starts in 1 month and multiple days. |
+| `Budget.Detail.Progress.StartsAtDate` | Starts %@ | Budget detail view starts text saying that budget starts at exact date. |
+| `Budget.Detail.Progress.StartsTomorrow` | Starts tomorrow | Budget chart text when starts tomorrow. |
 | `Budget.Detail.SeeTransactions` | See transactions | See budget detail transactions text. |
 | `Budget.Detail.Weekly.Title` | Weekly | Title for budgets. |
 | `Budget.Detail.Yearly.Title` | Yearly | Title for budgets. |
@@ -91,7 +110,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Generic.CancelButton` | Cancel | Title for the cancel button that will dismiss the select category modal shown when creating a budget. |
 | `Budget.Generic.DeleteButton` | Delete | Title for the button to delete a budget. |
 | `Budget.Generic.EditButton` | Edit | Title for budget edit button. |
-| `Budget.Generic.EmptyList` | You have no budgets. Create your first\n budget to help you spend less! | Description when list of budgets is empty |
+| `Budget.Generic.EmptyList` | You have no budgets. Create your first\n budget to help you spend less. | Description when list of budgets is empty |
 | `Budget.Generic.NextButton` | Next | Title of button to next step when creating a budget |
 | `Budget.Generic.SelectButton` | Select | Select button text for editing budget flow |
 | `Budget.Generic.SelectCategory` | Next | Title of button to next step when selecting a category to create a budget |
@@ -113,7 +132,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Target.KeywordFilter.Placeholder` | Keyword | Period filter field placeholder text when editing budget. |
 | `Budget.Target.Name.Placeholder` | Name | Name text field placeholder text shown when creating or editing budget. |
 | `Budget.Target.Period.Placeholder` | Budget period | Period type selection field placeholder text shown when creating or editing budget. |
-| `Budget.Target.SaveButton` | Save changes | Edit button text for editing budget flow. |
+| `Budget.Target.SaveButton` | Save changes | Save button text for editing budget flow. |
 | `Budget.Target.StartPeriod.Placeholder` | Start date | Period start date field placeholder text shown when creating or editing budget. |
 | `Budget.Transactions.EmptyState` | Here you will see your historical spending on %@. But currently you don't have any. | Title for budgets transaction empty state. |
 | `Categorization.CategoryPicker.CancelButton` | Cancel | Title for the cancel button that will dismiss the select category modal shown when categorizing a transaction. |
