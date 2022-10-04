@@ -288,12 +288,42 @@
       <trans-unit id="Budget.Detail.Progress.Completed.Days" xml:space="preserve">
         <source>Closed %d days ago</source>
         <target>Closed %d days ago</target>
-        <note>Budget detail view completed in days text.</note>
+        <note>Text in Budget chart when budget was closed multiple days ago.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Completed.Months" xml:space="preserve">
         <source>Closed %d months ago</source>
         <target>Closed %d months ago</target>
-        <note>Budget detail view completed in days text.</note>
+        <note>Text in Budget chart when budget was closed multiple months ago.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.MultipleMonthsAndDays" xml:space="preserve">
+        <source>Closed %1$d months and %2$d days ago</source>
+        <target>Closed %1$d months and %2$d days ago</target>
+        <note>Text in Budget chart when budget was closed multiple months and days ago.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.MultipleMonthsAndSingleDay" xml:space="preserve">
+        <source>Closed %d months and 1 day ago</source>
+        <target>Closed %d months and 1 day ago</target>
+        <note>Text in Budget chart when budget was closed multiple months and a day ago.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.SingleMonth" xml:space="preserve">
+        <source>Closed 1 month ago</source>
+        <target>Closed 1 month ago</target>
+        <note>Text in Budget chart when budget was closed one months ago.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.SingleMonthAndDay" xml:space="preserve">
+        <source>Closed 1 month and 1 day ago</source>
+        <target>Closed 1 month and 1 day ago</target>
+        <note>Text in Budget chart when budget was closed one month and a day ago.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.SingleMonthAndMultipleDays" xml:space="preserve">
+        <source>Closed 1 month and %d days ago</source>
+        <target>Closed 1 month and %d days ago</target>
+        <note>Text in Budget chart when budget was closed 1 month and multiple days ago.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.Completed.Yesterday" xml:space="preserve">
+        <source>Closed yesterday</source>
+        <target>Closed yesterday</target>
+        <note>Text in Budget chart when budget was closed yesterday.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Left" xml:space="preserve">
         <source>You can spend %@ and still remain within your budget</source>
@@ -308,7 +338,7 @@
       <trans-unit id="Budget.Detail.Progress.Left.From" xml:space="preserve">
         <source>left of %@</source>
         <target>left of %@</target>
-        <note>Budget detail view progress left from text.</note>
+        <note>Budget chart bottom text, left from text total.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Left.Monthly" xml:space="preserve">
         <source>You can spend %@ per month and still remain within your budget</source>
@@ -331,8 +361,8 @@
         <note>Budget detail remaining budget yearly.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Managed" xml:space="preserve">
-        <source>You managed your budget for this period</source>
-        <target>You managed your budget for this period</target>
+        <source>You managed your budget this period</source>
+        <target>You managed your budget this period</target>
         <note>Budget detail managed budget text.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.NotStarted" xml:space="preserve">
@@ -341,39 +371,104 @@
         <note>Budget detail budget has not started.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Over" xml:space="preserve">
-        <source>You have gone over your budget for this period</source>
-        <target>You have gone over your budget for this period</target>
+        <source>You went over your budget this period</source>
+        <target>You went over your budget this period</target>
         <note>Description text shown on budget detail view when user spent more than their budget target for the current period.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.LastDay" xml:space="preserve">
+        <source>Ends today</source>
+        <target>Ends today</target>
+        <note>Budget chart text when on last day of budget.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleDays" xml:space="preserve">
         <source>%d days remaining</source>
         <target>%d days remaining</target>
-        <note>Budget detail view remaining days.</note>
+        <note>Budget chart text number of remaining days.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleMonths" xml:space="preserve">
+        <source>%d months remaining</source>
+        <target>%d months remaining</target>
+        <note>Budget chart text number of months remaining.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleMonthsAndDays" xml:space="preserve">
+        <source>%1$d months and %2$d days remaining</source>
+        <target>%1$d months and %2$d days remaining</target>
+        <note>Budget chart text with multiple months and days remaining.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleMonthsAndSingleDay" xml:space="preserve">
+        <source>%d months and 1 day remaining</source>
+        <target>%d months and 1 day remaining</target>
+        <note>Budget chart text number of months and a single day remaining.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.RemaingTime.OneDay" xml:space="preserve">
-        <source>One day remaining</source>
-        <target>One day remaining</target>
-        <note>Budget detail view for one remaining day.</note>
+        <source>Ends tomorrow</source>
+        <target>Ends tomorrow</target>
+        <note>Budget chart text when one day remaining of the budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.SingleMonth" xml:space="preserve">
+        <source>1 month remaining</source>
+        <target>1 month remaining</target>
+        <note>Budget chart text exactly 1 month remaining.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.SingleMonthAndDay" xml:space="preserve">
+        <source>1 month and 1 day remaining</source>
+        <target>1 month and 1 day remaining</target>
+        <note>Budget chart text exactly 1 month and 1 day remaining.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemaingTime.SingleMonthAndMultipleDays" xml:space="preserve">
+        <source>1 month and %d days remaining</source>
+        <target>1 month and %d days remaining</target>
+        <note>Budget chart text  with exactly one month multiple days remaining.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Spent" xml:space="preserve">
-        <source>You have no remaining budget for this period.</source>
-        <target>You have no remaining budget for this period.</target>
+        <source>You have no remaining budget for this period</source>
+        <target>You have no remaining budget for this period</target>
         <note>Description text shown on budget detail view when user spent as much as the budget target for the current period.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.StartIn" xml:space="preserve">
         <source>Starts in %d days</source>
         <target>Starts in %d days</target>
-        <note>Title in budget detail view chart describing the number of days before the budget starts.</note>
+        <note>Budget chart text starts in multiple days.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartIn.MultipleMonths" xml:space="preserve">
+        <source>Starts in %d months</source>
+        <target>Starts in %d months</target>
+        <note>Budget detail view starts in months text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartIn.MultipleMonthsAndDays" xml:space="preserve">
+        <source>Starts in %1$d months and %2$d days</source>
+        <target>Starts in %1$d months and %2$d days</target>
+        <note>Budget chart text starts in multiple months and days.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartIn.MultipleMonthsAndSingleDay" xml:space="preserve">
+        <source>Starts in %d months and 1 day</source>
+        <target>Starts in %d months and 1 day</target>
+        <note>Budget chart text starts in multiple months and 1 day.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartIn.OneMonth" xml:space="preserve">
+        <source>Starts in 1 month</source>
+        <target>Starts in 1 month</target>
+        <note>Budget chart text starts in 1 month text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartIn.OneMonthAndOneDay" xml:space="preserve">
+        <source>Starts in 1 month and 1 day</source>
+        <target>Starts in 1 month and 1 day</target>
+        <note>Budget chart text starts in 1 month and 1 day text.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.StartIn.SingleMonthAndMultipleDays" xml:space="preserve">
+        <source>Starts in 1 month and %d days</source>
+        <target>Starts in 1 month and %d days</target>
+        <note>Budget chart text starts in 1 month and multiple days.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.StartsAtDate" xml:space="preserve">
         <source>Starts %@</source>
         <target>Starts %@</target>
-        <note>Title in budget detail view chart describing the exact date the budget starts.</note>
+        <note>Budget detail view starts text saying that budget starts at exact date.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Progress.StartsTomorrow" xml:space="preserve">
         <source>Starts tomorrow</source>
         <target>Starts tomorrow</target>
-        <note>Title in budget detail view chart describing that budget starts tomorrow.</note>
+        <note>Budget chart text when starts tomorrow.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.SeeTransactions" xml:space="preserve">
         <source>See transactions</source>
@@ -417,9 +512,9 @@
       </trans-unit>
       <trans-unit id="Budget.Generic.EmptyList" xml:space="preserve">
         <source>You have no budgets. Create your first
- budget to help you spend less!</source>
+ budget to help you spend less.</source>
         <target>You have no budgets. Create your first
- budget to help you spend less!</target>
+ budget to help you spend less.</target>
         <note>Description when list of budgets is empty</note>
       </trans-unit>
       <trans-unit id="Budget.Generic.NextButton" xml:space="preserve">
@@ -530,7 +625,7 @@
       <trans-unit id="Budget.Target.SaveButton" xml:space="preserve">
         <source>Save changes</source>
         <target>Save changes</target>
-        <note>Edit button text for editing budget flow.</note>
+        <note>Save button text for editing budget flow.</note>
       </trans-unit>
       <trans-unit id="Budget.Target.StartPeriod.Placeholder" xml:space="preserve">
         <source>Start date</source>
