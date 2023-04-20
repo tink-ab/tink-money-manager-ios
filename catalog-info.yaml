@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tink-money-manager-ios
+  description: Tink Money Manager iOS Public
+  tags: []
+  annotations:
+    github.com/project-slug: tink-ab/tink-money-manager-ios
+  links: []
+spec:
+  owner: ios
+  type: library
+  lifecycle: production
