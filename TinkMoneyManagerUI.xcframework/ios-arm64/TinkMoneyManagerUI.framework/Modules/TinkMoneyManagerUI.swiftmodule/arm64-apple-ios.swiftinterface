@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkMoneyManagerUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreGraphics
 import Foundation
 import QuartzCore
@@ -9,6 +10,7 @@ import Swift
 @_exported import TinkCore
 import UIKit
 import _Concurrency
+import _StringProcessing
 public protocol AccountDetailsViewControllerDelegate : AnyObject {
   func accountDetailsViewController(_ viewController: TinkMoneyManagerUI.AccountDetailsViewController, didSelectTransaction transaction: TinkCore.Transaction)
 }
@@ -226,11 +228,11 @@ public struct AppearanceProvider : TinkMoneyManagerUI.AppearanceProviding {
   }
   public init(colors: TinkMoneyManagerUI.ColorProvider? = nil, fonts: TinkMoneyManagerUI.FontProvider? = nil, icons: TinkMoneyManagerUI.IconProvider? = nil, budgetColors: TinkMoneyManagerUI.ColorProvider? = nil, actionableInsightColors: TinkMoneyManagerUI.ColorProvider? = nil, accountColors: TinkMoneyManagerUI.ColorProvider? = nil, statisticsColors: TinkMoneyManagerUI.ColorProvider? = nil)
   @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
-  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, account: UIKit.UIImage, budget: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
+  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, account: UIKit.UIImage, budget: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
   @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
-  public init(accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
+  public init(accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
   @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
-  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
+  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
   @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
   public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expense: UIKit.UIColor, income: UIKit.UIColor, transfer: UIKit.UIColor, uncategorized: UIKit.UIColor, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault)
   @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
@@ -272,12 +274,12 @@ extension TinkMoneyManagerUI.BudgetsViewController : TinkMoneyManagerUI.BudgetDe
 public protocol CarouselStyle {
   var item: TinkMoneyManagerUI.ItemStyle { get }
   var insets: UIKit.UIEdgeInsets { get }
-  var spacing: CoreGraphics.CGFloat { get }
+  var spacing: CoreFoundation.CGFloat { get }
 }
 public struct CardCarouselStyle : TinkMoneyManagerUI.CarouselStyle {
   public var item: TinkMoneyManagerUI.ItemStyle
   public var insets: UIKit.UIEdgeInsets
-  public var spacing: CoreGraphics.CGFloat
+  public var spacing: CoreFoundation.CGFloat
 }
 public protocol CategorizeTransactionViewControllerDelegate : AnyObject {
   func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
@@ -307,7 +309,7 @@ extension TinkMoneyManagerUI.CategorizeTransactionViewController {
   @_Concurrency.MainActor(unsafe) @objc open func navigationControllerPreferredInterfaceOrientationForPresentation(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientation
   @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, interactionControllerFor animationController: UIKit.UIViewControllerAnimatedTransitioning) -> UIKit.UIViewControllerInteractiveTransitioning?
   @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
-  @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) final public class CategoryStatisticsViewController : UIKit.UINavigationController {
@@ -628,17 +630,17 @@ public protocol FontProviding {
   func font(for weight: TinkMoneyManagerUI.Font.Weight) -> TinkMoneyManagerUI.Font
 }
 public protocol GroupStyle {
-  var cornerRadius: CoreGraphics.CGFloat { get }
+  var cornerRadius: CoreFoundation.CGFloat { get }
   var insets: UIKit.UIEdgeInsets { get }
-  var spacing: CoreGraphics.CGFloat { get }
+  var spacing: CoreFoundation.CGFloat { get }
   var shadow: TinkMoneyManagerUI.Shadow { get }
 }
 public struct CardGroupStyle : TinkMoneyManagerUI.GroupStyle {
-  public var cornerRadius: CoreGraphics.CGFloat
+  public var cornerRadius: CoreFoundation.CGFloat
   public var insets: UIKit.UIEdgeInsets
-  public var spacing: CoreGraphics.CGFloat
+  public var spacing: CoreFoundation.CGFloat
   public var shadow: TinkMoneyManagerUI.Shadow
-  public init(cornerRadius: CoreGraphics.CGFloat, insets: UIKit.UIEdgeInsets, spacing: CoreGraphics.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
+  public init(cornerRadius: CoreFoundation.CGFloat, insets: UIKit.UIEdgeInsets, spacing: CoreFoundation.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
   public static var `default`: TinkMoneyManagerUI.CardGroupStyle {
     get
   }
@@ -670,14 +672,15 @@ public class IconProvider : TinkMoneyManagerUI.IconProviding {
   public var transfer: UIKit.UIImage
   public var transport: UIKit.UIImage
   public var uncategorizedIcon: UIKit.UIImage
-  public var categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat?
-  public var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat?
+  public var categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat?
+  public var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat?
   public var notification: UIKit.UIImage
   public var list: UIKit.UIImage
   public var improveCategorization: UIKit.UIImage
   public var ingestedAccount: UIKit.UIImage?
+  public var defaultAccount: UIKit.UIImage?
   public init()
-  public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, ingestedAccount: UIKit.UIImage? = nil, categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? = nil)
+  public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, ingestedAccount: UIKit.UIImage? = nil, defaultAccount: UIKit.UIImage? = nil, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
   @objc deinit
 }
 public protocol IconProviding {
@@ -707,12 +710,13 @@ public protocol IconProviding {
   var transfer: UIKit.UIImage { get set }
   var transport: UIKit.UIImage { get set }
   var uncategorizedIcon: UIKit.UIImage { get set }
-  var categoryIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
-  var checkBoxIconBackgroundCornerRadiusFactor: CoreGraphics.CGFloat? { get set }
+  var categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? { get set }
+  var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? { get set }
   var notification: UIKit.UIImage { get set }
   var list: UIKit.UIImage { get set }
   var improveCategorization: UIKit.UIImage { get set }
   var ingestedAccount: UIKit.UIImage? { get set }
+  var defaultAccount: UIKit.UIImage? { get set }
 }
 public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLiteral, Swift.Codable {
   public let value: Swift.String
@@ -742,21 +746,21 @@ public protocol ImproveCategorizationLevelViewControllerDelegate : AnyObject {
 public protocol ItemListStyle {
   var item: TinkMoneyManagerUI.ItemStyle { get }
   var insets: UIKit.UIEdgeInsets { get }
-  var spacing: CoreGraphics.CGFloat { get }
+  var spacing: CoreFoundation.CGFloat { get }
 }
 public struct CardItemListStyle : TinkMoneyManagerUI.ItemListStyle {
   public var item: TinkMoneyManagerUI.ItemStyle
   public var insets: UIKit.UIEdgeInsets
-  public var spacing: CoreGraphics.CGFloat
+  public var spacing: CoreFoundation.CGFloat
 }
 public protocol ItemStyle {
-  var cornerRadius: CoreGraphics.CGFloat { get }
+  var cornerRadius: CoreFoundation.CGFloat { get }
   var shadow: TinkMoneyManagerUI.Shadow { get }
 }
 public struct CardItemStyle : TinkMoneyManagerUI.ItemStyle {
-  public var cornerRadius: CoreGraphics.CGFloat
+  public var cornerRadius: CoreFoundation.CGFloat
   public var shadow: TinkMoneyManagerUI.Shadow
-  public init(cornerRadius: CoreGraphics.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
+  public init(cornerRadius: CoreFoundation.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LeftToSpendViewController : UIKit.UIViewController {
   @available(*, deprecated, message: "Currency symbols will always show in statistics.")
@@ -822,11 +826,11 @@ public enum ScreenEvent {
   }
 }
 public struct Shadow {
-  public var opacity: CoreGraphics.CGFloat
-  public var radius: CoreGraphics.CGFloat
+  public var opacity: CoreFoundation.CGFloat
+  public var radius: CoreFoundation.CGFloat
   public var offset: UIKit.UIOffset
   public var color: UIKit.UIColor
-  public init(opacity: CoreGraphics.CGFloat, radius: CoreGraphics.CGFloat, offset: UIKit.UIOffset, color: UIKit.UIColor)
+  public init(opacity: CoreFoundation.CGFloat, radius: CoreFoundation.CGFloat, offset: UIKit.UIOffset, color: UIKit.UIColor)
   public static var none: TinkMoneyManagerUI.Shadow {
     get
   }
