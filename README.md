@@ -13,7 +13,7 @@
 ## Requirements
 
 - iOS 11.0
-- Xcode 11.4
+- Xcode 14.1
 
 ## Installation
 
