@@ -1,0 +1,947 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkMoneyManagerUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreGraphics
+import Foundation
+import QuartzCore
+import Security
+import Swift
+@_exported import TinkCore
+import UIKit
+import _Concurrency
+import _StringProcessing
+public protocol AccountDetailsViewControllerDelegate : AnyObject {
+  func accountDetailsViewController(_ viewController: TinkMoneyManagerUI.AccountDetailsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AccountDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.AccountDetailsViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
+  @available(*, deprecated, renamed: "init(tink:accountID:)")
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, accountId: TinkCore.Account.ID)
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.AccountDetailsViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+}
+extension TinkMoneyManagerUI.AccountDetailsViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+}
+extension TinkMoneyManagerUI.AccountDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+public protocol AccountsViewControllerDelegate : AnyObject {
+  func accountsViewController(_ viewController: TinkMoneyManagerUI.AccountsViewController, didSelectAccount account: TinkCore.Account)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AccountsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.AccountsViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
+  public enum Grouping {
+    case none
+    case kind
+    case custom(grouping: ([TinkCore.Account]) -> [TinkMoneyManagerUI.CustomAccountGroup])
+  }
+  public enum Predicate {
+    case all
+    case financialInstitution(TinkCore.Provider.FinancialInstitution.ID)
+    case favorite(Swift.Bool)
+    case kind(TinkCore.Account.Kind)
+    case credentials(TinkCore.Credentials.ID)
+    case custom((TinkCore.Account) -> Swift.Bool)
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, grouping: TinkMoneyManagerUI.AccountsViewController.Grouping = .none, predicate: TinkMoneyManagerUI.AccountsViewController.Predicate = .all)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.AccountsViewController {
+  @_Concurrency.MainActor(unsafe) final public func clearSelection(animated: Swift.Bool)
+}
+extension TinkMoneyManagerUI.AccountsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+public struct ActionableInsightViewModel {
+  public struct Insight {
+  }
+}
+extension TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate {
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind dataType: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkMoneyManagerUI.Month)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID], month: TinkMoneyManagerUI.Month)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+}
+@available(*, deprecated, renamed: "ActionableInsightsViewController")
+public typealias ActionableInsightListViewController = TinkMoneyManagerUI.ActionableInsightsViewController
+@available(*, deprecated, renamed: "ActionableInsightsViewControllerDelegate")
+public typealias ActionableInsightListViewControllerDelegate = TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate
+public protocol ActionableInsightsViewControllerDelegate : AnyObject {
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  @available(*, deprecated, message: "Use actionableInsightsViewController(_ viewController: ActionableInsightsViewController, initiateTransferFromAccount:to:amount:currencyCode:completionHandler:) instead")
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount source: Foundation.URL?, to destination: Foundation.URL?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
+  @available(*, deprecated, message: "Use actionableInsightsViewController(_ viewController: ActionableInsightsViewController, showTransactionsWithIDs:) method instead")
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID], month: TinkMoneyManagerUI.Month)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
+  @available(*, deprecated, message: "Use actionableInsightsViewController(_ viewController: ActionableInsightsViewController, showTransactionsByCategoryCode:) method instead")
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkMoneyManagerUI.Month)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showLeftToSpendForMonth month: TinkMoneyManagerUI.Month)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, refreshCredentialsWithID credentialsID: TinkCore.Credentials.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ActionableInsightsViewController : UIKit.UIViewController {
+  @available(*, deprecated, message: "Customizing the empty state will be deprecated.")
+  public enum EmptyState {
+    case `default`
+    case custom(UIKit.UIView)
+  }
+  @available(*, deprecated, message: "Customizing the empty state will be deprecated.")
+  @_Concurrency.MainActor(unsafe) final public var emptyState: TinkMoneyManagerUI.ActionableInsightsViewController.EmptyState {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.ActionableInsightsViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+}
+extension TinkMoneyManagerUI.ActionableInsightsViewController : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
+  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactions: [TinkCore.Transaction.ID], category: TinkCore.Category)
+  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: Swift.Error)
+}
+extension TinkMoneyManagerUI.ActionableInsightsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
+}
+extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+}
+public enum Appearance {
+  public static var provider: TinkMoneyManagerUI.AppearanceProviding
+  @available(*, deprecated, renamed: "provider.colors")
+  public static var colorProvider: TinkMoneyManagerUI.ColorProviding! {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "provider.fonts")
+  public static var fontProvider: TinkMoneyManagerUI.FontProviding! {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "provider.icons")
+  public static var iconProvider: TinkMoneyManagerUI.IconProviding! {
+    get
+    set
+  }
+}
+@available(*, unavailable, renamed: "AppearanceProvider")
+public typealias FinanceOverviewAppearanceProvider = TinkMoneyManagerUI.AppearanceProvider
+public protocol AppearanceProviding {
+  var colors: TinkMoneyManagerUI.ColorProviding { get set }
+  var icons: TinkMoneyManagerUI.IconProviding { get set }
+  var fonts: TinkMoneyManagerUI.FontProviding { get set }
+  @available(*, deprecated, renamed: "colors")
+  var colorProviding: TinkMoneyManagerUI.ColorProviding { get }
+  @available(*, deprecated, renamed: "icons")
+  var iconProviding: TinkMoneyManagerUI.IconProviding { get }
+  @available(*, deprecated, renamed: "fonts")
+  var fontProviding: TinkMoneyManagerUI.FontProviding { get }
+  var groupStyle: TinkMoneyManagerUI.GroupStyle { get set }
+  var itemListStyle: TinkMoneyManagerUI.ItemListStyle { get set }
+  var carouselStyle: TinkMoneyManagerUI.CarouselStyle { get set }
+  var notificationStyle: TinkMoneyManagerUI.ItemStyle { get set }
+  var budgetColors: TinkMoneyManagerUI.ColorProviding { get set }
+  var actionableInsightColors: TinkMoneyManagerUI.ColorProviding { get set }
+  var accountColors: TinkMoneyManagerUI.ColorProviding { get set }
+  var statisticsColors: TinkMoneyManagerUI.ColorProviding { get set }
+}
+public struct AppearanceProvider : TinkMoneyManagerUI.AppearanceProviding {
+  public var colors: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
+  public var icons: TinkMoneyManagerUI.IconProviding
+  public var fonts: TinkMoneyManagerUI.FontProviding
+  public var groupStyle: TinkMoneyManagerUI.GroupStyle
+  public var itemListStyle: TinkMoneyManagerUI.ItemListStyle
+  public var carouselStyle: TinkMoneyManagerUI.CarouselStyle
+  public var notificationStyle: TinkMoneyManagerUI.ItemStyle
+  public var budgetColors: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
+  public var actionableInsightColors: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
+  public var accountColors: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
+  public var statisticsColors: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "colors")
+  public var colorProviding: TinkMoneyManagerUI.ColorProviding {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "icons")
+  public var iconProviding: TinkMoneyManagerUI.IconProviding {
+    get
+    set
+  }
+  @available(*, deprecated, renamed: "fonts")
+  public var fontProviding: TinkMoneyManagerUI.FontProviding {
+    get
+    set
+  }
+  public init(colors: TinkMoneyManagerUI.ColorProvider? = nil, fonts: TinkMoneyManagerUI.FontProvider? = nil, icons: TinkMoneyManagerUI.IconProvider? = nil, budgetColors: TinkMoneyManagerUI.ColorProvider? = nil, actionableInsightColors: TinkMoneyManagerUI.ColorProvider? = nil, accountColors: TinkMoneyManagerUI.ColorProvider? = nil, statisticsColors: TinkMoneyManagerUI.ColorProvider? = nil)
+  @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
+  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, account: UIKit.UIImage, budget: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
+  @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
+  public init(accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
+  @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
+  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
+  @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
+  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expense: UIKit.UIColor, income: UIKit.UIColor, transfer: UIKit.UIColor, uncategorized: UIKit.UIColor, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault)
+  @available(*, deprecated, message: "Use AppearanceProvider(colorProvider:fontProvider:iconProvider:) instead.")
+  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, lightFont: TinkMoneyManagerUI.Font = .systemDefault, regularFont: TinkMoneyManagerUI.Font = .systemDefault, semiBoldFont: TinkMoneyManagerUI.Font = .systemDefault, boldFont: TinkMoneyManagerUI.Font = .systemDefault)
+}
+public protocol BudgetDetailsViewControllerDelegate : AnyObject {
+  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
+  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
+  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class BudgetDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.TransactionItemActionConfigurable {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.BudgetDetailsViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+}
+extension TinkMoneyManagerUI.BudgetDetailsViewController : TinkMoneyManagerUI.EditBudgetViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
+  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
+  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class BudgetsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @objc deinit
+}
+extension TinkMoneyManagerUI.BudgetsViewController : TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
+}
+public protocol CarouselStyle {
+  var item: TinkMoneyManagerUI.ItemStyle { get }
+  var insets: UIKit.UIEdgeInsets { get }
+  var spacing: CoreFoundation.CGFloat { get }
+}
+public struct CardCarouselStyle : TinkMoneyManagerUI.CarouselStyle {
+  public var item: TinkMoneyManagerUI.ItemStyle
+  public var insets: UIKit.UIEdgeInsets
+  public var spacing: CoreFoundation.CGFloat
+}
+public protocol CategorizeTransactionViewControllerDelegate : AnyObject {
+  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
+  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactionIDs: [TinkCore.Transaction.ID], category: TinkCore.Category)
+  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: Swift.Error)
+  func categorizeTransactionViewControllerDidCancel(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController)
+}
+extension TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate where Self : UIKit.UIViewController {
+  public func categorizeTransactionViewControllerDidCancel(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CategorizeTransactionViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) weak final public var categorizeTransactionDelegate: TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactionID: TinkCore.Transaction.ID, categoryTypes: [TinkCore.Category.Kind], categoryID: TinkCore.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
+  @available(*, deprecated, renamed: "init(tink:transactionID:categoryTypes:categoryID:showSimilarTransactions:)")
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactionId: TinkCore.Transaction.ID, categoryTypes: [TinkCore.Category.Kind], categoryId: TinkCore.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.CategorizeTransactionViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CategoryStatisticsNavigationControllerDelegate : ObjectiveC.NSObject, UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, didShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc open func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
+  @_Concurrency.MainActor(unsafe) @objc open func navigationControllerPreferredInterfaceOrientationForPresentation(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientation
+  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, interactionControllerFor animationController: UIKit.UIViewControllerAnimatedTransitioning) -> UIKit.UIViewControllerInteractiveTransitioning?
+  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) final public class CategoryStatisticsViewController : UIKit.UINavigationController {
+  public enum Style {
+    case pieChart, barChart
+    public static func == (a: TinkMoneyManagerUI.CategoryStatisticsViewController.Style, b: TinkMoneyManagerUI.CategoryStatisticsViewController.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) final public let categoryType: TinkCore.Category.Kind
+  @_Concurrency.MainActor(unsafe) final public let style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style
+  @available(*, deprecated, message: "Currency symbols will always show in statistics.")
+  @_Concurrency.MainActor(unsafe) final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, categoryType: TinkCore.Category.Kind, style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style = .pieChart)
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.CategoryStatisticsViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+}
+extension TinkMoneyManagerUI.CategoryStatisticsViewController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+public class ColorProvider : TinkMoneyManagerUI.ColorProviding {
+  public var background: UIKit.UIColor
+  public var secondaryBackground: UIKit.UIColor
+  public var label: UIKit.UIColor
+  public var secondaryLabel: UIKit.UIColor
+  public var separator: UIKit.UIColor
+  public var accent: UIKit.UIColor
+  public var accentBackground: UIKit.UIColor
+  public var button: UIKit.UIColor
+  public var buttonLabel: UIKit.UIColor
+  public var secondaryButton: UIKit.UIColor?
+  @available(*, deprecated, renamed: "secondaryButton")
+  public var secondaryButtonTitle: UIKit.UIColor?
+  public var tertiaryButton: UIKit.UIColor?
+  @available(*, deprecated, renamed: "tertiaryButton")
+  public var tertiaryButtonTitle: UIKit.UIColor?
+  public var tertiaryButtonBackground: UIKit.UIColor?
+  public var chevronButton: UIKit.UIColor?
+  public var chevronButtonDisabled: UIKit.UIColor?
+  public var groupedBackground: UIKit.UIColor?
+  public var secondaryGroupedBackground: UIKit.UIColor?
+  public var expenses: UIKit.UIColor
+  public var income: UIKit.UIColor
+  public var transfers: UIKit.UIColor
+  public var uncategorized: UIKit.UIColor
+  public var warning: UIKit.UIColor
+  public var critical: UIKit.UIColor
+  public var leftToSpend: UIKit.UIColor
+  public var expensesIconColor: UIKit.UIColor?
+  public var incomeIconColor: UIKit.UIColor?
+  public var transfersIconColor: UIKit.UIColor?
+  public var uncategorizedIconColor: UIKit.UIColor?
+  public var expensesIconBackgroundColor: UIKit.UIColor?
+  public var incomeIconBackgroundColor: UIKit.UIColor?
+  public var transfersIconBackgroundColor: UIKit.UIColor?
+  public var uncategorizedIconBackgroundColor: UIKit.UIColor?
+  public init()
+  public init(background: UIKit.UIColor, secondaryBackground: UIKit.UIColor, groupedBackground: UIKit.UIColor, secondaryGroupedBackground: UIKit.UIColor, label: UIKit.UIColor, secondaryLabel: UIKit.UIColor, separator: UIKit.UIColor, accent: UIKit.UIColor, expenses: UIKit.UIColor, income: UIKit.UIColor, transfers: UIKit.UIColor, uncategorized: UIKit.UIColor, warning: UIKit.UIColor, expensesIconColor: UIKit.UIColor? = nil, incomeIconColor: UIKit.UIColor? = nil, transfersIconColor: UIKit.UIColor? = nil, uncategorizedIconColor: UIKit.UIColor? = nil, expensesIconBackgroundColor: UIKit.UIColor? = nil, incomeIconBackgroundColor: UIKit.UIColor? = nil, transfersIconBackgroundColor: UIKit.UIColor? = nil, uncategorizedIconBackgroundColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+public protocol ColorProviding {
+  var background: UIKit.UIColor { get set }
+  var secondaryBackground: UIKit.UIColor { get set }
+  var label: UIKit.UIColor { get set }
+  var secondaryLabel: UIKit.UIColor { get set }
+  var separator: UIKit.UIColor { get set }
+  var accent: UIKit.UIColor { get set }
+  var accentBackground: UIKit.UIColor { get set }
+  var button: UIKit.UIColor { get set }
+  var buttonLabel: UIKit.UIColor { get set }
+  var secondaryButton: UIKit.UIColor? { get set }
+  var tertiaryButton: UIKit.UIColor? { get set }
+  var tertiaryButtonBackground: UIKit.UIColor? { get set }
+  var chevronButton: UIKit.UIColor? { get set }
+  var chevronButtonDisabled: UIKit.UIColor? { get set }
+  var groupedBackground: UIKit.UIColor? { get set }
+  var secondaryGroupedBackground: UIKit.UIColor? { get set }
+  var expenses: UIKit.UIColor { get set }
+  var income: UIKit.UIColor { get set }
+  var transfers: UIKit.UIColor { get set }
+  var uncategorized: UIKit.UIColor { get set }
+  var warning: UIKit.UIColor { get set }
+  var critical: UIKit.UIColor { get set }
+  var leftToSpend: UIKit.UIColor { get set }
+  var expensesIconColor: UIKit.UIColor? { get set }
+  var incomeIconColor: UIKit.UIColor? { get set }
+  var transfersIconColor: UIKit.UIColor? { get set }
+  var uncategorizedIconColor: UIKit.UIColor? { get set }
+  var expensesIconBackgroundColor: UIKit.UIColor? { get set }
+  var incomeIconBackgroundColor: UIKit.UIColor? { get set }
+  var transfersIconBackgroundColor: UIKit.UIColor? { get set }
+  var uncategorizedIconBackgroundColor: UIKit.UIColor? { get set }
+}
+public typealias TransactionItemAction = TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction
+public protocol TransactionItemActionConfigurable {
+  var transactionItemAction: TinkMoneyManagerUI.TransactionItemAction { get set }
+}
+public protocol EditAccountFieldsConfigurable {
+  var editAccountFields: TinkMoneyManagerUI.EditAccountFields { get set }
+}
+public protocol NoAccountsActionConfigurable {
+  var noAccountsAction: TinkMoneyManagerUI.NoAccountsAction { get set }
+}
+public protocol EditingPendingTransactionsConfigurable {
+  var editingPendingTransactions: TinkMoneyManagerUI.EditingPendingTransactions { get set }
+}
+public enum NoAccountsAction {
+  case none
+  case addAccount(onTap: () -> Swift.Void)
+}
+public enum EditingPendingTransactions {
+  case enabled
+  case disabled
+  public static func == (a: TinkMoneyManagerUI.EditingPendingTransactions, b: TinkMoneyManagerUI.EditingPendingTransactions) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CreateBudgetViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, completion: @escaping (Swift.Result<TinkCore.Budget, Swift.Error>) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+public struct CustomAccountGroup {
+  public var accounts: [TinkCore.Account]
+  public var title: Swift.String
+  public var infoText: Swift.String
+  public init(accounts: [TinkCore.Account], title: Swift.String, infoText: Swift.String? = nil)
+}
+public struct EditAccountFields : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let name: TinkMoneyManagerUI.EditAccountFields
+  public static let kind: TinkMoneyManagerUI.EditAccountFields
+  public static let isIncluded: TinkMoneyManagerUI.EditAccountFields
+  public static let isShared: TinkMoneyManagerUI.EditAccountFields
+  public static let isFavorite: TinkMoneyManagerUI.EditAccountFields
+  public static let all: TinkMoneyManagerUI.EditAccountFields
+  public typealias ArrayLiteralElement = TinkMoneyManagerUI.EditAccountFields
+  public typealias Element = TinkMoneyManagerUI.EditAccountFields
+  public typealias RawValue = Swift.Int
+}
+public protocol EditAccountViewControllerDelegate : AnyObject {
+  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didUpdate account: TinkCore.Account)
+  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didFailToUpdate error: Swift.Error)
+  func editAccountViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditAccountViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditAccountViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable
+  @_Concurrency.MainActor(unsafe) final public let accountID: TinkCore.Account.ID
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.EditAccountViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) final public var account: TinkCore.Account? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UIPickerViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+}
+extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UIPickerViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+}
+extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+}
+extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+public protocol EditBudgetViewControllerDelegate : AnyObject {
+  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
+  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
+  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditBudgetViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) weak final public var editBudgetViewControllerDelegate: TinkMoneyManagerUI.EditBudgetViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+public protocol EditTransactionViewControllerDelegate : AnyObject {
+  func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
+  func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkCore.Transaction)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditTransactionViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, transaction: TinkCore.Transaction)
+  @_Concurrency.MainActor(unsafe) @objc override final public func loadView()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerDidAttemptToDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+public enum EventTracker {
+  public static var tracker: TinkMoneyManagerUI.EventTracking?
+}
+public protocol EventTracking : AnyObject {
+  func track(_ screen: TinkMoneyManagerUI.ScreenEvent)
+}
+extension TinkMoneyManagerUI.FinanceOverviewViewController {
+  public enum Feature {
+    public enum StatisticsData {
+      case expenses
+      case income
+      case leftToSpend
+      public static func == (a: TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData, b: TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    case statistics([TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData])
+    case latestTransactions
+    case accounts(TinkMoneyManagerUI.AccountsViewController.Predicate, TinkMoneyManagerUI.AccountsViewController.Grouping)
+    case actionableInsights(delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
+    case budgets
+    case improveCategorizationLevel(predicate: (TinkCore.SuggestTransactionsResponse) -> Swift.Bool)
+    case custom(UIKit.UIView)
+    public static let accounts: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
+    public static let improveCategorizationLevel: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
+  }
+}
+extension TinkMoneyManagerUI.FinanceOverviewViewController {
+  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable, TinkMoneyManagerUI.EditingPendingTransactionsConfigurable {
+    public enum TransactionItemAction {
+      case showDetails
+      case categorize
+      public static func == (a: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction, b: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public var transactionItemAction: TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction
+    public var editAccountFields: TinkMoneyManagerUI.EditAccountFields
+    public var noAccountsAction: TinkMoneyManagerUI.NoAccountsAction
+    public var editingPendingTransactions: TinkMoneyManagerUI.EditingPendingTransactions
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class FinanceOverviewViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) final public var hidesTopBarWhenPushed: Swift.Bool
+  @available(*, deprecated, message: "Currency symbols will always show in statistics.")
+  @_Concurrency.MainActor(unsafe) final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
+    get
+    set
+  }
+  @available(*, deprecated, message: "Use init(tink:features:) instead and embed this view controller inside a UINavigationController.")
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, layoutSections: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, features: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
+  @objc deinit
+}
+extension TinkMoneyManagerUI.FinanceOverviewViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewSafeAreaInsetsDidChange()
+}
+extension TinkMoneyManagerUI.FinanceOverviewViewController : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+extension TinkMoneyManagerUI.FinanceOverviewViewController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+public enum Font {
+  case custom(Swift.String)
+  case systemDefault
+}
+extension TinkMoneyManagerUI.Font {
+  public enum Weight {
+    case light
+    case regular
+    case semibold
+    case bold
+    public static func == (a: TinkMoneyManagerUI.Font.Weight, b: TinkMoneyManagerUI.Font.Weight) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public class FontProvider : TinkMoneyManagerUI.FontProviding {
+  public var lightFont: TinkMoneyManagerUI.Font
+  public var regularFont: TinkMoneyManagerUI.Font
+  public var semiBoldFont: TinkMoneyManagerUI.Font
+  public var boldFont: TinkMoneyManagerUI.Font
+  public init()
+  public init(lightFont: TinkMoneyManagerUI.Font, regularFont: TinkMoneyManagerUI.Font, semiBoldFont: TinkMoneyManagerUI.Font, boldFont: TinkMoneyManagerUI.Font)
+  public func font(for weight: TinkMoneyManagerUI.Font.Weight) -> TinkMoneyManagerUI.Font
+  @objc deinit
+}
+public protocol FontProviding {
+  func font(for weight: TinkMoneyManagerUI.Font.Weight) -> TinkMoneyManagerUI.Font
+}
+public protocol GroupStyle {
+  var cornerRadius: CoreFoundation.CGFloat { get }
+  var insets: UIKit.UIEdgeInsets { get }
+  var spacing: CoreFoundation.CGFloat { get }
+  var shadow: TinkMoneyManagerUI.Shadow { get }
+}
+public struct CardGroupStyle : TinkMoneyManagerUI.GroupStyle {
+  public var cornerRadius: CoreFoundation.CGFloat
+  public var insets: UIKit.UIEdgeInsets
+  public var spacing: CoreFoundation.CGFloat
+  public var shadow: TinkMoneyManagerUI.Shadow
+  public init(cornerRadius: CoreFoundation.CGFloat, insets: UIKit.UIEdgeInsets, spacing: CoreFoundation.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
+  public static var `default`: TinkMoneyManagerUI.CardGroupStyle {
+    get
+  }
+}
+public class IconProvider : TinkMoneyManagerUI.IconProviding {
+  public var account: UIKit.UIImage
+  public var add: UIKit.UIImage
+  public var alert: UIKit.UIImage
+  public var benefits: UIKit.UIImage
+  public var budget: UIKit.UIImage
+  public var doubleTransaction: UIKit.UIImage
+  public var exclude: UIKit.UIImage
+  public var expensesIcon: UIKit.UIImage
+  public var financial: UIKit.UIImage
+  public var food: UIKit.UIImage
+  public var wellness: UIKit.UIImage
+  public var home: UIKit.UIImage
+  public var house: UIKit.UIImage
+  public var incomeIcon: UIKit.UIImage
+  public var entertainment: UIKit.UIImage
+  public var pension: UIKit.UIImage
+  public var other: UIKit.UIImage
+  public var refund: UIKit.UIImage
+  public var salary: UIKit.UIImage
+  public var savings: UIKit.UIImage
+  public var search: UIKit.UIImage
+  public var shopping: UIKit.UIImage
+  public var tag: UIKit.UIImage
+  public var transfer: UIKit.UIImage
+  public var transport: UIKit.UIImage
+  public var uncategorizedIcon: UIKit.UIImage
+  public var categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat?
+  public var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat?
+  public var notification: UIKit.UIImage
+  public var list: UIKit.UIImage
+  public var improveCategorization: UIKit.UIImage
+  public var ingestedAccount: UIKit.UIImage?
+  public var defaultAccount: UIKit.UIImage?
+  public init()
+  public init(account: UIKit.UIImage, alert: UIKit.UIImage, benefits: UIKit.UIImage, budget: UIKit.UIImage, doubleTransaction: UIKit.UIImage, exclude: UIKit.UIImage, expensesIcon: UIKit.UIImage, financial: UIKit.UIImage, food: UIKit.UIImage, wellness: UIKit.UIImage, home: UIKit.UIImage, house: UIKit.UIImage, incomeIcon: UIKit.UIImage, entertainment: UIKit.UIImage, pension: UIKit.UIImage, other: UIKit.UIImage, refund: UIKit.UIImage, salary: UIKit.UIImage, savings: UIKit.UIImage, search: UIKit.UIImage, shopping: UIKit.UIImage, tag: UIKit.UIImage, transfer: UIKit.UIImage, transport: UIKit.UIImage, uncategorizedIcon: UIKit.UIImage, ingestedAccount: UIKit.UIImage? = nil, defaultAccount: UIKit.UIImage? = nil, categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil, checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? = nil)
+  @objc deinit
+}
+public protocol IconProviding {
+  var account: UIKit.UIImage { get set }
+  var add: UIKit.UIImage { get set }
+  var budget: UIKit.UIImage { get set }
+  var alert: UIKit.UIImage { get set }
+  var benefits: UIKit.UIImage { get set }
+  var doubleTransaction: UIKit.UIImage { get set }
+  var exclude: UIKit.UIImage { get set }
+  var expensesIcon: UIKit.UIImage { get set }
+  var financial: UIKit.UIImage { get set }
+  var food: UIKit.UIImage { get set }
+  var wellness: UIKit.UIImage { get set }
+  var home: UIKit.UIImage { get set }
+  var house: UIKit.UIImage { get set }
+  var incomeIcon: UIKit.UIImage { get set }
+  var entertainment: UIKit.UIImage { get set }
+  var pension: UIKit.UIImage { get set }
+  var other: UIKit.UIImage { get set }
+  var refund: UIKit.UIImage { get set }
+  var salary: UIKit.UIImage { get set }
+  var savings: UIKit.UIImage { get set }
+  var search: UIKit.UIImage { get set }
+  var shopping: UIKit.UIImage { get set }
+  var tag: UIKit.UIImage { get set }
+  var transfer: UIKit.UIImage { get set }
+  var transport: UIKit.UIImage { get set }
+  var uncategorizedIcon: UIKit.UIImage { get set }
+  var categoryIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? { get set }
+  var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? { get set }
+  var notification: UIKit.UIImage { get set }
+  var list: UIKit.UIImage { get set }
+  var improveCategorization: UIKit.UIImage { get set }
+  var ingestedAccount: UIKit.UIImage? { get set }
+  var defaultAccount: UIKit.UIImage? { get set }
+}
+public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLiteral, Swift.Codable {
+  public let value: Swift.String
+  public init(_ value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol ImproveCategorizationLevelViewControllerDelegate : AnyObject {
+  func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ImproveCategorizationLevelViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactions: [TinkCore.Transaction])
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactionIDs: [TinkCore.Transaction.ID])
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+}
+public protocol ItemListStyle {
+  var item: TinkMoneyManagerUI.ItemStyle { get }
+  var insets: UIKit.UIEdgeInsets { get }
+  var spacing: CoreFoundation.CGFloat { get }
+}
+public struct CardItemListStyle : TinkMoneyManagerUI.ItemListStyle {
+  public var item: TinkMoneyManagerUI.ItemStyle
+  public var insets: UIKit.UIEdgeInsets
+  public var spacing: CoreFoundation.CGFloat
+}
+public protocol ItemStyle {
+  var cornerRadius: CoreFoundation.CGFloat { get }
+  var shadow: TinkMoneyManagerUI.Shadow { get }
+}
+public struct CardItemStyle : TinkMoneyManagerUI.ItemStyle {
+  public var cornerRadius: CoreFoundation.CGFloat
+  public var shadow: TinkMoneyManagerUI.Shadow
+  public init(cornerRadius: CoreFoundation.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LeftToSpendViewController : UIKit.UIViewController {
+  @available(*, deprecated, message: "Currency symbols will always show in statistics.")
+  @_Concurrency.MainActor(unsafe) final public var shouldShowCurrencySymbolInStatisticsTotal: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.LeftToSpendViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+}
+extension TinkMoneyManagerUI.LeftToSpendViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+}
+extension TinkMoneyManagerUI.LeftToSpendViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+public struct Month : Swift.Hashable, Swift.Comparable {
+  public static func < (lhs: TinkMoneyManagerUI.Month, rhs: TinkMoneyManagerUI.Month) -> Swift.Bool
+  public var year: Swift.Int
+  public var month: Swift.Int
+  public init(year: Swift.Int, month: Swift.Int)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.Month, b: TinkMoneyManagerUI.Month) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public let version: Swift.String
+extension TinkCore.Tink {
+  public func refresh()
+  public func resetCache()
+  public func fetchTransactionsToImproveCategorization(evaluateEverything: Swift.Bool? = nil, completion: @escaping (Swift.Result<[TinkCore.Transaction], Swift.Error>) -> Swift.Void) -> TinkCore.Cancellable?
+}
+public enum ScreenEvent {
+  case overview
+  case expenses
+  case income
+  case leftToSpend
+  case transactions
+  case categorySelection
+  case similarTransactions
+  case accounts
+  case accountDetails
+  case editAccount
+  case createBudget
+  case editBudget
+  case budgetDetails
+  case budgetTransactions
+  case events
+  case eventsArchive
+  case transactionDetails
+  case improveCategorizationLevel
+  public var name: Swift.String {
+    get
+  }
+  public static func == (a: TinkMoneyManagerUI.ScreenEvent, b: TinkMoneyManagerUI.ScreenEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Shadow {
+  public var opacity: CoreFoundation.CGFloat
+  public var radius: CoreFoundation.CGFloat
+  public var offset: UIKit.UIOffset
+  public var color: UIKit.UIColor
+  public init(opacity: CoreFoundation.CGFloat, radius: CoreFoundation.CGFloat, offset: UIKit.UIOffset, color: UIKit.UIColor)
+  public static var none: TinkMoneyManagerUI.Shadow {
+    get
+  }
+  public static var `default`: TinkMoneyManagerUI.Shadow {
+    get
+  }
+}
+extension TinkCore.Tink.Configuration {
+  @available(*, deprecated, message: "Use TinkMoneyManagerConfiguration(clientID:environment:certificateURL:) instead.")
+  public init(clientID: Swift.String, environment: TinkCore.Environment = .production, certificateURL: Foundation.URL? = nil) throws
+}
+public struct TinkError : Swift.Error {
+  public enum Status {
+    case cancelled
+    case invalidArgument
+    case notFound
+    case unauthenticated
+    case temporaryFailure
+    case timedOut
+    case unknown
+    case badRequest
+    case forbidden
+    case conflict
+    case preconditionFailed
+    case unavailableForLegalReasons
+    public static func == (a: TinkMoneyManagerUI.TinkError.Status, b: TinkMoneyManagerUI.TinkError.Status) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let status: TinkMoneyManagerUI.TinkError.Status
+  public let message: Swift.String?
+  public let underlyingError: Swift.Error
+}
+@available(*, deprecated, renamed: "TinkMoneyManagerConfiguration")
+public typealias TinkPFMConfiguration = TinkMoneyManagerUI.TinkMoneyManagerConfiguration
+public struct TinkMoneyManagerConfiguration : TinkCore.Configuration {
+  public let clientID: Swift.String
+  public let appURI: Foundation.URL?
+  public let callbackURI: Foundation.URL?
+  public let environment: TinkCore.Tink.Environment
+  public let certificateURL: Foundation.URL?
+  public init(clientID: Swift.String, environment: TinkCore.Tink.Environment = .production, certificateURL: Foundation.URL? = nil)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, transactionID: TinkCore.Transaction.ID)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.TransactionDetailsViewController : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension TinkMoneyManagerUI.TransactionDetailsViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+}
+extension TinkMoneyManagerUI.TransactionDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension TinkMoneyManagerUI.TransactionDetailsViewController : TinkMoneyManagerUI.EditTransactionViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
+  @_Concurrency.MainActor(unsafe) final public func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkCore.Transaction)
+}
+public protocol TransactionsViewControllerDelegate : AnyObject {
+  func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+  func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didFailWithError error: Swift.Error)
+}
+extension TinkMoneyManagerUI.TransactionsViewControllerDelegate {
+  public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didFailWithError error: Swift.Error)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.TransactionsViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, query: TinkCore.TransactionsQuery = TransactionsQuery())
+  @objc deinit
+}
+extension TinkMoneyManagerUI.TransactionsViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+}
+extension TinkMoneyManagerUI.TransactionsViewController {
+  @_Concurrency.MainActor(unsafe) final public func clearSelection(animated: Swift.Bool)
+}
+extension TinkMoneyManagerUI.TransactionsViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+public struct TransferIdentity {
+  public var account: Foundation.URL?
+  public var accountNumber: Swift.String?
+}
+extension TinkCore.UserSession : Swift.Equatable {
+  public static func == (lhs: TinkCore.UserSession, rhs: TinkCore.UserSession) -> Swift.Bool
+}
+extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Equatable {}
+extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Hashable {}
+extension TinkMoneyManagerUI.EditingPendingTransactions : Swift.Equatable {}
+extension TinkMoneyManagerUI.EditingPendingTransactions : Swift.Hashable {}
+extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Equatable {}
+extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Hashable {}
+extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction : Swift.Equatable {}
+extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction : Swift.Hashable {}
+extension TinkMoneyManagerUI.Font.Weight : Swift.Equatable {}
+extension TinkMoneyManagerUI.Font.Weight : Swift.Hashable {}
+extension TinkMoneyManagerUI.ScreenEvent : Swift.Equatable {}
+extension TinkMoneyManagerUI.ScreenEvent : Swift.Hashable {}
+extension TinkMoneyManagerUI.TinkError.Status : Swift.Equatable {}
+extension TinkMoneyManagerUI.TinkError.Status : Swift.Hashable {}
