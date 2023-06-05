@@ -44554,7 +44554,7 @@
     {
       "filePath": "\/usr\/local\/var\/buildkite-agent\/builds\/Mac-mini\/tink-ab\/money-manager-ios-pre-release\/Sources\/TinkMoneyManagerUI\/Features\/Categorization\/View Controllers\/CategorizeTransactionViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12396,
+      "offset": 12330,
       "length": 5,
       "value": "false"
     },
@@ -56281,7 +56281,7 @@
       "kind": "StringLiteral",
       "offset": 100,
       "length": 8,
-      "value": "\"0.28.0\""
+      "value": "\"0.28.1\""
     },
     {
       "filePath": "\/usr\/local\/var\/buildkite-agent\/builds\/Mac-mini\/tink-ab\/money-manager-ios-pre-release\/Sources\/TinkMoneyManagerUI\/PFMSessionManager.swift",
