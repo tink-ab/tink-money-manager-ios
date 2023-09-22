@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "TinkMoneyManager",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v13)
     ],
     products: [
         .library(
@@ -15,12 +15,12 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMajor(from: "1.9.0"))
+        .package(name: "TinkCore", url: "https://github.com/tink-ab/tink-core-ios", .upToNextMajor(from: "2.0.0"))
     ],
     targets: [
         .binaryTarget(
             name: "TinkMoneyManagerUI",
-            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/0.28.1/TinkMoneyManagerUI.xcframework.zip", checksum: "5e51e1994e69b2a58393759a7cf5cb27ba4389d6fb31624a58d92400020ad590"
+            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/1.0.0/TinkMoneyManagerUI.xcframework.zip", checksum: "4bab8959503f9075177501bc0bf6127ac44ca0ecb7eb28ba513e3a6872b08b76"
         ),
         .target(
             name: "TinkMoneyManagerUITarget",
