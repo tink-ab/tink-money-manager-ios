@@ -1,6 +1,6 @@
 import Foundation
-import TinkMoneyManagerUI
 import os.log
+import TinkMoneyManagerUI
 
 final class DebugEventTracker: EventTracking {
     func track(_ screen: ScreenEvent) {
