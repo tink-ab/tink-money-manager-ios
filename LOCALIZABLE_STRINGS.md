@@ -57,13 +57,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.CreateBudget.CreateWithKeyword` | Create with keyword | Title for create a budget with keyword. |
 | `Budget.CreateBudget.Title` | Create budget | Title of the select category modal shown when creating a budget. |
 | `Budget.Detail.Monthly.Title` | Monthly | Title for budgets. |
-| `Budget.Detail.Overview.CurrentMonthDescription` | You have %@ left on your budget this month | Budget overview current month description text. |
-| `Budget.Detail.Overview.CurrentWeekDescription` | You have %@ left on your budget this week | Budget overview current week description text. |
-| `Budget.Detail.Overview.CurrentYearDescription` | You have %@ left on your budget this year | Budget overview current year description text. |
 | `Budget.Detail.Overview.Description` | You made your budget %@ of the time since you created the budget | Budget overview description text. |
-| `Budget.Detail.OverView.OverCurrentMonthDescription` | You have gone %@ over your budget for this month | Description text shown on budget detail view when user spent more than their budget target for the current month. |
-| `Budget.Detail.OverView.OverCurrentWeekDescription` | You have gone %@ over your budget for this week | Description text shown on budget detail view when user spent more than their budget target for the current week. |
-| `Budget.Detail.OverView.OverCurrentYearDescription` | You have gone %@ over your budget for this year | Description text shown on budget detail view when user spent more than their budget target for the current year. |
 | `Budget.Detail.Overview.Title` | Over time | Title for budgets overview. |
 | `Budget.Detail.Progress.Completed.Days` | Closed %d days ago | Text in Budget chart when budget was closed multiple days ago. |
 | `Budget.Detail.Progress.Completed.Months` | Closed %d months ago | Text in Budget chart when budget was closed multiple months ago. |
@@ -77,21 +71,20 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Progress.Left.Daily` | You can spend %@ per day and still remain within your budget | Budget detail remaining budget daily. |
 | `Budget.Detail.Progress.Left.From` | left of %@ | Budget chart bottom text, left from text total. |
 | `Budget.Detail.Progress.Left.Monthly` | You can spend %@ per month and still remain within your budget | Budget detail remaining budget monthly. |
-| `Budget.Detail.Progress.Left.Total` | You have %@ remaining of your budget | Budget detail remaining budget yearly. |
 | `Budget.Detail.Progress.Left.Weekly` | You can spend %@ per week and still remain within your budget | Budget detail remaining budget weekly. |
 | `Budget.Detail.Progress.Left.Yearly` | You can spend %@ per year and still remain within your budget | Budget detail remaining budget yearly. |
 | `Budget.Detail.Progress.Managed` | You managed your budget this period | Budget detail managed budget text. |
 | `Budget.Detail.Progress.NotStarted` | Budget hasn't started yet | Budget detail budget has not started. |
 | `Budget.Detail.Progress.Over` | You went over your budget this period | Description text shown on budget detail view when user spent more than their budget target for the current period. |
-| `Budget.Detail.Progress.RemaingTime.LastDay` | Ends today | Budget chart text when on last day of budget. |
-| `Budget.Detail.Progress.RemaingTime.MultipleDays` | %d days remaining | Budget chart text number of remaining days. |
-| `Budget.Detail.Progress.RemaingTime.MultipleMonths` | %d months remaining | Budget chart text number of months remaining. |
-| `Budget.Detail.Progress.RemaingTime.MultipleMonthsAndDays` | %1$d months and %2$d days remaining | Budget chart text with multiple months and days remaining. |
-| `Budget.Detail.Progress.RemaingTime.MultipleMonthsAndSingleDay` | %d months and 1 day remaining | Budget chart text number of months and a single day remaining. |
-| `Budget.Detail.Progress.RemaingTime.OneDay` | Ends tomorrow | Budget chart text when one day remaining of the budget. |
-| `Budget.Detail.Progress.RemaingTime.SingleMonth` | 1 month remaining | Budget chart text exactly 1 month remaining. |
-| `Budget.Detail.Progress.RemaingTime.SingleMonthAndDay` | 1 month and 1 day remaining | Budget chart text exactly 1 month and 1 day remaining. |
-| `Budget.Detail.Progress.RemaingTime.SingleMonthAndMultipleDays` | 1 month and %d days remaining | Budget chart text  with exactly one month multiple days remaining. |
+| `Budget.Detail.Progress.RemainingTime.EndsTomorrow` | Ends tomorrow | Budget chart text when one day remaining of the budget. |
+| `Budget.Detail.Progress.RemainingTime.LastDay` | Ends today | Budget chart text when on last day of budget. |
+| `Budget.Detail.Progress.RemainingTime.MultipleDays` | %d days remaining | Budget chart text number of remaining days. |
+| `Budget.Detail.Progress.RemainingTime.MultipleMonths` | %d months remaining | Budget chart text number of months remaining. |
+| `Budget.Detail.Progress.RemainingTime.MultipleMonthsAndDays` | %1$d months and %2$d days remaining | Budget chart text with multiple months and days remaining. |
+| `Budget.Detail.Progress.RemainingTime.MultipleMonthsAndSingleDay` | %d months and 1 day remaining | Budget chart text number of months and a single day remaining. |
+| `Budget.Detail.Progress.RemainingTime.SingleMonth` | 1 month remaining | Budget chart text exactly 1 month remaining. |
+| `Budget.Detail.Progress.RemainingTime.SingleMonthAndDay` | 1 month and 1 day remaining | Budget chart text exactly 1 month and 1 day remaining. |
+| `Budget.Detail.Progress.RemainingTime.SingleMonthAndMultipleDays` | 1 month and %d days remaining | Budget chart text  with exactly one month multiple days remaining. |
 | `Budget.Detail.Progress.Spent` | You have no remaining budget for this period | Description text shown on budget detail view when user spent as much as the budget target for the current period. |
 | `Budget.Detail.Progress.StartIn` | Starts in %d days | Budget chart text starts in multiple days. |
 | `Budget.Detail.Progress.StartIn.MultipleMonths` | Starts in %d months | Budget detail view starts in months text. |
@@ -100,7 +93,6 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Detail.Progress.StartIn.OneMonth` | Starts in 1 month | Budget chart text starts in 1 month text. |
 | `Budget.Detail.Progress.StartIn.OneMonthAndOneDay` | Starts in 1 month and 1 day | Budget chart text starts in 1 month and 1 day text. |
 | `Budget.Detail.Progress.StartIn.SingleMonthAndMultipleDays` | Starts in 1 month and %d days | Budget chart text starts in 1 month and multiple days. |
-| `Budget.Detail.Progress.StartsAtDate` | Starts %@ | Budget detail view starts text saying that budget starts at exact date. |
 | `Budget.Detail.Progress.StartsTomorrow` | Starts tomorrow | Budget chart text when starts tomorrow. |
 | `Budget.Detail.SeeTransactions` | See transactions | See budget detail transactions text. |
 | `Budget.Detail.Weekly.Title` | Weekly | Title for budgets. |
@@ -193,20 +185,12 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `ImproveCategorizationLevel.Success.UnknownImprovement` | Your categorization just got better! | Text for the categorization level successfully improved. |
 | `ImproveCategorizationLevel.Title` | Improve categorization | Title for the improve categorization modal. |
 | `LeftToSpend.OverTime.LongPressSubtitle` | Left to spend in %@ | Subtitle shown when user long press bar in chart for left to spend statistics. |
-| `LeftToSpend.Progress.Current.DaysLeft` | You can spend %1$@ per day until next salary in %2$d days. | Left to spend per day until next salary in a number of days. |
-| `LeftToSpend.Progress.Current.LastDay` | You have %@ left to spend today. | Left to spend today. |
-| `LeftToSpend.Progress.Current.Less` | You have %@ less than you usually have this time of the month | Left to spend per is less than usual. |
-| `LeftToSpend.Progress.Current.More` | You have %@ more than you usually have this time of the month | Left to spend is more than usual. |
-| `LeftToSpend.Progress.Current.OneDayLeft` | You can spend %@ until tomorrow. | Left to spend per day until next salary tomorrow. |
-| `LeftToSpend.Progress.Past.BelowAverage` | You spent %@ below your average. | Left to spend less than average for previous month. |
-| `LeftToSpend.Progress.Past.Default` | You have an average of %1$@ Left to Spend in %2$@ | Left to spend less default. |
-| `LeftToSpend.Progress.Past.OverAverage` | You spent %@ over your average. | Left to spend more than average for previous month. |
 | `Overview.Accounts.AddBankOrCard` | Add bank or card | Optional text to display in overview when there are no accounts. |
+| `Overview.Accounts.All` | Accounts | Text displayed above accounts cards sections in the financial overview. |
 | `Overview.Accounts.EmptyState` | No accounts | Text to display in overview when there are no accounts. |
-| `Overview.Accounts.Header` | Favorite accounts | Text displayed above accounts cards sections in the financial overview when the favorite predicate is used. |
+| `Overview.Accounts.Favorite` | Favorite accounts | Text displayed above accounts cards sections in the financial overview when the favorite predicate is used. |
 | `Overview.Accounts.SeeAll` | See all accounts | Title on card in overview to show all accounts. |
 | `Overview.Accounts.SeeAllShortended` | See all | Title on card in overview to show all accounts. |
-| `Overview.Accounts.Title` | Accounts | Text displayed above accounts cards sections in the financial overview. |
 | `Overview.ActionableInsights.NoEvents` | No new events | Title for card when there are no insights. |
 | `Overview.ActionableInsights.RecentInsights` | recent events | Recent insights suffix. |
 | `Overview.ActionableInsights.RecentInsights.Singular` | recent event | Recent insight suffix. |
@@ -236,7 +220,6 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Transaction.Edit.SaveButton` | Save | Navigation button for saving changes to a transaction. |
 | `Transaction.Edit.Title` | Edit | Title for the view where you edit a specific transaction. |
 | `Transaction.Generic.Error` | No transaction details available | Text when failing to fetch transaction. |
-| `Transaction.Pending.Title` | Pending | Description for a pending transaction. |
 | `Transactions.NoTransactions` | You haven’t made any transactions yet | Text to display in the transaction list when there are no transactions. |
 | `Transactions.PendingStatus` | Pending | Text to indicate that the transaction is in the pending state. |
 | `Week.Of.Year.Long` | week | Week of the year formatter long text. |

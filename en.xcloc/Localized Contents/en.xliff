@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="Sources/TinkMoneyManagerUI/en.lproj/TinkMoneyManagerUI.strings" source-language="en" target-language="en" datatype="plaintext">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.1" build-num="14B47b"/>
-    </header>
-    <body>
-      <trans-unit id="AccountDetail.Header.AccountNumberFormat" xml:space="preserve">
-        <source>Account number: %@</source>
-        <target>Account number: %@</target>
-        <note>String format for displaying account number in account detail header.</note>
-      </trans-unit>
-      <trans-unit id="Accounts.Generic.CancelButton" xml:space="preserve">
-        <source>Cancel</source>
-        <target>Cancel</target>
-        <note>Title for cancelling changes done to the account settings.</note>
-      </trans-unit>
-      <trans-unit id="Accounts.Generic.EditButton" xml:space="preserve">
-        <source>Edit</source>
-        <target>Edit</target>
-        <note>Title for account edit button.</note>
-      </trans-unit>
-      <trans-unit id="Accounts.Generic.NoAccountAvailable" xml:space="preserve">
-        <source>No accounts available</source>
-        <target>No accounts available</target>
-        <note>Title for empty account list view.</note>
       </trans-unit>
       <trans-unit id="Accounts.Generic.SaveButton" xml:space="preserve">
         <source>Save</source>

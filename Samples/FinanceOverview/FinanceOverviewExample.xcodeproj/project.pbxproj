@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,13 +15,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		209B492325D692F900182B4A /* tink-pfm-sdk-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "tink-pfm-sdk-ios"; path = ../..; sourceTree = "<group>"; };
 		20C24BAC241A398200EB5927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugAnalyticsIntegration.swift; sourceTree = "<group>"; };
 		9DDD67A42368850500507DF3 /* FinanceOverviewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceOverviewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DDD67A72368850500507DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDD67B32368850700507DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DDD67B52368850700507DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB54D2F92ABDC572000E385B /* tink-money-manager-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tink-money-manager-ios"; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 		9D4E7AD0250B9DE900AE88DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				209B492325D692F900182B4A /* tink-pfm-sdk-ios */,
+				EB54D2F92ABDC572000E385B /* tink-money-manager-ios */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

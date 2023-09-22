@@ -1,5 +1,5 @@
-import UIKit
 import TinkMoneyManagerUI
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
