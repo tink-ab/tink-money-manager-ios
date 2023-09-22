@@ -690,6 +690,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
+
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
@@ -700,7 +701,6 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
-
 
 
 
