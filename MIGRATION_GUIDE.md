@@ -20,7 +20,7 @@ Here’s a list of all the APIs removed in this release:
 |------------------------|:-----------------------------|
 |`colorProvider` property|Use `provider.colors` instead.|
 |`fontProvider` property |Use `provider.fonts` instead. |
-|`iconProviderz` property|Use `iconProvider` instead.   |
+|`iconProvider` property|Use `provider.icons` instead.   |
 
 
 ## `AppearanceProviding` protocol
