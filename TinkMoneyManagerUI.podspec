@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = ["5.7", "5.8", "5.9"]
 
-  spec.dependency "TinkCore", "~> 2.0"
+  spec.dependency "TinkCore", "~> 2.1"
 end
