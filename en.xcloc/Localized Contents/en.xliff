@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+      </trans-unit>
+      <trans-unit id="Accounts.Generic.SaveButton" xml:space="preserve">
+        <source>Save</source>
+        <target>Save</target>
+        <note>Title for saving changes done to the account settings.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.EverydayAccounts" xml:space="preserve">
+        <source>Everyday accounts</source>
+        <target>Everyday accounts</target>
+        <note>Title for accounts grouped by everyday kind.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.Loans" xml:space="preserve">
+        <source>Loans</source>
+        <target>Loans</target>
+        <note>Title for accounts grouped by loans kind.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.Other" xml:space="preserve">
+        <source>Other</source>
+        <target>Other</target>
+        <note>Title for accounts grouped by other kind.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.Savings" xml:space="preserve">
+        <source>Savings accounts</source>
+        <target>Savings accounts</target>
         <note>Title for accounts grouped by savings kind.</note>
       </trans-unit>
       <trans-unit id="Accounts.Kind.Checking" xml:space="preserve">
