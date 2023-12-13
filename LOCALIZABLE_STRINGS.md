@@ -54,7 +54,6 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Alert.Delete.Message` | Are you sure you want to delete the budget “%@”? | Message to ask if budget should be deleted. |
 | `Budget.Alert.Delete.Title` | Delete budget? | Title for message to ask if budget should be deleted. |
 | `Budget.Category.AllExpenses` | All expenses | Formatter name for all expenses category. |
-| `Budget.CreateBudget.Created` | Your budget is now created! | Title of the label which shows user that new budget was created. |
 | `Budget.CreateBudget.CreateWithKeyword` | Create with keyword | Title for create a budget with keyword. |
 | `Budget.CreateBudget.Title` | Create budget | Title of the select category modal shown when creating a budget. |
 | `Budget.Detail.Monthly.Title` | Monthly | Title for budgets. |
@@ -102,11 +101,9 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Budget.Edit.Title` | Edit budget | Edit budget title. |
 | `Budget.Generic.CancelButton` | Cancel | Title for the cancel button that will dismiss the select category modal shown when creating a budget. |
 | `Budget.Generic.DeleteButton` | Delete | Title for the button to delete a budget. |
-| `Budget.Generic.DoneButton` | Done | Done button text for creating budget flow. |
 | `Budget.Generic.EditButton` | Edit | Title for budget edit button. |
 | `Budget.Generic.EmptyList` | You have no budgets. Create your first\n budget to help you spend less. | Description when list of budgets is empty |
 | `Budget.Generic.NextButton` | Next | Title of button to next step when creating a budget |
-| `Budget.Generic.NoBudgetsAvailable` | You have no budgets. Create your budget based on your top spending categories or create a new budget. | Title for empty budgets label when list of mixed plain and recommended budgets displayed. |
 | `Budget.Generic.SelectButton` | Select | Select button text for editing budget flow |
 | `Budget.Generic.SelectCategory` | Next | Title of button to next step when selecting a category to create a budget |
 | `Budget.Period.Type.Custom` | Custom | Custom budget period type. |
@@ -208,10 +205,6 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Overview.LatestTransactions.SeeAllButton` | See all | Title for button to see all transactions. |
 | `Overview.LatestTransactions.Title` | Latest transactions | Title for latest transactions list. |
 | `Overview.NoDataAvailable` | No statistics available | No statistics data available. |
-| `Overview.RecommendedBudgets.CellLabelSubtitle` | You have spent %@ on average.\nTrack your expense by creating a budget. | Subtitle for recommended budget cell displaying average expense for category. |
-| `Overview.RecommendedBudgets.CreateBudgetButton` | Create budget | Title for button to create new budget from list of recommended budgets. |
-| `Overview.RecommendedBudgets.RecommendedBudgetRoundedCellHeader` | Suggested budget | Header for recommended budget cell with rounded corners. |
-| `Overview.RecommendedBudgets.Title` | Top spending categories | Title for recommended budgets list title. |
 | `Transaction.Detail.ChangeCategory` | Change | Title for the button used to initiate a categorization of a transaction. |
 | `Transaction.Detail.Edit` | Edit | Text on button in navigation bar leading to the edit transaction flow. |
 | `Transaction.Detail.PendingTransaction.Description` | Details of a pending transactions can change before being confirmed. | Body of the informative pending transaction view. |
