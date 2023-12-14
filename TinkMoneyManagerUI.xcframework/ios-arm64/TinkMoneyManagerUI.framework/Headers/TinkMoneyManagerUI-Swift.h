@@ -362,11 +362,11 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 @end
 
 
-
-
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
+
+
 
 
 @class UICollectionView;
@@ -389,6 +389,28 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 - (void)viewDidAppear:(BOOL)animated;
 - (void)traitCollectionDidChange:(UITraitCollection * _Nullable)previousTraitCollection;
 @end
+
+
+/// A view controller that displays a list of existing and recommended budgets.
+/// Required scopes: <code>budgets:write</code>.
+/// <h2>Overview</h2>
+/// Use the <code>AllBudgetsViewController</code> when you want to display a list of existing and recommended budgets. Within this controller user can create a new budget using the recommended budget as a starting point. Existing budgets can also be edited and deleted.
+/// <code>AllBudgetsViewController</code> is intended to be presented within the <code>UINavigationController</code> navigation stack.
+/// \code
+/// let allBudgetsViewController = AllBudgetsViewController(tink: <#Tink#>)
+/// navigationController.pushViewController(allBudgetsViewController, animated: <#T##Bool#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI24AllBudgetsViewController")
+@interface AllBudgetsViewController : UIViewController
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
 
 
 /// A view controller that displays details of a budget.
@@ -564,6 +586,17 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI26CreateBudgetViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
+- (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI37CreateRecommendedBudgetViewController")
+@interface CreateRecommendedBudgetViewController : UINavigationController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)viewDidLoad;
 - (nonnull instancetype)initWithNavigationBarClass:(Class _Nullable)navigationBarClass toolbarClass:(Class _Nullable)toolbarClass SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithRootViewController:(UIViewController * _Nonnull)rootViewController SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
