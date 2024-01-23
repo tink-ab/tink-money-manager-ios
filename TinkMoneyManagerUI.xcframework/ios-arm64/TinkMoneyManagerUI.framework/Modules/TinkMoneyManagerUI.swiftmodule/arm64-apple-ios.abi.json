@@ -41528,63 +41528,63 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9361,
+      "offset": 9507,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9386,
+      "offset": 9532,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9415,
+      "offset": 9561,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9361,
+      "offset": 9507,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9386,
+      "offset": 9532,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9415,
+      "offset": 9561,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9361,
+      "offset": 9507,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9386,
+      "offset": 9532,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/AllBudgetsTableViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 9415,
+      "offset": 9561,
       "length": 1,
       "value": "2"
     },
@@ -42515,21 +42515,21 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/BudgetTargetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1894,
+      "offset": 2069,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/BudgetTargetViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3150,
+      "offset": 3325,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/BudgetTargetViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3648,
+      "offset": 3823,
       "length": 4,
       "value": "true"
     },
@@ -54469,6 +54469,20 @@
       "value": "20.0"
     },
     {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/Views\/RecommendedBudgetTableViewCellViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1467,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/Views\/RecommendedBudgetTableViewCellViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1629,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/RecommendedBudgetsViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 694,
@@ -55663,7 +55677,7 @@
       "kind": "StringLiteral",
       "offset": 78,
       "length": 7,
-      "value": "\"1.1.0\""
+      "value": "\"1.1.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/WeeklySummaryExpensesByCategoryItemView.swift",
