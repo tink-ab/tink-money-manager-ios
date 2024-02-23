@@ -492,9 +492,11 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     case actionableInsights(delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
     case budgets
     case recommendedBudgets
+    @available(*, deprecated)
     case improveCategorizationLevel(predicate: (TinkCore.SuggestTransactionsResponse) -> Swift.Bool)
     case custom(UIKit.UIView)
     public static let accounts: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
+    @available(*, deprecated)
     public static let improveCategorizationLevel: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
   }
 }
@@ -616,6 +618,7 @@ public class IconProvider : TinkMoneyManagerUI.IconProviding {
   public var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat?
   public var notification: UIKit.UIImage
   public var list: UIKit.UIImage
+  @available(*, deprecated)
   public var improveCategorization: UIKit.UIImage
   public var ingestedAccount: UIKit.UIImage?
   public var defaultAccount: UIKit.UIImage?
@@ -655,6 +658,7 @@ public protocol IconProviding {
   var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? { get set }
   var notification: UIKit.UIImage { get set }
   var list: UIKit.UIImage { get set }
+  @available(*, deprecated)
   var improveCategorization: UIKit.UIImage { get set }
   var ingestedAccount: UIKit.UIImage? { get set }
   var defaultAccount: UIKit.UIImage? { get set }
@@ -675,10 +679,12 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
     get
   }
 }
+@available(*, deprecated)
 public protocol ImproveCategorizationLevelViewControllerDelegate : AnyObject {
   func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ImproveCategorizationLevelViewController : UIKit.UIViewController {
+@objc @_hasMissingDesignatedInitializers @available(*, deprecated)
+@_Concurrency.MainActor(unsafe) final public class ImproveCategorizationLevelViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate?
   @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactions: [TinkCore.Transaction])
   @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactionIDs: [TinkCore.Transaction.ID])
@@ -731,6 +737,7 @@ public struct Month : Swift.Hashable, Swift.Comparable {
 extension TinkCore.Tink {
   public func refresh()
   public func resetCache()
+  @available(*, deprecated)
   public func fetchTransactionsToImproveCategorization(evaluateEverything: Swift.Bool? = nil, completion: @escaping (Swift.Result<[TinkCore.Transaction], Swift.Error>) -> Swift.Void) -> TinkCore.Cancellable?
 }
 public enum ScreenEvent {
@@ -751,6 +758,7 @@ public enum ScreenEvent {
   case events
   case eventsArchive
   case transactionDetails
+  @available(*, deprecated)
   case improveCategorizationLevel
   case budgetCreateSuccess
   case recommendedBudgetList
