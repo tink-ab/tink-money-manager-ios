@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-        <source>Account name</source>
-        <target>Account name</target>
-        <note>Title for account name setting.</note>
-      </trans-unit>
-      <trans-unit id="Accounts.Settings.AccountType" xml:space="preserve">
-        <source>Account type</source>
-        <target>Account type</target>
-        <note>Title for account type settings.</note>
-      </trans-unit>
-      <trans-unit id="Accounts.Settings.Favorite.Description" xml:space="preserve">
-        <source>Balance is shown in the overview</source>
-        <target>Balance is shown in the overview</target>
-        <note>Description for favorite account settings.</note>
-      </trans-unit>
-      <trans-unit id="Accounts.Settings.Favorite.Title" xml:space="preserve">
-        <source>Favorite</source>
-        <target>Favorite</target>
-        <note>Title for favorite account settings.</note>
-      </trans-unit>
-      <trans-unit id="Accounts.Settings.Included.Description" xml:space="preserve">
-        <source>This account is shown in your statistics</source>
-        <target>This account is shown in your statistics</target>
-        <note>Description for the included account settings.</note>
-      </trans-unit>
       <trans-unit id="Accounts.Settings.Included.Title" xml:space="preserve">
         <source>Included</source>
         <target>Included</target>
