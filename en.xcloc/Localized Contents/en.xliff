@@ -1,5 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Sources/TinkMoneyManagerUI/en.lproj/TinkMoneyManagerUI.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E204a"/>
+    </header>
+    <body>
+      <trans-unit id="AccountDetail.Header.AccountNumberFormat" xml:space="preserve">
+        <source>Account number: %@</source>
+        <target>Account number: %@</target>
+        <note>String format for displaying account number in account detail header.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Generic.CancelButton" xml:space="preserve">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>Title for cancelling changes done to the account settings.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Generic.EditButton" xml:space="preserve">
+        <source>Edit</source>
+        <target>Edit</target>
+        <note>Title for account edit button.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Generic.NoAccountAvailable" xml:space="preserve">
+        <source>No accounts available</source>
+        <target>No accounts available</target>
+        <note>Title for empty account list view.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Generic.SaveButton" xml:space="preserve">
+        <source>Save</source>
+        <target>Save</target>
+        <note>Title for saving changes done to the account settings.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.EverydayAccounts" xml:space="preserve">
+        <source>Everyday accounts</source>
+        <target>Everyday accounts</target>
+        <note>Title for accounts grouped by everyday kind.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.Loans" xml:space="preserve">
+        <source>Loans</source>
+        <target>Loans</target>
+        <note>Title for accounts grouped by loans kind.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.Other" xml:space="preserve">
+        <source>Other</source>
+        <target>Other</target>
+        <note>Title for accounts grouped by other kind.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Grouping.Savings" xml:space="preserve">
+        <source>Savings accounts</source>
+        <target>Savings accounts</target>
+        <note>Title for accounts grouped by savings kind.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.Checking" xml:space="preserve">
+        <source>Checking</source>
+        <target>Checking</target>
+        <note>Title for checking accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.CreditCard" xml:space="preserve">
+        <source>Credit Card</source>
+        <target>Credit Card</target>
+        <note>Title for credit card accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.External" xml:space="preserve">
+        <source>External</source>
+        <target>External</target>
+        <note>Title for external accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.Investment" xml:space="preserve">
+        <source>Investment</source>
+        <target>Investment</target>
+        <note>Title for investment accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.Loan" xml:space="preserve">
+        <source>Loan</source>
+        <target>Loan</target>
+        <note>Title for loaning accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.Mortgage" xml:space="preserve">
+        <source>Mortgage</source>
+        <target>Mortgage</target>
+        <note>Title for mortgage accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.Other" xml:space="preserve">
+        <source>Other</source>
+        <target>Other</target>
+        <note>Title for other accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.Pension" xml:space="preserve">
+        <source>Pension</source>
+        <target>Pension</target>
+        <note>Title for pension accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Kind.Savings" xml:space="preserve">
+        <source>Savings</source>
+        <target>Savings</target>
+        <note>Title for savings accounts.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Settings.AccountName" xml:space="preserve">
+        <source>Account name</source>
+        <target>Account name</target>
+        <note>Title for account name setting.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Settings.AccountType" xml:space="preserve">
+        <source>Account type</source>
+        <target>Account type</target>
+        <note>Title for account type settings.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Settings.Favorite.Description" xml:space="preserve">
+        <source>Balance is shown in the overview</source>
+        <target>Balance is shown in the overview</target>
+        <note>Description for favorite account settings.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Settings.Favorite.Title" xml:space="preserve">
+        <source>Favorite</source>
+        <target>Favorite</target>
+        <note>Title for favorite account settings.</note>
+      </trans-unit>
+      <trans-unit id="Accounts.Settings.Included.Description" xml:space="preserve">
+        <source>This account is shown in your statistics</source>
+        <target>This account is shown in your statistics</target>
+        <note>Description for the included account settings.</note>
+      </trans-unit>
       <trans-unit id="Accounts.Settings.Included.Title" xml:space="preserve">
         <source>Included</source>
         <target>Included</target>
@@ -115,6 +235,11 @@
         <target>Create with keyword</target>
         <note>Title for create a budget with keyword.</note>
       </trans-unit>
+      <trans-unit id="Budget.CreateBudget.Created" xml:space="preserve">
+        <source>Your budget is now created!</source>
+        <target>Your budget is now created!</target>
+        <note>Title of the label which shows user that new budget was created.</note>
+      </trans-unit>
       <trans-unit id="Budget.CreateBudget.Title" xml:space="preserve">
         <source>Create budget</source>
         <target>Create budget</target>
@@ -124,36 +249,6 @@
         <source>Monthly</source>
         <target>Monthly</target>
         <note>Title for budgets.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.OverView.OverCurrentMonthDescription" xml:space="preserve">
-        <source>You have gone %@ over your budget for this month</source>
-        <target>You have gone %@ over your budget for this month</target>
-        <note>Description text shown on budget detail view when user spent more than their budget target for the current month.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.OverView.OverCurrentWeekDescription" xml:space="preserve">
-        <source>You have gone %@ over your budget for this week</source>
-        <target>You have gone %@ over your budget for this week</target>
-        <note>Description text shown on budget detail view when user spent more than their budget target for the current week.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.OverView.OverCurrentYearDescription" xml:space="preserve">
-        <source>You have gone %@ over your budget for this year</source>
-        <target>You have gone %@ over your budget for this year</target>
-        <note>Description text shown on budget detail view when user spent more than their budget target for the current year.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.CurrentMonthDescription" xml:space="preserve">
-        <source>You have %@ left on your budget this month</source>
-        <target>You have %@ left on your budget this month</target>
-        <note>Budget overview current month description text.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.CurrentWeekDescription" xml:space="preserve">
-        <source>You have %@ left on your budget this week</source>
-        <target>You have %@ left on your budget this week</target>
-        <note>Budget overview current week description text.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Overview.CurrentYearDescription" xml:space="preserve">
-        <source>You have %@ left on your budget this year</source>
-        <target>You have %@ left on your budget this year</target>
-        <note>Budget overview current year description text.</note>
       </trans-unit>
       <trans-unit id="Budget.Detail.Overview.Description" xml:space="preserve">
         <source>You made your budget %@ of the time since you created the budget</source>
@@ -225,11 +320,6 @@
         <target>You can spend %@ per month and still remain within your budget</target>
         <note>Budget detail remaining budget monthly.</note>
       </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.Left.Total" xml:space="preserve">
-        <source>You have %@ remaining of your budget</source>
-        <target>You have %@ remaining of your budget</target>
-        <note>Budget detail remaining budget yearly.</note>
-      </trans-unit>
       <trans-unit id="Budget.Detail.Progress.Left.Weekly" xml:space="preserve">
         <source>You can spend %@ per week and still remain within your budget</source>
         <target>You can spend %@ per week and still remain within your budget</target>
@@ -255,47 +345,47 @@
         <target>You went over your budget this period</target>
         <note>Description text shown on budget detail view when user spent more than their budget target for the current period.</note>
       </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.LastDay" xml:space="preserve">
-        <source>Ends today</source>
-        <target>Ends today</target>
-        <note>Budget chart text when on last day of budget.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleDays" xml:space="preserve">
-        <source>%d days remaining</source>
-        <target>%d days remaining</target>
-        <note>Budget chart text number of remaining days.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleMonths" xml:space="preserve">
-        <source>%d months remaining</source>
-        <target>%d months remaining</target>
-        <note>Budget chart text number of months remaining.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleMonthsAndDays" xml:space="preserve">
-        <source>%1$d months and %2$d days remaining</source>
-        <target>%1$d months and %2$d days remaining</target>
-        <note>Budget chart text with multiple months and days remaining.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.MultipleMonthsAndSingleDay" xml:space="preserve">
-        <source>%d months and 1 day remaining</source>
-        <target>%d months and 1 day remaining</target>
-        <note>Budget chart text number of months and a single day remaining.</note>
-      </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.OneDay" xml:space="preserve">
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.EndsTomorrow" xml:space="preserve">
         <source>Ends tomorrow</source>
         <target>Ends tomorrow</target>
         <note>Budget chart text when one day remaining of the budget.</note>
       </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.SingleMonth" xml:space="preserve">
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.LastDay" xml:space="preserve">
+        <source>Ends today</source>
+        <target>Ends today</target>
+        <note>Budget chart text when on last day of budget.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.MultipleDays" xml:space="preserve">
+        <source>%d days remaining</source>
+        <target>%d days remaining</target>
+        <note>Budget chart text number of remaining days.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.MultipleMonths" xml:space="preserve">
+        <source>%d months remaining</source>
+        <target>%d months remaining</target>
+        <note>Budget chart text number of months remaining.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.MultipleMonthsAndDays" xml:space="preserve">
+        <source>%1$d months and %2$d days remaining</source>
+        <target>%1$d months and %2$d days remaining</target>
+        <note>Budget chart text with multiple months and days remaining.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.MultipleMonthsAndSingleDay" xml:space="preserve">
+        <source>%d months and 1 day remaining</source>
+        <target>%d months and 1 day remaining</target>
+        <note>Budget chart text number of months and a single day remaining.</note>
+      </trans-unit>
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.SingleMonth" xml:space="preserve">
         <source>1 month remaining</source>
         <target>1 month remaining</target>
         <note>Budget chart text exactly 1 month remaining.</note>
       </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.SingleMonthAndDay" xml:space="preserve">
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.SingleMonthAndDay" xml:space="preserve">
         <source>1 month and 1 day remaining</source>
         <target>1 month and 1 day remaining</target>
         <note>Budget chart text exactly 1 month and 1 day remaining.</note>
       </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.RemaingTime.SingleMonthAndMultipleDays" xml:space="preserve">
+      <trans-unit id="Budget.Detail.Progress.RemainingTime.SingleMonthAndMultipleDays" xml:space="preserve">
         <source>1 month and %d days remaining</source>
         <target>1 month and %d days remaining</target>
         <note>Budget chart text  with exactly one month multiple days remaining.</note>
@@ -340,11 +430,6 @@
         <target>Starts in 1 month and %d days</target>
         <note>Budget chart text starts in 1 month and multiple days.</note>
       </trans-unit>
-      <trans-unit id="Budget.Detail.Progress.StartsAtDate" xml:space="preserve">
-        <source>Starts %@</source>
-        <target>Starts %@</target>
-        <note>Budget detail view starts text saying that budget starts at exact date.</note>
-      </trans-unit>
       <trans-unit id="Budget.Detail.Progress.StartsTomorrow" xml:space="preserve">
         <source>Starts tomorrow</source>
         <target>Starts tomorrow</target>
@@ -385,6 +470,11 @@
         <target>Delete</target>
         <note>Title for the button to delete a budget.</note>
       </trans-unit>
+      <trans-unit id="Budget.Generic.DoneButton" xml:space="preserve">
+        <source>Done</source>
+        <target>Done</target>
+        <note>Done button text for creating budget flow.</note>
+      </trans-unit>
       <trans-unit id="Budget.Generic.EditButton" xml:space="preserve">
         <source>Edit</source>
         <target>Edit</target>
@@ -401,6 +491,11 @@
         <source>Next</source>
         <target>Next</target>
         <note>Title of button to next step when creating a budget</note>
+      </trans-unit>
+      <trans-unit id="Budget.Generic.NoBudgetsAvailable" xml:space="preserve">
+        <source>You have no budgets. Create your budget based on your top spending categories or create a new budget.</source>
+        <target>You have no budgets. Create your budget based on your top spending categories or create a new budget.</target>
+        <note>Title for empty budgets label when list of mixed plain and recommended budgets displayed.</note>
       </trans-unit>
       <trans-unit id="Budget.Generic.SelectButton" xml:space="preserve">
         <source>Select</source>
@@ -807,57 +902,22 @@
         <target>Left to spend in %@</target>
         <note>Subtitle shown when user long press bar in chart for left to spend statistics.</note>
       </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Current.DaysLeft" xml:space="preserve">
-        <source>You can spend %1$@ per day until next salary in %2$d days.</source>
-        <target>You can spend %1$@ per day until next salary in %2$d days.</target>
-        <note>Left to spend per day until next salary in a number of days.</note>
-      </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Current.LastDay" xml:space="preserve">
-        <source>You have %@ left to spend today.</source>
-        <target>You have %@ left to spend today.</target>
-        <note>Left to spend today.</note>
-      </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Current.Less" xml:space="preserve">
-        <source>You have %@ less than you usually have this time of the month</source>
-        <target>You have %@ less than you usually have this time of the month</target>
-        <note>Left to spend per is less than usual.</note>
-      </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Current.More" xml:space="preserve">
-        <source>You have %@ more than you usually have this time of the month</source>
-        <target>You have %@ more than you usually have this time of the month</target>
-        <note>Left to spend is more than usual.</note>
-      </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Current.OneDayLeft" xml:space="preserve">
-        <source>You can spend %@ until tomorrow.</source>
-        <target>You can spend %@ until tomorrow.</target>
-        <note>Left to spend per day until next salary tomorrow.</note>
-      </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Past.BelowAverage" xml:space="preserve">
-        <source>You spent %@ below your average.</source>
-        <target>You spent %@ below your average.</target>
-        <note>Left to spend less than average for previous month.</note>
-      </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Past.Default" xml:space="preserve">
-        <source>You have an average of %1$@ Left to Spend in %2$@</source>
-        <target>You have an average of %1$@ Left to Spend in %2$@</target>
-        <note>Left to spend less default.</note>
-      </trans-unit>
-      <trans-unit id="LeftToSpend.Progress.Past.OverAverage" xml:space="preserve">
-        <source>You spent %@ over your average.</source>
-        <target>You spent %@ over your average.</target>
-        <note>Left to spend more than average for previous month.</note>
-      </trans-unit>
       <trans-unit id="Overview.Accounts.AddBankOrCard" xml:space="preserve">
         <source>Add bank or card</source>
         <target>Add bank or card</target>
         <note>Optional text to display in overview when there are no accounts.</note>
+      </trans-unit>
+      <trans-unit id="Overview.Accounts.All" xml:space="preserve">
+        <source>Accounts</source>
+        <target>Accounts</target>
+        <note>Text displayed above accounts cards sections in the financial overview.</note>
       </trans-unit>
       <trans-unit id="Overview.Accounts.EmptyState" xml:space="preserve">
         <source>No accounts</source>
         <target>No accounts</target>
         <note>Text to display in overview when there are no accounts.</note>
       </trans-unit>
-      <trans-unit id="Overview.Accounts.Header" xml:space="preserve">
+      <trans-unit id="Overview.Accounts.Favorite" xml:space="preserve">
         <source>Favorite accounts</source>
         <target>Favorite accounts</target>
         <note>Text displayed above accounts cards sections in the financial overview when the favorite predicate is used.</note>
@@ -871,11 +931,6 @@
         <source>See all</source>
         <target>See all</target>
         <note>Title on card in overview to show all accounts.</note>
-      </trans-unit>
-      <trans-unit id="Overview.Accounts.Title" xml:space="preserve">
-        <source>Accounts</source>
-        <target>Accounts</target>
-        <note>Text displayed above accounts cards sections in the financial overview.</note>
       </trans-unit>
       <trans-unit id="Overview.ActionableInsights.NoEvents" xml:space="preserve">
         <source>No new events</source>
@@ -946,6 +1001,28 @@
         <source>No statistics available</source>
         <target>No statistics available</target>
         <note>No statistics data available.</note>
+      </trans-unit>
+      <trans-unit id="Overview.RecommendedBudgets.CellLabelSubtitle" xml:space="preserve">
+        <source>You have spent %@ on average.
+Track your expense by creating a budget.</source>
+        <target>You have spent %@ on average.
+Track your expense by creating a budget.</target>
+        <note>Subtitle for recommended budget cell displaying average expense for category.</note>
+      </trans-unit>
+      <trans-unit id="Overview.RecommendedBudgets.CreateBudgetButton" xml:space="preserve">
+        <source>Create budget</source>
+        <target>Create budget</target>
+        <note>Title for button to create new budget from list of recommended budgets.</note>
+      </trans-unit>
+      <trans-unit id="Overview.RecommendedBudgets.RecommendedBudgetRoundedCellHeader" xml:space="preserve">
+        <source>Suggested budget</source>
+        <target>Suggested budget</target>
+        <note>Header for recommended budget cell with rounded corners.</note>
+      </trans-unit>
+      <trans-unit id="Overview.RecommendedBudgets.Title" xml:space="preserve">
+        <source>Top spending categories</source>
+        <target>Top spending categories</target>
+        <note>Title for recommended budgets list title.</note>
       </trans-unit>
       <trans-unit id="Transaction.Detail.ChangeCategory" xml:space="preserve">
         <source>Change</source>
@@ -1022,11 +1099,6 @@
         <target>No transaction details available</target>
         <note>Text when failing to fetch transaction.</note>
       </trans-unit>
-      <trans-unit id="Transaction.Pending.Title" xml:space="preserve">
-        <source>Pending</source>
-        <target>Pending</target>
-        <note>Description for a pending transaction.</note>
-      </trans-unit>
       <trans-unit id="Transactions.NoTransactions" xml:space="preserve">
         <source>You haven’t made any transactions yet</source>
         <target>You haven’t made any transactions yet</target>
@@ -1051,7 +1123,7 @@
   </file>
   <file original="Sources/TinkMoneyManagerUIUITestsHost/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.1" build-num="14B47b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.3" build-num="15E204a"/>
     </header>
     <body>
       <trans-unit id="CFBundleName" xml:space="preserve">
