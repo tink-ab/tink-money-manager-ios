@@ -46962,7 +46962,7 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/View Models\/LeftToSpendRingChartViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3661,
+      "offset": 3664,
       "length": 4,
       "value": "true"
     },
@@ -55693,7 +55693,7 @@
       "kind": "StringLiteral",
       "offset": 78,
       "length": 7,
-      "value": "\"1.2.0\""
+      "value": "\"1.2.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/WeeklySummaryExpensesByCategoryItemView.swift",
