@@ -1,0 +1,19 @@
+name: PR Checks
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: [master]
+
+jobs:
+  run-swiftlint:
+    name: Run swiftlint
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run swiftlint
+        run: |
+          swiftlint lint --strict
