@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		u+bn3yzoxwic2+zBDaC0OA9bYrg=
+		zwJsJH7XXX4LENDjgiKUaQoGwE4=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		j504IGAnB1BpK2ReCiLCLBN537Q=
+		fJftizSIOoOLCGGWTso0RkqDXQo=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pO8b4ZemqVPaK/pCm+JR8vDYnLo=
+		GdAqosN+vvxVdAUE7rxEjzmrh04=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		j504IGAnB1BpK2ReCiLCLBN537Q=
+		fJftizSIOoOLCGGWTso0RkqDXQo=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,11 +54,15 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		x4lme+jGJhKPYbeh2bTDBLFtM7Q=
+		EqSRT9Ln674lhyGkQoxNGzWaf+o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		vsGENcRzonVgW/nScnw3Zgqb/dY=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		qtXDk7gm5eY9KlccOR62EpCaWdE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -81,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qs2wKBSFc/1bCxheDXJOeXLqad+5I5bfXBStdHFjmTQ=
+			FCVeY2s/U7XP3bO2HTt36vHRPQ9KPUmlj3nvSMg8Uio=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -109,14 +113,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t9owTLjXf+iz6vWcjvQTq0h9DNPRQsmDFsR8wTOeF7E=
+			Bzsf63DKP+qfJP7DbEaFAOR69jW7rdnKPFj59giMJCk=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qs2wKBSFc/1bCxheDXJOeXLqad+5I5bfXBStdHFjmTQ=
+			FCVeY2s/U7XP3bO2HTt36vHRPQ9KPUmlj3nvSMg8Uio=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -144,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1B9Wr4T6KHULXPbft11Z9yDEDp6TFFv8lKPE7dUQLNU=
+			2khrbrh0HLZTXpugOaf+hAAlbl4CzJitCsm/AIIrYVs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -152,6 +156,13 @@
 			<key>hash2</key>
 			<data>
 			ee+oM0mvvP02+5cj8T37FElSN2TENfzUXGi5wayuqFI=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			n6FQH4nuArrkPeHoQ2HKBA36K35DrxXOee2Qgf35xiI=
 			</data>
 		</dict>
 	</dict>
