@@ -42909,21 +42909,21 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/CategoryIconGridView.swift",
       "kind": "FloatLiteral",
-      "offset": 1597,
+      "offset": 1576,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/CategoryIconGridView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1671,
+      "offset": 1650,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/CategoryIconGridView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1792,
+      "offset": 1771,
       "length": 2,
       "value": "40"
     },
@@ -42937,28 +42937,28 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/CategoryIconGridView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2173,
+      "offset": 2152,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/CategoryIconGridView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2301,
+      "offset": 2280,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/CategoryIconGridView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2311,
+      "offset": 2290,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/CategoryIconGridView.swift",
       "kind": "Array",
-      "offset": 2006,
+      "offset": 1985,
       "length": 2,
       "value": "[]"
     },
@@ -55693,7 +55693,7 @@
       "kind": "StringLiteral",
       "offset": 78,
       "length": 7,
-      "value": "\"1.3.1\""
+      "value": "\"1.3.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/WeeklySummaryExpensesByCategoryItemView.swift",
