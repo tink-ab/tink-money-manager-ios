@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eSoWEURInWlPo4Euxe+jX/FD5xY=
+		DHsuFr5Q8wKMD5dDpE1WjF2nxz8=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		8+WtNwoyYtypx2qg0yb1jHj6LFg=
+		Avgmn/xgRYJuqGKHs1bKXeRPN28=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JQ9bMeY9VkH/5wmbLye9181n09k=
+		LvEsvxEQdgNRxZy0TX/eZlDsmYI=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		8+WtNwoyYtypx2qg0yb1jHj6LFg=
+		Avgmn/xgRYJuqGKHs1bKXeRPN28=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TFrHk3rap4OAJWVNIF3a8Mb9weU=
+		jnLPSUH3FUUhy4llfrlFw9VIV/c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,31 +62,31 @@
 		</data>
 		<key>TinkMoneyManagerUIResources.bundle/Assets.car</key>
 		<data>
-		pMk/3HF6HzNlRjmX/3d6FEJlesg=
+		omXj2qjVkX/Eez9akusFZqYHKxU=
 		</data>
 		<key>TinkMoneyManagerUIResources.bundle/Info.plist</key>
 		<data>
-		HkB5iHgHjJLGpDrsZOv5V5+M6P8=
+		PJK4hwTuj6w5hjlSjWywzfbr7qg=
 		</data>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		nlUY3D8dJRSbAbVH3YSKXDnZqrQ=
+		mHCIYSHlDv4wXrVxYnEmKRru6oA=
 		</data>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
-		OnX22wWFKRSOFN1+obRynMCeyXM=
+		AxmqLhpHy8vXUBqipyjqYLgaqjU=
 		</data>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		5QCwG7o1F/DeauRawTGWDvnwKf0=
+		516CA2e25uno9r88N2jEOJCT4Eg=
 		</data>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		/91jlnG3vTLaM0Wr8F0JI7gnW+Y=
+		Fl4VxhZVQFR7eW45/E7jT0bNxNQ=
 		</data>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeSignature</key>
 		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		EXKQp8MXfT4pzryslCe3DWLZ2YQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -102,7 +102,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s4L/ns0nLXrtMhyI4cZSvRe8nECMG9zPnDoRpw752xg=
+			rzHv4Wi7lW2rk8f77Vayd5ZlT9UqAjrEfM7Q0uRrnj4=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -130,14 +130,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mi4ey0Dr+UcfvyeLyRHpGxJDAiC36CC9vMng6aWBSFQ=
+			WgR91qmhl41XA/Vfs2QUyyzzSeh+C4GfaZX57YcWAMU=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s4L/ns0nLXrtMhyI4cZSvRe8nECMG9zPnDoRpw752xg=
+			rzHv4Wi7lW2rk8f77Vayd5ZlT9UqAjrEfM7Q0uRrnj4=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -165,7 +165,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eZN4JsKdiCSZMWv/VZPLlg4PUK+uMEkZfOVemvwZ83I=
+			8/u+q/W7/EwrzfSBjqEn9HCFSG+0h7uzjNualaHnKaM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -186,49 +186,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZrYYK13svRQ1MMWsfJphDPLS+ZWwEiL9W2SjUTJpqmM=
+			1fFsq/893qw91FSBmBctpFXmXPd/5M5nWi1/ULCRHJA=
 			</data>
 		</dict>
 		<key>TinkMoneyManagerUIResources.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ulr4TjzeWhQ+bBtGkIBgIaxpNNVtNrqjE912XG3qg8E=
+			qDoQuUkos/vF0jcP4eiqlRVo7cjYo8cUj/JChmyjEy0=
 			</data>
 		</dict>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4aZGuamh42RIvidcSgWoWKM6eSs6hw5RsrDpXnt+x8k=
+			69xG0agVe1FlUYJw5Z0AselJR+6rFtgLOTlm+swx874=
 			</data>
 		</dict>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeRequirements</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			Qem4SIho+yev3RjjlJOS1pL4TeydqFxASy69sxRFtW8=
 			</data>
 		</dict>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bm1fd6X/6D9hmxcIzxVfBRcD4t7L9CdQhP5jVbKc2VU=
+			Sb09GWX5Uyd+G3vr9fNNRk2Gj9bARQ/zXztQq90eZEU=
 			</data>
 		</dict>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GVVpWSDoPO7B4K6oCei5ewDlN62ZRjJQU8c2AbIII1E=
+			R5qflvG+OygT4lXdquRKnU1+aFXaK/hHbUFh4wIotDg=
 			</data>
 		</dict>
 		<key>TinkMoneyManagerUIResources.bundle/_CodeSignature/CodeSignature</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			+jhxXYdZ45tO/sGipAbpKRdPq151/a3BibtlV8yYbV0=
 			</data>
 		</dict>
 	</dict>
