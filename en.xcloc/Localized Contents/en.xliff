@@ -832,6 +832,16 @@
         <target>Over time</target>
         <note>Title for tab showing bar chart of data over time.</note>
       </trans-unit>
+      <trans-unit id="Generic.RecurringExpenses.Title" xml:space="preserve">
+        <source>Recurring expenses</source>
+        <target>Recurring expenses</target>
+        <note>Title for category statistics representing recurring expenses.</note>
+      </trans-unit>
+      <trans-unit id="Generic.SafeToSpend.Title" xml:space="preserve">
+        <source>Safe to spend</source>
+        <target>Safe to spend</target>
+        <note>Title for safe to spend statistics.</note>
+      </trans-unit>
       <trans-unit id="Generic.Transfers.Title" xml:space="preserve">
         <source>Transfers</source>
         <target>Transfers</target>
@@ -1024,6 +1034,26 @@ Track your expense by creating a budget.</target>
         <target>Top spending categories</target>
         <note>Title for recommended budgets list title.</note>
       </trans-unit>
+      <trans-unit id="Overview.RecurringExpenses.Approximated" xml:space="preserve">
+        <source>*Approximated</source>
+        <target>*Approximated</target>
+        <note>Approximated label.</note>
+      </trans-unit>
+      <trans-unit id="Overview.RecurringExpenses.Expected" xml:space="preserve">
+        <source>Expected %@</source>
+        <target>Expected %@</target>
+        <note>Subtitle for recurrent transaction cell label displaying the date of the upcoming transaction.</note>
+      </trans-unit>
+      <trans-unit id="Overview.RecurringExpenses.SeeAllButton" xml:space="preserve">
+        <source>See all</source>
+        <target>See all</target>
+        <note>Title for button to see all recurring expenses.</note>
+      </trans-unit>
+      <trans-unit id="Overview.RecurringExpenses.Title" xml:space="preserve">
+        <source>Recurring expenses</source>
+        <target>Recurring expenses</target>
+        <note>Title for latest recurring expenses list.</note>
+      </trans-unit>
       <trans-unit id="Transaction.Detail.ChangeCategory" xml:space="preserve">
         <source>Change</source>
         <target>Change</target>
@@ -1108,6 +1138,16 @@ Track your expense by creating a budget.</target>
         <source>Pending</source>
         <target>Pending</target>
         <note>Text to indicate that the transaction is in the pending state.</note>
+      </trans-unit>
+      <trans-unit id="Transactions.RecurringExpensesSectionTitle" xml:space="preserve">
+        <source>Recurring expenses</source>
+        <target>Recurring expenses</target>
+        <note>Title for section of recurring expensesin in All transactions screen.</note>
+      </trans-unit>
+      <trans-unit id="Transactions.TransactionsSectionTitle" xml:space="preserve">
+        <source>Transactions</source>
+        <target>Transactions</target>
+        <note>Title for section of transactions in All transactions screen.</note>
       </trans-unit>
       <trans-unit id="Week.Of.Year.Long" xml:space="preserve">
         <source>week</source>

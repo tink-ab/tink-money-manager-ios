@@ -174,6 +174,8 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Generic.Monthly.TabTitle` | Monthly | Title for tab showing chart of data for one month. |
 | `Generic.OverTime.AverageSubtitle` | %@ in average per month | Subtitle with average per month shown on over time views. |
 | `Generic.OverTime.TabTitle` | Over time | Title for tab showing bar chart of data over time. |
+| `Generic.RecurringExpenses.Title` | Recurring expenses | Title for category statistics representing recurring expenses. |
+| `Generic.SafeToSpend.Title` | Safe to spend | Title for safe to spend statistics. |
 | `Generic.Transfers.Title` | Transfers | Title for category statistics representing only transfers. |
 | `Human.Enumerated.formatter.And` | and | Human enumerated formatter text for and. |
 | `ImproveCategorizationLevel.CategorizationError` | There was an error categorizing | Error shown when categorization fails in improve categorization level modal. |
@@ -212,6 +214,10 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Overview.RecommendedBudgets.CreateBudgetButton` | Create budget | Title for button to create new budget from list of recommended budgets. |
 | `Overview.RecommendedBudgets.RecommendedBudgetRoundedCellHeader` | Suggested budget | Header for recommended budget cell with rounded corners. |
 | `Overview.RecommendedBudgets.Title` | Top spending categories | Title for recommended budgets list title. |
+| `Overview.RecurringExpenses.Approximated` | *Approximated | Approximated label. |
+| `Overview.RecurringExpenses.Expected` | Expected %@ | Subtitle for recurrent transaction cell label displaying the date of the upcoming transaction. |
+| `Overview.RecurringExpenses.SeeAllButton` | See all | Title for button to see all recurring expenses. |
+| `Overview.RecurringExpenses.Title` | Recurring expenses | Title for latest recurring expenses list. |
 | `Transaction.Detail.ChangeCategory` | Change | Title for the button used to initiate a categorization of a transaction. |
 | `Transaction.Detail.Edit` | Edit | Text on button in navigation bar leading to the edit transaction flow. |
 | `Transaction.Detail.PendingTransaction.Description` | Details of a pending transactions can change before being confirmed. | Body of the informative pending transaction view. |
@@ -229,5 +235,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Transaction.Generic.Error` | No transaction details available | Text when failing to fetch transaction. |
 | `Transactions.NoTransactions` | You haven’t made any transactions yet | Text to display in the transaction list when there are no transactions. |
 | `Transactions.PendingStatus` | Pending | Text to indicate that the transaction is in the pending state. |
+| `Transactions.RecurringExpensesSectionTitle` | Recurring expenses | Title for section of recurring expensesin in All transactions screen. |
+| `Transactions.TransactionsSectionTitle` | Transactions | Title for section of transactions in All transactions screen. |
 | `Week.Of.Year.Long` | week | Week of the year formatter long text. |
 | `Week.Of.Year.Short` | w | Week of the year formatter short text. |

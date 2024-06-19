@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "TinkMoneyManagerUI"
-  spec.version      = "1.3.3"
+  spec.version      = "1.4.0"
   spec.license      = { :type => "Tink", :file => "LICENSE" }
   spec.authors      = { "Tink AB" => "mobile@tink.se" }
   spec.homepage     = "https://github.com/tink-ab/tink-money-manager-ios"
@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = ["5.7", "5.8", "5.9"]
 
-  spec.dependency "TinkCore", "~> 2.3"
+  spec.dependency "TinkCore", "~> 2.4"
 end
