@@ -362,10 +362,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32ActionableInsightsViewController")
 @end
 
 
+
 @interface ActionableInsightsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 
@@ -738,6 +738,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
+
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
@@ -788,6 +789,74 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 
 
 
+/// A view controller that displays a list of predicted recurring transactions.
+/// Required scopes to display predicted recurring transactions: <code>transactions.recurring:read</code> or <code>enrichment.transactions:readonly</code> or <code>enrichment.transactions</code>.
+/// In order to display the total amount of predicted recurring transactions, the statistics types <code>expenses-by-cost-structure</code> need to be enabled.
+/// <h2>Overview</h2>
+/// Use the <code>RecurringExpensesViewController</code> when you want to display a list of predicted recurring transactions.
+/// \code
+/// let recurringExpensesViewController = RecurringExpensesViewController(tink: <#Tink#>)
+/// show(recurringExpensesViewController, sender: <#Any#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI31RecurringExpensesViewController")
+@interface RecurringExpensesViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+@class UIView;
+
+@interface RecurringExpensesViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDelegate>
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)sectionIndex SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+
+@interface RecurringExpensesViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
+- (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidAppear:(BOOL)animated;
+@end
+
+
+/// A view controller for displaying safe to spend details.
+/// Required scopes: <code>statistics:read</code>, <code>transactions:read</code>, <code>transactions:categorize</code>, <code>categories:read</code>, <code>calendar:read</code> and <code>user:read</code> and in order to display predicted recurring transactions: <code>transactions.recurring:read</code> or <code>enrichment.transactions:readonly</code> or <code>enrichment.transactions</code>.
+/// The statistics types <code>expenses-by-cost-structure</code> and <code>safe-to-spend</code> need to be enabled. Note that these features are not enabled by default.
+/// A <code>SafeToSpendViewController</code> displays an interface for browsing safe to spend by month.
+/// <h2>Overview</h2>
+/// \code
+/// let safeToSpendViewController = SafeToSpendViewController(tink: <#Tink#>)
+/// present(safeToSpendViewController, animated: true)
+///
+/// \endcode<h2>Navigation</h2>
+/// The <code>SafeToSpendViewController</code> has a right navigation item that navigates to the transactions list, but it does not manage navigation to the transactions list.
+/// Push the <code>SafeToSpendViewController</code> into a <code>UINavigationController</code> to show the transactions navigation item.
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI25SafeToSpendViewController")
+@interface SafeToSpendViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+@interface SafeToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
+- (void)viewDidLoad;
+@end
+
+
+
+@interface SafeToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
+- (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
+@end
+
+
+
 /// A view controller that displays details about a specific transaction.
 /// Use the <code>TransactionDetailsViewController</code> when you want to display information about a particular transaction. From this view controller, the user can also categorize or edit the transaction.
 /// When creating the view controller, you specify the ID for which transaction to display.
@@ -833,11 +902,11 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32TransactionDetailsViewController")
 @end
 
 
-
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 
 /// A view controller that displays a list of transactions.
@@ -872,7 +941,6 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI26TransactionsViewController")
 
 
 
-@class UIView;
 
 @interface TransactionsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDelegate>
 - (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)sectionIndex SWIFT_WARN_UNUSED_RESULT;
@@ -889,6 +957,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI26TransactionsViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 @end
+
 
 
 

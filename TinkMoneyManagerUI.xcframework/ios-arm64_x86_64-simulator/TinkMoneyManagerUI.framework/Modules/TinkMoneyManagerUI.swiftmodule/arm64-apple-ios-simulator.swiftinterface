@@ -294,12 +294,14 @@ public class ColorProvider : TinkMoneyManagerUI.ColorProviding {
   public var groupedBackground: UIKit.UIColor?
   public var secondaryGroupedBackground: UIKit.UIColor?
   public var expenses: UIKit.UIColor
+  public var recurringExpenses: UIKit.UIColor
   public var income: UIKit.UIColor
   public var transfers: UIKit.UIColor
   public var uncategorized: UIKit.UIColor
   public var warning: UIKit.UIColor
   public var critical: UIKit.UIColor
   public var leftToSpend: UIKit.UIColor
+  public var safeToSpend: UIKit.UIColor
   public var expensesIconColor: UIKit.UIColor?
   public var incomeIconColor: UIKit.UIColor?
   public var transfersIconColor: UIKit.UIColor?
@@ -330,12 +332,14 @@ public protocol ColorProviding {
   var groupedBackground: UIKit.UIColor? { get set }
   var secondaryGroupedBackground: UIKit.UIColor? { get set }
   var expenses: UIKit.UIColor { get set }
+  var recurringExpenses: UIKit.UIColor { get set }
   var income: UIKit.UIColor { get set }
   var transfers: UIKit.UIColor { get set }
   var uncategorized: UIKit.UIColor { get set }
   var warning: UIKit.UIColor { get set }
   var critical: UIKit.UIColor { get set }
   var leftToSpend: UIKit.UIColor { get set }
+  var safeToSpend: UIKit.UIColor { get set }
   var expensesIconColor: UIKit.UIColor? { get set }
   var incomeIconColor: UIKit.UIColor? { get set }
   var transfersIconColor: UIKit.UIColor? { get set }
@@ -361,6 +365,9 @@ public protocol EditingPendingTransactionsConfigurable {
 public protocol BudgetConfigurable {
   var showBudgetCreateSuccessScreen: Swift.Bool { get set }
   var shouldRecommendBudgets: Swift.Bool { get set }
+}
+public protocol RecurringExpensesConfigurable {
+  var showRecurringExpenses: Swift.Bool { get set }
 }
 public enum NoAccountsAction {
   case none
@@ -480,6 +487,7 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
       case expenses
       case income
       case leftToSpend
+      case safeToSpend
       public static func == (a: TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData, b: TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData) -> Swift.Bool
       public func hash(into hasher: inout Swift.Hasher)
       public var hashValue: Swift.Int {
@@ -487,6 +495,7 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
       }
     }
     case statistics([TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData])
+    case recurringExpenses
     case latestTransactions
     case accounts(TinkMoneyManagerUI.AccountsViewController.Predicate, TinkMoneyManagerUI.AccountsViewController.Grouping)
     case actionableInsights(delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
@@ -501,7 +510,7 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
   }
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController {
-  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable, TinkMoneyManagerUI.EditingPendingTransactionsConfigurable, TinkMoneyManagerUI.BudgetConfigurable {
+  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable, TinkMoneyManagerUI.EditingPendingTransactionsConfigurable, TinkMoneyManagerUI.BudgetConfigurable, TinkMoneyManagerUI.RecurringExpensesConfigurable {
     public enum TransactionItemAction {
       case showDetails
       case categorize
@@ -517,10 +526,11 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     public var editingPendingTransactions: TinkMoneyManagerUI.EditingPendingTransactions
     public var showBudgetCreateSuccessScreen: Swift.Bool
     public var shouldRecommendBudgets: Swift.Bool
+    public var showRecurringExpenses: Swift.Bool
   }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class FinanceOverviewViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
+  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.RecurringExpensesConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
     set
   }
@@ -740,11 +750,43 @@ extension TinkCore.Tink {
   @available(*, deprecated)
   public func fetchTransactionsToImproveCategorization(evaluateEverything: Swift.Bool? = nil, completion: @escaping (Swift.Result<[TinkCore.Transaction], Swift.Error>) -> Swift.Void) -> TinkCore.Cancellable?
 }
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class RecurringExpensesViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.RecurringExpensesViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+}
+extension TinkMoneyManagerUI.RecurringExpensesViewController {
+  @_Concurrency.MainActor(unsafe) final public func clearSelection(animated: Swift.Bool)
+}
+extension TinkMoneyManagerUI.RecurringExpensesViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SafeToSpendViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.SafeToSpendViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+}
+extension TinkMoneyManagerUI.SafeToSpendViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+}
+extension TinkMoneyManagerUI.SafeToSpendViewController : UIKit.UIAdaptivePresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
 public enum ScreenEvent {
   case overview
   case expenses
   case income
   case leftToSpend
+  case safeToSpend
+  case recurringExpenses
   case transactions
   case categorySelection
   case similarTransactions
@@ -848,7 +890,7 @@ extension TinkMoneyManagerUI.TransactionsViewControllerDelegate {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionsViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.TransactionsViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, query: TinkCore.TransactionsQuery = TransactionsQuery())
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, query: TinkCore.TransactionsQuery = TransactionsQuery(), showPredictedRecurringTransactions: Swift.Bool = false)
   @objc deinit
 }
 extension TinkMoneyManagerUI.TransactionsViewController {
