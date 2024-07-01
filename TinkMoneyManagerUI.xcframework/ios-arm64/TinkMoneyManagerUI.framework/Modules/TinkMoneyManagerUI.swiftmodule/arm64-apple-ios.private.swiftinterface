@@ -1,23 +1,93 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkMoneyManagerUI
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkMoneyManagerUI
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreGraphics
+import Dispatch
 import Foundation
+import OSLog
 import QuartzCore
 import Security
 import Swift
-@_exported import TinkCore
-import UIKit
+@_exported import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
+public struct AccessToken : Swift.Hashable, Swift.RawRepresentable, Swift.ExpressibleByStringLiteral {
+  public let rawValue: Swift.String
+  public init?(rawValue: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(_ value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias RawValue = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public struct Account {
+  public enum Kind : Swift.CaseIterable {
+    case checking
+    case savings
+    case investment
+    case mortgage
+    case creditCard
+    case loan
+    case pension
+    case other
+    case external
+    case unknown
+    public static func == (a: TinkMoneyManagerUI.Account.Kind, b: TinkMoneyManagerUI.Account.Kind) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public typealias AllCases = [TinkMoneyManagerUI.Account.Kind]
+    public static var allCases: [TinkMoneyManagerUI.Account.Kind] {
+      get
+    }
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum AccountExclusion {
+    case aggregation
+    case pfmAndSearch
+    case pfmData
+    case unknown
+    public static func == (a: TinkMoneyManagerUI.Account.AccountExclusion, b: TinkMoneyManagerUI.Account.AccountExclusion) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Account>
+  public let accountNumber: Swift.String
+  public let credentialsID: TinkMoneyManagerUI.Credentials.ID
+  public let isFavorite: Swift.Bool
+  public let id: TinkMoneyManagerUI.Account.ID
+  public let name: Swift.String
+  public let ownership: Swift.Double
+  public let kind: TinkMoneyManagerUI.Account.Kind
+  public let transferSourceIdentifiers: [Foundation.URL]?
+  public let holderName: Swift.String?
+  public let isClosed: Swift.Bool?
+  public let accountExclusion: TinkMoneyManagerUI.Account.AccountExclusion?
+  public let currencyDenominatedBalance: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+  public let refreshed: Foundation.Date?
+  public let firstSeen: Foundation.Date?
+  public let financialInstitutionID: TinkMoneyManagerUI.Provider.FinancialInstitution.ID?
+  public init(id: TinkMoneyManagerUI.Account.ID, credentialsID: TinkMoneyManagerUI.Credentials.ID, name: Swift.String, accountNumber: Swift.String, kind: TinkMoneyManagerUI.Account.Kind, transferSourceIdentifiers: [Foundation.URL]?, holderName: Swift.String?, isClosed: Swift.Bool?, currencyDenominatedBalance: TinkMoneyManagerUI.CurrencyDenominatedAmount?, refreshed: Foundation.Date?, firstSeen: Foundation.Date?, financialInstitutionID: TinkMoneyManagerUI.Provider.FinancialInstitution.ID?, isFavorite: Swift.Bool = false, ownership: Swift.Double = 1.0, accountExclusion: TinkMoneyManagerUI.Account.AccountExclusion = .unknown)
+}
+extension TinkMoneyManagerUI.Account : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.Account, b: TinkMoneyManagerUI.Account) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol AccountDetailsViewControllerDelegate : AnyObject {
-  func accountDetailsViewController(_ viewController: TinkMoneyManagerUI.AccountDetailsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+  func accountDetailsViewController(_ viewController: TinkMoneyManagerUI.AccountDetailsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AccountDetailsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.AccountDetailsViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.AccountDetailsViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, accountID: TinkMoneyManagerUI.Account.ID)
   @available(*, unavailable)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -27,31 +97,35 @@ extension TinkMoneyManagerUI.AccountDetailsViewController {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.AccountDetailsViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 extension TinkMoneyManagerUI.AccountDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
+public protocol AccountService {
+  func accounts(completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Account], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func update(id: TinkMoneyManagerUI.Account.ID, name: Swift.String?, type: TinkMoneyManagerUI.Account.Kind?, accountNumber: Swift.String?, isFavorite: Swift.Bool?, ownership: Swift.Double?, accountExclusion: TinkMoneyManagerUI.Account.AccountExclusion?, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Account, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
 public protocol AccountsViewControllerDelegate : AnyObject {
-  func accountsViewController(_ viewController: TinkMoneyManagerUI.AccountsViewController, didSelectAccount account: TinkCore.Account)
+  func accountsViewController(_ viewController: TinkMoneyManagerUI.AccountsViewController, didSelectAccount account: TinkMoneyManagerUI.Account)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AccountsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.AccountsViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.AccountsViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
   public enum Grouping {
     case none
     case kind
-    case custom(grouping: ([TinkCore.Account]) -> [TinkMoneyManagerUI.CustomAccountGroup])
+    case custom(grouping: ([TinkMoneyManagerUI.Account]) -> [TinkMoneyManagerUI.CustomAccountGroup])
   }
   public enum Predicate {
     case all
-    case financialInstitution(TinkCore.Provider.FinancialInstitution.ID)
+    case financialInstitution(TinkMoneyManagerUI.Provider.FinancialInstitution.ID)
     case favorite(Swift.Bool)
-    case kind(TinkCore.Account.Kind)
-    case credentials(TinkCore.Credentials.ID)
-    case custom((TinkCore.Account) -> Swift.Bool)
+    case kind(TinkMoneyManagerUI.Account.Kind)
+    case credentials(TinkMoneyManagerUI.Credentials.ID)
+    case custom((TinkMoneyManagerUI.Account) -> Swift.Bool)
   }
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, grouping: TinkMoneyManagerUI.AccountsViewController.Grouping = .none, predicate: TinkMoneyManagerUI.AccountsViewController.Predicate = .all)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, grouping: TinkMoneyManagerUI.AccountsViewController.Grouping = .none, predicate: TinkMoneyManagerUI.AccountsViewController.Predicate = .all)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
@@ -63,41 +137,311 @@ extension TinkMoneyManagerUI.AccountsViewController {
 extension TinkMoneyManagerUI.AccountsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
+public struct ActionableInsight {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.ActionableInsight>
+  public struct InsightAction {
+    public let label: Swift.String?
+    public let data: TinkMoneyManagerUI.InsightActionData?
+    public init(label: Swift.String?, data: TinkMoneyManagerUI.InsightActionData?)
+  }
+  @frozen public enum State {
+    case active([TinkMoneyManagerUI.ActionableInsight.InsightAction])
+    case archived(Foundation.Date)
+  }
+  public enum Kind {
+    case accountBalanceLow(TinkMoneyManagerUI.ActionableInsight.AccountBalanceLowData)
+    case budgetOverspent(TinkMoneyManagerUI.ActionableInsight.BudgetSummary)
+    case budgetCloseNegative(TinkMoneyManagerUI.ActionableInsight.BudgetSummary)
+    case budgetClosePositive(TinkMoneyManagerUI.ActionableInsight.BudgetSummary)
+    case budgetSuccess(TinkMoneyManagerUI.ActionableInsight.BudgetSummary)
+    case budgetSummaryAchieved(TinkMoneyManagerUI.ActionableInsight.BudgetPeriodSummary)
+    case budgetSummaryOverspent(TinkMoneyManagerUI.ActionableInsight.BudgetPeriodSummary)
+    case largeExpense(TinkMoneyManagerUI.ActionableInsight.LargeExpense)
+    case singleUncategorizedTransaction(TinkMoneyManagerUI.Transaction.ID)
+    case doubleCharge([TinkMoneyManagerUI.Transaction.ID])
+    case weeklyUncategorizedTransactions(TinkMoneyManagerUI.ActionableInsight.WeeklyTransactions)
+    case weeklySummaryExpensesByCategory(TinkMoneyManagerUI.ActionableInsight.WeeklyExpensesByCategory)
+    case weeklySummaryExpensesByDay(TinkMoneyManagerUI.ActionableInsight.WeeklyExpensesByDay)
+    case monthlySummaryExpensesByCategory(TinkMoneyManagerUI.ActionableInsight.MonthlyExpensesByCategory)
+    case weeklySummaryExpenseTransactions(TinkMoneyManagerUI.ActionableInsight.WeeklyTransactionsSummary)
+    case monthlySummaryExpenseTransactions(TinkMoneyManagerUI.ActionableInsight.MonthlyTransactionsSummary)
+    case newIncomeTransaction(TinkMoneyManagerUI.ActionableInsight.NewIncomeTransaction)
+    case suggestSetUpSavingsAccount(TinkMoneyManagerUI.ActionableInsight.SuggestSetUpSavingsAccount)
+    case creditCardLimitClose(TinkMoneyManagerUI.ActionableInsight.CreditCardLimit)
+    case creditCardLimitReached(TinkMoneyManagerUI.ActionableInsight.CreditCardLimit)
+    case leftToSpendPositiveMidMonth(TinkMoneyManagerUI.ActionableInsight.LeftToSpendMidMonth)
+    case leftToSpendNegativeMidMonth(TinkMoneyManagerUI.ActionableInsight.LeftToSpendMidMonth)
+    case budgetSuggestCreateTopCategory(TinkMoneyManagerUI.ActionableInsight.BudgetSuggestCreateTopCategory)
+    case budgetSuggestCreateTopPrimaryCategory(TinkMoneyManagerUI.ActionableInsight.BudgetSuggestCreateTopCategory)
+    case budgetSuggestCreateFirst
+    case leftToSpendPositiveBeginningMonth(TinkMoneyManagerUI.ActionableInsight.LeftToSpendBeginningMonth)
+    case leftToSpendNegativeBeginningMonth(TinkMoneyManagerUI.ActionableInsight.LeftToSpendBeginningMonth)
+    case spendingByCategoryIncreased(TinkMoneyManagerUI.ActionableInsight.SpendingByCategoryIncreased)
+    case spendingByPrimaryCategoryIncreased(TinkMoneyManagerUI.ActionableInsight.SpendingByCategoryIncreased)
+    case leftToSpendPositiveSummarySavingsAccount(TinkMoneyManagerUI.ActionableInsight.LeftToSpendPositiveSummarySavingsAccount)
+    case leftToSpendPositiveFinalWeek(TinkMoneyManagerUI.ActionableInsight.LeftToSpendPositiveFinalWeek)
+    case aggregationRefreshPSD2Credentials(TinkMoneyManagerUI.ActionableInsight.AggregationRefreshPSD2Credentials)
+    case unknown
+  }
+  public let id: TinkMoneyManagerUI.ActionableInsight.ID
+  public let kind: TinkMoneyManagerUI.ActionableInsight.Kind
+  public let state: TinkMoneyManagerUI.ActionableInsight.State
+  public let title: Swift.String
+  public let description: Swift.String
+  public let created: Foundation.Date
+}
+extension TinkMoneyManagerUI.ActionableInsight {
+  public struct AccountBalanceLowData {
+    public let accountID: TinkMoneyManagerUI.Account.ID
+    public let balance: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  }
+  public struct BudgetSummary {
+    public let budgetID: TinkMoneyManagerUI.Budget.ID
+    public let budgetPeriod: TinkMoneyManagerUI.ActionableInsight.BudgetPeriod
+  }
+  public struct BudgetPeriod {
+    public let dateInterval: Foundation.DateInterval
+    public let spentAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let budgetAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  }
+  public enum BudgetPeriodUnit {
+    case year
+    case month
+    case week
+    case unspecified
+    public static func == (a: TinkMoneyManagerUI.ActionableInsight.BudgetPeriodUnit, b: TinkMoneyManagerUI.ActionableInsight.BudgetPeriodUnit) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct BudgetPeriodSummary {
+    public let achievedBudgets: [TinkMoneyManagerUI.ActionableInsight.BudgetSummary]
+    public let overspentBudgets: [TinkMoneyManagerUI.ActionableInsight.BudgetSummary]
+    public let periodUnit: TinkMoneyManagerUI.ActionableInsight.BudgetPeriodUnit
+  }
+  public struct LargeExpense {
+    public let transactionID: TinkMoneyManagerUI.Transaction.ID
+    public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  }
+  public struct WeeklyTransactions {
+    public let transactionIDs: [TinkMoneyManagerUI.Transaction.ID]
+    public let week: TinkMoneyManagerUI.ActionableInsight.Week
+  }
+  public struct CategorySpending {
+    public let categoryCode: TinkMoneyManagerUI.Category.Code
+    public let spentAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  }
+  public struct TransactionSummary {
+    public struct TransactionsOverview {
+      public let totalCount: Swift.Int
+      public let mostCommonDescription: Swift.String
+      public let mostCommonCount: Swift.Int
+    }
+    public struct LargestExpense {
+      public let id: TinkMoneyManagerUI.Transaction.ID
+      public let date: Foundation.Date
+      public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+      public let description: Swift.String
+    }
+    public let totalExpenses: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let commonTransactionsOverview: TinkMoneyManagerUI.ActionableInsight.TransactionSummary.TransactionsOverview
+    public let largestExpense: TinkMoneyManagerUI.ActionableInsight.TransactionSummary.LargestExpense
+  }
+  public struct WeeklyExpensesByCategory {
+    public let week: TinkMoneyManagerUI.ActionableInsight.Week
+    public let expensesByCategory: [TinkMoneyManagerUI.ActionableInsight.CategorySpending]
+  }
+  public struct WeeklyExpensesByDay {
+    public struct ExpenseStatisticsByDay {
+      public let day: TinkMoneyManagerUI.ActionableInsight.Day
+      public let expenseStatistics: TinkMoneyManagerUI.ActionableInsight.WeeklyExpensesByDay.ExpenseStatistics
+    }
+    public struct ExpenseStatistics {
+      public let totalAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+      public let averageAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    }
+    public let week: TinkMoneyManagerUI.ActionableInsight.Week
+    public let expenseStatisticsByDay: [TinkMoneyManagerUI.ActionableInsight.WeeklyExpensesByDay.ExpenseStatisticsByDay]
+  }
+  public struct WeeklyTransactionsSummary {
+    public let week: TinkMoneyManagerUI.ActionableInsight.Week
+    public let summary: TinkMoneyManagerUI.ActionableInsight.TransactionSummary
+  }
+  public struct MonthlyExpensesByCategory {
+    public let month: TinkMoneyManagerUI.ActionableInsight.Month
+    public let expensesByCategory: [TinkMoneyManagerUI.ActionableInsight.CategorySpending]
+  }
+  public struct NewIncomeTransaction {
+    public let transactionID: TinkMoneyManagerUI.Transaction.ID
+    public let accountID: TinkMoneyManagerUI.Account.ID
+  }
+  public struct MonthlyTransactionsSummary {
+    public let month: TinkMoneyManagerUI.ActionableInsight.Month
+    public let summary: TinkMoneyManagerUI.ActionableInsight.TransactionSummary
+  }
+  public struct Month {
+    public let year: Swift.Int
+    public let month: Swift.Int
+  }
+  public struct Week {
+    public let year: Swift.Int
+    public let week: Swift.Int
+  }
+  public struct Day {
+    public let year: Swift.Int
+    public let month: Swift.Int
+    public let day: Swift.Int
+  }
+  public struct AccountInfo {
+    public let id: TinkMoneyManagerUI.Account.ID
+    public let name: Swift.String
+  }
+  public struct SuggestSetUpSavingsAccount {
+    public let balance: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let savingsAccount: TinkMoneyManagerUI.ActionableInsight.AccountInfo
+    public let currentAccount: TinkMoneyManagerUI.ActionableInsight.AccountInfo
+  }
+  public struct CreditCardLimit {
+    public let account: TinkMoneyManagerUI.ActionableInsight.AccountInfo
+    public let availableCredit: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+  }
+  public struct LeftToSpendStatistics {
+    public let createdAt: Foundation.Date
+    public let currentLeftToSpend: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let averageLeftToSpend: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  }
+  public struct LeftToSpendMidMonth {
+    public let month: TinkMoneyManagerUI.ActionableInsight.Month
+    public let amountDifference: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let leftToSpendStatistics: TinkMoneyManagerUI.ActionableInsight.LeftToSpendStatistics
+  }
+  public struct BudgetSuggestCreateTopCategory {
+    public let categorySpending: TinkMoneyManagerUI.ActionableInsight.CategorySpending
+    public let suggestedBudgetAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let suggestedBudgetCategoryDisplayName: Swift.String
+  }
+  public struct LeftToSpendBeginningMonth {
+    public let month: TinkMoneyManagerUI.ActionableInsight.Month
+    public let amountDifference: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let totalExpense: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let leftToSpendStatistics: TinkMoneyManagerUI.ActionableInsight.LeftToSpendStatistics
+  }
+  public struct CategoryInfo {
+    public let id: TinkMoneyManagerUI.Category.ID
+    public let code: TinkMoneyManagerUI.Category.Code
+    public let name: Swift.String
+  }
+  public struct SpendingByCategoryIncreased {
+    public let category: TinkMoneyManagerUI.ActionableInsight.CategoryInfo
+    public let lastMonth: TinkMoneyManagerUI.ActionableInsight.Month
+    public let lastMonthSpending: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let twoMonthsAgoSpending: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let percentage: Swift.Double
+  }
+  public struct LeftToSpendPositiveSummarySavingsAccount {
+    public let month: TinkMoneyManagerUI.ActionableInsight.Month
+    public let leftAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  }
+  public struct LeftToSpendPositiveFinalWeek {
+    public let month: TinkMoneyManagerUI.ActionableInsight.Month
+    public let amountDifference: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let leftToSpendStatistics: TinkMoneyManagerUI.ActionableInsight.LeftToSpendStatistics
+    public let leftToSpendPerDay: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  }
+  public struct ProviderInfo {
+    public let id: TinkMoneyManagerUI.Provider.ID
+    public let displayName: Swift.String
+  }
+  public struct AggregationRefreshPSD2Credentials {
+    public let credentialsID: TinkMoneyManagerUI.Credentials.ID
+    public let provider: TinkMoneyManagerUI.ActionableInsight.ProviderInfo
+    public let sessionExpiryDate: Foundation.Date
+  }
+}
+public enum InsightActionData {
+  public struct ViewBudget {
+    public let budgetID: TinkMoneyManagerUI.Budget.ID
+    public let budgetPeriodStartTime: Foundation.Date
+  }
+  public struct CreateTransfer {
+    public let sourceAccount: Foundation.URL?
+    public let destinationAccount: Foundation.URL?
+    public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+    public let sourceAccountNumber: Swift.String?
+    public let destinationAccountNumber: Swift.String?
+  }
+  public struct ViewTransaction {
+    public let transactionID: TinkMoneyManagerUI.Transaction.ID
+  }
+  public struct CategorizeSingleExpense {
+    public let transactionID: TinkMoneyManagerUI.Transaction.ID
+  }
+  public struct ViewTransactions {
+    public let transactionIDs: [TinkMoneyManagerUI.Transaction.ID]
+  }
+  public struct CategorizeTransactions {
+    public let transactionIDs: [TinkMoneyManagerUI.Transaction.ID]
+  }
+  public struct ViewTransactionsByCategory {
+    public let transactionIdsByCategory: [TinkMoneyManagerUI.Category.Code : [TinkMoneyManagerUI.Transaction.ID]]
+  }
+  public struct BudgetSuggestion {
+    public let filters: [TinkMoneyManagerUI.Budget.Filter]
+    public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+    public let periodicity: TinkMoneyManagerUI.Budget.Periodicity?
+  }
+  case unknown
+  case acknowledge
+  case dismiss
+  case viewBudget(TinkMoneyManagerUI.InsightActionData.ViewBudget)
+  case createTransfer(TinkMoneyManagerUI.InsightActionData.CreateTransfer)
+  case viewTransaction(TinkMoneyManagerUI.Transaction.ID)
+  case categorizeExpense(TinkMoneyManagerUI.Transaction.ID)
+  case viewTransactions([TinkMoneyManagerUI.Transaction.ID])
+  case categorizeTransactions([TinkMoneyManagerUI.Transaction.ID])
+  case viewTransactionsByCategory([TinkMoneyManagerUI.Category.Code : [TinkMoneyManagerUI.Transaction.ID]])
+  case viewAccount(TinkMoneyManagerUI.Account.ID)
+  case viewLeftToSpend(TinkMoneyManagerUI.ActionableInsight.Month)
+  case createBudget(TinkMoneyManagerUI.InsightActionData.BudgetSuggestion)
+  case refreshCredentials(TinkMoneyManagerUI.Credentials.ID)
+}
+public protocol ActionableInsightService {
+  func insights(completion: @escaping (Swift.Result<[TinkMoneyManagerUI.ActionableInsight], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+  func archivedInsights(completion: @escaping (Swift.Result<[TinkMoneyManagerUI.ActionableInsight], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+  func select(_ insightAction: TinkMoneyManagerUI.ActionableInsight.InsightAction, forInsightWithID insightID: TinkMoneyManagerUI.ActionableInsight.ID, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+}
 public struct ActionableInsightViewModel {
   public struct Insight {
   }
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate {
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind dataType: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
-  @available(*, deprecated, message: "Default handling for this method has been moved to actionableInsightsViewController(_:showTransactionsByCategoryCode:)")
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]], month: TinkMoneyManagerUI.Month)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
-  @available(*, deprecated, message: "Default handling for this method has been moved to actionableInsightsViewController(_ viewController:showTransactionsWithIDs:)")
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID], month: TinkMoneyManagerUI.Month)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
-  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkMoneyManagerUI.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind dataType: TinkMoneyManagerUI.ActionableInsight.Kind) -> UIKit.UIImage?
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkMoneyManagerUI.Budget.ID, budgetPeriodStart: Foundation.Date)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkMoneyManagerUI.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkMoneyManagerUI.Account.ID)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkMoneyManagerUI.Category.Code : [TinkMoneyManagerUI.Transaction.ID]])
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkMoneyManagerUI.Transaction.ID])
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkMoneyManagerUI.Transaction.ID)
+  public func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkMoneyManagerUI.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
 }
 public protocol ActionableInsightsViewControllerDelegate : AnyObject {
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkCore.Budget.ID, budgetPeriodStart: Foundation.Date)
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkCore.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkCore.Account.ID)
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkCore.Transaction.ID)
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkCore.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkCore.Transaction.ID])
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkCore.Category.Code : [TinkCore.Transaction.ID]])
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkCore.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showBudget id: TinkMoneyManagerUI.Budget.ID, budgetPeriodStart: Foundation.Date)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, createBudgetWithSuggestion suggestion: TinkMoneyManagerUI.InsightActionData.BudgetSuggestion, completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, initiateTransferFromAccount sourceIdentity: TinkMoneyManagerUI.TransferIdentity?, to destinationIdentity: TinkMoneyManagerUI.TransferIdentity?, amount: Swift.Double?, currencyCode: Swift.String?, completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showAccountWithID id: TinkMoneyManagerUI.Account.ID)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionWithID id: TinkMoneyManagerUI.Transaction.ID)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionWithID id: TinkMoneyManagerUI.Transaction.ID, completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsWithIDs ids: [TinkMoneyManagerUI.Transaction.ID])
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showTransactionsByCategoryCode transactionIDsByCategoryCode: [TinkMoneyManagerUI.Category.Code : [TinkMoneyManagerUI.Transaction.ID]])
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, categorizeTransactionsWithIDs ids: [TinkMoneyManagerUI.Transaction.ID], completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, showLeftToSpendForMonth month: TinkMoneyManagerUI.Month)
-  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, refreshCredentialsWithID credentialsID: TinkCore.Credentials.ID, completionHandler: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
-  func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkCore.ActionableInsight.Kind) -> UIKit.UIImage?
+  func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, refreshCredentialsWithID credentialsID: TinkMoneyManagerUI.Credentials.ID, completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+  func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkMoneyManagerUI.ActionableInsight.Kind) -> UIKit.UIImage?
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ActionableInsightsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, delegate: any TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
   @objc deinit
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController {
@@ -111,89 +455,160 @@ extension TinkMoneyManagerUI.ActionableInsightsViewController : UIKit.UICollecti
   @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
-  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactions: [TinkCore.Transaction.ID], category: TinkCore.Category)
-  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkMoneyManagerUI.Category)
+  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactions: [TinkMoneyManagerUI.Transaction.ID], category: TinkMoneyManagerUI.Category)
+  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: any Swift.Error)
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
-extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
-}
 extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AllBudgetsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 extension TinkMoneyManagerUI.AllBudgetsViewController : TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
 }
 public enum Appearance {
-  public static var provider: TinkMoneyManagerUI.AppearanceProviding
+  public static var provider: any TinkMoneyManagerUI.AppearanceProviding
 }
 @available(*, unavailable, renamed: "AppearanceProvider")
 public typealias FinanceOverviewAppearanceProvider = TinkMoneyManagerUI.AppearanceProvider
 public protocol AppearanceProviding {
-  var colors: TinkMoneyManagerUI.ColorProviding { get set }
-  var icons: TinkMoneyManagerUI.IconProviding { get set }
-  var fonts: TinkMoneyManagerUI.FontProviding { get set }
-  var groupStyle: TinkMoneyManagerUI.GroupStyle { get set }
-  var itemListStyle: TinkMoneyManagerUI.ItemListStyle { get set }
-  var carouselStyle: TinkMoneyManagerUI.CarouselStyle { get set }
-  var notificationStyle: TinkMoneyManagerUI.ItemStyle { get set }
-  var budgetColors: TinkMoneyManagerUI.ColorProviding { get set }
-  var actionableInsightColors: TinkMoneyManagerUI.ColorProviding { get set }
-  var accountColors: TinkMoneyManagerUI.ColorProviding { get set }
-  var statisticsColors: TinkMoneyManagerUI.ColorProviding { get set }
+  var colors: any TinkMoneyManagerUI.ColorProviding { get set }
+  var icons: any TinkMoneyManagerUI.IconProviding { get set }
+  var fonts: any TinkMoneyManagerUI.FontProviding { get set }
+  var groupStyle: any TinkMoneyManagerUI.GroupStyle { get set }
+  var itemListStyle: any TinkMoneyManagerUI.ItemListStyle { get set }
+  var carouselStyle: any TinkMoneyManagerUI.CarouselStyle { get set }
+  var notificationStyle: any TinkMoneyManagerUI.ItemStyle { get set }
+  var budgetColors: any TinkMoneyManagerUI.ColorProviding { get set }
+  var actionableInsightColors: any TinkMoneyManagerUI.ColorProviding { get set }
+  var accountColors: any TinkMoneyManagerUI.ColorProviding { get set }
+  var statisticsColors: any TinkMoneyManagerUI.ColorProviding { get set }
 }
 public struct AppearanceProvider : TinkMoneyManagerUI.AppearanceProviding {
-  public var colors: TinkMoneyManagerUI.ColorProviding {
+  public var colors: any TinkMoneyManagerUI.ColorProviding {
     get
     set
   }
-  public var icons: TinkMoneyManagerUI.IconProviding
-  public var fonts: TinkMoneyManagerUI.FontProviding
-  public var groupStyle: TinkMoneyManagerUI.GroupStyle
-  public var itemListStyle: TinkMoneyManagerUI.ItemListStyle
-  public var carouselStyle: TinkMoneyManagerUI.CarouselStyle
-  public var notificationStyle: TinkMoneyManagerUI.ItemStyle
-  public var budgetColors: TinkMoneyManagerUI.ColorProviding {
+  public var icons: any TinkMoneyManagerUI.IconProviding
+  public var fonts: any TinkMoneyManagerUI.FontProviding
+  public var groupStyle: any TinkMoneyManagerUI.GroupStyle
+  public var itemListStyle: any TinkMoneyManagerUI.ItemListStyle
+  public var carouselStyle: any TinkMoneyManagerUI.CarouselStyle
+  public var notificationStyle: any TinkMoneyManagerUI.ItemStyle
+  public var budgetColors: any TinkMoneyManagerUI.ColorProviding {
     get
     set
   }
-  public var actionableInsightColors: TinkMoneyManagerUI.ColorProviding {
+  public var actionableInsightColors: any TinkMoneyManagerUI.ColorProviding {
     get
     set
   }
-  public var accountColors: TinkMoneyManagerUI.ColorProviding {
+  public var accountColors: any TinkMoneyManagerUI.ColorProviding {
     get
     set
   }
-  public var statisticsColors: TinkMoneyManagerUI.ColorProviding {
+  public var statisticsColors: any TinkMoneyManagerUI.ColorProviding {
     get
     set
   }
   public init(colors: TinkMoneyManagerUI.ColorProvider? = nil, fonts: TinkMoneyManagerUI.FontProvider? = nil, icons: TinkMoneyManagerUI.IconProvider? = nil, budgetColors: TinkMoneyManagerUI.ColorProvider? = nil, actionableInsightColors: TinkMoneyManagerUI.ColorProvider? = nil, accountColors: TinkMoneyManagerUI.ColorProvider? = nil, statisticsColors: TinkMoneyManagerUI.ColorProvider? = nil)
 }
+public protocol AuthenticationService {
+  func clientDescription(clientID: Swift.String, scopes: [TinkMoneyManagerUI.Scope], redirectURI: Foundation.URL, completion: @escaping (Swift.Result<TinkMoneyManagerUI.ClientDescription, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+  func authorize(clientID: Swift.String, redirectURI: Foundation.URL, scopes: [TinkMoneyManagerUI.Scope], completion: @escaping (Swift.Result<TinkMoneyManagerUI.AuthorizationCode, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+}
+public struct AuthorizationCode : Swift.Hashable, Swift.RawRepresentable, Swift.ExpressibleByStringLiteral {
+  public let rawValue: Swift.String
+  public init?(rawValue: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(_ value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias RawValue = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public struct Budget {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Budget>
+  public enum Periodicity : Swift.Equatable {
+    case oneOff(TinkMoneyManagerUI.Budget.OneOffPeriodicity)
+    case recurring(TinkMoneyManagerUI.Budget.RecurringPeriodicity)
+    public static func == (a: TinkMoneyManagerUI.Budget.Periodicity, b: TinkMoneyManagerUI.Budget.Periodicity) -> Swift.Bool
+  }
+  public struct RecurringPeriodicity : Swift.Equatable {
+    public enum PeriodUnit {
+      case week
+      case month
+      case year
+      public static func == (a: TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit, b: TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public let periodUnit: TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit
+    public init(periodUnit: TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit)
+    public static func == (a: TinkMoneyManagerUI.Budget.RecurringPeriodicity, b: TinkMoneyManagerUI.Budget.RecurringPeriodicity) -> Swift.Bool
+  }
+  public struct OneOffPeriodicity : Swift.Equatable {
+    public let start: Foundation.Date
+    public let end: Foundation.Date
+    public init(start: Foundation.Date, end: Foundation.Date)
+    public static func == (a: TinkMoneyManagerUI.Budget.OneOffPeriodicity, b: TinkMoneyManagerUI.Budget.OneOffPeriodicity) -> Swift.Bool
+  }
+  public enum Filter {
+    case account(TinkMoneyManagerUI.Account.ID)
+    case category(TinkMoneyManagerUI.Category.Code)
+    case tag(Swift.String)
+    case search(Swift.String)
+  }
+  public let id: TinkMoneyManagerUI.Budget.ID
+  public let name: Swift.String
+  public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+  public let filter: [TinkMoneyManagerUI.Budget.Filter]
+  public let periodicity: TinkMoneyManagerUI.Budget.Periodicity?
+  public let created: Foundation.Date?
+}
+extension TinkMoneyManagerUI.Budget {
+  public struct Transaction {
+    public let id: TinkMoneyManagerUI.Transaction.ID
+    public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let dispensableAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+    public let date: Foundation.Date?
+    public let description: Swift.String?
+    public let categoryCode: TinkMoneyManagerUI.Category.Code?
+    public let accountID: TinkMoneyManagerUI.Account.ID?
+    public let pending: Swift.Bool?
+  }
+}
+public struct BudgetDetails {
+  public let budgetSpecification: TinkMoneyManagerUI.Budget
+  public let budgetPeriods: [TinkMoneyManagerUI.Budget.Period]
+  public let dateInterval: Foundation.DateInterval
+  public let totalSpentAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+  public let averageSpentAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+}
 public protocol BudgetDetailsViewControllerDelegate : AnyObject {
-  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
-  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
-  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
+  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkMoneyManagerUI.Budget)
+  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+  func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class BudgetDetailsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.TransactionItemActionConfigurable {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, budgetID: TinkMoneyManagerUI.Budget.ID)
   @objc deinit
 }
 extension TinkMoneyManagerUI.BudgetDetailsViewController {
@@ -201,42 +616,69 @@ extension TinkMoneyManagerUI.BudgetDetailsViewController {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.BudgetDetailsViewController : TinkMoneyManagerUI.EditBudgetViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
-  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
-  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: any Swift.Error)
+}
+extension TinkMoneyManagerUI.Budget {
+  public struct Period : Swift.Equatable {
+    public let dateInterval: Foundation.DateInterval
+    public let spentAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+    public static func == (a: TinkMoneyManagerUI.Budget.Period, b: TinkMoneyManagerUI.Budget.Period) -> Swift.Bool
+  }
+}
+public protocol BudgetService {
+  func budgets(includeArchived: Swift.Bool, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Budget], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func create(name: Swift.String, amount: TinkMoneyManagerUI.CurrencyDenominatedAmount, filter: [TinkMoneyManagerUI.Budget.Filter], periodicity: TinkMoneyManagerUI.Budget.Periodicity, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Budget, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func update(id: TinkMoneyManagerUI.Budget.ID, name: Swift.String, amount: TinkMoneyManagerUI.CurrencyDenominatedAmount, filter: [TinkMoneyManagerUI.Budget.Filter], periodicity: TinkMoneyManagerUI.Budget.Periodicity, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Budget, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func transactionsForBudget(id: TinkMoneyManagerUI.Budget.ID, dateInterval: Foundation.DateInterval, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Budget.Transaction], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func budgetSummaries(includeArchived: Swift.Bool, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.BudgetSummary], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func budgetDetails(id: TinkMoneyManagerUI.Budget.ID, dateInterval: Foundation.DateInterval, completion: @escaping (Swift.Result<TinkMoneyManagerUI.BudgetDetails, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func archive(id: TinkMoneyManagerUI.Budget.ID, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Budget, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func recommendedBudgets(completion: @escaping (Swift.Result<[TinkMoneyManagerUI.RecommendedBudget], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
+public struct BudgetSummary {
+  public let budget: TinkMoneyManagerUI.Budget
+  public let budgetPeriod: TinkMoneyManagerUI.Budget.Period
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class BudgetsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @objc deinit
 }
 extension TinkMoneyManagerUI.BudgetsViewController : TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: Swift.Error)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkCore.Budget)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkCore.Budget)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+}
+public protocol CalendarService {
+  func period(period: Swift.String, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Period], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
+public protocol Cancellable {
+  func cancel()
 }
 public protocol CarouselStyle {
-  var item: TinkMoneyManagerUI.ItemStyle { get }
+  var item: any TinkMoneyManagerUI.ItemStyle { get }
   var insets: UIKit.UIEdgeInsets { get }
   var spacing: CoreFoundation.CGFloat { get }
 }
 public struct CardCarouselStyle : TinkMoneyManagerUI.CarouselStyle {
-  public var item: TinkMoneyManagerUI.ItemStyle
+  public var item: any TinkMoneyManagerUI.ItemStyle
   public var insets: UIKit.UIEdgeInsets
   public var spacing: CoreFoundation.CGFloat
 }
 public protocol CategorizeTransactionViewControllerDelegate : AnyObject {
-  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkCore.Category)
-  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactionIDs: [TinkCore.Transaction.ID], category: TinkCore.Category)
-  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: Swift.Error)
+  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkMoneyManagerUI.Category)
+  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactionIDs: [TinkMoneyManagerUI.Transaction.ID], category: TinkMoneyManagerUI.Category)
+  func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: any Swift.Error)
   func categorizeTransactionViewControllerDidCancel(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController)
 }
 extension TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate where Self : UIKit.UIViewController {
   public func categorizeTransactionViewControllerDidCancel(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CategorizeTransactionViewController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) weak final public var categorizeTransactionDelegate: TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactionID: TinkCore.Transaction.ID, categoryTypes: [TinkCore.Category.Kind], categoryID: TinkCore.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) weak final public var categorizeTransactionDelegate: (any TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, transactionID: TinkMoneyManagerUI.Transaction.ID, categoryTypes: [TinkMoneyManagerUI.Category.Kind], categoryID: TinkMoneyManagerUI.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
   @objc deinit
 }
 extension TinkMoneyManagerUI.CategorizeTransactionViewController {
@@ -244,13 +686,100 @@ extension TinkMoneyManagerUI.CategorizeTransactionViewController {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
+public struct Category : Swift.Equatable {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Category>
+  public let id: TinkMoneyManagerUI.Category.ID
+  public let code: TinkMoneyManagerUI.Category.Code
+  public let name: Swift.String
+  public let sortOrder: Swift.Int
+  public let parent: TinkMoneyManagerUI.Category.ID?
+  public static func == (a: TinkMoneyManagerUI.Category, b: TinkMoneyManagerUI.Category) -> Swift.Bool
+}
+extension TinkMoneyManagerUI.Category {
+  public struct Code : Swift.Hashable, Swift.ExpressibleByStringLiteral {
+    public let value: Swift.String
+    public init(_ value: Swift.String)
+    public init(stringLiteral value: Swift.String)
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: TinkMoneyManagerUI.Category.Code, b: TinkMoneyManagerUI.Category.Code) -> Swift.Bool
+    public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+    public typealias StringLiteralType = Swift.String
+    public typealias UnicodeScalarLiteralType = Swift.String
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension TinkMoneyManagerUI.Category.Code {
+  public var isExpense: Swift.Bool {
+    get
+  }
+  public var isIncome: Swift.Bool {
+    get
+  }
+  public var isTransfer: Swift.Bool {
+    get
+  }
+  public var type: TinkMoneyManagerUI.Category.Kind {
+    get
+  }
+  public var isUncategorized: Swift.Bool {
+    get
+  }
+  public var isReimbursement: Swift.Bool {
+    get
+  }
+  public var isSavings: Swift.Bool {
+    get
+  }
+  public var isExcluded: Swift.Bool {
+    get
+  }
+  public var isOther: Swift.Bool {
+    get
+  }
+  public var isMiscOther: Swift.Bool {
+    get
+  }
+  public var isExpensesOther: Swift.Bool {
+    get
+  }
+  public var isRootCategory: Swift.Bool {
+    get
+  }
+  public var isSubcategory: Swift.Bool {
+    get
+  }
+  public func isChild(of parent: TinkMoneyManagerUI.Category.Code) -> Swift.Bool
+}
+extension TinkMoneyManagerUI.Category {
+  public enum Kind : Swift.String, Swift.Hashable {
+    case expenses
+    case income
+    case transfers
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension TinkMoneyManagerUI.Category.Kind {
+  public init(code: TinkMoneyManagerUI.Category.Code)
+  public var categoryCode: TinkMoneyManagerUI.Category.Code {
+    get
+  }
+}
+public protocol CategoryService {
+  func categories(completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Category], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CategoryStatisticsNavigationControllerDelegate : ObjectiveC.NSObject, UIKit.UINavigationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, didShow viewController: UIKit.UIViewController, animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc open func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
   @_Concurrency.MainActor(unsafe) @objc open func navigationControllerPreferredInterfaceOrientationForPresentation(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientation
-  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, interactionControllerFor animationController: UIKit.UIViewControllerAnimatedTransitioning) -> UIKit.UIViewControllerInteractiveTransitioning?
-  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, interactionControllerFor animationController: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
+  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
   @objc deinit
 }
@@ -263,9 +792,9 @@ extension TinkMoneyManagerUI.CategorizeTransactionViewController {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) final public let categoryType: TinkCore.Category.Kind
+  @_Concurrency.MainActor(unsafe) final public let categoryType: TinkMoneyManagerUI.Category.Kind
   @_Concurrency.MainActor(unsafe) final public let style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style
-  @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, categoryType: TinkCore.Category.Kind, style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style = .pieChart)
+  @_Concurrency.MainActor(unsafe) public init(tink: TinkMoneyManagerUI.Tink = .shared, categoryType: TinkMoneyManagerUI.Category.Kind, style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style = .pieChart)
   @available(*, unavailable)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -275,6 +804,12 @@ extension TinkMoneyManagerUI.CategoryStatisticsViewController {
 }
 extension TinkMoneyManagerUI.CategoryStatisticsViewController : UIKit.UIGestureRecognizerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+public struct ClientDescription {
+  public let name: Swift.String
+  public let scopes: [TinkMoneyManagerUI.ScopeDescription]
+  public let isVerified: Swift.Bool
+  public let isAggregator: Swift.Bool
 }
 public class ColorProvider : TinkMoneyManagerUI.ColorProviding {
   public var background: UIKit.UIColor
@@ -382,8 +917,15 @@ public enum EditingPendingTransactions {
     get
   }
 }
+public protocol Configuration {
+  var clientID: Swift.String { get }
+  var appURI: Foundation.URL? { get }
+  var callbackURI: Foundation.URL? { get }
+  var environment: TinkMoneyManagerUI.Tink.Environment { get }
+  var certificateURL: Foundation.URL? { get }
+}
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CreateBudgetViewController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, showBudgetCreateSuccessScreen: Swift.Bool = true, completion: @escaping (Swift.Result<TinkCore.Budget, Swift.Error>) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, showBudgetCreateSuccessScreen: Swift.Bool = true, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Budget, any Swift.Error>) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
@@ -392,11 +934,108 @@ public enum EditingPendingTransactions {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @objc deinit
 }
+public struct Credentials : Swift.Identifiable {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Credentials>
+  public let id: TinkMoneyManagerUI.Credentials.ID
+  public let providerName: TinkMoneyManagerUI.Provider.Name
+  public enum Kind {
+    case unknown
+    case password
+    case mobileBankID
+    case keyfob
+    case thirdPartyAuthentication
+    public var sortOrder: Swift.Int {
+      get
+    }
+    public static func == (a: TinkMoneyManagerUI.Credentials.Kind, b: TinkMoneyManagerUI.Credentials.Kind) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let kind: TinkMoneyManagerUI.Credentials.Kind
+  public enum Status : Swift.Equatable {
+    case unknown
+    case created
+    case authenticating
+    case updating
+    case updated
+    case temporaryError
+    case authenticationError
+    case permanentError
+    case awaitingMobileBankIDAuthentication(TinkMoneyManagerUI.Credentials.ThirdPartyAppAuthentication)
+    case awaitingSupplementalInformation([TinkMoneyManagerUI.Provider.Field])
+    case deleted
+    case awaitingThirdPartyAppAuthentication(TinkMoneyManagerUI.Credentials.ThirdPartyAppAuthentication)
+    case sessionExpired
+    public static func == (a: TinkMoneyManagerUI.Credentials.Status, b: TinkMoneyManagerUI.Credentials.Status) -> Swift.Bool
+  }
+  public let status: TinkMoneyManagerUI.Credentials.Status
+  public let statusPayload: Swift.String?
+  public let statusUpdated: Foundation.Date?
+  public let updated: Foundation.Date?
+  public let fields: [Swift.String : Swift.String]
+  public struct ThirdPartyAppAuthentication : Swift.Equatable {
+    public let downloadTitle: Swift.String?
+    public let downloadMessage: Swift.String?
+    public let upgradeTitle: Swift.String?
+    public let upgradeMessage: Swift.String?
+    public let appStoreURL: Foundation.URL?
+    public let scheme: Swift.String?
+    public let deepLinkURL: Foundation.URL?
+    public var hasAutoStartToken: Swift.Bool {
+      get
+    }
+    public static func == (a: TinkMoneyManagerUI.Credentials.ThirdPartyAppAuthentication, b: TinkMoneyManagerUI.Credentials.ThirdPartyAppAuthentication) -> Swift.Bool
+  }
+  public let sessionExpiryDate: Foundation.Date?
+  public var hasError: Swift.Bool {
+    get
+  }
+}
+public struct CurrencyCode : Swift.Hashable, Swift.ExpressibleByStringLiteral {
+  public let value: Swift.String
+  public init(_ value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.CurrencyCode, b: TinkMoneyManagerUI.CurrencyCode) -> Swift.Bool
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct CurrencyDenominatedAmount : Swift.Equatable, Swift.Hashable {
+  public let value: Foundation.Decimal
+  public let currencyCode: TinkMoneyManagerUI.CurrencyCode
+  public static func == (a: TinkMoneyManagerUI.CurrencyDenominatedAmount, b: TinkMoneyManagerUI.CurrencyDenominatedAmount) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension TinkMoneyManagerUI.CurrencyDenominatedAmount {
+  public var doubleValue: Swift.Double {
+    get
+  }
+  public init()
+  public init(_ int: Swift.Int, currencyCode: TinkMoneyManagerUI.CurrencyCode)
+  public init(_ double: Swift.Double, currencyCode: TinkMoneyManagerUI.CurrencyCode)
+  public init(_ decimal: Foundation.Decimal, currencyCode: TinkMoneyManagerUI.CurrencyCode)
+  public init(_ number: Foundation.NSNumber, currencyCode: TinkMoneyManagerUI.CurrencyCode)
+}
+extension TinkMoneyManagerUI.CurrencyDenominatedAmount {
+  public static func + (lhs: TinkMoneyManagerUI.CurrencyDenominatedAmount, rhs: TinkMoneyManagerUI.CurrencyDenominatedAmount) -> TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public static func - (lhs: TinkMoneyManagerUI.CurrencyDenominatedAmount, rhs: TinkMoneyManagerUI.CurrencyDenominatedAmount) -> TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public static func * (lhs: TinkMoneyManagerUI.CurrencyDenominatedAmount, rhs: TinkMoneyManagerUI.CurrencyDenominatedAmount) -> TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public static func / (lhs: TinkMoneyManagerUI.CurrencyDenominatedAmount, rhs: TinkMoneyManagerUI.CurrencyDenominatedAmount) -> TinkMoneyManagerUI.CurrencyDenominatedAmount
+}
 public struct CustomAccountGroup {
-  public var accounts: [TinkCore.Account]
+  public var accounts: [TinkMoneyManagerUI.Account]
   public var title: Swift.String
   public var infoText: Swift.String
-  public init(accounts: [TinkCore.Account], title: Swift.String, infoText: Swift.String? = nil)
+  public init(accounts: [TinkMoneyManagerUI.Account], title: Swift.String, infoText: Swift.String? = nil)
 }
 public struct EditAccountFields : Swift.OptionSet {
   public let rawValue: Swift.Int
@@ -412,18 +1051,18 @@ public struct EditAccountFields : Swift.OptionSet {
   public typealias RawValue = Swift.Int
 }
 public protocol EditAccountViewControllerDelegate : AnyObject {
-  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didUpdate account: TinkCore.Account)
-  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didFailToUpdate error: Swift.Error)
+  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didUpdate account: TinkMoneyManagerUI.Account)
+  func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didFailToUpdate error: any Swift.Error)
   func editAccountViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditAccountViewController)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditAccountViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.EditAccountFieldsConfigurable
-  @_Concurrency.MainActor(unsafe) final public let accountID: TinkCore.Account.ID
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.EditAccountViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) final public var account: TinkCore.Account? {
+  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable
+  @_Concurrency.MainActor(unsafe) final public let accountID: TinkMoneyManagerUI.Account.ID
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.EditAccountViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) final public var account: TinkMoneyManagerUI.Account? {
     get
   }
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, accountID: TinkCore.Account.ID)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, accountID: TinkMoneyManagerUI.Account.ID)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
@@ -447,23 +1086,23 @@ extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UITableViewDataSo
   @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
 public protocol EditBudgetViewControllerDelegate : AnyObject {
-  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkCore.Budget)
-  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkCore.Budget)
-  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: Swift.Error)
+  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkMoneyManagerUI.Budget)
+  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+  func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: any Swift.Error)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditBudgetViewController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) weak final public var editBudgetViewControllerDelegate: TinkMoneyManagerUI.EditBudgetViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, budgetID: TinkCore.Budget.ID)
+  @_Concurrency.MainActor(unsafe) weak final public var editBudgetViewControllerDelegate: (any TinkMoneyManagerUI.EditBudgetViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, budgetID: TinkMoneyManagerUI.Budget.ID)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 public protocol EditTransactionViewControllerDelegate : AnyObject {
   func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
-  func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkCore.Transaction)
+  func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkMoneyManagerUI.Transaction)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditTransactionViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, transaction: TinkCore.Transaction)
+  @_Concurrency.MainActor(unsafe) public init(tink: TinkMoneyManagerUI.Tink = .shared, transaction: TinkMoneyManagerUI.Transaction)
   @_Concurrency.MainActor(unsafe) @objc override final public func loadView()
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
@@ -475,8 +1114,14 @@ extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UIAdaptivePre
 extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UITextFieldDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
 }
+extension TinkMoneyManagerUI.Tink {
+  public enum Environment {
+    case production
+    case custom(Foundation.URL)
+  }
+}
 public enum EventTracker {
-  public static var tracker: TinkMoneyManagerUI.EventTracking?
+  public static var tracker: (any TinkMoneyManagerUI.EventTracking)?
 }
 public protocol EventTracking : AnyObject {
   func track(_ screen: TinkMoneyManagerUI.ScreenEvent)
@@ -498,15 +1143,11 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     case recurringExpenses
     case latestTransactions
     case accounts(TinkMoneyManagerUI.AccountsViewController.Predicate, TinkMoneyManagerUI.AccountsViewController.Grouping)
-    case actionableInsights(delegate: TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
+    case actionableInsights(delegate: any TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
     case budgets
     case recommendedBudgets
-    @available(*, deprecated)
-    case improveCategorizationLevel(predicate: (TinkCore.SuggestTransactionsResponse) -> Swift.Bool)
     case custom(UIKit.UIView)
     public static let accounts: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
-    @available(*, deprecated)
-    public static let improveCategorizationLevel: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
   }
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController {
@@ -530,12 +1171,12 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
   }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class FinanceOverviewViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) final public var configuration: TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.RecurringExpensesConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
+  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.RecurringExpensesConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
     set
   }
   @_Concurrency.MainActor(unsafe) final public var hidesTopBarWhenPushed: Swift.Bool
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, features: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, features: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
   @objc deinit
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController {
@@ -550,6 +1191,18 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController : UIKit.UIScrollViewD
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController : UIKit.UIGestureRecognizerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+extension TinkMoneyManagerUI.Provider {
+  public struct FinancialInstitution : Swift.Hashable {
+    public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Provider.FinancialInstitution>
+    public let id: TinkMoneyManagerUI.Provider.FinancialInstitution.ID
+    public let name: Swift.String
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: TinkMoneyManagerUI.Provider.FinancialInstitution, b: TinkMoneyManagerUI.Provider.FinancialInstitution) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
 }
 public enum Font {
   case custom(Swift.String)
@@ -628,8 +1281,6 @@ public class IconProvider : TinkMoneyManagerUI.IconProviding {
   public var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat?
   public var notification: UIKit.UIImage
   public var list: UIKit.UIImage
-  @available(*, deprecated)
-  public var improveCategorization: UIKit.UIImage
   public var ingestedAccount: UIKit.UIImage?
   public var defaultAccount: UIKit.UIImage?
   public var checkmark: UIKit.UIImage
@@ -668,8 +1319,6 @@ public protocol IconProviding {
   var checkBoxIconBackgroundCornerRadiusFactor: CoreFoundation.CGFloat? { get set }
   var notification: UIKit.UIImage { get set }
   var list: UIKit.UIImage { get set }
-  @available(*, deprecated)
-  var improveCategorization: UIKit.UIImage { get set }
   var ingestedAccount: UIKit.UIImage? { get set }
   var defaultAccount: UIKit.UIImage? { get set }
   var checkmark: UIKit.UIImage { get set }
@@ -678,10 +1327,10 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
   public let value: Swift.String
   public init(_ value: Swift.String)
   public init(stringLiteral value: Swift.String)
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias StringLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
@@ -689,25 +1338,13 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
     get
   }
 }
-@available(*, deprecated)
-public protocol ImproveCategorizationLevelViewControllerDelegate : AnyObject {
-  func improveCategorizationFinished(_ viewController: TinkMoneyManagerUI.ImproveCategorizationLevelViewController)
-}
-@objc @_hasMissingDesignatedInitializers @available(*, deprecated)
-@_Concurrency.MainActor(unsafe) final public class ImproveCategorizationLevelViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.ImproveCategorizationLevelViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactions: [TinkCore.Transaction])
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, transactionIDs: [TinkCore.Transaction.ID])
-  @objc deinit
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-}
 public protocol ItemListStyle {
-  var item: TinkMoneyManagerUI.ItemStyle { get }
+  var item: any TinkMoneyManagerUI.ItemStyle { get }
   var insets: UIKit.UIEdgeInsets { get }
   var spacing: CoreFoundation.CGFloat { get }
 }
 public struct CardItemListStyle : TinkMoneyManagerUI.ItemListStyle {
-  public var item: TinkMoneyManagerUI.ItemStyle
+  public var item: any TinkMoneyManagerUI.ItemStyle
   public var insets: UIKit.UIEdgeInsets
   public var spacing: CoreFoundation.CGFloat
 }
@@ -721,17 +1358,41 @@ public struct CardItemStyle : TinkMoneyManagerUI.ItemStyle {
   public init(cornerRadius: CoreFoundation.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LeftToSpendViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
 }
 extension TinkMoneyManagerUI.LeftToSpendViewController {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
 }
 extension TinkMoneyManagerUI.LeftToSpendViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 extension TinkMoneyManagerUI.LeftToSpendViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension TinkMoneyManagerUI.Tink {
+  public static var availableLocales: [Foundation.Locale] {
+    get
+  }
+  public static var defaultLocale: Foundation.Locale {
+    get
+  }
+}
+public struct Market : Swift.Hashable, Swift.RawRepresentable, Swift.ExpressibleByStringLiteral {
+  public let rawValue: Swift.String
+  public init?(rawValue: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(code value: Swift.String)
+  public var code: Swift.String {
+    get
+  }
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias RawValue = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension TinkMoneyManagerUI.Market : Swift.Comparable {
+  public static func < (lhs: TinkMoneyManagerUI.Market, rhs: TinkMoneyManagerUI.Market) -> Swift.Bool
 }
 public struct Month : Swift.Hashable, Swift.Comparable {
   public static func < (lhs: TinkMoneyManagerUI.Month, rhs: TinkMoneyManagerUI.Month) -> Swift.Bool
@@ -744,14 +1405,228 @@ public struct Month : Swift.Hashable, Swift.Comparable {
     get
   }
 }
-extension TinkCore.Tink {
+public protocol OAuthService {
+  func createAnonymous(market: TinkMoneyManagerUI.Market?, locale: Foundation.Locale, origin: Swift.String?, completion: @escaping (Swift.Result<TinkMoneyManagerUI.AccessToken, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+  func authenticate(clientID: Swift.String, code: TinkMoneyManagerUI.AuthorizationCode, completion: @escaping (Swift.Result<TinkMoneyManagerUI.AccessToken, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+}
+extension TinkMoneyManagerUI.Tink {
   public func refresh()
   public func resetCache()
-  @available(*, deprecated)
-  public func fetchTransactionsToImproveCategorization(evaluateEverything: Swift.Bool? = nil, completion: @escaping (Swift.Result<[TinkCore.Transaction], Swift.Error>) -> Swift.Void) -> TinkCore.Cancellable?
+}
+public struct Period {
+  public enum Resolution {
+    case monthly
+    case monthlyAdjusted
+    public static func == (a: TinkMoneyManagerUI.Period.Resolution, b: TinkMoneyManagerUI.Period.Resolution) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let dateInterval: Foundation.DateInterval
+  public let name: Swift.String
+  public let resolution: TinkMoneyManagerUI.Period.Resolution
+}
+extension TinkMoneyManagerUI.Period.Resolution {
+  public var statisticResolution: TinkMoneyManagerUI.Statistic.Resolution {
+    get
+  }
+}
+public struct PredictedRecurringTransaction {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.PredictedRecurringTransaction>
+  public let id: TinkMoneyManagerUI.PredictedRecurringTransaction.ID
+  public let accountID: TinkMoneyManagerUI.Account.ID
+  public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public var groupID: TinkMoneyManagerUI.RecurringTransactionsGroup.ID
+  public let booked: Swift.String
+  public let date: Swift.String
+  public let description: Swift.String
+  public let originalDescription: Swift.String
+  public init(accountID: TinkMoneyManagerUI.Account.ID, amount: TinkMoneyManagerUI.CurrencyDenominatedAmount, groupID: TinkMoneyManagerUI.RecurringTransactionsGroup.ID, booked: Swift.String, date: Swift.String, description: Swift.String, originalDescription: Swift.String)
+}
+extension TinkMoneyManagerUI.PredictedRecurringTransaction : Swift.Hashable, Swift.Equatable {
+  public static func == (lhs: TinkMoneyManagerUI.PredictedRecurringTransaction, rhs: TinkMoneyManagerUI.PredictedRecurringTransaction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias NextPageToken = Swift.String
+public protocol PredictedRecurringTransactionService {
+  func transactions(groupIdIn: Swift.String?, pageToken: Swift.String?, pageSize: Swift.Int?, completion: @escaping (Swift.Result<([TinkMoneyManagerUI.PredictedRecurringTransaction], TinkMoneyManagerUI.NextPageToken), any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
+public enum Product {
+  case realTimeBalance
+  case paymentInitiation
+  case accountAggregation
+  case accountCheck
+  case incomeCheck
+  case moneyManager
+  case transactions
+  case businessTransactions
+  case riskInsights
+  public static func == (a: TinkMoneyManagerUI.Product, b: TinkMoneyManagerUI.Product) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Provider : Swift.Identifiable {
+  public typealias Name = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Provider>
+  public var id: TinkMoneyManagerUI.Provider.Name {
+    get
+  }
+  public let name: TinkMoneyManagerUI.Provider.Name
+  public let displayName: Swift.String
+  public struct FinancialService : Swift.Equatable, Swift.Hashable {
+    public enum Segment {
+      case personal
+      case business
+      case unknown
+      public static func == (a: TinkMoneyManagerUI.Provider.FinancialService.Segment, b: TinkMoneyManagerUI.Provider.FinancialService.Segment) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public let segment: TinkMoneyManagerUI.Provider.FinancialService.Segment
+    public let shortName: Swift.String
+    public static func == (a: TinkMoneyManagerUI.Provider.FinancialService, b: TinkMoneyManagerUI.Provider.FinancialService) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let financialServices: [TinkMoneyManagerUI.Provider.FinancialService]
+  public enum Kind {
+    case unknown
+    case bank
+    case creditCard
+    case broker
+    case other
+    case test
+    public static var `default`: Swift.Set<TinkMoneyManagerUI.Provider.Kind>
+    public static var onlyTest: Swift.Set<TinkMoneyManagerUI.Provider.Kind>
+    public static var all: Swift.Set<TinkMoneyManagerUI.Provider.Kind>
+    public static func == (a: TinkMoneyManagerUI.Provider.Kind, b: TinkMoneyManagerUI.Provider.Kind) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let kind: TinkMoneyManagerUI.Provider.Kind
+  public enum ReleaseStatus {
+    case beta
+    public static func == (a: TinkMoneyManagerUI.Provider.ReleaseStatus, b: TinkMoneyManagerUI.Provider.ReleaseStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let releaseStatus: TinkMoneyManagerUI.Provider.ReleaseStatus?
+  public enum Status {
+    case unknown
+    case enabled
+    case disabled
+    case temporaryDisabled
+    public static func == (a: TinkMoneyManagerUI.Provider.Status, b: TinkMoneyManagerUI.Provider.Status) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let status: TinkMoneyManagerUI.Provider.Status
+  public let credentialsKind: TinkMoneyManagerUI.Credentials.Kind
+  public let helpText: Swift.String?
+  public let isPopular: Swift.Bool
+  public struct Field : Swift.Equatable {
+    public let description: Swift.String?
+    public let hint: Swift.String?
+    public let maxLength: Swift.Int?
+    public let minLength: Swift.Int?
+    public let isMasked: Swift.Bool
+    public let isNumeric: Swift.Bool
+    public let isImmutable: Swift.Bool
+    public let isOptional: Swift.Bool
+    public let name: Swift.String
+    public let initialValue: Swift.String
+    public let pattern: Swift.String
+    public let patternError: Swift.String
+    public let helpText: Swift.String
+    public let selectOptions: [TinkMoneyManagerUI.SelectOption]
+    public mutating func setImmutable(initialValue newValue: Swift.String)
+    public static func == (a: TinkMoneyManagerUI.Provider.Field, b: TinkMoneyManagerUI.Provider.Field) -> Swift.Bool
+  }
+  public let fields: [TinkMoneyManagerUI.Provider.Field]
+  public let groupDisplayName: Swift.String
+  public let image: Foundation.URL?
+  public let displayDescription: Swift.String
+  public struct Capabilities : Swift.OptionSet, Swift.Hashable {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let transfers: TinkMoneyManagerUI.Provider.Capabilities
+    public static let mortgageAggregation: TinkMoneyManagerUI.Provider.Capabilities
+    public static let checkingAccounts: TinkMoneyManagerUI.Provider.Capabilities
+    public static let savingsAccounts: TinkMoneyManagerUI.Provider.Capabilities
+    public static let creditCards: TinkMoneyManagerUI.Provider.Capabilities
+    public static let investments: TinkMoneyManagerUI.Provider.Capabilities
+    public static let loans: TinkMoneyManagerUI.Provider.Capabilities
+    public static let payments: TinkMoneyManagerUI.Provider.Capabilities
+    public static let mortgageLoan: TinkMoneyManagerUI.Provider.Capabilities
+    public static let identityData: TinkMoneyManagerUI.Provider.Capabilities
+    public static let eInvoices: TinkMoneyManagerUI.Provider.Capabilities
+    public static let listBeneficiaries: TinkMoneyManagerUI.Provider.Capabilities
+    public static let createBeneficiaries: TinkMoneyManagerUI.Provider.Capabilities
+    public static let all: TinkMoneyManagerUI.Provider.Capabilities
+    public typealias ArrayLiteralElement = TinkMoneyManagerUI.Provider.Capabilities
+    public typealias Element = TinkMoneyManagerUI.Provider.Capabilities
+    public typealias RawValue = Swift.Int
+  }
+  public let capabilities: TinkMoneyManagerUI.Provider.Capabilities
+  public enum AccessType : Swift.Hashable {
+    case unknown
+    case openBanking
+    case other
+    public static let all: Swift.Set<TinkMoneyManagerUI.Provider.AccessType>
+    public static func == (a: TinkMoneyManagerUI.Provider.AccessType, b: TinkMoneyManagerUI.Provider.AccessType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let accessType: TinkMoneyManagerUI.Provider.AccessType
+  public let marketCode: Swift.String
+  public let financialInstitution: TinkMoneyManagerUI.Provider.FinancialInstitution
+  public typealias ID = TinkMoneyManagerUI.Provider.Name
+}
+extension Swift.Set where Element == TinkMoneyManagerUI.Provider.Kind {
+  public static var all: Swift.Set<TinkMoneyManagerUI.Provider.Kind> {
+    get
+  }
+  public static var `default`: Swift.Set<TinkMoneyManagerUI.Provider.Kind> {
+    get
+  }
+  public static var onlyTest: Swift.Set<TinkMoneyManagerUI.Provider.Kind> {
+    get
+  }
+}
+extension Swift.Set where Element == TinkMoneyManagerUI.Provider.AccessType {
+  public static var all: Swift.Set<TinkMoneyManagerUI.Provider.AccessType> {
+    get
+  }
+}
+public protocol ProviderService {
+  func providers(name: TinkMoneyManagerUI.Provider.Name?, capabilities: TinkMoneyManagerUI.Provider.Capabilities?, includeTestProviders: Swift.Bool, excludeNonTestProviders: Swift.Bool, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Provider], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+  func providers(market: TinkMoneyManagerUI.Market, capabilities: TinkMoneyManagerUI.Provider.Capabilities?, includeTestProviders: Swift.Bool, excludeNonTestProviders: Swift.Bool, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Provider], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+}
+public struct RecommendedBudget {
+  public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+  public let filter: [TinkMoneyManagerUI.Budget.Filter]
+  public let name: Swift.String
+  public let recurringPeriodicity: TinkMoneyManagerUI.Budget.RecurringPeriodicity?
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class RecurringExpensesViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
 }
 extension TinkMoneyManagerUI.RecurringExpensesViewController {
@@ -767,18 +1642,130 @@ extension TinkMoneyManagerUI.RecurringExpensesViewController : UIKit.UITableView
   @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
   @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
+public struct RecurringTransactionsGroup {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.RecurringTransactionsGroup>
+  public let id: TinkMoneyManagerUI.RecurringTransactionsGroup.ID
+  public var categoryID: TinkMoneyManagerUI.Category.ID
+}
+public enum RecurringTransactionsGroupStatus : Swift.String {
+  case undefinded
+  case active
+  case inactive
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol RecurringTransactionsGroupService {
+  func recurringTransactionsGroups(pageToken: Swift.String?, pageSize: Swift.Int?, status: TinkMoneyManagerUI.RecurringTransactionsGroupStatus?, completion: @escaping (Swift.Result<([TinkMoneyManagerUI.RecurringTransactionsGroup], TinkMoneyManagerUI.NextPageToken), any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
+public protocol Retriable {
+  func retry()
+}
+public typealias RetryCancellable = (TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SafeToSpendViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared)
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
 }
 extension TinkMoneyManagerUI.SafeToSpendViewController {
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
 }
 extension TinkMoneyManagerUI.SafeToSpendViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
+  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 extension TinkMoneyManagerUI.SafeToSpendViewController : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+public struct Scope {
+}
+extension TinkMoneyManagerUI.Scope : Swift.Equatable {
+  public static func == (a: TinkMoneyManagerUI.Scope, b: TinkMoneyManagerUI.Scope) -> Swift.Bool
+}
+extension TinkMoneyManagerUI.Scope {
+  public enum ReadAccess : Swift.String {
+    case read
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ReadWriteAccess : Swift.String {
+    case read, write
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum AuthorizationAccess : Swift.String {
+    case grant, read, revoke
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CredentialsAccess : Swift.String {
+    case read, write, refresh
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum TransactionAccess : Swift.String {
+    case read, write, categorize
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum TransferAccess : Swift.String {
+    case read, execute
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum UserAccess : Swift.String {
+    case create, delete, read, webHooks, write
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static func accounts(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func activities(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func authorization(_ access: TinkMoneyManagerUI.Scope.AuthorizationAccess...) -> TinkMoneyManagerUI.Scope
+  public static func balances(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func beneficiaries(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func budgets(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func calendar(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func categories(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func contacts(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func credentials(_ access: TinkMoneyManagerUI.Scope.CredentialsAccess...) -> TinkMoneyManagerUI.Scope
+  public static func dataExports(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func documents(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func follow(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func identity(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func insights(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func investments(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func properties(_ access: TinkMoneyManagerUI.Scope.ReadWriteAccess...) -> TinkMoneyManagerUI.Scope
+  public static func providers(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func statistics(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func suggestions(_ access: TinkMoneyManagerUI.Scope.ReadAccess...) -> TinkMoneyManagerUI.Scope
+  public static func transactions(_ access: TinkMoneyManagerUI.Scope.TransactionAccess...) -> TinkMoneyManagerUI.Scope
+  public static func transfer(_ access: TinkMoneyManagerUI.Scope.TransferAccess...) -> TinkMoneyManagerUI.Scope
+  public static func user(_ access: TinkMoneyManagerUI.Scope.UserAccess...) -> TinkMoneyManagerUI.Scope
+}
+public struct ScopeDescription {
+  public let title: Swift.String
+  public let description: Swift.String
 }
 public enum ScreenEvent {
   case overview
@@ -800,8 +1787,6 @@ public enum ScreenEvent {
   case events
   case eventsArchive
   case transactionDetails
-  @available(*, deprecated)
-  case improveCategorizationLevel
   case budgetCreateSuccess
   case recommendedBudgetList
   public var name: Swift.String {
@@ -810,6 +1795,73 @@ public enum ScreenEvent {
   public static func == (a: TinkMoneyManagerUI.ScreenEvent, b: TinkMoneyManagerUI.ScreenEvent) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SelectOption : Swift.Equatable {
+  public let iconURL: Foundation.URL?
+  public let text: Swift.String?
+  public let value: Swift.String?
+  public static func == (a: TinkMoneyManagerUI.SelectOption, b: TinkMoneyManagerUI.SelectOption) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class ServiceContainer {
+  final public var authenticationService: any TinkMoneyManagerUI.AuthenticationService {
+    get
+  }
+  final public var oAuthService: any TinkMoneyManagerUI.OAuthService {
+    get
+  }
+  final public var providerService: any TinkMoneyManagerUI.ProviderService {
+    get
+  }
+  final public var userService: any TinkMoneyManagerUI.UserService {
+    get
+  }
+  final public var accountService: any TinkMoneyManagerUI.AccountService {
+    get
+  }
+  final public var actionableInsightService: any TinkMoneyManagerUI.ActionableInsightService {
+    get
+  }
+  final public var budgetService: any TinkMoneyManagerUI.BudgetService {
+    get
+  }
+  final public var calendarService: any TinkMoneyManagerUI.CalendarService {
+    get
+  }
+  final public var categoryService: any TinkMoneyManagerUI.CategoryService {
+    get
+  }
+  final public var statisticService: any TinkMoneyManagerUI.StatisticService {
+    get
+  }
+  final public var transactionService: any TinkMoneyManagerUI.TransactionService {
+    get
+  }
+  final public var recurringTransactionService: any TinkMoneyManagerUI.PredictedRecurringTransactionService {
+    get
+  }
+  final public var recurringTransactionsGroupService: any TinkMoneyManagerUI.RecurringTransactionsGroupService {
+    get
+  }
+  @objc deinit
+}
+public enum ServiceError : Swift.Error {
+  case cancelled
+  case invalidArgument(Swift.String?)
+  case notFound(Swift.String?)
+  case alreadyExists(Swift.String?)
+  case permissionDenied(Swift.String?)
+  case unauthenticated(Swift.String?)
+  case failedPrecondition(Swift.String?)
+  case tooManyRequests(Swift.String?)
+  case unavailableForLegalReasons(Swift.String?)
+  case internalError(Swift.String?)
+}
+public protocol SessionManager {
+}
+public struct SessionUser {
+  public var username: Swift.String? {
     get
   }
 }
@@ -825,6 +1877,96 @@ public struct Shadow {
   public static var `default`: TinkMoneyManagerUI.Shadow {
     get
   }
+}
+public struct Statistic {
+  public enum Resolution {
+    case daily, monthly, monthlyAdjusted, yearly, all, weekly
+    public static func == (a: TinkMoneyManagerUI.Statistic.Resolution, b: TinkMoneyManagerUI.Statistic.Resolution) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Kind {
+    case balancesByAccount
+    case balancesByAccountTypeGroup
+    case expensesByCategory
+    case expensesByPrimaryCategory
+    case expensesByCategoryByCount
+    case expensesByPrimaryCategoryByCount
+    case incomeByCategory
+    case incomeAndExpenses
+    case leftToSpend
+    case leftToSpendAverage
+    case safeToSpend
+    case expensesByCostStructure
+    public static func == (a: TinkMoneyManagerUI.Statistic.Kind, b: TinkMoneyManagerUI.Statistic.Kind) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let description: Swift.String
+  public let payload: Swift.String?
+  public let period: TinkMoneyManagerUI.StatisticPeriod
+  public let resolution: TinkMoneyManagerUI.Statistic.Resolution
+  public let kind: TinkMoneyManagerUI.Statistic.Kind
+  public let value: Swift.Double
+  public let userID: Swift.String
+}
+public enum StatisticPeriod : Swift.Hashable {
+  case year(Swift.Int)
+  case week(year: Swift.Int, week: Swift.Int)
+  case month(year: Swift.Int, month: Swift.Int)
+  case day(year: Swift.Int, month: Swift.Int, day: Swift.Int)
+  public var stringRepresentation: Swift.String {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.StatisticPeriod, b: TinkMoneyManagerUI.StatisticPeriod) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol StatisticService {
+  func statistics(description: Swift.String?, periods: [TinkMoneyManagerUI.StatisticPeriod], types: [TinkMoneyManagerUI.Statistic.Kind], resolution: TinkMoneyManagerUI.Statistic.Resolution, padResultsUntilToday: Swift.Bool, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Statistic], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
+extension TinkMoneyManagerUI.Tink {
+  @discardableResult
+  public func _createTemporaryUser(for market: TinkMoneyManagerUI.Market, locale: Foundation.Locale = Tink.defaultLocale, completion: @escaping (Swift.Result<TinkMoneyManagerUI.AccessToken, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+  public var _sdkName: Swift.String {
+    get
+    set
+  }
+  public var _version: Swift.String {
+    get
+    set
+  }
+  public var _urlSession: Foundation.URLSession {
+    get
+    set
+  }
+}
+public class Tink {
+  public static var shared: TinkMoneyManagerUI.Tink {
+    get
+  }
+  public var sessionManagers: [any TinkMoneyManagerUI.SessionManager]
+  public var userSession: TinkMoneyManagerUI.UserSession? {
+    get
+    set
+  }
+  public init(configuration: any TinkMoneyManagerUI.Configuration)
+  public static func configure(with configuration: any TinkMoneyManagerUI.Configuration)
+  final public let configuration: any TinkMoneyManagerUI.Configuration
+  public var services: TinkMoneyManagerUI.ServiceContainer {
+    get
+  }
+  @objc deinit
+}
+extension TinkMoneyManagerUI.Tink {
+  @discardableResult
+  public func authenticateUser(authorizationCode: TinkMoneyManagerUI.AuthorizationCode, completion: @escaping (Swift.Result<TinkMoneyManagerUI.AccessToken, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
 }
 public struct TinkError : Swift.Error {
   public enum Status {
@@ -848,18 +1990,74 @@ public struct TinkError : Swift.Error {
   }
   public let status: TinkMoneyManagerUI.TinkError.Status
   public let message: Swift.String?
-  public let underlyingError: Swift.Error
+  public let underlyingError: any Swift.Error
 }
-public struct TinkMoneyManagerConfiguration : TinkCore.Configuration {
+public enum TinkLogger {
+  public static func logUsedSDK(version: Swift.String, subsystem: Swift.String, category: Swift.String)
+}
+public struct TinkMoneyManagerConfiguration : TinkMoneyManagerUI.Configuration {
   public let clientID: Swift.String
   public let appURI: Foundation.URL?
   public let callbackURI: Foundation.URL?
-  public let environment: TinkCore.Tink.Environment
+  public let environment: TinkMoneyManagerUI.Tink.Environment
   public let certificateURL: Foundation.URL?
-  public init(clientID: Swift.String, environment: TinkCore.Tink.Environment = .production, certificateURL: Foundation.URL? = nil)
+  public init(clientID: Swift.String, environment: TinkMoneyManagerUI.Tink.Environment = .production, certificateURL: Foundation.URL? = nil)
+}
+public struct Transaction {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Transaction>
+  public let accountID: TinkMoneyManagerUI.Account.ID
+  public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public var categoryID: TinkMoneyManagerUI.Category.ID
+  public let description: Swift.String
+  public let date: Foundation.Date
+  public let id: TinkMoneyManagerUI.Transaction.ID
+  public let inserted: Foundation.Date
+  public let isUpcomingOrInFuture: Swift.Bool
+  public let notes: Swift.String?
+  public let originalDescription: Swift.String
+  public let originalDate: Foundation.Date
+  public let originalAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public let isPending: Swift.Bool
+  public let categoryType: TinkMoneyManagerUI.CategoryType
+  public let dispensableAmount: Swift.Double?
+  public let lastModified: Foundation.Date
+  public let type: TinkMoneyManagerUI.TransactionType
+  public let userId: Swift.String
+  public init(id: TinkMoneyManagerUI.Transaction.ID, accountID: TinkMoneyManagerUI.Account.ID, amount: TinkMoneyManagerUI.CurrencyDenominatedAmount, categoryID: TinkMoneyManagerUI.Category.ID, description: Swift.String, date: Foundation.Date, inserted: Foundation.Date, isUpcomingOrInFuture: Swift.Bool, notes: Swift.String?, originalDescription: Swift.String, originalDate: Foundation.Date, originalAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount, isPending: Swift.Bool, categoryType: TinkMoneyManagerUI.CategoryType, dispensableAmount: Swift.Double?, lastModified: Foundation.Date, type: TinkMoneyManagerUI.TransactionType, userId: Swift.String)
+}
+extension TinkMoneyManagerUI.Transaction : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.Transaction, b: TinkMoneyManagerUI.Transaction) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum TransactionType {
+  case `default`
+  case creditCard
+  case transfer
+  case payment
+  case withdrawal
+  case unknown
+  public static func == (a: TinkMoneyManagerUI.TransactionType, b: TinkMoneyManagerUI.TransactionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CategoryType {
+  case expenses
+  case income
+  case transfers
+  case unknown
+  public static func == (a: TinkMoneyManagerUI.CategoryType, b: TinkMoneyManagerUI.CategoryType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionDetailsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public init(tink: TinkCore.Tink = .shared, transactionID: TinkCore.Transaction.ID)
+  @_Concurrency.MainActor(unsafe) public init(tink: TinkMoneyManagerUI.Tink = .shared, transactionID: TinkMoneyManagerUI.Transaction.ID)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
@@ -879,18 +2077,69 @@ extension TinkMoneyManagerUI.TransactionDetailsViewController : UIKit.UIAdaptive
 }
 extension TinkMoneyManagerUI.TransactionDetailsViewController : TinkMoneyManagerUI.EditTransactionViewControllerDelegate {
   @_Concurrency.MainActor(unsafe) final public func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
-  @_Concurrency.MainActor(unsafe) final public func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkCore.Transaction)
+  @_Concurrency.MainActor(unsafe) final public func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkMoneyManagerUI.Transaction)
+}
+public struct TransactionsQuery : Swift.Equatable {
+  public var accountIDs: [TinkMoneyManagerUI.Account.ID]
+  public var categoryIDs: [TinkMoneyManagerUI.Category.ID]
+  public var dateInterval: Foundation.DateInterval?
+  public var query: Swift.String?
+  public var includeUpcoming: Swift.Bool
+  public var sort: TinkMoneyManagerUI.TransactionsQuery.Sort
+  public var order: TinkMoneyManagerUI.TransactionsQuery.Order
+  public var limit: Swift.Int?
+  public enum Sort : Swift.String {
+    case date
+    case account
+    case description
+    case amount
+    case category
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @frozen public enum Order : Swift.String {
+    case ascending
+    case descending
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(accountIDs: [TinkMoneyManagerUI.Account.ID] = [], categoryIDs: [TinkMoneyManagerUI.Category.ID] = [], dateInterval: Foundation.DateInterval? = nil, query: Swift.String? = nil, includeUpcoming: Swift.Bool = false, sort: TinkMoneyManagerUI.TransactionsQuery.Sort = .date, order: TinkMoneyManagerUI.TransactionsQuery.Order = .descending, limit: Swift.Int? = nil)
+  public static func == (a: TinkMoneyManagerUI.TransactionsQuery, b: TinkMoneyManagerUI.TransactionsQuery) -> Swift.Bool
+}
+public enum TransactionsQueryError : Swift.Error {
+  case notMatchable
+  public static func == (a: TinkMoneyManagerUI.TransactionsQueryError, b: TinkMoneyManagerUI.TransactionsQueryError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.Collection where Self.Element == TinkMoneyManagerUI.Transaction {
+  public func filter(with query: TinkMoneyManagerUI.TransactionsQuery) throws -> [TinkMoneyManagerUI.Transaction]
+}
+public protocol TransactionService {
+  func transactions(query: TinkMoneyManagerUI.TransactionsQuery, offset: Swift.Int?, completion: @escaping (Swift.Result<([TinkMoneyManagerUI.Transaction], Swift.Bool), any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func categorize(_ transactionIDs: [Swift.String], as newCategoryID: Swift.String, completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func transactionsSimilar(to transactionID: Swift.String, ifCategorizedAs categoryID: Swift.String, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Transaction], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func transaction(id: TinkMoneyManagerUI.Transaction.ID, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Transaction, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func update(transactionID: TinkMoneyManagerUI.Transaction.ID, amount: TinkMoneyManagerUI.CurrencyDenominatedAmount, categoryID: TinkMoneyManagerUI.Category.ID, date: Foundation.Date, description: Swift.String, notes: Swift.String?, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Transaction, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
 }
 public protocol TransactionsViewControllerDelegate : AnyObject {
-  func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkCore.Transaction)
-  func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didFailWithError error: Swift.Error)
+  func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
+  func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didFailWithError error: any Swift.Error)
 }
 extension TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didFailWithError error: Swift.Error)
+  public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didFailWithError error: any Swift.Error)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: TinkMoneyManagerUI.TransactionsViewControllerDelegate?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkCore.Tink = .shared, query: TinkCore.TransactionsQuery = TransactionsQuery(), showPredictedRecurringTransactions: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.TransactionsViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, query: TinkMoneyManagerUI.TransactionsQuery = TransactionsQuery(), showPredictedRecurringTransactions: Swift.Bool = false)
   @objc deinit
 }
 extension TinkMoneyManagerUI.TransactionsViewController {
@@ -910,21 +2159,107 @@ public struct TransferIdentity {
   public var account: Foundation.URL?
   public var accountNumber: Swift.String?
 }
-extension TinkCore.UserSession : Swift.Equatable {
-  public static func == (lhs: TinkCore.UserSession, rhs: TinkCore.UserSession) -> Swift.Bool
+public struct User {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.User>
+  public let created: Foundation.Date
+  public let id: TinkMoneyManagerUI.User.ID
+  public let username: Swift.String?
+  public let profile: TinkMoneyManagerUI.UserProfile
+}
+public struct UserProfile {
+  public let currency: TinkMoneyManagerUI.CurrencyCode
+  public let locale: Foundation.Locale
+  public let market: TinkMoneyManagerUI.Market
+  public let periodAdjustedDay: Swift.Int
+  public let periodMode: TinkMoneyManagerUI.Period.Resolution?
+  public let timeZone: Foundation.TimeZone?
+}
+public protocol UserService {
+  func userProfile(completion: @escaping (Swift.Result<TinkMoneyManagerUI.UserProfile, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+  func user(completion: @escaping (Swift.Result<TinkMoneyManagerUI.User, any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)?
+}
+public enum UserSession {
+  case accessToken(Swift.String)
+}
+extension TinkMoneyManagerUI.UserSession : Swift.Equatable {
+  public static func == (lhs: TinkMoneyManagerUI.UserSession, rhs: TinkMoneyManagerUI.UserSession) -> Swift.Bool
 }
 public let version: Swift.String
+extension TinkMoneyManagerUI.Account.Kind : Swift.Equatable {}
+extension TinkMoneyManagerUI.Account.Kind : Swift.Hashable {}
+extension TinkMoneyManagerUI.Account.AccountExclusion : Swift.Equatable {}
+extension TinkMoneyManagerUI.Account.AccountExclusion : Swift.Hashable {}
+extension TinkMoneyManagerUI.ActionableInsight.BudgetPeriodUnit : Swift.Equatable {}
+extension TinkMoneyManagerUI.ActionableInsight.BudgetPeriodUnit : Swift.Hashable {}
+extension TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit : Swift.Equatable {}
+extension TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit : Swift.Hashable {}
+extension TinkMoneyManagerUI.Category.Kind : Swift.RawRepresentable {}
 extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Equatable {}
 extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Hashable {}
 extension TinkMoneyManagerUI.EditingPendingTransactions : Swift.Equatable {}
 extension TinkMoneyManagerUI.EditingPendingTransactions : Swift.Hashable {}
+extension TinkMoneyManagerUI.Credentials.Kind : Swift.Equatable {}
+extension TinkMoneyManagerUI.Credentials.Kind : Swift.Hashable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Equatable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Feature.StatisticsData : Swift.Hashable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction : Swift.Equatable {}
 extension TinkMoneyManagerUI.FinanceOverviewViewController.Configuration.TransactionItemAction : Swift.Hashable {}
 extension TinkMoneyManagerUI.Font.Weight : Swift.Equatable {}
 extension TinkMoneyManagerUI.Font.Weight : Swift.Hashable {}
+extension TinkMoneyManagerUI.Period.Resolution : Swift.Equatable {}
+extension TinkMoneyManagerUI.Period.Resolution : Swift.Hashable {}
+extension TinkMoneyManagerUI.Product : Swift.Equatable {}
+extension TinkMoneyManagerUI.Product : Swift.Hashable {}
+extension TinkMoneyManagerUI.Provider.Kind : Swift.Equatable {}
+extension TinkMoneyManagerUI.Provider.Kind : Swift.Hashable {}
+extension TinkMoneyManagerUI.Provider.Status : Swift.Equatable {}
+extension TinkMoneyManagerUI.Provider.Status : Swift.Hashable {}
+extension TinkMoneyManagerUI.Provider.FinancialService.Segment : Swift.Equatable {}
+extension TinkMoneyManagerUI.Provider.FinancialService.Segment : Swift.Hashable {}
+extension TinkMoneyManagerUI.Provider.ReleaseStatus : Swift.Equatable {}
+extension TinkMoneyManagerUI.Provider.ReleaseStatus : Swift.Hashable {}
+extension TinkMoneyManagerUI.RecurringTransactionsGroupStatus : Swift.Equatable {}
+extension TinkMoneyManagerUI.RecurringTransactionsGroupStatus : Swift.Hashable {}
+extension TinkMoneyManagerUI.RecurringTransactionsGroupStatus : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.Scope.ReadAccess : Swift.Equatable {}
+extension TinkMoneyManagerUI.Scope.ReadAccess : Swift.Hashable {}
+extension TinkMoneyManagerUI.Scope.ReadAccess : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.Scope.ReadWriteAccess : Swift.Equatable {}
+extension TinkMoneyManagerUI.Scope.ReadWriteAccess : Swift.Hashable {}
+extension TinkMoneyManagerUI.Scope.ReadWriteAccess : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.Scope.AuthorizationAccess : Swift.Equatable {}
+extension TinkMoneyManagerUI.Scope.AuthorizationAccess : Swift.Hashable {}
+extension TinkMoneyManagerUI.Scope.AuthorizationAccess : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.Scope.CredentialsAccess : Swift.Equatable {}
+extension TinkMoneyManagerUI.Scope.CredentialsAccess : Swift.Hashable {}
+extension TinkMoneyManagerUI.Scope.CredentialsAccess : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.Scope.TransactionAccess : Swift.Equatable {}
+extension TinkMoneyManagerUI.Scope.TransactionAccess : Swift.Hashable {}
+extension TinkMoneyManagerUI.Scope.TransactionAccess : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.Scope.TransferAccess : Swift.Equatable {}
+extension TinkMoneyManagerUI.Scope.TransferAccess : Swift.Hashable {}
+extension TinkMoneyManagerUI.Scope.TransferAccess : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.Scope.UserAccess : Swift.Equatable {}
+extension TinkMoneyManagerUI.Scope.UserAccess : Swift.Hashable {}
+extension TinkMoneyManagerUI.Scope.UserAccess : Swift.RawRepresentable {}
 extension TinkMoneyManagerUI.ScreenEvent : Swift.Equatable {}
 extension TinkMoneyManagerUI.ScreenEvent : Swift.Hashable {}
+extension TinkMoneyManagerUI.Statistic.Kind : Swift.Equatable {}
+extension TinkMoneyManagerUI.Statistic.Kind : Swift.Hashable {}
+extension TinkMoneyManagerUI.Statistic.Resolution : Swift.Equatable {}
+extension TinkMoneyManagerUI.Statistic.Resolution : Swift.Hashable {}
 extension TinkMoneyManagerUI.TinkError.Status : Swift.Equatable {}
 extension TinkMoneyManagerUI.TinkError.Status : Swift.Hashable {}
+extension TinkMoneyManagerUI.TransactionType : Swift.Equatable {}
+extension TinkMoneyManagerUI.TransactionType : Swift.Hashable {}
+extension TinkMoneyManagerUI.CategoryType : Swift.Equatable {}
+extension TinkMoneyManagerUI.CategoryType : Swift.Hashable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Sort : Swift.Equatable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Sort : Swift.Hashable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Sort : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.Equatable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.Hashable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.Sendable {}
+extension TinkMoneyManagerUI.TransactionsQueryError : Swift.Equatable {}
+extension TinkMoneyManagerUI.TransactionsQueryError : Swift.Hashable {}
