@@ -12,4 +12,4 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "TinkMoneyManagerUI.xcframework"
 
   spec.swift_version = ["5.7", "5.8", "5.9"]
-
+end
