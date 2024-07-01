@@ -12,8 +12,8 @@
 
 ## Requirements
 
-- iOS 13.0
-- Xcode 14.1
+- iOS 14.0
+- Xcode 15.2
 
 ## Installation
 
@@ -38,7 +38,7 @@ Refer to their [guide](https://guides.cocoapods.org/using/using-cocoapods.html) 
 3. Open your `.xcworkspace` file to see the project in Xcode.
 
 ### Manual Installation
-Drag the `TinkMoneyManagerUI.xcframework` and `TinkCore.xcframework` into the  _Frameworks, Libraries, and Embedded Content_ section on your application targets’ _General_ tab. 
+Drag the `TinkMoneyManagerUI.xcframework` into the  _Frameworks, Libraries, and Embedded Content_ section on your application targets’ _General_ tab.
 
 You should now be able to `import TinkMoneyManagerUI` within your project.
 

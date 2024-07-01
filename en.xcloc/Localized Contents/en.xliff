@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
   <file original="Sources/TinkMoneyManagerUI/en.lproj/TinkMoneyManagerUI.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.1" build-num="14B47b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
     </header>
     <body>
       <trans-unit id="AccountDetail.Header.AccountNumberFormat" xml:space="preserve">
@@ -852,61 +852,6 @@
         <target>and</target>
         <note>Human enumerated formatter text for and.</note>
       </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.CategorizationError" xml:space="preserve">
-        <source>There was an error categorizing</source>
-        <target>There was an error categorizing</target>
-        <note>Error shown when categorization fails in improve categorization level modal.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Overview.CategorizeButton" xml:space="preserve">
-        <source>Categorize</source>
-        <target>Categorize</target>
-        <note>Title for the button on the improve categorization card shown on the finance overview.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Overview.Detail" xml:space="preserve">
-        <source>We found %d transactions without a category.</source>
-        <target>We found %d transactions without a category.</target>
-        <note>Detail for the improve categorization card shown on the finance overview.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Overview.DismissButton" xml:space="preserve">
-        <source>Dismiss</source>
-        <target>Dismiss</target>
-        <note>Title for the dismiss button on the improve categorization card shown on the finance overview.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Overview.Title" xml:space="preserve">
-        <source>Improve your categorization</source>
-        <target>Improve your categorization</target>
-        <note>Title for the improve categorization card shown on the finance overview.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Success.Improvement" xml:space="preserve">
-        <source>Your categorization just got %@ better!</source>
-        <target>Your categorization just got %@ better!</target>
-        <note>Text for the categorization level successfully improved.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Success.Level" xml:space="preserve">
-        <source>%@ of your transactions are now categorized.</source>
-        <target>%@ of your transactions are now categorized.</target>
-        <note>Text for the current categorization level.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions" xml:space="preserve">
-        <source>%d transactions categorized.</source>
-        <target>%d transactions categorized.</target>
-        <note>Text for the number of transactions that were successfully categorized.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Success.OneCategorizedTransaction" xml:space="preserve">
-        <source>%d transaction categorized.</source>
-        <target>%d transaction categorized.</target>
-        <note>Text for one transaction that was successfully categorized.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Success.UnknownImprovement" xml:space="preserve">
-        <source>Your categorization just got better!</source>
-        <target>Your categorization just got better!</target>
-        <note>Text for the categorization level successfully improved.</note>
-      </trans-unit>
-      <trans-unit id="ImproveCategorizationLevel.Title" xml:space="preserve">
-        <source>Improve categorization</source>
-        <target>Improve categorization</target>
-        <note>Title for the improve categorization modal.</note>
-      </trans-unit>
       <trans-unit id="LeftToSpend.OverTime.LongPressSubtitle" xml:space="preserve">
         <source>Left to spend in %@</source>
         <target>Left to spend in %@</target>
@@ -1163,7 +1108,7 @@ Track your expense by creating a budget.</target>
   </file>
   <file original="Sources/TinkMoneyManagerUIUITestsHost/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
     <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.1" build-num="14B47b"/>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="15.2" build-num="15C500b"/>
     </header>
     <body>
       <trans-unit id="CFBundleName" xml:space="preserve">

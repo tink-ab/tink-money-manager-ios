@@ -178,17 +178,6 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Generic.SafeToSpend.Title` | Safe to spend | Title for safe to spend statistics. |
 | `Generic.Transfers.Title` | Transfers | Title for category statistics representing only transfers. |
 | `Human.Enumerated.formatter.And` | and | Human enumerated formatter text for and. |
-| `ImproveCategorizationLevel.CategorizationError` | There was an error categorizing | Error shown when categorization fails in improve categorization level modal. |
-| `ImproveCategorizationLevel.Overview.CategorizeButton` | Categorize | Title for the button on the improve categorization card shown on the finance overview. |
-| `ImproveCategorizationLevel.Overview.Detail` | We found %d transactions without a category. | Detail for the improve categorization card shown on the finance overview. |
-| `ImproveCategorizationLevel.Overview.DismissButton` | Dismiss | Title for the dismiss button on the improve categorization card shown on the finance overview. |
-| `ImproveCategorizationLevel.Overview.Title` | Improve your categorization | Title for the improve categorization card shown on the finance overview. |
-| `ImproveCategorizationLevel.Success.Improvement` | Your categorization just got %@ better! | Text for the categorization level successfully improved. |
-| `ImproveCategorizationLevel.Success.Level` | %@ of your transactions are now categorized. | Text for the current categorization level. |
-| `ImproveCategorizationLevel.Success.NumberOfCategorizedTransactions` | %d transactions categorized. | Text for the number of transactions that were successfully categorized. |
-| `ImproveCategorizationLevel.Success.OneCategorizedTransaction` | %d transaction categorized. | Text for one transaction that was successfully categorized. |
-| `ImproveCategorizationLevel.Success.UnknownImprovement` | Your categorization just got better! | Text for the categorization level successfully improved. |
-| `ImproveCategorizationLevel.Title` | Improve categorization | Title for the improve categorization modal. |
 | `LeftToSpend.OverTime.LongPressSubtitle` | Left to spend in %@ | Subtitle shown when user long press bar in chart for left to spend statistics. |
 | `Overview.Accounts.AddBankOrCard` | Add bank or card | Optional text to display in overview when there are no accounts. |
 | `Overview.Accounts.All` | Accounts | Text displayed above accounts cards sections in the financial overview. |
