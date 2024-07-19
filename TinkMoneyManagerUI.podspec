@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "TinkMoneyManagerUI"
-  spec.version      = "2.0.0"
+  spec.version      = "2.0.1"
   spec.license      = { :type => "Tink", :file => "LICENSE" }
   spec.authors      = { "Tink AB" => "mobile@tink.se" }
   spec.homepage     = "https://github.com/tink-ab/tink-money-manager-ios"
@@ -12,4 +12,4 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "TinkMoneyManagerUI.xcframework"
 
   spec.swift_version = ["5.7", "5.8", "5.9"]
-end
+
