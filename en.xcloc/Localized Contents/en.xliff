@@ -842,6 +842,16 @@
         <target>Safe to spend</target>
         <note>Title for safe to spend statistics.</note>
       </trans-unit>
+      <trans-unit id="Generic.Subscriptions.NoSubscriptionsAvailable" xml:space="preserve">
+        <source>No subscriptions available</source>
+        <target>No subscriptions available</target>
+        <note>Title for empty subscription list view.</note>
+      </trans-unit>
+      <trans-unit id="Generic.Subscriptions.Title" xml:space="preserve">
+        <source>Subscriptions</source>
+        <target>Subscriptions</target>
+        <note>Title for Subscriptions Overview screen.</note>
+      </trans-unit>
       <trans-unit id="Generic.Transfers.Title" xml:space="preserve">
         <source>Transfers</source>
         <target>Transfers</target>
@@ -998,6 +1008,38 @@ Track your expense by creating a budget.</target>
         <source>Recurring expenses</source>
         <target>Recurring expenses</target>
         <note>Title for latest recurring expenses list.</note>
+      </trans-unit>
+      <trans-unit id="Subscriptions.Overview.AmountLessThenPreviousMonth" xml:space="preserve">
+        <source>%@ less then previous month</source>
+        <target>%@ less then previous month</target>
+        <note>Difference in subscription cost when it is lower compared to the previous month</note>
+      </trans-unit>
+      <trans-unit id="Subscriptions.Overview.AmountMoreThenPreviousMonth" xml:space="preserve">
+        <source>%@ more then previous month</source>
+        <target>%@ more then previous month</target>
+        <note>Difference in subscription cost when it is higher compared to the previous month
+   No difference in subscription cost compared to the previous month.</note>
+      </trans-unit>
+      <trans-unit id="Subscriptions.Overview.LongPressSubtitle.Expenses" xml:space="preserve">
+        <source>Spent on subscriptions in %@</source>
+        <target>Spent on subscriptions in %@</target>
+        <note>Subtitle shown when user long press bar in chart for subscriptions statistics.</note>
+      </trans-unit>
+      <trans-unit id="Subscriptions.Overview.Number" xml:space="preserve">
+        <source>for %d subscriptions</source>
+        <target>for %d subscriptions</target>
+        <note>Description for the number of subscriptions per month.</note>
+      </trans-unit>
+      <trans-unit id="Subscriptions.Overview.Title" xml:space="preserve">
+        <source>Subscriptions</source>
+        <target>Subscriptions</target>
+        <note>Description for average amount of subscriptions per months.
+   Title for the Subscription card on Finance Overview.</note>
+      </trans-unit>
+      <trans-unit id="Subscriptions.Statistics.Estimated" xml:space="preserve">
+        <source>Your subscriptions is estimated to be %@ this month</source>
+        <target>Your subscriptions is estimated to be %@ this month</target>
+        <note>Estimated value of subscriptions for the card view in Expenses.</note>
       </trans-unit>
       <trans-unit id="Transaction.Detail.ChangeCategory" xml:space="preserve">
         <source>Change</source>
