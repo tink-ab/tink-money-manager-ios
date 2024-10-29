@@ -176,6 +176,8 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Generic.OverTime.TabTitle` | Over time | Title for tab showing bar chart of data over time. |
 | `Generic.RecurringExpenses.Title` | Recurring expenses | Title for category statistics representing recurring expenses. |
 | `Generic.SafeToSpend.Title` | Safe to spend | Title for safe to spend statistics. |
+| `Generic.Subscriptions.NoSubscriptionsAvailable` | No subscriptions available | Title for empty subscription list view. |
+| `Generic.Subscriptions.Title` | Subscriptions | Title for Subscriptions Overview screen. |
 | `Generic.Transfers.Title` | Transfers | Title for category statistics representing only transfers. |
 | `Human.Enumerated.formatter.And` | and | Human enumerated formatter text for and. |
 | `LeftToSpend.OverTime.LongPressSubtitle` | Left to spend in %@ | Subtitle shown when user long press bar in chart for left to spend statistics. |
@@ -228,3 +230,7 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Transactions.TransactionsSectionTitle` | Transactions | Title for section of transactions in All transactions screen. |
 | `Week.Of.Year.Long` | week | Week of the year formatter long text. |
 | `Week.Of.Year.Short` | w | Week of the year formatter short text. |
+| `Subscriptions.Overview.LongPressSubtitle.Expenses` | Spent on subscriptions in %@ | Subtitle shown when user long press bar in chart for subscriptions statistics. |
+| `Subscriptions.Overview.Number` | for %d subscriptions | Description for the number of subscriptions per month. |
+| `Subscriptions.Overview.Title` | Subscriptions | Title for the Subscription card on Finance Overview. |
+| `Subscriptions.Statistics.Estimated` | Your subscriptions is estimated to be %@ this month | Estimated value of subscriptions for the card view in Expenses. |

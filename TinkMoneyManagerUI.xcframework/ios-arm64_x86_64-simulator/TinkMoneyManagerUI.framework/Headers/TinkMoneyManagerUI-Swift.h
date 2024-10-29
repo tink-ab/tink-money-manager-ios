@@ -770,15 +770,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -817,10 +817,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 @end
 
 
+
 @interface LeftToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 
@@ -892,6 +892,28 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25SafeToSpendViewController")
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
 
+
+
+/// A view controller that displays a list of subscriptions.
+/// Required scopes to display subscriptions: <code>subscriptions:read</code>.
+/// <h2>Overview</h2>
+/// Use the <code>SubscriptionsViewController</code> when you want to display a list of subscriptions.
+/// \code
+/// let subscriptionsViewController = SubscriptionsViewController(tink: <#Tink#>)
+/// show(subscriptionsViewController, sender: <#Any#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI27SubscriptionsViewController")
+@interface SubscriptionsViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+@interface SubscriptionsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+@end
 
 
 /// A view controller that displays details about a specific transaction.
@@ -1794,15 +1816,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-@end
-
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1841,10 +1863,10 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 @end
 
 
+
 @interface LeftToSpendViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIAdaptivePresentationControllerDelegate>
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
-
 
 
 
@@ -1916,6 +1938,28 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25SafeToSpendViewController")
 - (void)presentationControllerWillDismiss:(UIPresentationController * _Nonnull)presentationController;
 @end
 
+
+
+/// A view controller that displays a list of subscriptions.
+/// Required scopes to display subscriptions: <code>subscriptions:read</code>.
+/// <h2>Overview</h2>
+/// Use the <code>SubscriptionsViewController</code> when you want to display a list of subscriptions.
+/// \code
+/// let subscriptionsViewController = SubscriptionsViewController(tink: <#Tink#>)
+/// show(subscriptionsViewController, sender: <#Any#>)
+///
+/// \endcode
+SWIFT_CLASS("_TtC18TinkMoneyManagerUI27SubscriptionsViewController")
+@interface SubscriptionsViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+@interface SubscriptionsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+@end
 
 
 /// A view controller that displays details about a specific transaction.

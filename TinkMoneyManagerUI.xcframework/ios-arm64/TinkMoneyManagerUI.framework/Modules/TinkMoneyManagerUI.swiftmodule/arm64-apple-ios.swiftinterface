@@ -904,6 +904,9 @@ public protocol BudgetConfigurable {
 public protocol RecurringExpensesConfigurable {
   var showRecurringExpenses: Swift.Bool { get set }
 }
+public protocol SubscriptionsInStatisticsConfigurable {
+  var showSubscriptionsInStatistics: Swift.Bool { get set }
+}
 public enum NoAccountsAction {
   case none
   case addAccount(onTap: () -> Swift.Void)
@@ -1146,12 +1149,13 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     case actionableInsights(delegate: any TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate)
     case budgets
     case recommendedBudgets
+    case subscriptionsOverview
     case custom(UIKit.UIView)
     public static let accounts: TinkMoneyManagerUI.FinanceOverviewViewController.Feature
   }
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController {
-  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable, TinkMoneyManagerUI.EditingPendingTransactionsConfigurable, TinkMoneyManagerUI.BudgetConfigurable, TinkMoneyManagerUI.RecurringExpensesConfigurable {
+  public struct Configuration : TinkMoneyManagerUI.TransactionItemActionConfigurable, TinkMoneyManagerUI.EditAccountFieldsConfigurable, TinkMoneyManagerUI.NoAccountsActionConfigurable, TinkMoneyManagerUI.EditingPendingTransactionsConfigurable, TinkMoneyManagerUI.BudgetConfigurable, TinkMoneyManagerUI.RecurringExpensesConfigurable, TinkMoneyManagerUI.SubscriptionsInStatisticsConfigurable {
     public enum TransactionItemAction {
       case showDetails
       case categorize
@@ -1168,10 +1172,11 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     public var showBudgetCreateSuccessScreen: Swift.Bool
     public var shouldRecommendBudgets: Swift.Bool
     public var showRecurringExpenses: Swift.Bool
+    public var showSubscriptionsInStatistics: Swift.Bool
   }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class FinanceOverviewViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.RecurringExpensesConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
+  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.RecurringExpensesConfigurable & TinkMoneyManagerUI.SubscriptionsInStatisticsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
     set
   }
@@ -1789,6 +1794,8 @@ public enum ScreenEvent {
   case transactionDetails
   case budgetCreateSuccess
   case recommendedBudgetList
+  case subscriptionsOverview
+  case subscriptionOverviewDetails
   public var name: Swift.String {
     get
   }
@@ -1842,6 +1849,9 @@ public struct SelectOption : Swift.Equatable {
     get
   }
   final public var recurringTransactionsGroupService: any TinkMoneyManagerUI.RecurringTransactionsGroupService {
+    get
+  }
+  final public var subscriptionsService: any TinkMoneyManagerUI.SubscriptionsService {
     get
   }
   @objc deinit
@@ -1900,6 +1910,8 @@ public struct Statistic {
     case leftToSpendAverage
     case safeToSpend
     case expensesByCostStructure
+    case expensesBySubscription
+    case expensesBySubscriptionAverage
     public static func == (a: TinkMoneyManagerUI.Statistic.Kind, b: TinkMoneyManagerUI.Statistic.Kind) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1930,6 +1942,39 @@ public enum StatisticPeriod : Swift.Hashable {
 }
 public protocol StatisticService {
   func statistics(description: Swift.String?, periods: [TinkMoneyManagerUI.StatisticPeriod], types: [TinkMoneyManagerUI.Statistic.Kind], resolution: TinkMoneyManagerUI.Statistic.Resolution, padResultsUntilToday: Swift.Bool, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Statistic], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
+public struct Subscription {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Subscription>
+  public let id: TinkMoneyManagerUI.Subscription.ID
+  public let accountID: TinkMoneyManagerUI.Account.ID
+  public var categoryID: TinkMoneyManagerUI.Category.ID
+  public let description: Swift.String
+  public let startDate: Swift.String
+  public let subscriptionCost: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public let totalSubscriptionSpend: TinkMoneyManagerUI.CurrencyDenominatedAmount
+}
+public struct SubscriptionTransaction : Swift.Hashable {
+  public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.SubscriptionTransaction>
+  public let id: TinkMoneyManagerUI.SubscriptionTransaction.ID
+  public let date: Swift.String
+  public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.SubscriptionTransaction, b: TinkMoneyManagerUI.SubscriptionTransaction) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol SubscriptionsService {
+  func subscriptions(pageToken: Swift.String?, completion: @escaping (Swift.Result<([TinkMoneyManagerUI.Subscription], TinkMoneyManagerUI.NextPageToken), any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+  func transactions(for subscriptionID: TinkMoneyManagerUI.Subscription.ID, completion: @escaping (Swift.Result<([TinkMoneyManagerUI.SubscriptionTransaction], TinkMoneyManagerUI.NextPageToken), any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SubscriptionsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
+  @objc deinit
+}
+extension TinkMoneyManagerUI.SubscriptionsViewController {
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.Tink {
   @discardableResult

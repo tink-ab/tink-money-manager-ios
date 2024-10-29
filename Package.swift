@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TinkMoneyManagerUI",
-            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/2.0.4/TinkMoneyManagerUI.xcframework.zip", checksum: "8c09b8d857844b8f8238cf35567a753cbf487e7d54ce1fcd18a177754bb0d7ec"
+            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/2.1.0/TinkMoneyManagerUI.xcframework.zip", checksum: "92411534adab38fb2ac17483634f9e6e418f9806e23544da37eccebad5a391ad"
         ),
     ]
 )
