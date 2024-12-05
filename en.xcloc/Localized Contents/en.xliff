@@ -1017,8 +1017,12 @@ Track your expense by creating a budget.</target>
       <trans-unit id="Subscriptions.Overview.AmountMoreThenPreviousMonth" xml:space="preserve">
         <source>%@ more then previous month</source>
         <target>%@ more then previous month</target>
-        <note>Difference in subscription cost when it is higher compared to the previous month
-   No difference in subscription cost compared to the previous month.</note>
+        <note>Difference in subscription cost when it is higher compared to the previous month</note>
+      </trans-unit>
+      <trans-unit id="Subscriptions.Overview.Average" xml:space="preserve">
+        <source>%.2f in avg./month</source>
+        <target>%.2f in avg./month</target>
+        <note>Description for average amount of subscriptions per months.</note>
       </trans-unit>
       <trans-unit id="Subscriptions.Overview.LongPressSubtitle.Expenses" xml:space="preserve">
         <source>Spent on subscriptions in %@</source>
@@ -1030,11 +1034,15 @@ Track your expense by creating a budget.</target>
         <target>for %d subscriptions</target>
         <note>Description for the number of subscriptions per month.</note>
       </trans-unit>
+      <trans-unit id="Subscriptions.Overview.SameAsPreviousMonth" xml:space="preserve">
+        <source>Same as previous month</source>
+        <target>Same as previous month</target>
+        <note>No difference in subscription cost compared to the previous month.</note>
+      </trans-unit>
       <trans-unit id="Subscriptions.Overview.Title" xml:space="preserve">
         <source>Subscriptions</source>
         <target>Subscriptions</target>
-        <note>Description for average amount of subscriptions per months.
-   Title for the Subscription card on Finance Overview.</note>
+        <note>Title for the Subscription card on Finance Overview.</note>
       </trans-unit>
       <trans-unit id="Subscriptions.Statistics.Estimated" xml:space="preserve">
         <source>Your subscriptions is estimated to be %@ this month</source>

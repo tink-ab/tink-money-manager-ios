@@ -209,6 +209,14 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Overview.RecurringExpenses.Expected` | Expected %@ | Subtitle for recurrent transaction cell label displaying the date of the upcoming transaction. |
 | `Overview.RecurringExpenses.SeeAllButton` | See all | Title for button to see all recurring expenses. |
 | `Overview.RecurringExpenses.Title` | Recurring expenses | Title for latest recurring expenses list. |
+| `Subscriptions.Overview.AmountLessThenPreviousMonth` | %@ less then previous month | Difference in subscription cost when it is lower compared to the previous month |
+| `Subscriptions.Overview.AmountMoreThenPreviousMonth` | %@ more then previous month | Difference in subscription cost when it is higher compared to the previous month |
+| `Subscriptions.Overview.Average` | %.2f in avg./month | Description for average amount of subscriptions per months. |
+| `Subscriptions.Overview.LongPressSubtitle.Expenses` | Spent on subscriptions in %@ | Subtitle shown when user long press bar in chart for subscriptions statistics. |
+| `Subscriptions.Overview.Number` | for %d subscriptions | Description for the number of subscriptions per month. |
+| `Subscriptions.Overview.SameAsPreviousMonth` | Same as previous month | No difference in subscription cost compared to the previous month. |
+| `Subscriptions.Overview.Title` | Subscriptions | Title for the Subscription card on Finance Overview. |
+| `Subscriptions.Statistics.Estimated` | Your subscriptions is estimated to be %@ this month | Estimated value of subscriptions for the card view in Expenses. |
 | `Transaction.Detail.ChangeCategory` | Change | Title for the button used to initiate a categorization of a transaction. |
 | `Transaction.Detail.Edit` | Edit | Text on button in navigation bar leading to the edit transaction flow. |
 | `Transaction.Detail.PendingTransaction.Description` | Details of a pending transactions can change before being confirmed. | Body of the informative pending transaction view. |
@@ -230,7 +238,3 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 | `Transactions.TransactionsSectionTitle` | Transactions | Title for section of transactions in All transactions screen. |
 | `Week.Of.Year.Long` | week | Week of the year formatter long text. |
 | `Week.Of.Year.Short` | w | Week of the year formatter short text. |
-| `Subscriptions.Overview.LongPressSubtitle.Expenses` | Spent on subscriptions in %@ | Subtitle shown when user long press bar in chart for subscriptions statistics. |
-| `Subscriptions.Overview.Number` | for %d subscriptions | Description for the number of subscriptions per month. |
-| `Subscriptions.Overview.Title` | Subscriptions | Title for the Subscription card on Finance Overview. |
-| `Subscriptions.Statistics.Estimated` | Your subscriptions is estimated to be %@ this month | Estimated value of subscriptions for the card view in Expenses. |
