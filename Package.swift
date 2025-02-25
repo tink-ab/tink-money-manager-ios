@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "TinkMoneyManager",
     platforms: [
-        .iOS(.v14)
+        .iOS("15.8.3")
     ],
     products: [
         .library(
@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TinkMoneyManagerUI",
-            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/2.1.2/TinkMoneyManagerUI.xcframework.zip", checksum: "05137a171cd10ff256feb53b8ae6d97377633076afb07f2f057239042b480311"
+            url: "https://github.com/tink-ab/tink-money-manager-ios/releases/download/3.0.0/TinkMoneyManagerUI.xcframework.zip", checksum: "90968e1457944facdc84a866297167a95f22f289ced7765d3328c24f751cafc0"
         ),
     ]
 )
