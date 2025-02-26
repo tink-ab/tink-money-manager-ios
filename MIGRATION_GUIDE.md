@@ -1,4 +1,4 @@
-# Tink Money Manager iOS SDK 2.0 Migration Guide
+# Tink Money Manager iOS SDK 3.0 Migration Guide
 
 This guide covers how to update your iOS project using Money Manager iOS SDK versions lower than 2.0 to Money Manager iOS SDK 2.0.
 We encourage you to update as soon as possible, so that you have a smooth and modern experience using the SDK. This will also make future updates of the SDK more seamless. 
