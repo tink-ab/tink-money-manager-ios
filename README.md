@@ -12,8 +12,8 @@
 
 ## Requirements
 
-- iOS 14.0
-- Xcode 15.2
+- iOS 15.8.3
+- Xcode 16.2
 
 ## Installation
 
