@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TinkMoneyManagerUI
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios15.8.3-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TinkMoneyManagerUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import CoreGraphics
 import Dispatch
 import Foundation
@@ -38,7 +38,7 @@ public struct Account {
     public static func == (a: TinkMoneyManagerUI.Account.Kind, b: TinkMoneyManagerUI.Account.Kind) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public typealias AllCases = [TinkMoneyManagerUI.Account.Kind]
-    public static var allCases: [TinkMoneyManagerUI.Account.Kind] {
+    nonisolated public static var allCases: [TinkMoneyManagerUI.Account.Kind] {
       get
     }
     public var hashValue: Swift.Int {
@@ -84,23 +84,23 @@ extension TinkMoneyManagerUI.Account : Swift.Hashable {
 public protocol AccountDetailsViewControllerDelegate : AnyObject {
   func accountDetailsViewController(_ viewController: TinkMoneyManagerUI.AccountDetailsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AccountDetailsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.AccountDetailsViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, accountID: TinkMoneyManagerUI.Account.ID)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class AccountDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any TinkMoneyManagerUI.AccountDetailsViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, accountID: TinkMoneyManagerUI.Account.ID)
   @available(*, unavailable)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 extension TinkMoneyManagerUI.AccountDetailsViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.AccountDetailsViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
+  @_Concurrency.MainActor @preconcurrency final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 extension TinkMoneyManagerUI.AccountDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 public protocol AccountService {
   func accounts(completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Account], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
@@ -109,9 +109,9 @@ public protocol AccountService {
 public protocol AccountsViewControllerDelegate : AnyObject {
   func accountsViewController(_ viewController: TinkMoneyManagerUI.AccountsViewController, didSelectAccount account: TinkMoneyManagerUI.Account)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AccountsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.AccountsViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class AccountsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any TinkMoneyManagerUI.AccountsViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable
   public enum Grouping {
     case none
     case kind
@@ -125,17 +125,17 @@ public protocol AccountsViewControllerDelegate : AnyObject {
     case credentials(TinkMoneyManagerUI.Credentials.ID)
     case custom((TinkMoneyManagerUI.Account) -> Swift.Bool)
   }
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, grouping: TinkMoneyManagerUI.AccountsViewController.Grouping = .none, predicate: TinkMoneyManagerUI.AccountsViewController.Predicate = .all)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, grouping: TinkMoneyManagerUI.AccountsViewController.Grouping = .none, predicate: TinkMoneyManagerUI.AccountsViewController.Predicate = .all)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 extension TinkMoneyManagerUI.AccountsViewController {
-  @_Concurrency.MainActor(unsafe) final public func clearSelection(animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func clearSelection(animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.AccountsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 public struct ActionableInsight {
   public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.ActionableInsight>
@@ -440,41 +440,41 @@ public protocol ActionableInsightsViewControllerDelegate : AnyObject {
   func actionableInsightsViewController(_ viewController: TinkMoneyManagerUI.ActionableInsightsViewController, refreshCredentialsWithID credentialsID: TinkMoneyManagerUI.Credentials.ID, completionHandler: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
   func actionableInsightsViewController(_ viewController: UIKit.UIViewController, imageForInsightWithKind kind: TinkMoneyManagerUI.ActionableInsight.Kind) -> UIKit.UIImage?
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ActionableInsightsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, delegate: any TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class ActionableInsightsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, delegate: any TinkMoneyManagerUI.ActionableInsightsViewControllerDelegate, shouldShowArchive: Swift.Bool = true)
   @objc deinit
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController : UIKit.UICollectionViewDataSource {
-  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkMoneyManagerUI.Category)
-  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactions: [TinkMoneyManagerUI.Transaction.ID], category: TinkMoneyManagerUI.Category)
-  @_Concurrency.MainActor(unsafe) final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, willCategorizeAs category: TinkMoneyManagerUI.Category)
+  @_Concurrency.MainActor @preconcurrency final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didCategorize transactions: [TinkMoneyManagerUI.Transaction.ID], category: TinkMoneyManagerUI.Category)
+  @_Concurrency.MainActor @preconcurrency final public func categorizeTransactionViewController(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController, didFailWithError error: any Swift.Error)
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 extension TinkMoneyManagerUI.ActionableInsightsViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
+  @_Concurrency.MainActor @preconcurrency final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class AllBudgetsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class AllBudgetsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 extension TinkMoneyManagerUI.AllBudgetsViewController : TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkMoneyManagerUI.Budget)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor @preconcurrency final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor @preconcurrency final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
 }
 public enum Appearance {
   public static var provider: any TinkMoneyManagerUI.AppearanceProviding
@@ -602,23 +602,23 @@ public protocol BudgetDetailsViewControllerDelegate : AnyObject {
   func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
   func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class BudgetDetailsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.TransactionItemActionConfigurable {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class BudgetDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency final public var configuration: any TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, budgetID: TinkMoneyManagerUI.Budget.ID)
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, budgetID: TinkMoneyManagerUI.Budget.ID)
   @objc deinit
 }
 extension TinkMoneyManagerUI.BudgetDetailsViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.BudgetDetailsViewController : TinkMoneyManagerUI.EditBudgetViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkMoneyManagerUI.Budget)
-  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
-  @_Concurrency.MainActor(unsafe) final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor @preconcurrency final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor @preconcurrency final public func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: any Swift.Error)
 }
 extension TinkMoneyManagerUI.Budget {
   public struct Period : Swift.Equatable {
@@ -641,15 +641,15 @@ public struct BudgetSummary {
   public let budget: TinkMoneyManagerUI.Budget
   public let budgetPeriod: TinkMoneyManagerUI.Budget.Period
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class BudgetsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class BudgetsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
   @objc deinit
 }
 extension TinkMoneyManagerUI.BudgetsViewController : TinkMoneyManagerUI.BudgetDetailsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkMoneyManagerUI.Budget)
-  @_Concurrency.MainActor(unsafe) final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor @preconcurrency final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didFailWithError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didUpdateBudget budget: TinkMoneyManagerUI.Budget)
+  @_Concurrency.MainActor @preconcurrency final public func budgetDetailsViewController(_ viewController: TinkMoneyManagerUI.BudgetDetailsViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
 }
 public protocol CalendarService {
   func period(period: Swift.String, completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Period], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
@@ -676,15 +676,15 @@ public protocol CategorizeTransactionViewControllerDelegate : AnyObject {
 extension TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate where Self : UIKit.UIViewController {
   public func categorizeTransactionViewControllerDidCancel(_ controller: TinkMoneyManagerUI.CategorizeTransactionViewController)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CategorizeTransactionViewController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) weak final public var categorizeTransactionDelegate: (any TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, transactionID: TinkMoneyManagerUI.Transaction.ID, categoryTypes: [TinkMoneyManagerUI.Category.Kind], categoryID: TinkMoneyManagerUI.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class CategorizeTransactionViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor @preconcurrency weak final public var categorizeTransactionDelegate: (any TinkMoneyManagerUI.CategorizeTransactionViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, transactionID: TinkMoneyManagerUI.Transaction.ID, categoryTypes: [TinkMoneyManagerUI.Category.Kind], categoryID: TinkMoneyManagerUI.Category.ID? = nil, showSimilarTransactions: Swift.Bool = true)
   @objc deinit
 }
 extension TinkMoneyManagerUI.CategorizeTransactionViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 public struct Category : Swift.Equatable {
   public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Category>
@@ -773,17 +773,17 @@ extension TinkMoneyManagerUI.Category.Kind {
 public protocol CategoryService {
   func categories(completion: @escaping (Swift.Result<[TinkMoneyManagerUI.Category], any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class CategoryStatisticsNavigationControllerDelegate : ObjectiveC.NSObject, UIKit.UINavigationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, didShow viewController: UIKit.UIViewController, animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc open func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
-  @_Concurrency.MainActor(unsafe) @objc open func navigationControllerPreferredInterfaceOrientationForPresentation(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientation
-  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, interactionControllerFor animationController: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
-  @_Concurrency.MainActor(unsafe) @objc open func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CategoryStatisticsNavigationControllerDelegate : ObjectiveC.NSObject, UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc open func navigationController(_ navigationController: UIKit.UINavigationController, willShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc open func navigationController(_ navigationController: UIKit.UINavigationController, didShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc open func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
+  @_Concurrency.MainActor @preconcurrency @objc open func navigationControllerPreferredInterfaceOrientationForPresentation(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientation
+  @_Concurrency.MainActor @preconcurrency @objc open func navigationController(_ navigationController: UIKit.UINavigationController, interactionControllerFor animationController: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
+  @_Concurrency.MainActor @preconcurrency @objc open func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) final public class CategoryStatisticsViewController : UIKit.UINavigationController {
+@objc @_Concurrency.MainActor @preconcurrency final public class CategoryStatisticsViewController : UIKit.UINavigationController {
   public enum Style {
     case pieChart, barChart
     public static func == (a: TinkMoneyManagerUI.CategoryStatisticsViewController.Style, b: TinkMoneyManagerUI.CategoryStatisticsViewController.Style) -> Swift.Bool
@@ -792,18 +792,18 @@ public protocol CategoryService {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) final public let categoryType: TinkMoneyManagerUI.Category.Kind
-  @_Concurrency.MainActor(unsafe) final public let style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style
-  @_Concurrency.MainActor(unsafe) public init(tink: TinkMoneyManagerUI.Tink = .shared, categoryType: TinkMoneyManagerUI.Category.Kind, style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style = .pieChart)
+  @_Concurrency.MainActor @preconcurrency final public let categoryType: TinkMoneyManagerUI.Category.Kind
+  @_Concurrency.MainActor @preconcurrency final public let style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style
+  @_Concurrency.MainActor @preconcurrency public init(tink: TinkMoneyManagerUI.Tink = .shared, categoryType: TinkMoneyManagerUI.Category.Kind, style: TinkMoneyManagerUI.CategoryStatisticsViewController.Style = .pieChart)
   @available(*, unavailable)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 extension TinkMoneyManagerUI.CategoryStatisticsViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
 }
 extension TinkMoneyManagerUI.CategoryStatisticsViewController : UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
 }
 public struct ClientDescription {
   public let name: Swift.String
@@ -927,14 +927,14 @@ public protocol Configuration {
   var environment: TinkMoneyManagerUI.Tink.Environment { get }
   var certificateURL: Foundation.URL? { get }
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CreateBudgetViewController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, showBudgetCreateSuccessScreen: Swift.Bool = true, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Budget, any Swift.Error>) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class CreateBudgetViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, showBudgetCreateSuccessScreen: Swift.Bool = true, completion: @escaping (Swift.Result<TinkMoneyManagerUI.Budget, any Swift.Error>) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class CreateRecommendedBudgetViewController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class CreateRecommendedBudgetViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
   @objc deinit
 }
 public struct Credentials : Swift.Identifiable {
@@ -1058,64 +1058,64 @@ public protocol EditAccountViewControllerDelegate : AnyObject {
   func editAccountViewController(_ viewController: TinkMoneyManagerUI.EditAccountViewController, didFailToUpdate error: any Swift.Error)
   func editAccountViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditAccountViewController)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditAccountViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable
-  @_Concurrency.MainActor(unsafe) final public let accountID: TinkMoneyManagerUI.Account.ID
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.EditAccountViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) final public var account: TinkMoneyManagerUI.Account? {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EditAccountViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency final public var configuration: any TinkMoneyManagerUI.EditAccountFieldsConfigurable
+  @_Concurrency.MainActor @preconcurrency final public let accountID: TinkMoneyManagerUI.Account.ID
+  @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any TinkMoneyManagerUI.EditAccountViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency final public var account: TinkMoneyManagerUI.Account? {
     get
   }
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, accountID: TinkMoneyManagerUI.Account.ID)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, accountID: TinkMoneyManagerUI.Account.ID)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UIPickerViewDataSource {
-  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc final public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
 }
 extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UIPickerViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
-  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+  @_Concurrency.MainActor @preconcurrency @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
 }
 extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UITextFieldDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
 }
 extension TinkMoneyManagerUI.EditAccountViewController : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
 public protocol EditBudgetViewControllerDelegate : AnyObject {
   func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didEditBudget budget: TinkMoneyManagerUI.Budget)
   func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didDeleteBudget budget: TinkMoneyManagerUI.Budget)
   func editBudgetViewController(_ viewController: TinkMoneyManagerUI.EditBudgetViewController, didFailWithError error: any Swift.Error)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditBudgetViewController : UIKit.UINavigationController {
-  @_Concurrency.MainActor(unsafe) weak final public var editBudgetViewControllerDelegate: (any TinkMoneyManagerUI.EditBudgetViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, budgetID: TinkMoneyManagerUI.Budget.ID)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EditBudgetViewController : UIKit.UINavigationController {
+  @_Concurrency.MainActor @preconcurrency weak final public var editBudgetViewControllerDelegate: (any TinkMoneyManagerUI.EditBudgetViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, budgetID: TinkMoneyManagerUI.Budget.ID)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 public protocol EditTransactionViewControllerDelegate : AnyObject {
   func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
   func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkMoneyManagerUI.Transaction)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class EditTransactionViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public init(tink: TinkMoneyManagerUI.Tink = .shared, transaction: TinkMoneyManagerUI.Transaction)
-  @_Concurrency.MainActor(unsafe) @objc override final public func loadView()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class EditTransactionViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public init(tink: TinkMoneyManagerUI.Tink = .shared, transaction: TinkMoneyManagerUI.Transaction)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func loadView()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
 }
 extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerDidAttemptToDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationControllerDidAttemptToDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 extension TinkMoneyManagerUI.EditTransactionViewController : UIKit.UITextFieldDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
 }
 extension TinkMoneyManagerUI.Tink {
   public enum Environment {
@@ -1175,27 +1175,27 @@ extension TinkMoneyManagerUI.FinanceOverviewViewController {
     public var showSubscriptionsInStatistics: Swift.Bool
   }
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class FinanceOverviewViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) final public var configuration: any TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.RecurringExpensesConfigurable & TinkMoneyManagerUI.SubscriptionsInStatisticsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class FinanceOverviewViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency final public var configuration: any TinkMoneyManagerUI.BudgetConfigurable & TinkMoneyManagerUI.EditAccountFieldsConfigurable & TinkMoneyManagerUI.EditingPendingTransactionsConfigurable & TinkMoneyManagerUI.NoAccountsActionConfigurable & TinkMoneyManagerUI.RecurringExpensesConfigurable & TinkMoneyManagerUI.SubscriptionsInStatisticsConfigurable & TinkMoneyManagerUI.TransactionItemActionConfigurable {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) final public var hidesTopBarWhenPushed: Swift.Bool
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, features: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
+  @_Concurrency.MainActor @preconcurrency final public var hidesTopBarWhenPushed: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, features: [TinkMoneyManagerUI.FinanceOverviewViewController.Feature])
   @objc deinit
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewSafeAreaInsetsDidChange()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewSafeAreaInsetsDidChange()
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
 extension TinkMoneyManagerUI.FinanceOverviewViewController : UIKit.UIGestureRecognizerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
 }
 extension TinkMoneyManagerUI.Provider {
   public struct FinancialInstitution : Swift.Hashable {
@@ -1334,8 +1334,8 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
   public init(stringLiteral value: Swift.String)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias StringLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
@@ -1362,18 +1362,18 @@ public struct CardItemStyle : TinkMoneyManagerUI.ItemStyle {
   public var shadow: TinkMoneyManagerUI.Shadow
   public init(cornerRadius: CoreFoundation.CGFloat, shadow: TinkMoneyManagerUI.Shadow)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class LeftToSpendViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class LeftToSpendViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
 }
 extension TinkMoneyManagerUI.LeftToSpendViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
 }
 extension TinkMoneyManagerUI.LeftToSpendViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
+  @_Concurrency.MainActor @preconcurrency final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 extension TinkMoneyManagerUI.LeftToSpendViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 extension TinkMoneyManagerUI.Tink {
   public static var availableLocales: [Foundation.Locale] {
@@ -1630,22 +1630,22 @@ public struct RecommendedBudget {
   public let name: Swift.String
   public let recurringPeriodicity: TinkMoneyManagerUI.Budget.RecurringPeriodicity?
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class RecurringExpensesViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class RecurringExpensesViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
 }
 extension TinkMoneyManagerUI.RecurringExpensesViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.RecurringExpensesViewController {
-  @_Concurrency.MainActor(unsafe) final public func clearSelection(animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func clearSelection(animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.RecurringExpensesViewController : UIKit.UITableViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
 public struct RecurringTransactionsGroup {
   public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.RecurringTransactionsGroup>
@@ -1669,18 +1669,18 @@ public protocol Retriable {
   func retry()
 }
 public typealias RetryCancellable = (TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SafeToSpendViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class SafeToSpendViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
 }
 extension TinkMoneyManagerUI.SafeToSpendViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
 }
 extension TinkMoneyManagerUI.SafeToSpendViewController : TinkMoneyManagerUI.TransactionsViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
+  @_Concurrency.MainActor @preconcurrency final public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didSelectTransaction transaction: TinkMoneyManagerUI.Transaction)
 }
 extension TinkMoneyManagerUI.SafeToSpendViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 public struct Scope {
 }
@@ -1968,13 +1968,13 @@ public protocol SubscriptionsService {
   func subscriptions(pageToken: Swift.String?, completion: @escaping (Swift.Result<([TinkMoneyManagerUI.Subscription], TinkMoneyManagerUI.NextPageToken), any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
   func transactions(for subscriptionID: TinkMoneyManagerUI.Subscription.ID, completion: @escaping (Swift.Result<([TinkMoneyManagerUI.SubscriptionTransaction], TinkMoneyManagerUI.NextPageToken), any Swift.Error>) -> Swift.Void) -> (any TinkMoneyManagerUI.Cancellable)?
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class SubscriptionsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class SubscriptionsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
 }
 extension TinkMoneyManagerUI.SubscriptionsViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.Tink {
   @discardableResult
@@ -2101,28 +2101,28 @@ public enum CategoryType {
     get
   }
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionDetailsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public init(tink: TinkMoneyManagerUI.Tink = .shared, transactionID: TinkMoneyManagerUI.Transaction.ID)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class TransactionDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public init(tink: TinkMoneyManagerUI.Tink = .shared, transactionID: TinkMoneyManagerUI.Transaction.ID)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 extension TinkMoneyManagerUI.TransactionDetailsViewController : UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
 }
 extension TinkMoneyManagerUI.TransactionDetailsViewController : UIKit.UITableViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc final public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
 extension TinkMoneyManagerUI.TransactionDetailsViewController : UIKit.UIAdaptivePresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func presentationControllerWillDismiss(_ presentationController: UIKit.UIPresentationController)
 }
 extension TinkMoneyManagerUI.TransactionDetailsViewController : TinkMoneyManagerUI.EditTransactionViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) final public func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
-  @_Concurrency.MainActor(unsafe) final public func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkMoneyManagerUI.Transaction)
+  @_Concurrency.MainActor @preconcurrency final public func editTransactionViewControllerDidCancel(_ viewController: TinkMoneyManagerUI.EditTransactionViewController)
+  @_Concurrency.MainActor @preconcurrency final public func editTransactionViewControllerDidEditSuccessfully(_ viewController: TinkMoneyManagerUI.EditTransactionViewController, transaction: TinkMoneyManagerUI.Transaction)
 }
 public struct TransactionsQuery : Swift.Equatable {
   public var accountIDs: [TinkMoneyManagerUI.Account.ID]
@@ -2182,23 +2182,23 @@ public protocol TransactionsViewControllerDelegate : AnyObject {
 extension TinkMoneyManagerUI.TransactionsViewControllerDelegate {
   public func transactionsViewController(_ viewController: TinkMoneyManagerUI.TransactionsViewController, didFailWithError error: any Swift.Error)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TransactionsViewController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) weak final public var delegate: (any TinkMoneyManagerUI.TransactionsViewControllerDelegate)?
-  @_Concurrency.MainActor(unsafe) convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, query: TinkMoneyManagerUI.TransactionsQuery = TransactionsQuery(), showPredictedRecurringTransactions: Swift.Bool = false)
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class TransactionsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any TinkMoneyManagerUI.TransactionsViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared, query: TinkMoneyManagerUI.TransactionsQuery = TransactionsQuery(), showPredictedRecurringTransactions: Swift.Bool = false)
   @objc deinit
 }
 extension TinkMoneyManagerUI.TransactionsViewController {
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.TransactionsViewController {
-  @_Concurrency.MainActor(unsafe) final public func clearSelection(animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func clearSelection(animated: Swift.Bool)
 }
 extension TinkMoneyManagerUI.TransactionsViewController : UIKit.UITableViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection sectionIndex: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
 public struct TransferIdentity {
   public var account: Foundation.URL?
@@ -2239,6 +2239,7 @@ extension TinkMoneyManagerUI.ActionableInsight.BudgetPeriodUnit : Swift.Hashable
 extension TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit : Swift.Equatable {}
 extension TinkMoneyManagerUI.Budget.RecurringPeriodicity.PeriodUnit : Swift.Hashable {}
 extension TinkMoneyManagerUI.Category.Kind : Swift.RawRepresentable {}
+extension TinkMoneyManagerUI.CategoryStatisticsNavigationControllerDelegate : Swift.Sendable {}
 extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Equatable {}
 extension TinkMoneyManagerUI.CategoryStatisticsViewController.Style : Swift.Hashable {}
 extension TinkMoneyManagerUI.EditingPendingTransactions : Swift.Equatable {}
@@ -2306,5 +2307,6 @@ extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.Equatable {}
 extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.Hashable {}
 extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.RawRepresentable {}
 extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.Sendable {}
+extension TinkMoneyManagerUI.TransactionsQuery.Order : Swift.BitwiseCopyable {}
 extension TinkMoneyManagerUI.TransactionsQueryError : Swift.Equatable {}
 extension TinkMoneyManagerUI.TransactionsQueryError : Swift.Hashable {}
