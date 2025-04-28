@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,8 +11,6 @@
 		9DC592592395548000C9A5F1 /* DebugAnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */; };
 		9DDD67A82368850500507DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD67A72368850500507DF3 /* AppDelegate.swift */; };
 		9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */; };
-		EB1BCF462DBFA78500B16C22 /* TinkMoneyManagerUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1BCF442DBFA76300B16C22 /* TinkMoneyManagerUI.xcframework */; };
-		EB1BCF472DBFA78500B16C22 /* TinkMoneyManagerUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB1BCF442DBFA76300B16C22 /* TinkMoneyManagerUI.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,7 +20,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB1BCF472DBFA78500B16C22 /* TinkMoneyManagerUI.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +33,6 @@
 		9DDD67A72368850500507DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDD67B32368850700507DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DDD67B52368850700507DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB1BCF442DBFA76300B16C22 /* TinkMoneyManagerUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkMoneyManagerUI.xcframework; path = ../../TinkMoneyManagerUI.xcframework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB1BCF462DBFA78500B16C22 /* TinkMoneyManagerUI.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +49,6 @@
 		9DDD679B2368850500507DF3 = {
 			isa = PBXGroup;
 			children = (
-				EB1BCF442DBFA76300B16C22 /* TinkMoneyManagerUI.xcframework */,
 				9DDD67A62368850500507DF3 /* FinanceOverviewExample */,
 				9DDD67A52368850500507DF3 /* Products */,
 			);
