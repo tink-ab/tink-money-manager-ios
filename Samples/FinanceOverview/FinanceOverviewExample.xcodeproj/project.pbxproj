@@ -36,7 +36,7 @@
 		9DDD67A72368850500507DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DDD67B32368850700507DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DDD67B52368850700507DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB1BCF442DBFA76300B16C22 /* TinkMoneyManagerUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkMoneyManagerUI.xcframework; path = "/Users/sbelous/Developer/tink-money-manager-ios/TinkMoneyManagerUI.xcframework"; sourceTree = "<absolute>"; };
+		EB1BCF442DBFA76300B16C22 /* TinkMoneyManagerUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinkMoneyManagerUI.xcframework; path = ../../TinkMoneyManagerUI.xcframework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
