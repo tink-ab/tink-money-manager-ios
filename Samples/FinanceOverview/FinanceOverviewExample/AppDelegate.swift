@@ -1,14 +1,13 @@
-import TinkMoneyManagerUI
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    let debugEventTracker = DebugEventTracker()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let tabBarController = UITabBarController()
+
+        /* Example of Money Manager usage and configuration:
 
         let configuration = TinkMoneyManagerConfiguration(clientID: "YOUR_CLIENT_ID")
         let tink = Tink(configuration: configuration)
@@ -34,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: overviewViewController)
 
         tabBarController.setViewControllers([navigationController], animated: false)
+         */
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController

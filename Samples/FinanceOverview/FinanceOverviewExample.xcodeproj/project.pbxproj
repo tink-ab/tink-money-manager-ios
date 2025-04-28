@@ -3,17 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		20C24BAD241A398200EB5927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C24BAC241A398200EB5927 /* Assets.xcassets */; };
-		8FDC12E925DD407800655EF1 /* TinkMoneyManagerUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FDC12E825DD407800655EF1 /* TinkMoneyManagerUI */; };
 		9DC592592395548000C9A5F1 /* DebugAnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */; };
 		9DDD67A82368850500507DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD67A72368850500507DF3 /* AppDelegate.swift */; };
 		9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */; };
-		EBC0ACAD2D709C2C00C0F049 /* TinkMoneyManagerUI in Frameworks */ = {isa = PBXBuildFile; productRef = EBC0ACAC2D709C2C00C0F049 /* TinkMoneyManagerUI */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EB1BCF482DBFA78500B16C22 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		20C24BAC241A398200EB5927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,8 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FDC12E925DD407800655EF1 /* TinkMoneyManagerUI in Frameworks */,
-				EBC0ACAD2D709C2C00C0F049 /* TinkMoneyManagerUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +84,7 @@
 				9DDD67A02368850500507DF3 /* Sources */,
 				9DDD67A12368850500507DF3 /* Frameworks */,
 				9DDD67A22368850500507DF3 /* Resources */,
+				EB1BCF482DBFA78500B16C22 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -82,8 +92,6 @@
 			);
 			name = FinanceOverviewExample;
 			packageProductDependencies = (
-				8FDC12E825DD407800655EF1 /* TinkMoneyManagerUI */,
-				EBC0ACAC2D709C2C00C0F049 /* TinkMoneyManagerUI */,
 			);
 			productName = PFMExampleApp;
 			productReference = 9DDD67A42368850500507DF3 /* FinanceOverviewExample.app */;
@@ -113,7 +121,6 @@
 			);
 			mainGroup = 9DDD679B2368850500507DF3;
 			packageReferences = (
-				EBC0ACAB2D709C2C00C0F049 /* XCRemoteSwiftPackageReference "tink-money-manager-ios" */,
 			);
 			productRefGroup = 9DDD67A52368850500507DF3 /* Products */;
 			projectDirPath = "";
@@ -338,29 +345,6 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		EBC0ACAB2D709C2C00C0F049 /* XCRemoteSwiftPackageReference "tink-money-manager-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tink-ab/tink-money-manager-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8FDC12E825DD407800655EF1 /* TinkMoneyManagerUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TinkMoneyManagerUI;
-		};
-		EBC0ACAC2D709C2C00C0F049 /* TinkMoneyManagerUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EBC0ACAB2D709C2C00C0F049 /* XCRemoteSwiftPackageReference "tink-money-manager-ios" */;
-			productName = TinkMoneyManagerUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DDD679C2368850500507DF3 /* Project object */;
 }
