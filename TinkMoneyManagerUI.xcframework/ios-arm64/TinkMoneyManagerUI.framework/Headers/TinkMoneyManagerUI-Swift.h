@@ -774,15 +774,15 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI29FinanceOverviewViewController")
 
 
 
-
-@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
-@end
-
 @class UIScrollView;
 
 @interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
+@interface FinanceOverviewViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer * _Nonnull)gestureRecognizer SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -830,6 +830,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI25LeftToSpendViewController")
 
 
 
+
 /// A view controller that displays a list of predicted recurring transactions.
 /// Required scopes to display predicted recurring transactions: <code>transactions.recurring:read</code> or <code>enrichment.transactions:readonly</code> or <code>enrichment.transactions</code>.
 /// In order to display the total amount of predicted recurring transactions, the statistics types <code>expenses-by-cost-structure</code> need to be enabled.
@@ -858,13 +859,13 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI31RecurringExpensesViewController")
 @end
 
 
+
 @interface RecurringExpensesViewController (SWIFT_EXTENSION(TinkMoneyManagerUI))
 - (void)viewDidLoad;
 - (void)viewDidLayoutSubviews;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 @end
-
 
 
 /// A view controller for displaying safe to spend details.
@@ -965,11 +966,11 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI32TransactionDetailsViewController")
 @end
 
 
+
 @interface TransactionDetailsViewController (SWIFT_EXTENSION(TinkMoneyManagerUI)) <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
-
 
 
 /// A view controller that displays a list of transactions.
@@ -1020,6 +1021,7 @@ SWIFT_CLASS("_TtC18TinkMoneyManagerUI26TransactionsViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidAppear:(BOOL)animated;
 @end
+
 
 
 
