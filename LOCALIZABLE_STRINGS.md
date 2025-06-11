@@ -9,6 +9,12 @@ You can also use the [Xcode Localization Catalog (xcloc)](https://help.apple.com
 
 | Key | Default | Description |  
 | -------- | -------- | -------- |
+| `Accessibility.DoubleTapToExpand` | Double tap to expand | Accessibility hint instructing users to double tap to expand content |
+| `Accessibility.DoubleTapToOpen` | Double tap to open | Accessibility hint instructing users to double tap to open |
+| `Accessibility.NextButton` | Next | Accessibility title of button of next period |
+| `Accessibility.PreviousButton` | Previous | Accessibility title of button of previous period |
+| `Accessibility.SwitchOff` | off | Accessibility state when a toggle switch is turned off |
+| `Accessibility.SwitchOn` | on | Accessibility state when a toggle switch is turned on |
 | `AccountDetail.Header.AccountNumberFormat` | Account number: %@ | String format for displaying account number in account detail header. |
 | `Accounts.Generic.CancelButton` | Cancel | Title for cancelling changes done to the account settings. |
 | `Accounts.Generic.EditButton` | Edit | Title for account edit button. |

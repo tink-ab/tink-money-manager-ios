@@ -5,6 +5,36 @@
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.2" build-num="16C5032a"/>
     </header>
     <body>
+      <trans-unit id="Accessibility.DoubleTapToExpand" xml:space="preserve">
+        <source>Double tap to expand</source>
+        <target>Double tap to expand</target>
+        <note>Accessibility hint instructing users to double tap to expand content</note>
+      </trans-unit>
+      <trans-unit id="Accessibility.DoubleTapToOpen" xml:space="preserve">
+        <source>Double tap to open</source>
+        <target>Double tap to open</target>
+        <note>Accessibility hint instructing users to double tap to open</note>
+      </trans-unit>
+      <trans-unit id="Accessibility.NextButton" xml:space="preserve">
+        <source>Next</source>
+        <target>Next</target>
+        <note>Accessibility title of button of next period</note>
+      </trans-unit>
+      <trans-unit id="Accessibility.PreviousButton" xml:space="preserve">
+        <source>Previous</source>
+        <target>Previous</target>
+        <note>Accessibility title of button of previous period</note>
+      </trans-unit>
+      <trans-unit id="Accessibility.SwitchOff" xml:space="preserve">
+        <source>off</source>
+        <target>off</target>
+        <note>Accessibility state when a toggle switch is turned off</note>
+      </trans-unit>
+      <trans-unit id="Accessibility.SwitchOn" xml:space="preserve">
+        <source>on</source>
+        <target>on</target>
+        <note>Accessibility state when a toggle switch is turned on</note>
+      </trans-unit>
       <trans-unit id="AccountDetail.Header.AccountNumberFormat" xml:space="preserve">
         <source>Account number: %@</source>
         <target>Account number: %@</target>
