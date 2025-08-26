@@ -89353,168 +89353,168 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 769,
+      "offset": 800,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 808,
+      "offset": 839,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 821,
+      "offset": 852,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "StringLiteral",
-      "offset": 1242,
+      "offset": 1273,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "StringLiteral",
-      "offset": 1248,
+      "offset": 1279,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "StringLiteral",
-      "offset": 1286,
+      "offset": 1317,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "StringLiteral",
-      "offset": 1292,
+      "offset": 1323,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "StringLiteral",
-      "offset": 1335,
+      "offset": 1366,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1794,
+      "offset": 1825,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1829,
+      "offset": 1860,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1929,
+      "offset": 1960,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2008,
+      "offset": 2039,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2216,
+      "offset": 2247,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2289,
+      "offset": 2320,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "FloatLiteral",
-      "offset": 2326,
+      "offset": 2357,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2390,
+      "offset": 2421,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2469,
+      "offset": 2500,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2711,
+      "offset": 2742,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2790,
+      "offset": 2821,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2846,
+      "offset": 2877,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2881,
+      "offset": 2912,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3109,
+      "offset": 3140,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3144,
+      "offset": 3175,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/Views\/BudgetDetailProgressView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3285,
+      "offset": 3316,
       "length": 5,
       "value": "false"
     },
@@ -93525,7 +93525,7 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/LeftToSpendMonthDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5749,
+      "offset": 5742,
       "length": 5,
       "value": "false"
     },
@@ -93755,169 +93755,190 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
+      "kind": "FloatLiteral",
+      "offset": 683,
+      "length": 3,
+      "value": "8.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
+      "kind": "FloatLiteral",
+      "offset": 728,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 773,
+      "offset": 858,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1203,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1037,
+      "offset": 1390,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1150,
+      "offset": 1503,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1212,
+      "offset": 1565,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "FloatLiteral",
-      "offset": 1258,
+      "offset": 1611,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1505,
+      "offset": 1858,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1569,
+      "offset": 1922,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1761,
+      "offset": 2114,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "FloatLiteral",
-      "offset": 1945,
+      "offset": 2298,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2130,
+      "offset": 2483,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2193,
+      "offset": 2546,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "FloatLiteral",
-      "offset": 2315,
+      "offset": 2668,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2439,
+      "offset": 2792,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2445,
+      "offset": 2798,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2455,
+      "offset": 2808,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2467,
+      "offset": 2820,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2529,
+      "offset": 2882,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2569,
+      "offset": 2922,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2729,
+      "offset": 3082,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2760,
+      "offset": 3113,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2847,
+      "offset": 3200,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "FloatLiteral",
-      "offset": 2935,
+      "offset": 3288,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3140,
+      "offset": 3493,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Left To Spend\/Views\/LeftToSpendView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7532,
+      "offset": 9301,
       "length": 5,
       "value": "false"
     },
@@ -101211,7 +101232,14 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/OverviewLeftToSpendViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1417,
+      "offset": 356,
+      "length": 3,
+      "value": "280"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/OverviewLeftToSpendViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1704,
       "length": 3,
       "value": "280"
     },
@@ -103423,7 +103451,7 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Safe To Spend\/SafeToSpendMonthDetailViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6222,
+      "offset": 6215,
       "length": 5,
       "value": "false"
     },
@@ -104150,29 +104178,64 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
+      "kind": "FloatLiteral",
+      "offset": 649,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
+      "kind": "FloatLiteral",
+      "offset": 688,
+      "length": 3,
+      "value": "8.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
+      "kind": "FloatLiteral",
+      "offset": 733,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
+      "kind": "FloatLiteral",
+      "offset": 797,
+      "length": 3,
+      "value": "4.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
+      "kind": "FloatLiteral",
+      "offset": 838,
+      "length": 3,
+      "value": "7.0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
       "kind": "BooleanLiteral",
-      "offset": 763,
+      "offset": 1198,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
       "kind": "FloatLiteral",
-      "offset": 878,
+      "offset": 1313,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
       "kind": "BooleanLiteral",
-      "offset": 933,
+      "offset": 1368,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartTitleView.swift",
       "kind": "BooleanLiteral",
-      "offset": 805,
+      "offset": 1240,
       "length": 5,
       "value": "false"
     },
@@ -104221,147 +104284,147 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 567,
+      "offset": 764,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "Array",
-      "offset": 983,
+      "offset": 1180,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "FloatLiteral",
-      "offset": 2159,
+      "offset": 2356,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "FloatLiteral",
-      "offset": 2339,
+      "offset": 2536,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2738,
+      "offset": 2935,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3225,
+      "offset": 3422,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3232,
+      "offset": 3429,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3324,
+      "offset": 3521,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "IntegerLiteral",
-      "offset": 3330,
+      "offset": 3527,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3104,
+      "offset": 3301,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3491,
+      "offset": 3688,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3589,
+      "offset": 3786,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3664,
+      "offset": 3861,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3760,
+      "offset": 3957,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3390,
+      "offset": 3587,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5004,
+      "offset": 5201,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5024,
+      "offset": 5221,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5071,
+      "offset": 5268,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5306,
+      "offset": 5627,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "IntegerLiteral",
-      "offset": 5367,
+      "offset": 5688,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Pie Chart\/StatisticsPieChartView.swift",
       "kind": "BooleanLiteral",
-      "offset": 11827,
+      "offset": 12148,
       "length": 5,
       "value": "false"
     },
@@ -104431,7 +104494,7 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Subscriptions\/SubscriptionDetailsViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 15939,
+      "offset": 15890,
       "length": 4,
       "value": "60.0"
     },
@@ -104445,7 +104508,7 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Subscriptions\/SubscriptionTransactionDetailsViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 9445,
+      "offset": 9368,
       "length": 4,
       "value": "40.0"
     },
@@ -105063,7 +105126,7 @@
       "kind": "StringLiteral",
       "offset": 78,
       "length": 7,
-      "value": "\"3.1.0\""
+      "value": "\"3.1.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/WeeklySummaryExpensesByCategoryItemView.swift",
