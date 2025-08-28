@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		9DC592592395548000C9A5F1 /* DebugAnalyticsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC592582395548000C9A5F1 /* DebugAnalyticsIntegration.swift */; };
 		9DDD67A82368850500507DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD67A72368850500507DF3 /* AppDelegate.swift */; };
 		9DDD67B42368850700507DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD67B22368850700507DF3 /* LaunchScreen.storyboard */; };
+		EB41131B2E6085C500D5288E /* TinkMoneyManagerUI in Frameworks */ = {isa = PBXBuildFile; productRef = EB41131A2E6085C500D5288E /* TinkMoneyManagerUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB41131B2E6085C500D5288E /* TinkMoneyManagerUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,7 @@
 			);
 			name = FinanceOverviewExample;
 			packageProductDependencies = (
+				EB41131A2E6085C500D5288E /* TinkMoneyManagerUI */,
 			);
 			productName = PFMExampleApp;
 			productReference = 9DDD67A42368850500507DF3 /* FinanceOverviewExample.app */;
@@ -121,6 +124,7 @@
 			);
 			mainGroup = 9DDD679B2368850500507DF3;
 			packageReferences = (
+				EB4113192E6085C500D5288E /* XCRemoteSwiftPackageReference "tink-money-manager-ios" */,
 			);
 			productRefGroup = 9DDD67A52368850500507DF3 /* Products */;
 			projectDirPath = "";
@@ -345,6 +349,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB4113192E6085C500D5288E /* XCRemoteSwiftPackageReference "tink-money-manager-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tink-ab/tink-money-manager-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB41131A2E6085C500D5288E /* TinkMoneyManagerUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB4113192E6085C500D5288E /* XCRemoteSwiftPackageReference "tink-money-manager-ios" */;
+			productName = TinkMoneyManagerUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DDD679C2368850500507DF3 /* Project object */;
 }
