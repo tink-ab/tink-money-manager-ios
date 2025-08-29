@@ -1,4 +1,5 @@
 import UIKit
+import TinkMoneyManagerUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -7,7 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let tabBarController = UITabBarController()
 
-        /* Example of Money Manager usage and configuration:
+        // Example of Money Manager usage and configuration:
 
         let configuration = TinkMoneyManagerConfiguration(clientID: "YOUR_CLIENT_ID")
         let tink = Tink(configuration: configuration)
@@ -23,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Appearance.provider = AppearanceProvider(colors: colorProvider)
 
-        EventTracker.tracker = debugEventTracker
+        EventTracker.tracker = DebugEventTracker()
 
         let overviewViewController = FinanceOverviewViewController(tink: tink, features: [.statistics([.expenses, .income]), .accounts, .latestTransactions, .budgets])
 
@@ -33,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: overviewViewController)
 
         tabBarController.setViewControllers([navigationController], animated: false)
-         */
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController

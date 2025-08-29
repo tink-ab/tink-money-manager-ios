@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios15.8.3-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name TinkMoneyManagerUI
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios15.8.3-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TinkMoneyManagerUI
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import CoreGraphics
 import Dispatch
 import Foundation
@@ -36,11 +36,11 @@ public struct Account {
     case external
     case unknown
     public static func == (a: TinkMoneyManagerUI.Account.Kind, b: TinkMoneyManagerUI.Account.Kind) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
     public typealias AllCases = [TinkMoneyManagerUI.Account.Kind]
     nonisolated public static var allCases: [TinkMoneyManagerUI.Account.Kind] {
       get
     }
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -75,8 +75,8 @@ public struct Account {
   public init(id: TinkMoneyManagerUI.Account.ID, credentialsID: TinkMoneyManagerUI.Credentials.ID, name: Swift.String, accountNumber: Swift.String, kind: TinkMoneyManagerUI.Account.Kind, transferSourceIdentifiers: [Foundation.URL]?, holderName: Swift.String?, isClosed: Swift.Bool?, currencyDenominatedBalance: TinkMoneyManagerUI.CurrencyDenominatedAmount?, refreshed: Foundation.Date?, firstSeen: Foundation.Date?, financialInstitutionID: TinkMoneyManagerUI.Provider.FinancialInstitution.ID?, isFavorite: Swift.Bool = false, ownership: Swift.Double = 1.0, accountExclusion: TinkMoneyManagerUI.Account.AccountExclusion = .unknown)
 }
 extension TinkMoneyManagerUI.Account : Swift.Hashable {
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: TinkMoneyManagerUI.Account, b: TinkMoneyManagerUI.Account) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -700,11 +700,11 @@ extension TinkMoneyManagerUI.Category {
     public let value: Swift.String
     public init(_ value: Swift.String)
     public init(stringLiteral value: Swift.String)
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: TinkMoneyManagerUI.Category.Code, b: TinkMoneyManagerUI.Category.Code) -> Swift.Bool
     public typealias ExtendedGraphemeClusterLiteralType = Swift.String
     public typealias StringLiteralType = Swift.String
     public typealias UnicodeScalarLiteralType = Swift.String
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -1000,11 +1000,11 @@ public struct CurrencyCode : Swift.Hashable, Swift.ExpressibleByStringLiteral {
   public let value: Swift.String
   public init(_ value: Swift.String)
   public init(stringLiteral value: Swift.String)
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: TinkMoneyManagerUI.CurrencyCode, b: TinkMoneyManagerUI.CurrencyCode) -> Swift.Bool
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias StringLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1202,8 +1202,8 @@ extension TinkMoneyManagerUI.Provider {
     public typealias ID = TinkMoneyManagerUI.Identifier<TinkMoneyManagerUI.Provider.FinancialInstitution>
     public let id: TinkMoneyManagerUI.Provider.FinancialInstitution.ID
     public let name: Swift.String
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: TinkMoneyManagerUI.Provider.FinancialInstitution, b: TinkMoneyManagerUI.Provider.FinancialInstitution) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -1334,11 +1334,11 @@ public struct Identifier<Type> : Swift.Hashable, Swift.ExpressibleByStringLitera
   public init(stringLiteral value: Swift.String)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: TinkMoneyManagerUI.Identifier<Type>, b: TinkMoneyManagerUI.Identifier<Type>) -> Swift.Bool
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias StringLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1404,8 +1404,8 @@ public struct Month : Swift.Hashable, Swift.Comparable {
   public var year: Swift.Int
   public var month: Swift.Int
   public init(year: Swift.Int, month: Swift.Int)
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: TinkMoneyManagerUI.Month, b: TinkMoneyManagerUI.Month) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1668,7 +1668,7 @@ public protocol RecurringTransactionsGroupService {
 public protocol Retriable {
   func retry()
 }
-public typealias RetryCancellable = (TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable)
+public typealias RetryCancellable = TinkMoneyManagerUI.Cancellable & TinkMoneyManagerUI.Retriable
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class SafeToSpendViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
   @objc deinit
@@ -1934,8 +1934,8 @@ public enum StatisticPeriod : Swift.Hashable {
   public var stringRepresentation: Swift.String {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: TinkMoneyManagerUI.StatisticPeriod, b: TinkMoneyManagerUI.StatisticPeriod) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1958,8 +1958,8 @@ public struct SubscriptionTransaction : Swift.Hashable {
   public let id: TinkMoneyManagerUI.SubscriptionTransaction.ID
   public let date: Swift.String
   public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: TinkMoneyManagerUI.SubscriptionTransaction, b: TinkMoneyManagerUI.SubscriptionTransaction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -2071,8 +2071,8 @@ public struct Transaction {
   public init(id: TinkMoneyManagerUI.Transaction.ID, accountID: TinkMoneyManagerUI.Account.ID, amount: TinkMoneyManagerUI.CurrencyDenominatedAmount, categoryID: TinkMoneyManagerUI.Category.ID, description: Swift.String, date: Foundation.Date, inserted: Foundation.Date, isUpcomingOrInFuture: Swift.Bool, notes: Swift.String?, originalDescription: Swift.String, originalDate: Foundation.Date, originalAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount, isPending: Swift.Bool, categoryType: TinkMoneyManagerUI.CategoryType, dispensableAmount: Swift.Double?, lastModified: Foundation.Date, type: TinkMoneyManagerUI.TransactionType, userId: Swift.String)
 }
 extension TinkMoneyManagerUI.Transaction : Swift.Hashable {
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: TinkMoneyManagerUI.Transaction, b: TinkMoneyManagerUI.Transaction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
