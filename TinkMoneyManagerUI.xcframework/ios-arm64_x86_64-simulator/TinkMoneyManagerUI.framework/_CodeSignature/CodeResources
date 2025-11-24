@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+fEEMK485JvUkPLareoHqHtH3pM=
+		tKdgtdBJlV1wBdSe1X72eUtP5Uw=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		GxceZDHobNsgwSeR/LeAfgDoT+I=
+		BybnRJ+i5UqvO4E/Gkp5MsV+mBw=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		yJdlT4PrUk+GCmeGx0/B12kqujk=
+		2dbaQPsjcyJiW+OPKBZzw6nIB+0=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		WOjjHM5Mhdk0EnHDVC2tARYFt4s=
+		Z14nq4rgWichivNIn0bhd3Nh45w=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		yJdlT4PrUk+GCmeGx0/B12kqujk=
+		2dbaQPsjcyJiW+OPKBZzw6nIB+0=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5+U32MMa4m/pHemaIsIuo+JgR1s=
+		OJ2Z7dq79nBlXJhXVscloe3hyW8=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		GxceZDHobNsgwSeR/LeAfgDoT+I=
+		BybnRJ+i5UqvO4E/Gkp5MsV+mBw=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tbq4ggIPpZ4qRqwrLbfS7zTsKWc=
+		Mmi3Ek3qKGEuqbseoYuY1yU66G8=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		GIhqu45NGREUAmSrgqReUt7vhb0=
+		he5qIYOj3TskASyiVOk+tYYQmxM=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tbq4ggIPpZ4qRqwrLbfS7zTsKWc=
+		Mmi3Ek3qKGEuqbseoYuY1yU66G8=
 		</data>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+UkwxSuR9L+z30I6dilTMZ+TIBY=
+		CIz6d4gERUmgG28oozWkOog0czM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -102,70 +102,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+8CKxiG5P1hb47DlXpH1XRYHhlp0ZAKpMl+hdNgmMtw=
+			iS7+kTJikRQ0mw1brLAhJ/aWVZwHNa5WHAPRYdgG4Uc=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AA6HtvM/iTvw+IUynFvIwhVDt6PdkCR6DxrYgZGhNiQ=
+			6F+/zlNL0fChjuMNuF6fsIM8YL+Frkp34ElHsKsWHP4=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Je+Bm3Bni502uGmqzksp5wBYR7njUNclg1mM/WKr074=
+			EhOvzs5C7PeDXS6jpSNQOAnvB0glDXtTN6Xlj+4fkgk=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AA6HtvM/iTvw+IUynFvIwhVDt6PdkCR6DxrYgZGhNiQ=
+			6F+/zlNL0fChjuMNuF6fsIM8YL+Frkp34ElHsKsWHP4=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mcd+8EAn3b6P/5FbXhpSBt1EUyiZj72JjEl5PKq7Gd4=
+			evRwuQ0xUfIgIGIJlxcpr9wOk6Un/HqoXg44/6GIouw=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+8CKxiG5P1hb47DlXpH1XRYHhlp0ZAKpMl+hdNgmMtw=
+			iS7+kTJikRQ0mw1brLAhJ/aWVZwHNa5WHAPRYdgG4Uc=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WtdJ2mZBI1l5yxObetOA6sr6WIjwPuXofKdFCpzoKBg=
+			TJcEcpWkAqIL19zigv7y9PWTG/7uxlF5v0UN+pMCHmY=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZdnpQ0mXrXbb2/u5akcA/YFDdW72rF6xaIcSYLjkYEQ=
+			OVFqgKn0F+6EgDH7Z7Li++6jmQr8eDSE/RU/m/sfxRo=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WtdJ2mZBI1l5yxObetOA6sr6WIjwPuXofKdFCpzoKBg=
+			TJcEcpWkAqIL19zigv7y9PWTG/7uxlF5v0UN+pMCHmY=
 			</data>
 		</dict>
 		<key>Modules/TinkMoneyManagerUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xrQ3LkUUQ7xKOJOFBp6T9fIcNwBB1+6z9VXdQ9dA8vQ=
+			DCye1YqYKqy8vOh+UvVxL0tH4VVZG8hN06chmulVN4E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

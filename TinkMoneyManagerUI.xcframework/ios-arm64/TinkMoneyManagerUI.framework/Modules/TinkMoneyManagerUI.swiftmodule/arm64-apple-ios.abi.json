@@ -21379,6 +21379,182 @@
           },
           {
             "kind": "TypeDecl",
+            "name": "Period",
+            "printedName": "Period",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "dateInterval",
+                "printedName": "dateInterval",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DateInterval",
+                    "printedName": "Foundation.DateInterval",
+                    "usr": "s:10Foundation12DateIntervalV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvp",
+                "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvp",
+                "moduleName": "TinkMoneyManagerUI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DateInterval",
+                        "printedName": "Foundation.DateInterval",
+                        "usr": "s:10Foundation12DateIntervalV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvg",
+                    "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvg",
+                    "moduleName": "TinkMoneyManagerUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "spentAmount",
+                "printedName": "spentAmount",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CurrencyDenominatedAmount",
+                        "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount",
+                        "usr": "s:18TinkMoneyManagerUI25CurrencyDenominatedAmountV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvp",
+                "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvp",
+                "moduleName": "TinkMoneyManagerUI",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CurrencyDenominatedAmount",
+                            "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount",
+                            "usr": "s:18TinkMoneyManagerUI25CurrencyDenominatedAmountV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvg",
+                    "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvg",
+                    "moduleName": "TinkMoneyManagerUI",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Period",
+                    "printedName": "TinkMoneyManagerUI.Budget.Period",
+                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Period",
+                    "printedName": "TinkMoneyManagerUI.Budget.Period",
+                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV2eeoiySbAE_AEtFZ",
+                "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV2eeoiySbAE_AEtFZ",
+                "moduleName": "TinkMoneyManagerUI",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV",
+            "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV",
+            "moduleName": "TinkMoneyManagerUI",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
             "name": "Transaction",
             "printedName": "Transaction",
             "children": [
@@ -21893,182 +22069,6 @@
                 "printedName": "Escapable",
                 "usr": "s:s9EscapableP",
                 "mangledName": "$ss9EscapableP"
-              }
-            ]
-          },
-          {
-            "kind": "TypeDecl",
-            "name": "Period",
-            "printedName": "Period",
-            "children": [
-              {
-                "kind": "Var",
-                "name": "dateInterval",
-                "printedName": "dateInterval",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "DateInterval",
-                    "printedName": "Foundation.DateInterval",
-                    "usr": "s:10Foundation12DateIntervalV"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvp",
-                "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvp",
-                "moduleName": "TinkMoneyManagerUI",
-                "declAttributes": [
-                  "HasStorage",
-                  "AccessControl",
-                  "RawDocComment"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "DateInterval",
-                        "printedName": "Foundation.DateInterval",
-                        "usr": "s:10Foundation12DateIntervalV"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvg",
-                    "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV12dateInterval10Foundation04DateH0Vvg",
-                    "moduleName": "TinkMoneyManagerUI",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "spentAmount",
-                "printedName": "spentAmount",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CurrencyDenominatedAmount",
-                        "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount",
-                        "usr": "s:18TinkMoneyManagerUI25CurrencyDenominatedAmountV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvp",
-                "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvp",
-                "moduleName": "TinkMoneyManagerUI",
-                "declAttributes": [
-                  "HasStorage",
-                  "AccessControl",
-                  "RawDocComment"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "CurrencyDenominatedAmount",
-                            "printedName": "TinkMoneyManagerUI.CurrencyDenominatedAmount",
-                            "usr": "s:18TinkMoneyManagerUI25CurrencyDenominatedAmountV"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvg",
-                    "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV11spentAmountAA019CurrencyDenominatedH0VSgvg",
-                    "moduleName": "TinkMoneyManagerUI",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Function",
-                "name": "==",
-                "printedName": "==(_:_:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Period",
-                    "printedName": "TinkMoneyManagerUI.Budget.Period",
-                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Period",
-                    "printedName": "TinkMoneyManagerUI.Budget.Period",
-                    "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV2eeoiySbAE_AEtFZ",
-                "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV2eeoiySbAE_AEtFZ",
-                "moduleName": "TinkMoneyManagerUI",
-                "static": true,
-                "implicit": true,
-                "funcSelfKind": "NonMutating"
-              }
-            ],
-            "declKind": "Struct",
-            "usr": "s:18TinkMoneyManagerUI6BudgetV6PeriodV",
-            "mangledName": "$s18TinkMoneyManagerUI6BudgetV6PeriodV",
-            "moduleName": "TinkMoneyManagerUI",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Copyable",
-                "printedName": "Copyable",
-                "usr": "s:s8CopyableP",
-                "mangledName": "$ss8CopyableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
-                "name": "Equatable",
-                "printedName": "Equatable",
-                "usr": "s:SQ",
-                "mangledName": "$sSQ"
               }
             ]
           }
@@ -88308,14 +88308,14 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Account.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Account.swift",
       "kind": "BooleanLiteral",
       "offset": 7702,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Account.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Account.swift",
       "kind": "FloatLiteral",
       "offset": 7737,
       "length": 3,
@@ -88954,91 +88954,91 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 15085,
+      "offset": 15323,
       "length": 4,
       "value": "0.25"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 15272,
+      "offset": 15510,
       "length": 4,
       "value": "0.25"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 15523,
+      "offset": 15761,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 15655,
+      "offset": 15893,
       "length": 5,
       "value": "0.125"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 15790,
+      "offset": 16028,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 15923,
+      "offset": 16161,
       "length": 5,
       "value": "0.125"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 16033,
+      "offset": 16271,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 16209,
+      "offset": 16447,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 16346,
+      "offset": 16584,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 16484,
+      "offset": 16722,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 16622,
+      "offset": 16860,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 16730,
+      "offset": 16968,
       "length": 3,
       "value": "0.9"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Charts\/Bar Chart View Controller\/BarChartCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 17162,
+      "offset": 17400,
       "length": 3,
       "value": "1.0"
     },
@@ -100940,7 +100940,7 @@
       "kind": "IntegerLiteral",
       "offset": 1306,
       "length": 1,
-      "value": "0"
+      "value": "1"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/Views\/OverviewAccountCollectionViewCell.swift",
@@ -101017,7 +101017,7 @@
       "kind": "IntegerLiteral",
       "offset": 136,
       "length": 2,
-      "value": "20"
+      "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/OverviewAccountsViewController.swift",
@@ -101031,7 +101031,7 @@
       "kind": "IntegerLiteral",
       "offset": 158,
       "length": 2,
-      "value": "20"
+      "value": "16"
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Overview\/View Controllers\/OverviewAccountsViewController.swift",
@@ -101531,763 +101531,763 @@
       "value": "6"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 6707,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 6712,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 6837,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 6842,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 6971,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 6976,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7103,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7108,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7227,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7232,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7350,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7355,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7461,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7466,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7576,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7581,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7703,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7708,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7825,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7830,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7946,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 7951,
       "length": 2,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 8077,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 8082,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 8208,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Provider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Provider.swift",
       "kind": "IntegerLiteral",
       "offset": 8213,
       "length": 2,
       "value": "13"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 220,
       "length": 10,
       "value": "\"CHECKING\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 254,
       "length": 9,
       "value": "\"SAVINGS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 290,
       "length": 12,
       "value": "\"INVESTMENT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 327,
       "length": 10,
       "value": "\"MORTGAGE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 364,
       "length": 13,
       "value": "\"CREDIT_CARD\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 398,
       "length": 6,
       "value": "\"LOAN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 428,
       "length": 9,
       "value": "\"PENSION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 459,
       "length": 7,
       "value": "\"OTHER\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 491,
       "length": 10,
       "value": "\"EXTERNAL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 525,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 686,
       "length": 10,
       "value": "\"BUSINESS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 720,
       "length": 9,
       "value": "\"MANDATE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 753,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 935,
       "length": 13,
       "value": "\"AGGREGATION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 977,
       "length": 16,
       "value": "\"PFM_AND_SEARCH\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 1017,
       "length": 10,
       "value": "\"PFM_DATA\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 1049,
       "length": 6,
       "value": "\"NONE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccount.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccount.swift",
       "kind": "StringLiteral",
       "offset": 1079,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 133,
       "length": 10,
       "value": "\"MORTGAGE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 166,
       "length": 8,
       "value": "\"BLANCO\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 201,
       "length": 12,
       "value": "\"MEMBERSHIP\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 237,
       "length": 9,
       "value": "\"VEHICLE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 267,
       "length": 6,
       "value": "\"LAND\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 297,
       "length": 9,
       "value": "\"STUDENT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 329,
       "length": 8,
       "value": "\"CREDIT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 359,
       "length": 7,
       "value": "\"OTHER\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTAccountDetails.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTAccountDetails.swift",
       "kind": "StringLiteral",
       "offset": 390,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 1675,
       "length": 21,
       "value": "\"ACCOUNT_BALANCE_LOW\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 1724,
       "length": 18,
       "value": "\"BUDGET_OVERSPENT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 1774,
       "length": 23,
       "value": "\"BUDGET_CLOSE_NEGATIVE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 1829,
       "length": 23,
       "value": "\"BUDGET_CLOSE_POSITIVE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 1878,
       "length": 16,
       "value": "\"BUDGET_SUCCESS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 1928,
       "length": 25,
       "value": "\"BUDGET_SUMMARY_ACHIEVED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 1988,
       "length": 26,
       "value": "\"BUDGET_SUMMARY_OVERSPENT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2039,
       "length": 15,
       "value": "\"LARGE_EXPENSE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2097,
       "length": 34,
       "value": "\"SINGLE_UNCATEGORIZED_TRANSACTION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2156,
       "length": 15,
       "value": "\"DOUBLE_CHARGE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2215,
       "length": 35,
       "value": "\"WEEKLY_UNCATEGORIZED_TRANSACTIONS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2294,
       "length": 37,
       "value": "\"WEEKLY_SUMMARY_EXPENSES_BY_CATEGORY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2363,
       "length": 32,
       "value": "\"WEEKLY_SUMMARY_EXPENSES_BY_DAY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2440,
       "length": 38,
       "value": "\"MONTHLY_SUMMARY_EXPENSES_BY_CATEGORY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2523,
       "length": 37,
       "value": "\"WEEKLY_SUMMARY_EXPENSE_TRANSACTIONS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2606,
       "length": 38,
       "value": "\"MONTHLY_SUMMARY_EXPENSE_TRANSACTIONS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2677,
       "length": 24,
       "value": "\"NEW_INCOME_TRANSACTION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2740,
       "length": 32,
       "value": "\"SUGGEST_SET_UP_SAVINGS_ACCOUNT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2805,
       "length": 25,
       "value": "\"CREDIT_CARD_LIMIT_CLOSE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2865,
       "length": 27,
       "value": "\"CREDIT_CARD_LIMIT_REACHED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 2932,
       "length": 34,
       "value": "\"LEFT_TO_SPEND_POSITIVE_MID_MONTH\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3006,
       "length": 34,
       "value": "\"LEFT_TO_SPEND_NEGATIVE_MID_MONTH\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3083,
       "length": 36,
       "value": "\"BUDGET_SUGGEST_CREATE_TOP_CATEGORY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3169,
       "length": 44,
       "value": "\"BUDGET_SUGGEST_CREATE_TOP_PRIMARY_CATEGORY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3250,
       "length": 29,
       "value": "\"BUDGET_SUGGEST_CREATE_FIRST\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3325,
       "length": 40,
       "value": "\"LEFT_TO_SPEND_POSITIVE_BEGINNING_MONTH\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3411,
       "length": 40,
       "value": "\"LEFT_TO_SPEND_NEGATIVE_BEGINNING_MONTH\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3491,
       "length": 32,
       "value": "\"SPENDING_BY_CATEGORY_INCREASED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3570,
       "length": 40,
       "value": "\"SPENDING_BY_PRIMARY_CATEGORY_INCREASED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3663,
       "length": 48,
       "value": "\"LEFT_TO_SPEND_POSITIVE_SUMMARY_SAVINGS_ACCOUNT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3752,
       "length": 35,
       "value": "\"LEFT_TO_SPEND_POSITIVE_FINAL_WEEK\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 3833,
       "length": 37,
       "value": "\"AGGREGATION_REFRESH_PSD2_CREDENTIAL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 4610,
       "length": 6,
       "value": "\"WEEK\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 4638,
       "length": 7,
       "value": "\"MONTH\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 4666,
       "length": 6,
       "value": "\"YEAR\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 4700,
       "length": 13,
       "value": "\"UNSPECIFIED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19396,
       "length": 13,
       "value": "\"ACKNOWLEDGE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19429,
       "length": 9,
       "value": "\"DISMISS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19461,
       "length": 13,
       "value": "\"VIEW_BUDGET\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19501,
       "length": 17,
       "value": "\"CREATE_TRANSFER\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19546,
       "length": 18,
       "value": "\"VIEW_TRANSACTION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19594,
       "length": 20,
       "value": "\"CATEGORIZE_EXPENSE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19643,
       "length": 19,
       "value": "\"VIEW_TRANSACTIONS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19697,
       "length": 25,
       "value": "\"CATEGORIZE_TRANSACTIONS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19761,
       "length": 31,
       "value": "\"VIEW_TRANSACTIONS_BY_CATEGORY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19816,
       "length": 14,
       "value": "\"VIEW_ACCOUNT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19858,
       "length": 20,
       "value": "\"VIEW_LEFT_TO_SPEND\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19903,
       "length": 15,
       "value": "\"CREATE_BUDGET\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 19949,
       "length": 20,
       "value": "\"REFRESH_CREDENTIAL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 21659,
       "length": 35,
       "value": "\"BUDGET_PERIODICITY_TYPE_RECURRING\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTActionableInsight.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTActionableInsight.swift",
       "kind": "StringLiteral",
       "offset": 21725,
       "length": 33,
       "value": "\"BUDGET_PERIODICITY_TYPE_ONE_OFF\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTBudget.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTBudget.swift",
       "kind": "StringLiteral",
       "offset": 900,
       "length": 9,
       "value": "\"ONE_OFF\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTBudget.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTBudget.swift",
       "kind": "StringLiteral",
       "offset": 935,
       "length": 11,
       "value": "\"RECURRING\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTBudget.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTBudget.swift",
       "kind": "StringLiteral",
       "offset": 1177,
       "length": 6,
       "value": "\"WEEK\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTBudget.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTBudget.swift",
       "kind": "StringLiteral",
       "offset": 1209,
       "length": 7,
       "value": "\"MONTH\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTBudget.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTBudget.swift",
       "kind": "StringLiteral",
       "offset": 1241,
       "length": 6,
@@ -102301,21 +102301,21 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTCategoryType.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCategoryType.swift",
       "kind": "StringLiteral",
       "offset": 74,
       "length": 10,
       "value": "\"EXPENSES\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTCategoryType.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCategoryType.swift",
       "kind": "StringLiteral",
       "offset": 103,
       "length": 8,
       "value": "\"INCOME\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTCategoryType.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCategoryType.swift",
       "kind": "StringLiteral",
       "offset": 133,
       "length": 11,
@@ -102329,485 +102329,485 @@
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Client\/REST\/RESTContentType.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Client\/REST\/RESTContentType.swift",
       "kind": "StringLiteral",
       "offset": 66,
       "length": 33,
       "value": "\"application\/json; charset=utf-8\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 317,
       "length": 10,
       "value": "\"PASSWORD\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 356,
       "length": 15,
       "value": "\"MOBILE_BANKID\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 394,
       "length": 8,
       "value": "\"KEYFOB\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 432,
       "length": 17,
       "value": "\"THIRD_PARTY_APP\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 473,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 639,
       "length": 9,
       "value": "\"CREATED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 679,
       "length": 16,
       "value": "\"AUTHENTICATING\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 746,
       "length": 39,
       "value": "\"AWAITING_MOBILE_BANKID_AUTHENTICATION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 833,
       "length": 35,
       "value": "\"AWAITING_SUPPLEMENTAL_INFORMATION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 893,
       "length": 10,
       "value": "\"UPDATING\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 927,
       "length": 9,
       "value": "\"UPDATED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 972,
       "length": 22,
       "value": "\"AUTHENTICATION_ERROR\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 1025,
       "length": 17,
       "value": "\"TEMPORARY_ERROR\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 1073,
       "length": 17,
       "value": "\"PERMANENT_ERROR\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 1142,
       "length": 41,
       "value": "\"AWAITING_THIRD_PARTY_APP_AUTHENTICATION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 1207,
       "length": 9,
       "value": "\"DELETED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 1247,
       "length": 17,
       "value": "\"SESSION_EXPIRED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTCredentials.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTCredentials.swift",
       "kind": "StringLiteral",
       "offset": 1288,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTField.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTField.swift",
       "kind": "StringLiteral",
       "offset": 2800,
       "length": 13,
       "value": "\"description\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTField.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTField.swift",
       "kind": "StringLiteral",
       "offset": 3007,
       "length": 10,
       "value": "\"optional\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Client\/REST\/RESTMethod.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Client\/REST\/RESTMethod.swift",
       "kind": "StringLiteral",
       "offset": 60,
       "length": 5,
       "value": "\"GET\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Client\/REST\/RESTMethod.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Client\/REST\/RESTMethod.swift",
       "kind": "StringLiteral",
       "offset": 82,
       "length": 6,
       "value": "\"POST\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Client\/REST\/RESTMethod.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Client\/REST\/RESTMethod.swift",
       "kind": "StringLiteral",
       "offset": 107,
       "length": 8,
       "value": "\"DELETE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Client\/REST\/RESTMethod.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Client\/REST\/RESTMethod.swift",
       "kind": "StringLiteral",
       "offset": 131,
       "length": 5,
       "value": "\"PUT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTPeriod.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTPeriod.swift",
       "kind": "StringLiteral",
       "offset": 136,
       "length": 9,
       "value": "\"MONTHLY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTPeriod.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTPeriod.swift",
       "kind": "StringLiteral",
       "offset": 177,
       "length": 18,
       "value": "\"MONTHLY_ADJUSTED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTPeriodMode.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTPeriodMode.swift",
       "kind": "StringLiteral",
       "offset": 71,
       "length": 9,
       "value": "\"MONTHLY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTPeriodMode.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTPeriodMode.swift",
       "kind": "StringLiteral",
       "offset": 108,
       "length": 18,
       "value": "\"MONTHLY_ADJUSTED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 442,
+      "offset": 443,
       "length": 14,
       "value": "\"OPEN_BANKING\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 478,
+      "offset": 479,
       "length": 7,
       "value": "\"OTHER\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 509,
+      "offset": 510,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 686,
+      "offset": 687,
       "length": 10,
       "value": "\"EMBEDDED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 721,
+      "offset": 722,
       "length": 10,
       "value": "\"REDIRECT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 757,
+      "offset": 758,
       "length": 11,
       "value": "\"DECOUPLED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 792,
+      "offset": 793,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 970,
+      "offset": 971,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1005,
+      "offset": 1006,
       "length": 11,
       "value": "\"TRANSFERS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1042,
+      "offset": 1043,
       "length": 11,
       "value": "\"EINVOICES\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1089,
+      "offset": 1090,
       "length": 22,
       "value": "\"MORTGAGE_AGGREGATION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1144,
+      "offset": 1145,
       "length": 19,
       "value": "\"CHECKING_ACCOUNTS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1195,
+      "offset": 1196,
       "length": 18,
       "value": "\"SAVINGS_ACCOUNTS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1241,
+      "offset": 1242,
       "length": 14,
       "value": "\"CREDIT_CARDS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1277,
+      "offset": 1278,
       "length": 7,
       "value": "\"LOANS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1312,
+      "offset": 1313,
       "length": 13,
       "value": "\"INVESTMENTS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1350,
+      "offset": 1351,
       "length": 10,
       "value": "\"PAYMENTS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1389,
+      "offset": 1390,
       "length": 15,
       "value": "\"IDENTITY_DATA\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1440,
+      "offset": 1441,
       "length": 22,
       "value": "\"CREATE_BENEFICIARIES\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1496,
+      "offset": 1497,
       "length": 20,
       "value": "\"LIST_BENEFICIARIES\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1683,
+      "offset": 1684,
       "length": 10,
       "value": "\"PASSWORD\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1722,
+      "offset": 1723,
       "length": 15,
       "value": "\"MOBILE_BANKID\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1760,
+      "offset": 1761,
       "length": 8,
       "value": "\"KEYFOB\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1798,
+      "offset": 1799,
       "length": 17,
       "value": "\"THIRD_PARTY_APP\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1839,
+      "offset": 1840,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2008,
+      "offset": 2009,
       "length": 9,
       "value": "\"ENABLED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2051,
+      "offset": 2052,
       "length": 20,
       "value": "\"TEMPORARY_DISABLED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2096,
+      "offset": 2097,
       "length": 10,
       "value": "\"DISABLED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2130,
+      "offset": 2131,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2290,
+      "offset": 2291,
       "length": 6,
       "value": "\"BANK\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2323,
+      "offset": 2324,
       "length": 13,
       "value": "\"CREDIT_CARD\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2359,
+      "offset": 2360,
       "length": 8,
       "value": "\"BROKER\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2388,
+      "offset": 2389,
       "length": 6,
       "value": "\"TEST\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2416,
+      "offset": 2417,
       "length": 7,
       "value": "\"OTHER\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2447,
+      "offset": 2448,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2666,
+      "offset": 2667,
       "length": 6,
       "value": "\"BETA\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2696,
+      "offset": 2697,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2914,
+      "offset": 2915,
       "length": 10,
       "value": "\"PERSONAL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2953,
+      "offset": 2954,
       "length": 10,
       "value": "\"BUSINESS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTProvider.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2991,
+      "offset": 2992,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
@@ -102854,203 +102854,203 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "BooleanLiteral",
       "offset": 234,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 386,
       "length": 7,
       "value": "\"SCORE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 410,
       "length": 6,
       "value": "\"DATE\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 436,
       "length": 9,
       "value": "\"ACCOUNT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 469,
       "length": 13,
       "value": "\"DESCRIPTION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 501,
       "length": 8,
       "value": "\"AMOUNT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 530,
       "length": 10,
       "value": "\"CATEGORY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 599,
       "length": 5,
       "value": "\"ASC\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTSearchQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTSearchQuery.swift",
       "kind": "StringLiteral",
       "offset": 621,
       "length": 6,
       "value": "\"DESC\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 337,
       "length": 7,
       "value": "\"DAILY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 363,
       "length": 8,
       "value": "\"WEEKLY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 391,
       "length": 9,
       "value": "\"MONTHLY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 428,
       "length": 18,
       "value": "\"MONTHLY_ADJUSTED\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 465,
       "length": 8,
       "value": "\"YEARLY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 489,
       "length": 5,
       "value": "\"ALL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 692,
       "length": 21,
       "value": "\"balances-by-account\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 752,
       "length": 32,
       "value": "\"balances-by-account-type-group\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 815,
       "length": 22,
       "value": "\"expenses-by-category\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 875,
       "length": 30,
       "value": "\"expenses-by-primary-category\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 943,
       "length": 31,
       "value": "\"expenses-by-category\/by-count\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1019,
       "length": 39,
       "value": "\"expenses-by-primary-category\/by-count\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1087,
       "length": 20,
       "value": "\"income-by-category\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1137,
       "length": 21,
       "value": "\"income-and-expenses\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1182,
       "length": 15,
       "value": "\"left-to-spend\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1228,
       "length": 23,
       "value": "\"left-to-spend-average\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1275,
       "length": 15,
       "value": "\"safe-to-spend\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1326,
       "length": 28,
       "value": "\"expenses-by-cost-structure\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1389,
       "length": 26,
       "value": "\"expenses-by-subscription\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTStatisticQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTStatisticQuery.swift",
       "kind": "StringLiteral",
       "offset": 1457,
       "length": 34,
@@ -103078,133 +103078,133 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransaction.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransaction.swift",
       "kind": "StringLiteral",
       "offset": 760,
       "length": 9,
       "value": "\"DEFAULT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransaction.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransaction.swift",
       "kind": "StringLiteral",
       "offset": 792,
       "length": 13,
       "value": "\"CREDIT_CARD\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransaction.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransaction.swift",
       "kind": "StringLiteral",
       "offset": 826,
       "length": 10,
       "value": "\"TRANSFER\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransaction.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransaction.swift",
       "kind": "StringLiteral",
       "offset": 856,
       "length": 9,
       "value": "\"PAYMENT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransaction.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransaction.swift",
       "kind": "StringLiteral",
       "offset": 888,
       "length": 12,
       "value": "\"WITHDRAWAL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransaction.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransaction.swift",
       "kind": "StringLiteral",
       "offset": 920,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransactionsResult.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransactionsResult.swift",
       "kind": "StringLiteral",
       "offset": 148,
       "length": 11,
       "value": "\"STATEMENT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransactionsResult.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransactionsResult.swift",
       "kind": "StringLiteral",
       "offset": 187,
       "length": 13,
       "value": "\"TRANSACTION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransactionsResult.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransactionsResult.swift",
       "kind": "StringLiteral",
       "offset": 225,
       "length": 10,
       "value": "\"CATEGORY\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransactionsResult.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransactionsResult.swift",
       "kind": "StringLiteral",
       "offset": 258,
       "length": 8,
       "value": "\"BUDGET\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransactionsResult.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransactionsResult.swift",
       "kind": "StringLiteral",
       "offset": 287,
       "length": 6,
       "value": "\"GOAL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/REST\/Models\/RESTTransactionsResult.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransactionsResult.swift",
       "kind": "StringLiteral",
       "offset": 320,
       "length": 12,
       "value": "\"SUGGESTION\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTTransferDestination.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransferDestination.swift",
       "kind": "StringLiteral",
       "offset": 138,
       "length": 10,
       "value": "\"CHECKING\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTTransferDestination.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransferDestination.swift",
       "kind": "StringLiteral",
       "offset": 172,
       "length": 9,
       "value": "\"SAVINGS\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTTransferDestination.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransferDestination.swift",
       "kind": "StringLiteral",
       "offset": 208,
       "length": 12,
       "value": "\"INVESTMENT\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTTransferDestination.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransferDestination.swift",
       "kind": "StringLiteral",
       "offset": 247,
       "length": 13,
       "value": "\"CREDIT_CARD\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTTransferDestination.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransferDestination.swift",
       "kind": "StringLiteral",
       "offset": 281,
       "length": 6,
       "value": "\"LOAN\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTTransferDestination.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransferDestination.swift",
       "kind": "StringLiteral",
       "offset": 312,
       "length": 10,
       "value": "\"EXTERNAL\""
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/REST\/Models\/RESTTransferDestination.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/REST\/Models\/RESTTransferDestination.swift",
       "kind": "StringLiteral",
       "offset": 346,
       "length": 9,
@@ -103848,7 +103848,7 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/Model\/Scope.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/Scope.swift",
       "kind": "StringLiteral",
       "offset": 1348,
       "length": 11,
@@ -104863,21 +104863,21 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/Models\/TransactionQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/TransactionQuery.swift",
       "kind": "Array",
       "offset": 2264,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/Models\/TransactionQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/TransactionQuery.swift",
       "kind": "Array",
       "offset": 2297,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Core\/PFM\/Models\/TransactionQuery.swift",
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/TinkMoneyManagerCore\/Sources\/TinkMoneyManagerCore\/Models\/TransactionQuery.swift",
       "kind": "BooleanLiteral",
       "offset": 2382,
       "length": 5,
@@ -105126,7 +105126,7 @@
       "kind": "StringLiteral",
       "offset": 78,
       "length": 7,
-      "value": "\"3.1.1\""
+      "value": "\"3.1.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/WeeklySummaryExpensesByCategoryItemView.swift",
