@@ -578,18 +578,6 @@ public struct Budget {
   public let periodicity: TinkMoneyManagerUI.Budget.Periodicity?
   public let created: Foundation.Date?
 }
-extension TinkMoneyManagerUI.Budget {
-  public struct Transaction {
-    public let id: TinkMoneyManagerUI.Transaction.ID
-    public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
-    public let dispensableAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
-    public let date: Foundation.Date?
-    public let description: Swift.String?
-    public let categoryCode: TinkMoneyManagerUI.Category.Code?
-    public let accountID: TinkMoneyManagerUI.Account.ID?
-    public let pending: Swift.Bool?
-  }
-}
 public struct BudgetDetails {
   public let budgetSpecification: TinkMoneyManagerUI.Budget
   public let budgetPeriods: [TinkMoneyManagerUI.Budget.Period]
@@ -640,6 +628,18 @@ public protocol BudgetService {
 public struct BudgetSummary {
   public let budget: TinkMoneyManagerUI.Budget
   public let budgetPeriod: TinkMoneyManagerUI.Budget.Period
+}
+extension TinkMoneyManagerUI.Budget {
+  public struct Transaction {
+    public let id: TinkMoneyManagerUI.Transaction.ID
+    public let amount: TinkMoneyManagerUI.CurrencyDenominatedAmount
+    public let dispensableAmount: TinkMoneyManagerUI.CurrencyDenominatedAmount?
+    public let date: Foundation.Date?
+    public let description: Swift.String?
+    public let categoryCode: TinkMoneyManagerUI.Category.Code?
+    public let accountID: TinkMoneyManagerUI.Account.ID?
+    public let pending: Swift.Bool?
+  }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class BudgetsViewController : UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency convenience public init(tink: TinkMoneyManagerUI.Tink = .shared)
