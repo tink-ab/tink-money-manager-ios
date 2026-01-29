@@ -12,7 +12,7 @@
 
 ## Requirements
 
-- iOS 15.8.3
+- iOS 15.8.5
 - Xcode 16.2
 
 ## Installation
