@@ -100812,7 +100812,7 @@
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Generic\/View Controllers\/Month Picker\/MonthPickerBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 5595,
+      "offset": 5613,
       "length": 2,
       "value": "56"
     },
@@ -105126,7 +105126,7 @@
       "kind": "StringLiteral",
       "offset": 78,
       "length": 7,
-      "value": "\"3.1.6\""
+      "value": "\"3.1.7\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/WeeklySummaryExpensesByCategoryItemView.swift",
