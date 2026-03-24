@@ -89310,8 +89310,15 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/BudgetCategoryPickerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1483,
+      "length": 2,
+      "value": "-8"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Budgets\/BudgetCategoryPickerViewController.swift",
       "kind": "Array",
-      "offset": 1354,
+      "offset": 1659,
       "length": 2,
       "value": "[]"
     },
@@ -105126,7 +105133,7 @@
       "kind": "StringLiteral",
       "offset": 78,
       "length": 7,
-      "value": "\"3.1.7\""
+      "value": "\"3.1.8\""
     },
     {
       "filePath": "\/Users\/runner\/work\/tink-pfm-sdk-ios\/tink-pfm-sdk-ios\/Sources\/TinkMoneyManagerUI\/Features\/Actionable Insights\/Views\/WeeklySummaryExpensesByCategoryItemView.swift",
